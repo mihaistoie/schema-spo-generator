@@ -1026,7 +1026,8 @@
               <Champ id="code" libelle="Code" nomInterne="Code" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
               <Champ id="libelle" libelle="Libelle" nomInterne="Libelle" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
               <Champ id="codesurfvendu" libelle="CodeSurfVendu" nomInterne="CodeSurfVendu" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
-              <Champ id="codeproctc" libelle="Code procédure tranche commerciale" nomInterne="CodeProcTC" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />			  
+              <Champ id="codeproctc" libelle="Code procédure tranche commerciale" nomInterne="CodeProcTC" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+			  <Champ id="prixfige" libelle="prixFige" nomInterne="prixFige" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
             </Champs>
             <Indexes />
           </Table>
@@ -6232,12 +6233,13 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
           </Table>
           <Table id="FLUXTRESOOP" libelle="Flux tréso opération" nomInterne="FluxTresoOp" visibilite="N" abstraite="N">
             <Champs>
-              <Champ id="idop" libelle="IdOp" nomInterne="IdOp" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
-              <Champ id="typeflux" libelle="TypeFlux" nomInterne="TypeFlux" clePrimaire="O" obligatoire="O" type="String" taille="10" crypte="N" />
-              <Champ id="typemnt" libelle="TypeMnt" nomInterne="TypeMnt" clePrimaire="O" obligatoire="O" type="String" taille="10" crypte="N" />
-              <Champ id="idposte" libelle="IdPoste" nomInterne="IdPoste" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
-              <Champ id="idprog" libelle="IdProg" nomInterne="IdProg" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
-              <Champ id="dateflux" libelle="DateFlux" nomInterne="DateFlux" clePrimaire="O" obligatoire="O" type="DateMG" crypte="N" />
+              <Champ id="id" libelle="Id" nomInterne="Id" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
+              <Champ id="idop" libelle="IdOp" nomInterne="IdOp" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="typeflux" libelle="TypeFlux" nomInterne="TypeFlux" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
+              <Champ id="typemnt" libelle="TypeMnt" nomInterne="TypeMnt" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
+              <Champ id="idposte" libelle="IdPoste" nomInterne="IdPoste" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idprog" libelle="IdProg" nomInterne="IdProg" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="dateflux" libelle="DateFlux" nomInterne="DateFlux" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="periode" libelle="Periode" nomInterne="Periode" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="mntht" libelle="MntHT" nomInterne="MntHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="mnttva" libelle="MntTVA" nomInterne="MntTVA" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
@@ -6853,6 +6855,218 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
             </ORACLE>
             <ENTERPRISEDB />
           </Vue>
+          <Vue id="VIEW_FACTSIT_PAYE" libelle="View_FactSit_Paye" nomInterne="View_FactSit_Paye" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
+              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="type" libelle="type" nomInterne="type" clePrimaire="N" obligatoire="N" type="String" taille="2" crypte="N" />
+            </Champs>
+            <SQLSERVER>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+RETENU
+as 
+(
+select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte,idprog
+union
+select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte
+),
+S_IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntht,dtcompta as dateflux ,numfact as idpiece,lib as libpiece ,dtimport as datepiece 
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'F' and OPE.exportgf=0 and dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)
+group by idop,idposte,dtcompta,numfact,lib,dtimport
+),
+IMP
+as
+(
+select 
+I.idop
+,I.idprog
+,I.idposte
+,I.mntttc
+,I.dtcompta as dateflux
+,I.numfact as idpiece
+,I.lib as libpiece
+,I.dtimport as datepiece
+from MCIMPORTGF I
+JOIN OPE O ON O.iddoss = I.idop 
+WHERE I.typenreg = 'F' and O.exportgf=0
+union
+select * from S_IMP
+),
+FAC
+as 
+(
+select 
+A.idop
+,A.idprog
+,A.idposte
+,A.mntttc - COALESCE(R.ret,0) as mntttc
+,COALESCE(S.dtpaie,F.dtpaie,OD.dateod) as dateflux
+,A.idfact as idpiece
+,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
+,COALESCE(S.dtsitu,F.dtfact,OD.dateod) as datepiece 
+ ,COALESCE(F.type,'D') as type
+from MCAFFECBUD A
+join OPE O on O.iddoss = A.idop
+left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
+left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
+left outer join MCSITUATION S ON S.idsitu = A.idfact
+left outer join MCOD OD ON OD.id = A.idfact
+left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
+WHERE A.typemnt = 'F'
+ and  O.exportgf=-1
+ and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null 
+ and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  CONVERT(VARCHAR(10),GETDATE(),111)
+ and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null)
+)
+
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,IMP.idpiece
+,IMP.libpiece
+,IMP.datepiece
+,'D' as type
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
+Union
+select
+ FAC.idop 
+,FAC.idprog
+,FAC.idposte
+,FAC.mntttc as mnt
+,FAC.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,FAC.idpiece
+,FAC.libpiece
+,FAC.datepiece
+,FAC.type
+from FAC
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte</SQLSERVER>
+            <ORACLE>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+RETENU
+as 
+(
+select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte,idprog
+union
+select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte
+),
+S_IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntht,dtcompta as dateflux ,numfact as idpiece,lib as libpiece ,dtimport as datepiece 
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'F' and OPE.exportgf=0 AND dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')
+group by idop,idposte,dtcompta,numfact,lib,dtimport
+),
+IMP
+as
+(
+select 
+I.idop
+,I.idprog
+,I.idposte
+,I.mntttc
+,I.dtcompta as dateflux
+,I.numfact as idpiece
+,I.lib as libpiece
+,I.dtimport as datepiece
+from MCIMPORTGF I
+JOIN OPE O ON O.iddoss = I.idop 
+WHERE I.typenreg = 'F' and O.exportgf=0
+union
+select * from S_IMP
+),
+FAC
+as 
+(
+select 
+A.idop
+,A.idprog
+,A.idposte
+,A.mntttc - COALESCE(R.ret,0) as mntttc
+,COALESCE(S.dtpaie,F.dtpaie,OD.dateod) as dateflux
+,A.idfact as idpiece
+,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
+,COALESCE(S.dtsitu,F.dtfact,OD.dateod) as datepiece 
+,COALESCE(F.type,'D') as type
+from MCAFFECBUD A
+join OPE O on O.iddoss = A.idop
+left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
+left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
+left outer join MCSITUATION S ON S.idsitu = A.idfact
+left outer join MCOD OD ON OD.id = A.idfact
+left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
+WHERE A.typemnt = 'F'
+ and  O.exportgf=-1
+ and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null 
+ and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  TO_CHAR(SYSDATE,'YYYY/MM/DD')
+ and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null)
+)
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,IMP.idpiece
+,IMP.libpiece
+,IMP.datepiece
+,'D' as type
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
+Union
+select
+ FAC.idop 
+,FAC.idprog
+,FAC.idposte
+,FAC.mntttc as mnt
+,FAC.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,FAC.idpiece
+,FAC.libpiece
+,FAC.datepiece
+,FAC.type
+from FAC
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte</ORACLE>
+            <ENTERPRISEDB />
+          </Vue>		  
           <Vue id="VIEW_FACTSIT_PREVUE" libelle="View_FactSit_Prevue" nomInterne="View_FactSit_Prevue" visibilite="N" abstraite="N">
             <Champs>
               <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
@@ -6865,213 +7079,216 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
               <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="datepaie" libelle="Date de paiement" nomInterne="datepaie" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="type" libelle="type" nomInterne="type" clePrimaire="N" obligatoire="N" type="String" taille="2" crypte="N" />
             </Champs>
-            <SQLSERVER>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              RETENU
-              as
-              (
-              select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte,idprog
-              union
-              select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte
-              ),
-              S_IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece ,lib as libpiece ,dtimport as datepiece,
-              CASE WHEN (dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN dtcompta ELSE null END as datepaie
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'F' and OPE.exportgf=0
-              group by idop,idposte,dtcompta,numfact,lib,dtimport
-              ),
-              IMP
-              as
-              (
-              select
-              I.idop
-              ,I.idprog
-              ,I.idposte
-              ,I.mntttc
-              ,I.dtcompta as dateflux
-              ,I.numfact as idpiece
-              ,I.lib as libpiece
-              ,I.dtimport as datepiece
-              ,CASE WHEN (I.dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN I.dtcompta ELSE null END as datepaie
-              from MCIMPORTGF I
-              JOIN OPE O ON O.iddoss = I.idop
-              WHERE I.typenreg = 'F' and O.exportgf=0
-              union
-              select * from S_IMP
-              ),
-              FAC
-              as
-              (
-              select
-              A.idop
-              ,A.idprog
-              ,A.idposte
-              ,A.mntttc - COALESCE(R.ret,0) as mntttc
-              ,CASE WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
-              ,A.idfact as idpiece
-              ,COALESCE(S.lib,F.lib,OD.lib) as libpiece
-              ,COALESCE(S.lib,F.lib,OD.lib) as datepiece
-              ,CASE WHEN (OD.id is not null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END as dtannul
-              ,CASE
-              WHEN (OD.id is not null) THEN (CASE WHEN (OD.dateod &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN OD.dateod ELSE null END)
-              WHEN (S.idsitu IS null) THEN
-              (CASE WHEN (F.dtpaie &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN F.dtpaie ELSE null END) ELSE
-              (CASE WHEN (S.dtpaie &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN S.dtpaie ELSE null END) END as datepaie
-              from MCAFFECBUD A
-              join OPE O on O.iddoss = A.idop
-              left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
-              left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
-              left outer join MCSITUATION S ON S.idsitu = A.idfact
-              left outer join MCOD OD ON OD.id = A.idfact
-              left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-              WHERE A.typemnt = 'F' and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null
-              )
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,IMP.idpiece
-              ,IMP.libpiece
-              ,IMP.datepiece
-              ,IMP.datepaie
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
-              Union
-              select
-              FAC.idop
-              ,FAC.idprog
-              ,FAC.idposte
-              ,FAC.mntttc as mnt
-              ,FAC.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,FAC.idpiece
-              ,FAC.libpiece
-              ,FAC.datepiece
-              ,FAC.datepaie
-              from FAC
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte
-            </SQLSERVER>
-            <ORACLE>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              RETENU
-              as
-              (
-              select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte,idprog
-              union
-              select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte
-              ),
-              S_IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece ,lib as libpiece ,dtimport as datepiece,
-              CASE WHEN (dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN dtcompta ELSE null END as datepaie
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'F' and OPE.exportgf=0
-              GROUP BY idop, '*', idposte, dtcompta, numfact, lib, dtimport, CASE WHEN (dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN dtcompta ELSE null END
-              ),
-              IMP
-              as
-              (
-              select
-              I.idop
-              ,I.idprog
-              ,I.idposte
-              ,I.mntttc
-              ,I.dtcompta as dateflux
-              ,I.numfact as idpiece
-              ,I.lib as libpiece
-              ,I.dtimport as datepiece
-              ,CASE WHEN (I.dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN I.dtcompta ELSE null END as datepaie
-              from MCIMPORTGF I
-              JOIN OPE O ON O.iddoss = I.idop
-              WHERE I.typenreg = 'F' and O.exportgf=0
-              union
-              select * from S_IMP
-              ),
-              FAC
-              as
-              (
-              select
-              A.idop
-              ,A.idprog
-              ,A.idposte
-              ,A.mntttc - COALESCE(R.ret,0) as mntttc
-              ,CASE WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
-              ,A.idfact as idpiece
-              ,COALESCE(S.lib,F.lib,OD.lib) as libpiece
-              ,COALESCE(S.lib,F.lib,OD.lib) as datepiece
-              ,CASE WHEN (OD.id is not null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END as dtannul
-              ,CASE
-              WHEN (OD.id is not null) THEN (CASE WHEN (OD.dateod &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN OD.dateod ELSE null END)
-              WHEN (S.idsitu IS null) THEN
-              (CASE WHEN (F.dtpaie &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN F.dtpaie ELSE null END) ELSE
-              (CASE WHEN (S.dtpaie &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN S.dtpaie ELSE null END) END as datepaie
-              from MCAFFECBUD A
-              join OPE O on O.iddoss = A.idop
-              left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
-              left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
-              left outer join MCSITUATION S ON S.idsitu = A.idfact
-              left outer join MCOD OD ON OD.id = A.idfact
-              left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-              WHERE A.typemnt = 'F' and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null
-              )
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,IMP.idpiece
-              ,IMP.libpiece
-              ,IMP.datepiece
-              ,IMP.datepaie
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
-              Union
-              select
-              FAC.idop
-              ,FAC.idprog
-              ,FAC.idposte
-              ,FAC.mntttc as mnt
-              ,FAC.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,FAC.idpiece
-              ,FAC.libpiece
-              ,FAC.datepiece
-              ,FAC.datepaie
-              from FAC
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte
-            </ORACLE>
+            <SQLSERVER>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+RETENU
+as 
+(
+select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte,idprog
+union
+select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte
+),
+S_IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece ,lib as libpiece ,dtimport as datepiece,
+CASE WHEN (dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN dtcompta ELSE null END as datepaie
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'F' and OPE.exportgf=0
+group by idop,idposte,dtcompta,numfact,lib,dtimport
+),
+IMP
+as
+(
+select 
+I.idop
+,I.idprog
+,I.idposte
+,I.mntttc
+,I.dtcompta as dateflux
+,I.numfact as idpiece
+,I.lib as libpiece
+,I.dtimport as datepiece
+,CASE WHEN (I.dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN I.dtcompta ELSE null END as datepaie
+from MCIMPORTGF I
+JOIN OPE O ON O.iddoss = I.idop 
+WHERE I.typenreg = 'F' and O.exportgf=0
+union
+select * from S_IMP
+),
+FAC
+as 
+(
+select 
+A.idop
+,A.idprog
+,A.idposte
+,A.mntttc - COALESCE(R.ret,0) as mntttc
+,CASE WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
+,A.idfact as idpiece
+,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
+,COALESCE(S.lib,F.lib,OD.lib) as datepiece
+,CASE WHEN (OD.id is not null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END as dtannul
+,CASE
+WHEN (OD.id is not null) THEN (CASE WHEN (OD.dateod &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN OD.dateod ELSE null END)
+ WHEN (S.idsitu IS null) THEN
+ (CASE WHEN (F.dtpaie &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN F.dtpaie ELSE null END) ELSE
+ (CASE WHEN (S.dtpaie &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN S.dtpaie ELSE null END) END as datepaie
+ ,COALESCE(F.type,'D') as type
+from MCAFFECBUD A
+join OPE O on O.iddoss = A.idop
+left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
+left outer JOIN MCFACTURE F ON F.idfact = FM.idfact 
+left outer join MCSITUATION S ON S.idsitu = A.idfact
+left outer join MCOD OD ON OD.id = A.idfact
+left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
+WHERE A.typemnt = 'F' and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null
+)
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,IMP.idpiece
+,IMP.libpiece
+,IMP.datepiece
+,IMP.datepaie
+,'D' as type
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
+Union
+select
+ FAC.idop 
+,FAC.idprog
+,FAC.idposte
+,FAC.mntttc as mnt
+,FAC.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,FAC.idpiece
+,FAC.libpiece
+,FAC.datepiece
+,FAC.datepaie
+,FAC.type
+from FAC
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte</SQLSERVER>
+            <ORACLE>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+RETENU
+as 
+(
+select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte,idprog
+union
+select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
+group by idfact,idposte
+),
+S_IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece ,lib as libpiece ,dtimport as datepiece,
+CASE WHEN (dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN dtcompta ELSE null END as datepaie
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'F' and OPE.exportgf=0
+GROUP BY idop, '*', idposte, dtcompta, numfact, lib, dtimport, CASE WHEN (dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN dtcompta ELSE null END
+),
+IMP
+as
+(
+select 
+I.idop
+,I.idprog
+,I.idposte
+,I.mntttc
+,I.dtcompta as dateflux
+,I.numfact as idpiece
+,I.lib as libpiece
+,I.dtimport as datepiece
+,CASE WHEN (I.dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN I.dtcompta ELSE null END as datepaie
+from MCIMPORTGF I
+JOIN OPE O ON O.iddoss = I.idop 
+WHERE I.typenreg = 'F' and O.exportgf=0
+union
+select * from S_IMP
+),
+FAC
+as 
+(
+select 
+A.idop
+,A.idprog
+,A.idposte
+,A.mntttc - COALESCE(R.ret,0) as mntttc
+,CASE WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
+,A.idfact as idpiece
+,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
+,COALESCE(S.lib,F.lib,OD.lib) as datepiece
+,CASE WHEN (OD.id is not null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END as dtannul
+,CASE
+ WHEN (OD.id is not null) THEN (CASE WHEN (OD.dateod &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN OD.dateod ELSE null END)
+ WHEN (S.idsitu IS null) THEN
+ (CASE WHEN (F.dtpaie &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN F.dtpaie ELSE null END) ELSE 
+ (CASE WHEN (S.dtpaie &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN S.dtpaie ELSE null END) END as datepaie
+,COALESCE(F.type,'D') as type
+ from MCAFFECBUD A
+join OPE O on O.iddoss = A.idop
+left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
+left outer JOIN MCFACTURE F ON F.idfact = FM.idfact 
+left outer join MCSITUATION S ON S.idsitu = A.idfact
+left outer join MCOD OD ON OD.id = A.idfact
+left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
+WHERE A.typemnt = 'F' and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null 
+)
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,IMP.idpiece
+,IMP.libpiece
+,IMP.datepiece
+,IMP.datepaie
+,'D' as type
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
+Union
+select
+ FAC.idop 
+,FAC.idprog
+,FAC.idposte
+,FAC.mntttc as mnt
+,FAC.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,FAC.idpiece
+,FAC.libpiece
+,FAC.datepiece
+,FAC.datepaie
+,FAC.type
+from FAC
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte</ORACLE>
             <ENTERPRISEDB />
           </Vue>
           <Vue id="VIEW_FIN_PREVU_IMPORT" libelle="View_Fin_Prevu_Import" nomInterne="View_Fin_Prevu_Import" visibilite="N" abstraite="N">
@@ -7224,216 +7441,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
             </ORACLE>
             <ENTERPRISEDB />
           </Vue>
-          <Vue id="VIEW_FACTSIT_PAYE" libelle="View_FactSit_Paye" nomInterne="View_FactSit_Paye" visibilite="N" abstraite="N">
-            <Champs>
-              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
-              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
-              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-            </Champs>
-            <SQLSERVER>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              RETENU
-              as
-              (
-              select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte,idprog
-              union
-              select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte
-              ),
-              S_IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntht,dtcompta as dateflux ,numfact as idpiece,lib as libpiece ,dtimport as datepiece
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'F' and OPE.exportgf=0 and dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)
-              group by idop,idposte,dtcompta,numfact,lib,dtimport
-              ),
-              IMP
-              as
-              (
-              select
-              I.idop
-              ,I.idprog
-              ,I.idposte
-              ,I.mntttc
-              ,I.dtcompta as dateflux
-              ,I.numfact as idpiece
-              ,I.lib as libpiece
-              ,I.dtimport as datepiece
-              from MCIMPORTGF I
-              JOIN OPE O ON O.iddoss = I.idop
-              WHERE I.typenreg = 'F' and O.exportgf=0
-              union
-              select * from S_IMP
-              ),
-              FAC
-              as
-              (
-              select
-              A.idop
-              ,A.idprog
-              ,A.idposte
-              ,A.mntttc - COALESCE(R.ret,0) as mntttc
-              ,COALESCE(S.dtpaie,F.dtpaie,OD.dateod) as dateflux
-              ,A.idfact as idpiece
-              ,COALESCE(S.lib,F.lib,OD.lib) as libpiece
-              ,COALESCE(S.dtsitu,F.dtfact,OD.dateod) as datepiece
-              from MCAFFECBUD A
-              join OPE O on O.iddoss = A.idop
-              left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
-              left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
-              left outer join MCSITUATION S ON S.idsitu = A.idfact
-              left outer join MCOD OD ON OD.id = A.idfact
-              left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-              WHERE A.typemnt = 'F'
-              and  O.exportgf=-1
-              and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null
-              and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  CONVERT(VARCHAR(10),GETDATE(),111)
-              and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null)
-              )
-
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,IMP.idpiece
-              ,IMP.libpiece
-              ,IMP.datepiece
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
-              Union
-              select
-              FAC.idop
-              ,FAC.idprog
-              ,FAC.idposte
-              ,FAC.mntttc as mnt
-              ,FAC.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,FAC.idpiece
-              ,FAC.libpiece
-              ,FAC.datepiece
-              from FAC
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte
-            </SQLSERVER>
-            <ORACLE>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              RETENU
-              as
-              (
-              select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte,idprog
-              union
-              select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
-              group by idfact,idposte
-              ),
-              S_IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntht,dtcompta as dateflux ,numfact as idpiece,lib as libpiece ,dtimport as datepiece
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'F' and OPE.exportgf=0 AND dtcompta &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')
-              group by idop,idposte,dtcompta,numfact,lib,dtimport
-              ),
-              IMP
-              as
-              (
-              select
-              I.idop
-              ,I.idprog
-              ,I.idposte
-              ,I.mntttc
-              ,I.dtcompta as dateflux
-              ,I.numfact as idpiece
-              ,I.lib as libpiece
-              ,I.dtimport as datepiece
-              from MCIMPORTGF I
-              JOIN OPE O ON O.iddoss = I.idop
-              WHERE I.typenreg = 'F' and O.exportgf=0
-              union
-              select * from S_IMP
-              ),
-              FAC
-              as
-              (
-              select
-              A.idop
-              ,A.idprog
-              ,A.idposte
-              ,A.mntttc - COALESCE(R.ret,0) as mntttc
-              ,COALESCE(S.dtpaie,F.dtpaie,OD.dateod) as dateflux
-              ,A.idfact as idpiece
-              ,COALESCE(S.lib,F.lib,OD.lib) as libpiece
-              ,COALESCE(S.dtsitu,F.dtfact,OD.dateod) as datepiece
-              from MCAFFECBUD A
-              join OPE O on O.iddoss = A.idop
-              left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
-              left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
-              left outer join MCSITUATION S ON S.idsitu = A.idfact
-              left outer join MCOD OD ON OD.id = A.idfact
-              left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-              WHERE A.typemnt = 'F'
-              and  O.exportgf=-1
-              and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null
-              and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  TO_CHAR(SYSDATE,'YYYY/MM/DD')
-              and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null)
-              )
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,IMP.idpiece
-              ,IMP.libpiece
-              ,IMP.datepiece
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
-              Union
-              select
-              FAC.idop
-              ,FAC.idprog
-              ,FAC.idposte
-              ,FAC.mntttc as mnt
-              ,FAC.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,FAC.idpiece
-              ,FAC.libpiece
-              ,FAC.datepiece
-              from FAC
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte
-            </ORACLE>
-            <ENTERPRISEDB />
-          </Vue>
-        </Vues>
+		  </Vues>
         <Relations>
           <Associations>
             <Association active="O" nomInterne="Associe">

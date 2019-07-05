@@ -2094,6 +2094,11 @@
 				"title": "Code procédure tranche commerciale",
 				"type": "string",
 				"maxLength": 32
+			},
+			"prixfige": {
+				"title": "prixFige",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -10391,14 +10396,14 @@
 		"title": "Flux tréso opération",
 		"type": "object",
 		"primaryKey": [
-			"idop",
-			"typeflux",
-			"typemnt",
-			"idposte",
-			"idprog",
-			"dateflux"
+			"id"
 		],
 		"properties": {
+			"id": {
+				"title": "Id",
+				"type": "string",
+				"maxLength": 32
+			},
 			"idop": {
 				"title": "IdOp",
 				"type": "string",
