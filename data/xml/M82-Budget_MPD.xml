@@ -51,6 +51,7 @@
         <ValCodification valeur="AIDEVENTE" lbval="Aide à la vente" visibilite="N" />
         <ValCodification valeur="FD" lbval="Frais financiers" visibilite="N" />
         <ValCodification valeur="FR" lbval="Recettes financiers" visibilite="N" />		
+        <ValCodification valeur="PF" lbval="Produits financiers" visibilite="N" />		
       </Codification>
       <Codification idcodif="BudModeRepart" lbcodif="Mode répartition budget" taille="10" visibilite="N">
         <ValCodification valeur="CONSO" lbval="Consolidation" visibilite="N" />
@@ -4980,6 +4981,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="cmnt" libelle="Commentaire" nomInterne="Commentaire" clePrimaire="N" obligatoire="N" type="String" taille="4000" crypte="N" />
               <Champ id="mntinitial" libelle="Montant initial" nomInterne="MntInitial" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="mntregul" libelle="Montant régularisé" nomInterne="MntRegul" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+			  <Champ id="codetva" libelle="Code TVA" nomInterne="CodeTVA" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
             </Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -5063,7 +5065,8 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="mntfisc" libelle="MntFisc" nomInterne="MntFisc" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="posposte" libelle="Position poste budgétaire" nomInterne="PosPoste" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />			  
               <Champ id="forcer" libelle="Forcer" nomInterne="Forcer" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
-              <Champ id="dtcompta" libelle="Date de comptabilisation" nomInterne="DateComptabilisation" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />			  
+              <Champ id="dtcompta" libelle="Date de comptabilisation" nomInterne="DateComptabilisation" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />		
+			  <Champ id="codetva" libelle="Code TVA" nomInterne="CodeTVA" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
 			</Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -5601,6 +5604,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="mntht" libelle="Montant HT" nomInterne="MntHT" clePrimaire="N" obligatoire="O" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="mntttc" libelle="Montant TTC" nomInterne="MntTTC" clePrimaire="N" obligatoire="O" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="mnttva" libelle="Montant TVA" nomInterne="MntTVA" clePrimaire="N" obligatoire="O" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
+			  <Champ id="codetva" libelle="Code TVA" nomInterne="CodeTVA" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
             </Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -5965,6 +5969,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
 			  <Champ id="methodecomptaacc" libelle="MethodeComptaAcc" nomInterne="MethodeComptaAcc" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="typecommacc" libelle="TypeCommAcc" nomInterne="TypeCommAcc" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
 			  <Champ id="refeng" libelle="Engagement" nomInterne="RefEngage" clePrimaire="N" obligatoire="N" type="String" taille="50" crypte="N" />
+              <Champ id="idtranchetravaux" libelle="Code tranche travaux" nomInterne="IdTrancheTravaux" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />			  
             </Champs>
             <Indexes />
           </Table>
@@ -5975,6 +5980,14 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
             </Champs>
             <Indexes />
 		  </Table>
+		  <Table id="ECCODEJOURNAL" libelle="ECCodeJournal" nomInterne="ECCodeJournal" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="code" libelle="Code" nomInterne="Code" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
+              <Champ id="libelle" libelle="Libelle" nomInterne="Libelle" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
+              <Champ id="typejournal" libelle="Type Journal" nomInterne="TypeJournal" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
 		</Tables>
         <Relations>
           <Associations>
@@ -6920,10 +6933,10 @@ A.idop
 ,A.idprog
 ,A.idposte
 ,A.mntttc - COALESCE(R.ret,0) as mntttc
-,COALESCE(S.dtpaie,F.dtpaie,OD.dateod) as dateflux
+,COALESCE(S.dtpaie,F.dtpaie,OD.dateod,A.dtcompta) as dateflux
 ,A.idfact as idpiece
-,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
-,COALESCE(S.dtsitu,F.dtfact,OD.dateod) as datepiece 
+,COALESCE(S.lib,F.lib,OD.lib,FI.libelle) as libpiece 
+,COALESCE(S.dtsitu,F.dtfact,OD.dateod,FI.dateFin) as datepiece 
  ,COALESCE(F.type,'D') as type
 from MCAFFECBUD A
 join OPE O on O.iddoss = A.idop
@@ -6931,11 +6944,12 @@ left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
 left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
 left outer join MCSITUATION S ON S.idsitu = A.idfact
 left outer join MCOD OD ON OD.id = A.idfact
+left outer JOIN CPFraisFi FI ON FI.code = A.idcontrat 
 left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-WHERE A.typemnt = 'F'
+WHERE A.typemnt in ('F','A')
  and  O.exportgf=-1
- and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null 
- and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  CONVERT(VARCHAR(10),GETDATE(),111)
+ and (CASE WHEN (FI.id IS NOT NULL) THEN A.dtcompta WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null 
+ and (CASE WHEN (FI.id IS NOT NULL) THEN A.dtcompta WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  CONVERT(VARCHAR(10),GETDATE(),111) 
  and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null)
 )
 
@@ -6966,7 +6980,8 @@ select
 ,FAC.type
 from FAC
 LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
-LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte</SQLSERVER>
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte
+</SQLSERVER>
             <ORACLE>WITH 
 OPE
 as
@@ -7019,10 +7034,10 @@ A.idop
 ,A.idprog
 ,A.idposte
 ,A.mntttc - COALESCE(R.ret,0) as mntttc
-,COALESCE(S.dtpaie,F.dtpaie,OD.dateod) as dateflux
+,COALESCE(S.dtpaie,F.dtpaie,OD.dateod,A.dtcompta) as dateflux
 ,A.idfact as idpiece
-,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
-,COALESCE(S.dtsitu,F.dtfact,OD.dateod) as datepiece 
+,COALESCE(S.lib,F.lib,OD.lib,FI.libelle) as libpiece 
+,COALESCE(S.dtsitu,F.dtfact,OD.dateod,FI.dateFin) as datepiece 
 ,COALESCE(F.type,'D') as type
 from MCAFFECBUD A
 join OPE O on O.iddoss = A.idop
@@ -7030,11 +7045,12 @@ left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
 left outer JOIN MCFACTURE F ON F.idfact = FM.idfact
 left outer join MCSITUATION S ON S.idsitu = A.idfact
 left outer join MCOD OD ON OD.id = A.idfact
+left outer JOIN CPFraisFi FI ON FI.code = A.idcontrat 
 left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-WHERE A.typemnt = 'F'
+WHERE A.typemnt in ('F','A')
  and  O.exportgf=-1
- and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null 
- and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  TO_CHAR(SYSDATE,'YYYY/MM/DD')
+ and (CASE WHEN (FI.id IS NOT NULL) THEN A.dtcompta WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) is not null 
+ and (CASE WHEN (FI.id IS NOT NULL) THEN A.dtcompta WHEN (OD.id IS NOT NULL) THEN OD.dateod WHEN (S.idsitu IS null) THEN F.dtpaie ELSE  S.dtpaie END) &lt;=  TO_CHAR(SYSDATE,'YYYY/MM/DD')
  and (CASE WHEN (OD.id IS NOT NULL) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null)
 )
 select IMP.idop 
@@ -7064,9 +7080,10 @@ select
 ,FAC.type
 from FAC
 LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
-LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte</ORACLE>
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte
+</ORACLE>
             <ENTERPRISEDB />
-          </Vue>		  
+          </Vue>
           <Vue id="VIEW_FACTSIT_PREVUE" libelle="View_FactSit_Prevue" nomInterne="View_FactSit_Prevue" visibilite="N" abstraite="N">
             <Champs>
               <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
@@ -7135,10 +7152,10 @@ A.idop
 ,A.idprog
 ,A.idposte
 ,A.mntttc - COALESCE(R.ret,0) as mntttc
-,CASE WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
+,CASE WHEN (FI.code is not null) THEN  CONVERT(VARCHAR(10),CAST(FI.dateFin AS datetime),111) WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
 ,A.idfact as idpiece
-,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
-,COALESCE(S.lib,F.lib,OD.lib) as datepiece
+,COALESCE(S.lib,F.lib,OD.lib,Fi.libelle) as libpiece 
+,COALESCE(S.dtsitu,F.dtfact,OD.dateod,CONVERT(VARCHAR(10),CAST(FI.dateFin as datetime),111)) as datepiece
 ,CASE WHEN (OD.id is not null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END as dtannul
 ,CASE
 WHEN (OD.id is not null) THEN (CASE WHEN (OD.dateod &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN OD.dateod ELSE null END)
@@ -7150,10 +7167,11 @@ from MCAFFECBUD A
 join OPE O on O.iddoss = A.idop
 left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
 left outer JOIN MCFACTURE F ON F.idfact = FM.idfact 
+left outer JOIN CPFraisFi FI ON FI.code = A.idcontrat 
 left outer join MCSITUATION S ON S.idsitu = A.idfact
 left outer join MCOD OD ON OD.id = A.idfact
 left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-WHERE A.typemnt = 'F' and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null
+WHERE A.typemnt in ('F','A') and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null
 )
 select IMP.idop 
 ,IMP.idprog
@@ -7239,10 +7257,10 @@ A.idop
 ,A.idprog
 ,A.idposte
 ,A.mntttc - COALESCE(R.ret,0) as mntttc
-,CASE WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
+,CASE WHEN (FI.code is not null) THEN  TO_CHAR(FI.dateFin,'YYYY/MM/DD') WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
 ,A.idfact as idpiece
-,COALESCE(S.lib,F.lib,OD.lib) as libpiece 
-,COALESCE(S.lib,F.lib,OD.lib) as datepiece
+,COALESCE(S.lib,F.lib,OD.lib,Fi.libelle) as libpiece 
+,COALESCE(S.lib,F.lib,OD.lib,TO_CHAR(FI.dateFin,'YYYY/MM/DD')) as datepiece
 ,CASE WHEN (OD.id is not null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END as dtannul
 ,CASE
  WHEN (OD.id is not null) THEN (CASE WHEN (OD.dateod &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN OD.dateod ELSE null END)
@@ -7250,14 +7268,16 @@ A.idop
  (CASE WHEN (F.dtpaie &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN F.dtpaie ELSE null END) ELSE 
  (CASE WHEN (S.dtpaie &lt;= TO_CHAR(SYSDATE,'YYYY/MM/DD')) THEN S.dtpaie ELSE null END) END as datepaie
 ,COALESCE(F.type,'D') as type
+,COALESCE('D') as type
  from MCAFFECBUD A
 join OPE O on O.iddoss = A.idop
 left outer join MCFACTMNT FM On FM.idmnt = A.idmnt
 left outer JOIN MCFACTURE F ON F.idfact = FM.idfact 
+left outer JOIN CPFraisFi FI ON FI.code = A.idcontrat 
 left outer join MCSITUATION S ON S.idsitu = A.idfact
 left outer join MCOD OD ON OD.id = A.idfact
 left outer join RETENU R ON R.idfact = A.idfact and R.idposte = A.idposte and R.idprog = A.idprog
-WHERE A.typemnt = 'F' and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null 
+WHERE A.typemnt in ('F','A') and  O.exportgf=-1 and CASE WHEN (OD.id IS NOT null) THEN OD.dateannul WHEN (S.idsitu IS null) THEN F.dtannul ELSE  S.dtannul END is null 
 )
 select IMP.idop 
 ,IMP.idprog
