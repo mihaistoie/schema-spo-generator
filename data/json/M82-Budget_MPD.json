@@ -5840,6 +5840,11 @@
 				"title": "Montant régularisé",
 				"type": "string",
 				"maxLength": 32
+			},
+			"codetva": {
+				"title": "Code TVA",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -6298,6 +6303,11 @@
 				"title": "Date de comptabilisation",
 				"type": "string",
 				"format": "mgdis-date"
+			},
+			"codetva": {
+				"title": "Code TVA",
+				"type": "string",
+				"maxLength": 10
 			}
 		}
 	},
@@ -8119,6 +8129,11 @@
 				"title": "Montant TVA",
 				"type": "number",
 				"decimals": 4
+			},
+			"codetva": {
+				"title": "Code TVA",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -9476,6 +9491,11 @@
 				"title": "Engagement",
 				"type": "string",
 				"maxLength": 50
+			},
+			"idtranchetravaux": {
+				"title": "Code tranche travaux",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -9525,6 +9545,32 @@
 					"idpc"
 				],
 				"invRel": "eCListeTypeCompteList"
+			}
+		}
+	},
+	"ECCODEJOURNAL": {
+		"tableName": "ECCODEJOURNAL",
+		"name": "SpoECCodeJournal",
+		"title": "ECCodeJournal",
+		"type": "object",
+		"primaryKey": [
+			"code"
+		],
+		"properties": {
+			"code": {
+				"title": "Code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libelle": {
+				"title": "Libelle",
+				"type": "string",
+				"maxLength": 200
+			},
+			"typejournal": {
+				"title": "Type Journal",
+				"type": "string",
+				"maxLength": 10
 			}
 		}
 	},
