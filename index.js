@@ -19,6 +19,8 @@ const generateTable = (schemas, table, nameSpace) => {
     if (table.Champs && table.Champs.length && table.Champs[0].Champ && table.Champs[0].Champ.length) {
         table.Champs[0].Champ.forEach((fieldJson) => {
             const field = fieldJson.$;
+            if (field.id === 'xmlcontext')
+                return;
             if (field.clePrimaire === 'O')
                 td.primaryKey.push(field.id);
             const fd = {
@@ -71,9 +73,7 @@ const generateTable = (schemas, table, nameSpace) => {
         const r1 = t1.$;
         const r2 = t2.$;
         if (!schemas[r1.idTable] || !schemas[r2.idTable]) {
-            console.log(r1.idTable);
-            console.log(r2.idTable);
-            throw 'Invalid relation ' + JSON.stringify(association, null, '\t');
+            return;
         }
         let isMany1 = r2.cardinaliteMax === '*';
         let isMany2 = r1.cardinaliteMax === '*';
@@ -153,8 +153,20 @@ const generateTable = (schemas, table, nameSpace) => {
             }
         });
     }
+    else {
+        console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXX');
+        console.log(root);
+        if (root && root.length) {
+            root.forEach((table) => {
+                generateTable(schemas, table, nameSpace);
+            });
+        }
+    }
 }, generateTablePropertiesSchema = (schemas, json, nameSpace, entryName) => {
-    const root = json.root[entryName];
+    let root = json.root[entryName];
+    if (!root) {
+        root = json.root;
+    }
     generateTables(schemas, root, nameSpace);
 }, generateTableRelations = (schemas, json, nameSpace, entryName) => {
     const root = json.root[entryName];

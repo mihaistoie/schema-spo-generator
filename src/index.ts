@@ -22,6 +22,8 @@ const
 
             table.Champs[0].Champ.forEach((fieldJson: any) => {
                 const field = fieldJson.$;
+                if (field.id === 'xmlcontext')
+                    return;
                 if (field.clePrimaire === 'O')
                     td.primaryKey.push(field.id);
                 const fd: any = {
@@ -73,9 +75,7 @@ const
             const r1 = t1.$;
             const r2 = t2.$;
             if (!schemas[r1.idTable] || !schemas[r2.idTable]) {
-                console.log(r1.idTable)
-                console.log(r2.idTable)
-                throw 'Invalid relation ' + JSON.stringify(association, null, '\t')
+                return;
             }
             let isMany1 = r2.cardinaliteMax === '*';
             let isMany2 = r1.cardinaliteMax === '*';
@@ -171,11 +171,24 @@ const
                 }
 
             })
+        } else {
+            delete root.$;
+            console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXX');
+            console.log(root);
+            if (root && root.length) {
+                root.forEach((table: any) => {
+                    generateTable(schemas, table, nameSpace)
+
+                });
+            }
         }
 
     },
     generateTablePropertiesSchema = (schemas: any, json: any, nameSpace: string, entryName: string): void => {
-        const root = json.root[entryName];
+        let root = json.root[entryName];
+        if (!root) {
+            root = json.root;
+        }
         generateTables(schemas, root, nameSpace);
 
     },
