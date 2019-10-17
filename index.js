@@ -26,6 +26,7 @@ const generateTable = (schemas, table, nameSpace) => {
             const fd = {
                 title: field.libelle.replace(/'/g, '’'),
             };
+            field.type = field.type || 'String';
             if (field.type === 'String') {
                 fd.type = 'string';
                 if (field.taille) {
@@ -154,6 +155,7 @@ const generateTable = (schemas, table, nameSpace) => {
         });
     }
     else {
+        delete root.$;
         console.log('XXXXXXXXXXXXXXXXXXXXXXXXXXX');
         console.log(root);
         if (root && root.length) {

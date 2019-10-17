@@ -1197,11 +1197,6 @@
 				"title": "Statut d’opération",
 				"type": "string",
 				"maxLength": 32
-			},
-			"uniteloyer": {
-				"title": "Unité Loyer",
-				"type": "string",
-				"maxLength": 32
 			}
 		}
 	},

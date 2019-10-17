@@ -29,6 +29,7 @@ const
                 const fd: any = {
                     title: field.libelle.replace(/'/g, '’'),
                 };
+                field.type = field.type || 'String';
                 if (field.type === 'String') {
                     fd.type = 'string';
                     if (field.taille) {

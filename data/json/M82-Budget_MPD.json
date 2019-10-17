@@ -2012,6 +2012,11 @@
 				"title": "Etape Budgétaire",
 				"type": "string",
 				"maxLength": 10
+			},
+			"idproced": {
+				"title": "idProced",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -2220,6 +2225,16 @@
 				"title": "posteRV",
 				"type": "string",
 				"maxLength": 32
+			},
+			"postetvamarge": {
+				"title": "posteTvaMarge",
+				"type": "string",
+				"maxLength": 32
+			},
+			"postedation": {
+				"title": "PosteDation",
+				"type": "string",
+				"maxLength": 32
 			}
 		}
 	},
@@ -2251,6 +2266,56 @@
 				"title": "posteDepenseAV",
 				"type": "string",
 				"maxLength": 32
+			}
+		}
+	},
+	"PARAMLIENPROC": {
+		"tableName": "PARAMLIENPROC",
+		"name": "SpoParamLienProc",
+		"title": "ParamLienProc",
+		"type": "object",
+		"primaryKey": [
+			"id"
+		],
+		"properties": {
+			"id": {
+				"title": "Id",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproc1": {
+				"title": "IdProc1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape1": {
+				"title": "IdEtape1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction1": {
+				"title": "IdAction1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproc2": {
+				"title": "IdProc2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape2": {
+				"title": "IdEtape2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction2": {
+				"title": "IdAction2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"priorite": {
+				"title": "Priorite",
+				"type": "integer"
 			}
 		}
 	},
@@ -2814,6 +2879,11 @@
 				"title": "Position poste contrôle budgétaire",
 				"type": "string",
 				"maxLength": 32
+			},
+			"inclustvamarge": {
+				"title": "inclusTvaMarge",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -3233,6 +3303,11 @@
 				"title": "IdentiqueModeleBudget",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"inclustvamarge": {
+				"title": "inclusTvaMarge",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -3591,6 +3666,16 @@
 				"title": "Chemin comptable",
 				"type": "string",
 				"maxLength": 256
+			},
+			"optiontva": {
+				"title": "optionTva",
+				"type": "string",
+				"maxLength": 10
+			},
+			"repartvamarge": {
+				"title": "reparTvaMarge",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -4468,6 +4553,31 @@
 				"title": "RatioSurfVB",
 				"type": "number",
 				"decimals": 4
+			},
+			"optiontva": {
+				"title": "optionTva",
+				"type": "string",
+				"maxLength": 10
+			},
+			"repartvamarge": {
+				"title": "reparTvaMarge",
+				"type": "string",
+				"maxLength": 10
+			},
+			"postetvamarge": {
+				"title": "posteTvaMarge",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "idProced",
+				"type": "string",
+				"maxLength": 32
+			},
+			"postedation": {
+				"title": "PosteDation",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -4765,6 +4875,36 @@
 			},
 			"sdpav": {
 				"title": "Surface de plancher avant",
+				"type": "number",
+				"decimals": 2
+			},
+			"catvamargeht": {
+				"title": "caTvaMargeHT",
+				"type": "number",
+				"decimals": 2
+			},
+			"catvamargettc": {
+				"title": "caTvaMargeTTC",
+				"type": "number",
+				"decimals": 2
+			},
+			"deptvamarge": {
+				"title": "depTvaMarge",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttvamarge": {
+				"title": "mntTvaMarge",
+				"type": "number",
+				"decimals": 2
+			},
+			"cadationht": {
+				"title": "CADationHT",
+				"type": "number",
+				"decimals": 2
+			},
+			"cadationttc": {
+				"title": "CADationTTC",
 				"type": "number",
 				"decimals": 2
 			}
@@ -8882,9 +9022,9 @@
 			"idpc",
 			"typecpt",
 			"idposte",
-			"tva",
 			"gh",
-			"mois"
+			"mois",
+			"idtva"
 		],
 		"properties": {
 			"idpc": {
@@ -8925,6 +9065,11 @@
 				"title": "Compte stockable",
 				"type": "string",
 				"maxLength": 10
+			},
+			"idtva": {
+				"title": "IdTva",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -10385,15 +10530,17 @@
 	"FLUXTRESOHISTO": {
 		"tableName": "FLUXTRESOHISTO",
 		"name": "SpoFluxTresoHisto",
-		"title": "FluxTresoHisto",
+		"title": "Historique flux trésorerie",
 		"type": "object",
 		"primaryKey": [
-			"idop",
-			"idprog",
-			"idposte",
-			"dateflux"
+			"id"
 		],
 		"properties": {
+			"id": {
+				"title": "Id",
+				"type": "string",
+				"maxLength": 32
+			},
 			"idop": {
 				"title": "IdOp",
 				"type": "string",

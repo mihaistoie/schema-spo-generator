@@ -1,0 +1,3580 @@
+{
+	"DOMTIERS": {
+		"tableName": "DOMTIERS",
+		"name": "SpoTiers",
+		"title": "Tiers",
+		"type": "object",
+		"primaryKey": [
+			"iddoss"
+		],
+		"properties": {
+			"iddoss": {
+				"title": "Code  tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbdoss": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idref": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"objdos": {
+				"title": "Objet",
+				"type": "string",
+				"maxLength": 255
+			},
+			"iddossreg": {
+				"title": "Est le fils de",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Numéro d’ordre du dossier fils",
+				"type": "integer"
+			},
+			"idtiers": {
+				"title": "Code tiers principal",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nom": {
+				"title": "Nom Raison Sociale",
+				"type": "string",
+				"maxLength": 50
+			},
+			"prenom": {
+				"title": "Prénom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"lbsecond": {
+				"title": "Libellé complémentaire",
+				"type": "string",
+				"maxLength": 200
+			},
+			"morale": {
+				"title": "Personnalité juridique morale",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idactiv": {
+				"title": "Type d’activité"
+			},
+			"idgenre": {
+				"title": "Genre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"siren": {
+				"title": "SIREN",
+				"type": "string",
+				"maxLength": 9
+			},
+			"nic": {
+				"title": "NIC",
+				"type": "string",
+				"maxLength": 5
+			},
+			"codeexterne": {
+				"title": "Code externe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtnais": {
+				"title": "Date de naissance",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"lieunais": {
+				"title": "Lieu de naissance",
+				"type": "string",
+				"maxLength": 200
+			},
+			"nationalite": {
+				"title": "Nationalité",
+				"type": "string",
+				"maxLength": 2
+			},
+			"sexe": {
+				"title": "Sexe"
+			},
+			"situfamille": {
+				"title": "Situation familiale"
+			},
+			"sigle": {
+				"title": "Sigle",
+				"type": "string",
+				"maxLength": 20
+			},
+			"logo": {
+				"title": "Logo",
+				"type": "string",
+				"maxLength": 250
+			},
+			"pays": {
+				"title": "Pays",
+				"type": "string",
+				"maxLength": 2
+			},
+			"devise": {
+				"title": "Devise",
+				"type": "string",
+				"maxLength": 3
+			},
+			"financeur": {
+				"title": "Tiers financeur",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"moralprive": {
+				"title": "Personne morale privée ou publique",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"adressesList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoAdresses",
+				"localFields": [
+					"idtiers"
+				],
+				"foreignFields": [
+					"iddoss"
+				],
+				"invRel": "tiers"
+			},
+			"assurancesList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoAssurances",
+				"localFields": [
+					"idtiers"
+				],
+				"foreignFields": [
+					"iddoss"
+				],
+				"invRel": "tiers"
+			},
+			"representantUnTiersList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoRepresentantUnTiers",
+				"localFields": [
+					"codtiers"
+				],
+				"foreignFields": [
+					"iddoss"
+				],
+				"invRel": "tiers"
+			},
+			"genre": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoGenre",
+				"localFields": [
+					"idgenre"
+				],
+				"foreignFields": [
+					"idgenre"
+				],
+				"invRel": "tiersList"
+			},
+			"ribList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoRib",
+				"localFields": [
+					"idtiers"
+				],
+				"foreignFields": [
+					"iddoss"
+				],
+				"invRel": "tiers"
+			},
+			"tiersFusionnesList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoTiersFusionnes",
+				"localFields": [
+					"idtiers"
+				],
+				"foreignFields": [
+					"iddoss"
+				],
+				"invRel": "tiers"
+			}
+		}
+	},
+	"TICODADM": {
+		"tableName": "TICODADM",
+		"name": "SpoCodesAdministratifs",
+		"title": "Codes administratifs",
+		"type": "object",
+		"primaryKey": [
+			"idcodadm"
+		],
+		"properties": {
+			"idcodadm": {
+				"title": "Nature du code administratif",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbcodadm": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 80
+			},
+			"testuniq": {
+				"title": "Test d’unicité",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"TITIERSREF": {
+		"tableName": "TITIERSREF",
+		"name": "SpoCodeAdministratifsTiers",
+		"title": "Code administratifs des tiers",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"idcodadm"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code  tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcodadm": {
+				"title": "Nature du code administratif",
+				"type": "string",
+				"maxLength": 32
+			},
+			"codadm": {
+				"title": "Code administratif",
+				"type": "string",
+				"maxLength": 30
+			}
+		}
+	},
+	"TIADRESSE": {
+		"tableName": "TIADRESSE",
+		"name": "SpoAdresses",
+		"title": "Adresses",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"idadresse"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code  tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idadresse": {
+				"title": "Code adresse"
+			},
+			"lbadresse": {
+				"title": "Libellé adresse",
+				"type": "string",
+				"maxLength": 80
+			},
+			"rue1": {
+				"title": "Rue 1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"rue2": {
+				"title": "Rue 2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"rue3": {
+				"title": "Rue 3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"codepostal": {
+				"title": "Code postal",
+				"type": "string",
+				"maxLength": 10
+			},
+			"nomville": {
+				"title": "Ville",
+				"type": "string",
+				"maxLength": 50
+			},
+			"cedex": {
+				"title": "Type cedex"
+			},
+			"numcedex": {
+				"title": "Numéro de cedex",
+				"type": "string",
+				"maxLength": 5
+			},
+			"pays": {
+				"title": "Zone libre de saisie (pays)",
+				"type": "string",
+				"maxLength": 40
+			},
+			"rue4": {
+				"title": "Code postal +Ville + Cedex",
+				"type": "string",
+				"maxLength": 100
+			},
+			"telephone": {
+				"title": "Téléphone",
+				"type": "string",
+				"maxLength": 25
+			},
+			"telport": {
+				"title": "Téléphone portable",
+				"type": "string",
+				"maxLength": 25
+			},
+			"telex": {
+				"title": "Autre Telephone",
+				"type": "string",
+				"maxLength": 25
+			},
+			"fax": {
+				"title": "Fax",
+				"type": "string",
+				"maxLength": 25
+			},
+			"adremail": {
+				"title": "Adresse Internet",
+				"type": "string",
+				"maxLength": 64
+			},
+			"sitewww": {
+				"title": "Site Internet",
+				"type": "string",
+				"maxLength": 100
+			},
+			"teledomi": {
+				"title": "Téléphone personnel",
+				"type": "string",
+				"maxLength": 25
+			},
+			"numvoie": {
+				"title": "Numéro de voie",
+				"type": "string",
+				"maxLength": 4
+			},
+			"compnumvoie": {
+				"title": "Complément numéro de voie",
+				"type": "string",
+				"maxLength": 20
+			},
+			"boitepost": {
+				"title": "Boite postale",
+				"type": "string",
+				"maxLength": 20
+			},
+			"natvoie": {
+				"title": "Nature de la voie"
+			},
+			"urnorigine": {
+				"title": "URN Origine de l’adresse",
+				"type": "string",
+				"maxLength": 200
+			}
+		},
+		"relations": {
+			"tiers": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoTiers",
+				"localFields": [
+					"iddoss"
+				],
+				"foreignFields": [
+					"idtiers"
+				],
+				"invRel": "adressesList"
+			}
+		}
+	},
+	"TIAGIT": {
+		"tableName": "TIAGIT",
+		"name": "SpoAgitComme",
+		"title": "Agit comme",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"idtyptiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code  tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtyptiers": {
+				"title": "Code type de tiers",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"TIASSUR": {
+		"tableName": "TIASSUR",
+		"name": "SpoAssurances",
+		"title": "Assurances",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"idpolice",
+			"typgar"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code  tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpolice": {
+				"title": "Numéro de police",
+				"type": "string",
+				"maxLength": 20
+			},
+			"typgar": {
+				"title": "Type de garantie"
+			},
+			"banque": {
+				"title": "Code compagnie d’assurance",
+				"type": "string",
+				"maxLength": 40
+			},
+			"dtvalid": {
+				"title": "Date de validité",
+				"type": "string",
+				"maxLength": 10
+			}
+		},
+		"relations": {
+			"tiers": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoTiers",
+				"localFields": [
+					"iddoss"
+				],
+				"foreignFields": [
+					"idtiers"
+				],
+				"invRel": "assurancesList"
+			}
+		}
+	},
+	"TIREPRES": {
+		"tableName": "TIREPRES",
+		"name": "SpoRepresentantUnTiers",
+		"title": "Représentant(s) d’un tiers",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"typerepres",
+			"idcompteur"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typerepres": {
+				"title": "Type de représentant"
+			},
+			"idcompteur": {
+				"title": "Compteur",
+				"type": "integer"
+			},
+			"titre": {
+				"title": "Titre",
+				"type": "string",
+				"maxLength": 100
+			},
+			"genre": {
+				"title": "Genre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nom": {
+				"title": "Nom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"prenom": {
+				"title": "Prénom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"telephone": {
+				"title": "Téléphone",
+				"type": "string",
+				"maxLength": 25
+			},
+			"telport": {
+				"title": "Téléphone portable",
+				"type": "string",
+				"maxLength": 25
+			},
+			"telex": {
+				"title": "Télex",
+				"type": "string",
+				"maxLength": 25
+			},
+			"fax": {
+				"title": "Fax",
+				"type": "string",
+				"maxLength": 25
+			},
+			"adremail": {
+				"title": "Adresse Internet",
+				"type": "string",
+				"maxLength": 64
+			},
+			"adr1": {
+				"title": "Adresse 1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"adr2": {
+				"title": "Adresse 2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"adr3": {
+				"title": "Adresse 3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"adr4": {
+				"title": "Adresse 4",
+				"type": "string",
+				"maxLength": 100
+			},
+			"codtiers": {
+				"title": "Code tiers associé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"sitewww": {
+				"title": "Site Internet",
+				"type": "string",
+				"maxLength": 100
+			},
+			"teledomi": {
+				"title": "Téléphone personnel",
+				"type": "string",
+				"maxLength": 25
+			},
+			"actif": {
+				"title": "Actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"fonction": {
+				"title": "Fonction"
+			},
+			"codepostal": {
+				"title": "Code postal",
+				"type": "string",
+				"maxLength": 10
+			},
+			"nomville": {
+				"title": "Ville",
+				"type": "string",
+				"maxLength": 50
+			},
+			"cedex": {
+				"title": "Type cedex"
+			},
+			"numcedex": {
+				"title": "Numéro de cedex",
+				"type": "string",
+				"maxLength": 5
+			},
+			"pays": {
+				"title": "Zone libre de saisie (pays)",
+				"type": "string",
+				"maxLength": 40
+			},
+			"numvoie": {
+				"title": "Numéro de voie",
+				"type": "string",
+				"maxLength": 4
+			},
+			"compnumvoie": {
+				"title": "Complément numéro de voie",
+				"type": "string",
+				"maxLength": 20
+			},
+			"boitepost": {
+				"title": "Boite postale",
+				"type": "string",
+				"maxLength": 20
+			},
+			"service": {
+				"title": "Service",
+				"type": "string",
+				"maxLength": 80
+			},
+			"principal": {
+				"title": "Principal",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dtvaliddeb": {
+				"title": "Date entrée en fonction",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtvalidfin": {
+				"title": "Date sortie de fonction",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		},
+		"relations": {
+			"tiers": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoTiers",
+				"localFields": [
+					"iddoss"
+				],
+				"foreignFields": [
+					"codtiers"
+				],
+				"invRel": "representantUnTiersList"
+			},
+			"genre": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoGenre",
+				"localFields": [
+					"idgenre"
+				],
+				"foreignFields": [
+					"genre"
+				],
+				"invRel": "representantUnTiersList"
+			}
+		}
+	},
+	"TIGENRE": {
+		"tableName": "TIGENRE",
+		"name": "SpoGenre",
+		"title": "Genre",
+		"type": "object",
+		"primaryKey": [
+			"idgenre"
+		],
+		"properties": {
+			"idgenre": {
+				"title": "Code genre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"abregenre": {
+				"title": "Abréviation genre",
+				"type": "string",
+				"maxLength": 10
+			},
+			"lbgenre": {
+				"title": "Libellé genre",
+				"type": "string",
+				"maxLength": 80
+			}
+		},
+		"relations": {
+			"representantUnTiersList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoRepresentantUnTiers",
+				"localFields": [
+					"genre"
+				],
+				"foreignFields": [
+					"idgenre"
+				],
+				"invRel": "genre"
+			},
+			"tiersList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoTiers",
+				"localFields": [
+					"idgenre"
+				],
+				"foreignFields": [
+					"idgenre"
+				],
+				"invRel": "genre"
+			}
+		}
+	},
+	"TIPAYS": {
+		"tableName": "TIPAYS",
+		"name": "SpoPays",
+		"title": "Pays",
+		"type": "object",
+		"primaryKey": [
+			"idpays"
+		],
+		"properties": {
+			"idpays": {
+				"title": "Code du pays",
+				"type": "string",
+				"maxLength": 2
+			},
+			"lbpays": {
+				"title": "Libellé du pays",
+				"type": "string",
+				"maxLength": 80
+			},
+			"numpays": {
+				"title": "Numéro du pays",
+				"type": "string",
+				"maxLength": 3
+			},
+			"nationalite": {
+				"title": "Nationalité",
+				"type": "string",
+				"maxLength": 80
+			},
+			"iddevise": {
+				"title": "Code de la devise",
+				"type": "string",
+				"maxLength": 3
+			}
+		}
+	},
+	"TIRIB": {
+		"tableName": "TIRIB",
+		"name": "SpoRib",
+		"title": "Rib",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"rangrib"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code  tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rangrib": {
+				"title": "Rang Rib",
+				"type": "string",
+				"maxLength": 2
+			},
+			"lbintitule": {
+				"title": "Intitulé du compte",
+				"type": "string",
+				"maxLength": 120
+			},
+			"banque": {
+				"title": "Nom de la banque",
+				"type": "string",
+				"maxLength": 40
+			},
+			"agence": {
+				"title": "Agence",
+				"type": "string",
+				"maxLength": 40
+			},
+			"coderib": {
+				"title": "RIB (code banque + code guichet + numéro de compte + clé RIB)",
+				"type": "string",
+				"maxLength": 23
+			},
+			"gestfin": {
+				"title": "Code bancaire hors SEPA",
+				"type": "string",
+				"maxLength": 30
+			},
+			"neutral": {
+				"title": "Actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"modreg": {
+				"title": "Mode de règlement",
+				"type": "string",
+				"maxLength": 2
+			},
+			"codiban": {
+				"title": "RIB International",
+				"type": "string",
+				"maxLength": 34
+			},
+			"bic": {
+				"title": "Code BIC",
+				"type": "string",
+				"maxLength": 11
+			},
+			"typdomibanq": {
+				"title": "Type de Domiciliation Bancaire"
+			}
+		},
+		"relations": {
+			"tiers": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoTiers",
+				"localFields": [
+					"iddoss"
+				],
+				"foreignFields": [
+					"idtiers"
+				],
+				"invRel": "ribList"
+			}
+		}
+	},
+	"TITYPTIERS": {
+		"tableName": "TITYPTIERS",
+		"name": "SpoTypeTiers",
+		"title": "Type de tiers",
+		"type": "object",
+		"primaryKey": [
+			"idtyptiers"
+		],
+		"properties": {
+			"idtyptiers": {
+				"title": "Code type de tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbtyptiers": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 100
+			},
+			"morale": {
+				"title": "Personnalité juridique morale",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"actif": {
+				"title": "Actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"uniq": {
+				"title": "Unique sur le tiers",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comptiers": {
+				"title": "Complément",
+				"type": "string",
+				"maxLength": 30
+			},
+			"idaction": {
+				"title": "Action rattachée",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typededroit": {
+				"title": "Type de droit"
+			}
+		}
+	},
+	"TIFUSION": {
+		"tableName": "TIFUSION",
+		"name": "SpoTiersFusionnes",
+		"title": "Tiers fusionnés",
+		"type": "object",
+		"primaryKey": [
+			"idpivot",
+			"idtiers"
+		],
+		"properties": {
+			"idpivot": {
+				"title": "Tiers pivot",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtiers": {
+				"title": "Tiers à fusionner",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtfusion": {
+				"title": "Date de la fusion",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"lbtiers": {
+				"title": "Libellé du tiers fusionné",
+				"type": "string",
+				"maxLength": 200
+			}
+		},
+		"relations": {
+			"tiers": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoTiers",
+				"localFields": [
+					"iddoss"
+				],
+				"foreignFields": [
+					"idtiers"
+				],
+				"invRel": "tiersFusionnesList"
+			}
+		}
+	},
+	"TIFUSIONTAB": {
+		"tableName": "TIFUSIONTAB",
+		"name": "SpoTablesATraiterFusion",
+		"title": "Tables à traiter pour fusion",
+		"type": "object",
+		"primaryKey": [
+			"nomtab",
+			"nomcol"
+		],
+		"properties": {
+			"nomtab": {
+				"title": "Code table",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomcol": {
+				"title": "Code colonne",
+				"type": "string",
+				"maxLength": 32
+			},
+			"suppr": {
+				"title": "A supprimer",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"modif": {
+				"title": "A modifier",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"TIDOMETABL": {
+		"tableName": "TIDOMETABL",
+		"name": "SpoEtablissementsDomiciliataires",
+		"title": "Etablissements domiciliataires",
+		"type": "object",
+		"primaryKey": [
+			"idetabl"
+		],
+		"properties": {
+			"idetabl": {
+				"title": "Code établissement",
+				"type": "string",
+				"maxLength": 5
+			},
+			"lbetabl": {
+				"title": "Libellé long établissement",
+				"type": "string",
+				"maxLength": 40
+			},
+			"lcetabl": {
+				"title": "Libellé court établissement",
+				"type": "string",
+				"maxLength": 10
+			},
+			"bic": {
+				"title": "Code BIC",
+				"type": "string",
+				"maxLength": 11
+			},
+			"dtefindiffusion": {
+				"title": "Date de fin de diffusion",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		},
+		"relations": {
+			"guichetsDomiciliatairesList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoGuichetsDomiciliataires",
+				"localFields": [
+					"idetabl"
+				],
+				"foreignFields": [
+					"idetabl"
+				],
+				"invRel": "etablissementsDomiciliataires"
+			}
+		}
+	},
+	"TIDOMGUICHET": {
+		"tableName": "TIDOMGUICHET",
+		"name": "SpoGuichetsDomiciliataires",
+		"title": "Guichets domiciliataires",
+		"type": "object",
+		"primaryKey": [
+			"idetabl",
+			"idguichet"
+		],
+		"properties": {
+			"idetabl": {
+				"title": "Code établissement",
+				"type": "string",
+				"maxLength": 5
+			},
+			"idguichet": {
+				"title": "Code guichet",
+				"type": "string",
+				"maxLength": 5
+			},
+			"lbguichet": {
+				"title": "Libellé guichet",
+				"type": "string",
+				"maxLength": 20
+			},
+			"lbdomicil": {
+				"title": "Libellé domiciliation",
+				"type": "string",
+				"maxLength": 24
+			},
+			"bic": {
+				"title": "Code BIC",
+				"type": "string",
+				"maxLength": 11
+			},
+			"dtefindiffusion": {
+				"title": "Date de fin de diffusion",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		},
+		"relations": {
+			"etablissementsDomiciliataires": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoEtablissementsDomiciliataires",
+				"localFields": [
+					"idetabl"
+				],
+				"foreignFields": [
+					"idetabl"
+				],
+				"invRel": "guichetsDomiciliatairesList"
+			}
+		}
+	},
+	"FFCORNAF": {
+		"tableName": "FFCORNAF",
+		"name": "SpoCorrespondanceEntreCodesNAF",
+		"title": "Correspondance entre les codes NAF",
+		"type": "object",
+		"primaryKey": [
+			"idpere",
+			"idfils"
+		],
+		"properties": {
+			"idpere": {
+				"title": "Code NAF père",
+				"type": "string",
+				"maxLength": 4
+			},
+			"idfils": {
+				"title": "Code NAF fils",
+				"type": "string",
+				"maxLength": 4
+			},
+			"lbnaf": {
+				"title": "Libellé NAF fils",
+				"type": "string",
+				"maxLength": 250
+			}
+		}
+	},
+	"TIDEVISE": {
+		"tableName": "TIDEVISE",
+		"name": "SpoDevise",
+		"title": "Devise",
+		"type": "object",
+		"primaryKey": [
+			"iddevise"
+		],
+		"properties": {
+			"iddevise": {
+				"title": "Code de la devise",
+				"type": "string",
+				"maxLength": 3
+			},
+			"idnumerique": {
+				"title": "Numérique",
+				"type": "string",
+				"maxLength": 4
+			},
+			"lbdevise": {
+				"title": "Devise",
+				"type": "string",
+				"maxLength": 80
+			},
+			"symbole": {
+				"title": "Symbole",
+				"type": "string",
+				"maxLength": 3
+			},
+			"nbdecimales": {
+				"title": "Nombres de décimales",
+				"type": "integer"
+			},
+			"pariteeuro": {
+				"title": "Parité euro",
+				"type": "number",
+				"decimals": 6
+			}
+		}
+	},
+	"TICTASBUD": {
+		"tableName": "TICTASBUD",
+		"name": "SpoBudgetPatrimoineAssociation",
+		"title": "Budget - Patrimoine",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tasexe"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tasrec": {
+				"title": "Recettes",
+				"type": "number",
+				"decimals": 2
+			},
+			"tasdep": {
+				"title": "Dépenses",
+				"type": "number",
+				"decimals": 2
+			},
+			"tasadh": {
+				"title": "Adhésion",
+				"type": "number",
+				"decimals": 2
+			},
+			"tassubv": {
+				"title": "Subventionné",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"TICTASCAT": {
+		"tableName": "TICTASCAT",
+		"name": "SpoActionsUnTiersAssociation",
+		"title": "Actions réalisées annuelles d’un tiers",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tasexe"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tasactreal": {
+				"title": "Actions réalisées annuelles",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			}
+		}
+	},
+	"TICTASACTJ": {
+		"tableName": "TICTASACTJ",
+		"name": "SpoActionsJourUnTiersAssociation",
+		"title": "Actions réalisées journalières",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"idutil",
+			"tasdateheure"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutil": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasdateheure": {
+				"title": "Date et heure de l’action",
+				"type": "string",
+				"maxLength": 20
+			},
+			"tasactjour": {
+				"title": "Actions réalisées journalières",
+				"type": "string",
+				"maxLength": 600
+			}
+		}
+	},
+	"TICTASCON": {
+		"tableName": "TICTASCON",
+		"name": "SpoConventionUnTiersAssociation",
+		"title": "Convention d’un tiers",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"idconv"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idconv": {
+				"title": "Code convention",
+				"type": "string",
+				"maxLength": 32
+			},
+			"taslbconv": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 80
+			},
+			"tascodif": {
+				"title": "Codification",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasdtdval": {
+				"title": "Date de début de validité",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"tasdtfval": {
+				"title": "Date de fin de validité",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"descgen": {
+				"title": "Description générale",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"dtsignat": {
+				"title": "Date de signature",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"duree": {
+				"title": "Durée",
+				"type": "string",
+				"maxLength": 20
+			},
+			"observ": {
+				"title": "Observations",
+				"type": "string",
+				"maxLength": 255
+			},
+			"mtconv": {
+				"title": "Montant de la convention",
+				"type": "number",
+				"decimals": 2
+			},
+			"tasexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tastypact": {
+				"title": "Type d’acte"
+			},
+			"idconvcadre": {
+				"title": "Code convention cadre",
+				"type": "string",
+				"maxLength": 20
+			},
+			"iddomassocie": {
+				"title": "Code domaine du dossier associé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddossassocie": {
+				"title": "Code dossier associé",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"TICTASDBU": {
+		"tableName": "TICTASDBU",
+		"name": "SpoDetailBudgetAssociation",
+		"title": "Détail budget",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tasexe",
+			"tascat"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tascat": {
+				"title": "Catégorie"
+			},
+			"tastyp": {
+				"title": "Dépenses Recettes",
+				"type": "string",
+				"maxLength": 1
+			},
+			"tasmontant": {
+				"title": "Montant",
+				"type": "number",
+				"decimals": 2
+			},
+			"tasreg": {
+				"title": "Regroupements de catégorie",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"TICTASEFF": {
+		"tableName": "TICTASEFF",
+		"name": "SpoEffectifsAssociations",
+		"title": "Effectifs",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tasexe",
+			"tasmemb"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tasmemb": {
+				"title": "Type de membre"
+			},
+			"tasnb": {
+				"title": "Nombre",
+				"type": "number",
+				"decimals": 2
+			},
+			"tascotis": {
+				"title": "Cotisation",
+				"type": "number",
+				"decimals": 2
+			},
+			"tasobserv": {
+				"title": "Observation",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			}
+		}
+	},
+	"TICTASGEN": {
+		"tableName": "TICTASGEN",
+		"name": "SpoComplementAssociation",
+		"title": "Complément association",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasobjet": {
+				"title": "Objet association",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"tasgeree": {
+				"title": "Collectivité",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tasnat": {
+				"title": "Nature"
+			},
+			"tasdjo": {
+				"title": "Date de publication au JO",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"codethem": {
+				"title": "Code thème",
+				"type": "string",
+				"maxLength": 32
+			},
+			"domthem": {
+				"title": "Domaine d’intervention"
+			},
+			"natjur": {
+				"title": "Nature juridique"
+			},
+			"numenr": {
+				"title": "Numéro d’enregistrement en préfecture",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rup": {
+				"title": "Reconnue d’utilité publique (RUP)",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"typrup": {
+				"title": "Type RUP",
+				"type": "string",
+				"maxLength": 80
+			},
+			"numagrem": {
+				"title": "Numéro d’agrément",
+				"type": "string",
+				"maxLength": 20
+			},
+			"organisme": {
+				"title": "Organisme qui a agréé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtdecpref": {
+				"title": "Date de déclaration en préfecture",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtmodstat": {
+				"title": "Date de dernière modification des statuts",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtdissol": {
+				"title": "Date de dissolution",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtpubreg": {
+				"title": "Date de publication de l’inscription au registre des associations",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"activprinc": {
+				"title": "Activités principales réalisées",
+				"type": "string",
+				"maxLength": 200
+			}
+		},
+		"relations": {
+			"themes": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoThemes",
+				"localFields": [
+					"codethem"
+				],
+				"foreignFields": [
+					"codethem"
+				],
+				"invRel": "complementAssociationList"
+			}
+		}
+	},
+	"TICTASPAT": {
+		"tableName": "TICTASPAT",
+		"name": "SpoPatrimoine",
+		"title": "Patrimoine",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tasexe"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasexe": {
+				"title": "Exercice"
+			},
+			"tasinfo": {
+				"title": "Description",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			}
+		}
+	},
+	"TICTASSBX": {
+		"tableName": "TICTASSBX",
+		"name": "SpoSubventionsExterieuresAssociation",
+		"title": "Subventions extérieures",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tasexe",
+			"tasorga"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tasexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tasorga": {
+				"title": "Organisme subventionneur"
+			},
+			"tassub": {
+				"title": "Montant",
+				"type": "number",
+				"decimals": 2
+			},
+			"dtsub": {
+				"title": "Date de la subvention",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"libcomp": {
+				"title": "Libellé complémentaire",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"TICTASHCN": {
+		"tableName": "TICTASHCN",
+		"name": "SpoHistoriqueChangementsNomAssociations",
+		"title": "Historique des changements de nom",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"dtchgnom"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtchgnom": {
+				"title": "Date du changement de nom",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"nomancien": {
+				"title": "Ancien nom",
+				"type": "string",
+				"maxLength": 200
+			},
+			"obschgnom": {
+				"title": "Observations",
+				"type": "string",
+				"maxLength": 255
+			}
+		}
+	},
+	"TICTASHCA": {
+		"tableName": "TICTASHCA",
+		"name": "SpoHistoriqueConseilsAdministrationAssociations",
+		"title": "Historique des conseils d’administration",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"dthisto",
+			"idcompteur"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dthisto": {
+				"title": "Date d’historisation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idcompteur": {
+				"title": "Compteur",
+				"type": "integer"
+			},
+			"titre": {
+				"title": "Titre"
+			},
+			"codtiers": {
+				"title": "Code tiers membre du CA",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"TICTCOMMUNCLA": {
+		"tableName": "TICTCOMMUNCLA",
+		"name": "SpoClassificationSyndicatCommuneCommune",
+		"title": "Classification syndicat de commune",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"exeref",
+			"tcoclatyp"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exeref": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tcoclatyp": {
+				"title": "Code type classification"
+			},
+			"tcocla": {
+				"title": "Code classification",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"classifications": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoClassifications",
+				"localFields": [
+					"typclass",
+					"class"
+				],
+				"foreignFields": [
+					"tcoclatyp",
+					"tcocla"
+				],
+				"invRel": "classificationSyndicatCommuneCommuneList"
+			}
+		}
+	},
+	"TICTCOEFF": {
+		"tableName": "TICTCOEFF",
+		"name": "SpoEffectifsCommunes",
+		"title": "Effectifs  Communes",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tcoeffexe",
+			"tcoefftyp"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tcoeffexe": {
+				"title": "Année",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tcoefftyp": {
+				"title": "Type d’effectifs"
+			},
+			"tcoeffnb": {
+				"title": "Nombre",
+				"type": "number",
+				"decimals": 2
+			},
+			"tcoobserv": {
+				"title": "Observation",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			}
+		}
+	},
+	"TICTCOEQU": {
+		"tableName": "TICTCOEQU",
+		"name": "SpoEquipementsCommune",
+		"title": "Equipements commune",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tcoequ"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tcoequ": {
+				"title": "Code équipement",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tcoequpre": {
+				"title": "Présence",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tcoequnb": {
+				"title": "Nombre",
+				"type": "number",
+				"decimals": 2
+			}
+		},
+		"relations": {
+			"equipements": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoEquipements",
+				"localFields": [
+					"codeequ"
+				],
+				"foreignFields": [
+					"tcoequ"
+				],
+				"invRel": "equipementsCommuneList"
+			}
+		}
+	},
+	"TICTCOFIN": {
+		"tableName": "TICTCOFIN",
+		"name": "SpoDonneesFinancieresCommune",
+		"title": "Données financières commune",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tcofinexe",
+			"tcofindon"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tcofinexe": {
+				"title": "Année de référence",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tcofindon": {
+				"title": "Donnée financière"
+			},
+			"tcofinnb": {
+				"title": "Montant",
+				"type": "number",
+				"decimals": 5
+			}
+		}
+	},
+	"TICTCOPOP": {
+		"tableName": "TICTCOPOP",
+		"name": "SpoPopulationsCommune",
+		"title": "Populations commune",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tcopopsrc",
+			"tcopopexe",
+			"tcopoptyp"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tcopopsrc": {
+				"title": "Source d’information"
+			},
+			"tcopopexe": {
+				"title": "Année",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tcopoptyp": {
+				"title": "Type de population"
+			},
+			"tcopopnb": {
+				"title": "Nombre",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"TICTCOTSE": {
+		"tableName": "TICTCOTSE",
+		"name": "SpoTiersSecondairesCommune",
+		"title": "Tiers secondaires commune",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tcotseno"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tcotseno": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"tcotsefonc": {
+				"title": "Fonction"
+			},
+			"tcotseident": {
+				"title": "Identification Tiers",
+				"type": "string",
+				"maxLength": 200
+			},
+			"tcotsecomp": {
+				"title": "Complément",
+				"type": "string",
+				"maxLength": 100
+			}
+		}
+	},
+	"TICTCOURB": {
+		"tableName": "TICTCOURB",
+		"name": "SpoDonneesUrbanismesCommune",
+		"title": "Données urbanismes commune",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tcourbexe",
+			"tcourbdon"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tcourbexe": {
+				"title": "Année",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tcourbdon": {
+				"title": "Donnée urbanisme"
+			},
+			"tcournb": {
+				"title": "Nombre",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"TICTENT": {
+		"tableName": "TICTENT",
+		"name": "SpoDonneesGeneralesEntreprise",
+		"title": "Données générales entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenobjet": {
+				"title": "Objet de l’entreprise",
+				"type": "string",
+				"maxLength": 600
+			},
+			"tenenseigne": {
+				"title": "Enseigne",
+				"type": "string",
+				"maxLength": 200
+			},
+			"tensigle": {
+				"title": "Champ non utilisé",
+				"type": "string",
+				"maxLength": 8
+			},
+			"tennaf17": {
+				"title": "NAF 17 (NAF 2003)",
+				"type": "string",
+				"maxLength": 1
+			},
+			"tennaf700": {
+				"title": "NAF 700 (NAF 2003)",
+				"type": "string",
+				"maxLength": 5
+			},
+			"tenactireal": {
+				"title": "Activité réelle",
+				"type": "string",
+				"maxLength": 600
+			},
+			"tenactidb": {
+				"title": "Activité D et B",
+				"type": "string",
+				"maxLength": 600
+			},
+			"tenfiliere": {
+				"title": "Filière économique"
+			},
+			"tenzone": {
+				"title": "Zone économique",
+				"type": "string",
+				"maxLength": 600
+			},
+			"tenannu": {
+				"title": "Annuaire"
+			},
+			"tencomment": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 600
+			}
+		}
+	},
+	"TICTENACT": {
+		"tableName": "TICTENACT",
+		"name": "SpoActivitesEntreprise",
+		"title": "Activités entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"codsect",
+			"codact"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"codsect": {
+				"title": "Secteurs"
+			},
+			"codact": {
+				"title": "Activités",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenactprinc": {
+				"title": "Activité principale",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tencomment": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 600
+			}
+		},
+		"relations": {
+			"activites": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActivites",
+				"localFields": [
+					"codsect",
+					"codact"
+				],
+				"foreignFields": [
+					"codsect",
+					"codact"
+				],
+				"invRel": "activitesEntrepriseList"
+			}
+		}
+	},
+	"TICTENCAP": {
+		"tableName": "TICTENCAP",
+		"name": "SpoActionnaireEntreprise",
+		"title": "Complément Actionnaire entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tencapno"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tencapno": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"tenpourcdet": {
+				"title": "Pourcentage détenu",
+				"type": "number",
+				"decimals": 2
+			},
+			"tencapmont": {
+				"title": "Montant",
+				"type": "number",
+				"decimals": 2
+			},
+			"tendatnaiss": {
+				"title": "Date de naissance",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"tenlieunaiss": {
+				"title": "Lieu de naissance",
+				"type": "string",
+				"maxLength": 60
+			},
+			"tencomment": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 600
+			}
+		}
+	},
+	"TICTENEFF": {
+		"tableName": "TICTENEFF",
+		"name": "SpoEffectifsEntreprise",
+		"title": "Effectifs entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tenexe",
+			"teneff"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"teneff": {
+				"title": "Type d’effectif"
+			},
+			"teneffnb": {
+				"title": "Nombre",
+				"type": "number",
+				"decimals": 2
+			},
+			"tencontrat": {
+				"title": "Contrat aidé",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tenorigine": {
+				"title": "Origine de la saisie"
+			},
+			"tencomment": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 600
+			}
+		}
+	},
+	"TICTENFIN": {
+		"tableName": "TICTENFIN",
+		"name": "SpoDonneesFinancieresEntreprise",
+		"title": "Données financières entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tenexe",
+			"tenfin"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenexe": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tenfin": {
+				"title": "Type de données"
+			},
+			"tenmontant": {
+				"title": "Montant",
+				"type": "number",
+				"decimals": 2
+			},
+			"tensigne": {
+				"title": "Classification",
+				"type": "string",
+				"maxLength": 1
+			},
+			"tendeff": {
+				"title": "Date de clôture",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"tenorigine": {
+				"title": "Origine de la saisie"
+			}
+		}
+	},
+	"TICTENGEN": {
+		"tableName": "TICTENGEN",
+		"name": "SpoComplementEntreprise",
+		"title": "Informations juridiques entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenvilleimm": {
+				"title": "Ville d’immatriculation",
+				"type": "string",
+				"maxLength": 60
+			},
+			"tenlettreimm": {
+				"title": "Lettre d’immatriculation"
+			},
+			"tendep": {
+				"title": "Département",
+				"type": "string",
+				"maxLength": 3
+			},
+			"tenregcm": {
+				"title": "Registre des métiers",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tenregcc": {
+				"title": "Registre du commerce",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tendebact": {
+				"title": "Début d’activité",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"tenadrsiege": {
+				"title": "Adresse du siège",
+				"type": "string",
+				"maxLength": 100
+			},
+			"tenconj": {
+				"title": "Conjoint collaborateur",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tenorigent": {
+				"title": "Origine de l’entreprise"
+			},
+			"tenformjur": {
+				"title": "Forme juridique"
+			},
+			"tenobjent": {
+				"title": "Objet de l’entreprise",
+				"type": "string",
+				"maxLength": 600
+			},
+			"tenmsa": {
+				"title": "Mutualité Sociale Agricole",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tencat": {
+				"title": "Catégorie de tiers"
+			},
+			"tennregcm": {
+				"title": "Numéro Registre des métiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tennregcc": {
+				"title": "Numéro Registre du commerce",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tennation": {
+				"title": "Nationalité de l’entreprise",
+				"type": "string",
+				"maxLength": 50
+			},
+			"tendtinst": {
+				"title": "Date d’installation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"tenmotinst": {
+				"title": "Motif de l’installation"
+			},
+			"tencporig": {
+				"title": "Code postal d’origine",
+				"type": "string",
+				"maxLength": 10
+			},
+			"tendtferm": {
+				"title": "Date de fermeture",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"tenmotferm": {
+				"title": "Motif de la fermeture"
+			},
+			"tencomment": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 600
+			},
+			"numtvaintracom": {
+				"title": "N° TVA intracommunautaire",
+				"type": "string",
+				"maxLength": 14
+			},
+			"regimetva": {
+				"title": "Régime de TVA"
+			},
+			"tribunalcom": {
+				"title": "Tribunal de commerce",
+				"type": "string",
+				"maxLength": 80
+			},
+			"tendtimmatregcm": {
+				"title": "Date d’immatriculation RM",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"tendtimmatregcc": {
+				"title": "Date d’immatriculation RCS",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"TICTENTSE": {
+		"tableName": "TICTENTSE",
+		"name": "SpoTiersSecondairesEntreprise",
+		"title": "Tiers secondaires entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"tentseno"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tentseno": {
+				"title": "Numéro d’ordre",
+				"type": "string",
+				"maxLength": 4
+			},
+			"tentsefonc": {
+				"title": "Fonction"
+			},
+			"tentseident": {
+				"title": "Identifiant",
+				"type": "string",
+				"maxLength": 200
+			},
+			"tentsecomp": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 100
+			}
+		}
+	},
+	"TICTENADR": {
+		"tableName": "TICTENADR",
+		"name": "SpoAdresseComplementaireEntreprise",
+		"title": "Complément adresse entreprise",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenmail": {
+				"title": "Mailing"
+			},
+			"tenemail": {
+				"title": "E-mailing"
+			},
+			"codrivoli": {
+				"title": "Code Rivoli",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenquartier": {
+				"title": "Quartier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenbati": {
+				"title": "Bâtiment",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tenheberg": {
+				"title": "Hébergement Spécifique",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tencomment": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 600
+			}
+		}
+	},
+	"TICTGRCOEXE": {
+		"tableName": "TICTGRCOEXE",
+		"name": "SpoCommunesAppartenantAGroupe",
+		"title": "Communes appartenant à un groupe",
+		"type": "object",
+		"primaryKey": [
+			"idtiers",
+			"exeref",
+			"idcom"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exeref": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"idcom": {
+				"title": "Code tiers commune adhérente",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"TICTXXACT": {
+		"tableName": "TICTXXACT",
+		"name": "SpoActivites",
+		"title": "Activités",
+		"type": "object",
+		"primaryKey": [
+			"codsect",
+			"codact"
+		],
+		"properties": {
+			"codsect": {
+				"title": "Code secteur"
+			},
+			"codact": {
+				"title": "Code activité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libact": {
+				"title": "Activité",
+				"type": "string",
+				"maxLength": 60
+			}
+		},
+		"relations": {
+			"activitesEntrepriseList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActivitesEntreprise",
+				"localFields": [
+					"codsect",
+					"codact"
+				],
+				"foreignFields": [
+					"codsect",
+					"codact"
+				],
+				"invRel": "activites"
+			}
+		}
+	},
+	"TICTXXCLA": {
+		"tableName": "TICTXXCLA",
+		"name": "SpoClassifications",
+		"title": "Classifications",
+		"type": "object",
+		"primaryKey": [
+			"class",
+			"typclass"
+		],
+		"properties": {
+			"class": {
+				"title": "Code classification",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typclass": {
+				"title": "Code type"
+			},
+			"libclass": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 50
+			}
+		},
+		"relations": {
+			"classificationSyndicatCommuneCommuneList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoClassificationSyndicatCommuneCommune",
+				"localFields": [
+					"tcoclatyp",
+					"tcocla"
+				],
+				"foreignFields": [
+					"typclass",
+					"class"
+				],
+				"invRel": "classifications"
+			}
+		}
+	},
+	"TICTXXCOM": {
+		"tableName": "TICTXXCOM",
+		"name": "SpoComplementCourrier",
+		"title": "Complément courrier",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"desforme": {
+				"title": "Forme du courrier",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"desnom1": {
+				"title": "Titre 1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desnom2": {
+				"title": "Titre 2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desnom3": {
+				"title": "Titre 3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desnom4": {
+				"title": "Titre 4",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desadr1": {
+				"title": "Adresse 1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desadr2": {
+				"title": "Adresse 2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desadr3": {
+				"title": "Adresse 3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desadr4": {
+				"title": "Adresse 4",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desadr5": {
+				"title": "Adresse 5",
+				"type": "string",
+				"maxLength": 100
+			},
+			"despol": {
+				"title": "Formule de politesse",
+				"type": "string",
+				"maxLength": 200
+			},
+			"desapp": {
+				"title": "Formule d’appel",
+				"type": "string",
+				"maxLength": 100
+			},
+			"descp": {
+				"title": "Code postal",
+				"type": "string",
+				"maxLength": 10
+			},
+			"desville": {
+				"title": "Ville",
+				"type": "string",
+				"maxLength": 60
+			},
+			"desnom5": {
+				"title": "Titre 5",
+				"type": "string",
+				"maxLength": 100
+			},
+			"desnom6": {
+				"title": "Titre 6",
+				"type": "string",
+				"maxLength": 100
+			},
+			"telcorres": {
+				"title": "Téléphone correspondant",
+				"type": "string",
+				"maxLength": 25
+			},
+			"desobjet": {
+				"title": "Objet dans courrier",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"desentet": {
+				"title": "Entête adresse",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"article1": {
+				"title": "Article 1",
+				"type": "string",
+				"maxLength": 20
+			},
+			"article2": {
+				"title": "Article 2",
+				"type": "string",
+				"maxLength": 20
+			}
+		}
+	},
+	"TICTXXEQU": {
+		"tableName": "TICTXXEQU",
+		"name": "SpoEquipements",
+		"title": "Equipements",
+		"type": "object",
+		"primaryKey": [
+			"codeequ"
+		],
+		"properties": {
+			"codeequ": {
+				"title": "Code équipement",
+				"type": "string",
+				"maxLength": 32
+			},
+			"domequ": {
+				"title": "Domaine",
+				"type": "string",
+				"maxLength": 50
+			},
+			"libequ": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 50
+			}
+		},
+		"relations": {
+			"equipementsCommuneList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoEquipementsCommune",
+				"localFields": [
+					"tcoequ"
+				],
+				"foreignFields": [
+					"codeequ"
+				],
+				"invRel": "equipements"
+			}
+		}
+	},
+	"TICTXXTHE": {
+		"tableName": "TICTXXTHE",
+		"name": "SpoThemes",
+		"title": "Thèmes",
+		"type": "object",
+		"primaryKey": [
+			"codethem"
+		],
+		"properties": {
+			"codethem": {
+				"title": "Code thème",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libthem": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 70
+			},
+			"domthem": {
+				"title": "Domaine d’intervention"
+			}
+		},
+		"relations": {
+			"complementAssociationList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoComplementAssociation",
+				"localFields": [
+					"codethem"
+				],
+				"foreignFields": [
+					"codethem"
+				],
+				"invRel": "themes"
+			}
+		}
+	},
+	"TICTEFGEN": {
+		"tableName": "TICTEFGEN",
+		"name": "SpoComplementEtablissementFormation",
+		"title": "Complément établissement de formation",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tefproprio": {
+				"title": "Propriétaire"
+			},
+			"tefstatut": {
+				"title": "Statut de l’établissement"
+			},
+			"tefdep": {
+				"title": "Départemental",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"tefdtouv": {
+				"title": "Date d’ouverture",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"teftype": {
+				"title": "Type de l’établissement"
+			}
+		}
+	},
+	"TICTBANQ": {
+		"tableName": "TICTBANQ",
+		"name": "SpoComplementBanque",
+		"title": "Informations complémentaires sur les banques",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code du tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"bic": {
+				"title": "Code BIC",
+				"type": "string",
+				"maxLength": 11
+			}
+		}
+	},
+	"TICTCOMHAB": {
+		"tableName": "TICTCOMHAB",
+		"name": "SpoComplementComHab",
+		"title": "Informations complémentaires sur les communes",
+		"type": "object",
+		"primaryKey": [
+			"idtiers"
+		],
+		"properties": {
+			"idtiers": {
+				"title": "Code du tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"zone123": {
+				"title": "Zone I II III"
+			},
+			"zoneabc": {
+				"title": "Zone ABC"
+			}
+		}
+	},
+	"TIRISQUE": {
+		"tableName": "TIRISQUE",
+		"name": "Spo",
+		"title": "Analyse des risques",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code Domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code Dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cptcnonsub": {
+				"title": "Champ de compétences juridiquement non subventionnable",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comcptcnonsub": {
+				"title": "Com. Champ de compétences juridiquement non subventionnable",
+				"type": "string",
+				"maxLength": 200
+			},
+			"absint": {
+				"title": "Absence de tout intérêt des activités de l’association",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comabsint": {
+				"title": "Com. Absence de tout intérêt des activités de l’association",
+				"type": "string",
+				"maxLength": 200
+			},
+			"asstranspa": {
+				"title": "Association transparente",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comasstranspa": {
+				"title": "Com.Association transparente",
+				"type": "string",
+				"maxLength": 200
+			},
+			"majdroit": {
+				"title": "Majorité de droit ou de fait de la collectivité dans la direction de l’asso",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"commajdroit": {
+				"title": "Com. Maj. de droit ou de fait de la collectivité dans la direction de l’asso",
+				"type": "string",
+				"maxLength": 200
+			},
+			"majresspub": {
+				"title": "Majorité de ressources publiques  >= à 80% du budget de l’association",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"commajresspub": {
+				"title": "Com.Majorité de ressources publiques >= à 80% du budget de l’association",
+				"type": "string",
+				"maxLength": 200
+			},
+			"benefonpub": {
+				"title": "Bénéfices sur Fonds Publics",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"combenefonpub": {
+				"title": "Commentaires Bénéfices sur Fonds Publics",
+				"type": "string",
+				"maxLength": 200
+			},
+			"tribunaux": {
+				"title": "Importante mise en cause devant les tribunaux",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comtribunaux": {
+				"title": "Com.Importante mise en cause devant les tribunaux",
+				"type": "string",
+				"maxLength": 200
+			},
+			"contentieu": {
+				"title": "Contentieux avec ancienne équipe dirigeante",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comcontentieu": {
+				"title": "Com.Contentieux avec ancienne équipe dirigeante",
+				"type": "string",
+				"maxLength": 200
+			},
+			"aideleve": {
+				"title": "Aide collectivité > à 4573 €/an (subv + valorisation aides indirectes)",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comaideleve": {
+				"title": "Com. Aide collectivité > à 4573 €/an (subv + valorisation aides indirectes)",
+				"type": "string",
+				"maxLength": 200
+			},
+			"findegrad": {
+				"title": "Comptes financiers fortement dégradés",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comfindegrad": {
+				"title": "Com.Comptes financiers fortement dégradés",
+				"type": "string",
+				"maxLength": 200
+			},
+			"reducactiv": {
+				"title": "Tendance à une forte réduction des activités dans les dernières années",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comreducactiv": {
+				"title": "Com. Tendance à une forte réduction des activités dans les dernières années",
+				"type": "string",
+				"maxLength": 200
+			},
+			"exctreso": {
+				"title": "Excédents structurels de trésorerie",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comexctreso": {
+				"title": "Com.Excédents structurels de trésorerie",
+				"type": "string",
+				"maxLength": 200
+			},
+			"depfin": {
+				"title": "Forte dépendance financière >= à 50% du budget de l’asso",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comdepfin": {
+				"title": "Com Forte dépendance financière >= à 50% du budget de l’asso",
+				"type": "string",
+				"maxLength": 200
+			},
+			"presrepres": {
+				"title": "Grande présence du représentant dans les instances dirigeantes de l’asso",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"compresrepres": {
+				"title": "Com. présence du représentant dans les instances dirigeantes de l’asso",
+				"type": "string",
+				"maxLength": 200
+			},
+			"encrecet": {
+				"title": "Encaissement de recettes tarifaires ou d’exploitation de nature publique",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comencrecet": {
+				"title": "Com. Encaissement de recettes tarifaires ou d’exploitation de nature publique",
+				"type": "string",
+				"maxLength": 200
+			},
+			"nonrespeng": {
+				"title": "Non respect par l’asso d’engagements précédents pris",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"comnonrespeng": {
+				"title": "Com. Non respect par l’association d’engagements précédents",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"TICOMTIERS": {
+		"tableName": "TICOMTIERS",
+		"name": "SpoCommissionTiers",
+		"title": "Commissions par tiers",
+		"type": "object",
+		"primaryKey": [
+			"idcom",
+			"idtiers"
+		],
+		"properties": {
+			"idcom": {
+				"title": "Code commission",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"TIDONGEN": {
+		"tableName": "TIDONGEN",
+		"name": "SpoTiersDonneesGenerales",
+		"title": "Données générales du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ministere": {
+				"title": "Ministère de rattachement"
+			},
+			"statut": {
+				"title": "Statut"
+			},
+			"citemixte": {
+				"title": "Cité mixte régionale",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"greta": {
+				"title": "Siège de GRETA",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"accserv": {
+				"title": "Accueil de services communs",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idmandataire": {
+				"title": "Code du mandataire",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rne": {
+				"title": "Code RNE",
+				"type": "string",
+				"maxLength": 8
+			},
+			"academie": {
+				"title": "Académie de rattachement"
+			},
+			"typelycee": {
+				"title": "Type de lycée"
+			},
+			"citemixtedep": {
+				"title": "Cité mixte départementale",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"regfin": {
+				"title": "Régime financier"
+			},
+			"souscontrat": {
+				"title": "Sous contrat (pour les lycées privées)",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dsq": {
+				"title": "DSQ",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"zep": {
+				"title": "ZEP",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"TIREPRESENTANT": {
+		"tableName": "TIREPRESENTANT",
+		"name": "SpoTiersRepresentants",
+		"title": "Représentants du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"exercice",
+			"uidrepres"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"uidrepres": {
+				"title": "Guid du représentant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"titre": {
+				"title": "Titre"
+			},
+			"nomrep": {
+				"title": "Nom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"prenomrep": {
+				"title": "Prénom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"genrerep": {
+				"title": "Genre",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"TIDOTATION": {
+		"tableName": "TIDOTATION",
+		"name": "SpoTiersDotations",
+		"title": "Dotations du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"exercice"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice"
+			},
+			"mtdotprev": {
+				"title": "Montant dotation prévisionnelle (€)",
+				"type": "number",
+				"decimals": 2
+			},
+			"mtdodef": {
+				"title": "Montant dotation définitive (€)",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"TICHAUFFAGE": {
+		"tableName": "TICHAUFFAGE",
+		"name": "SpoTiersChauffage",
+		"title": "Chauffage du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"exploitant"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exploitant": {
+				"title": "Exploitant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"marche": {
+				"title": "Marché",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dtdeb": {
+				"title": "Date début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtfin": {
+				"title": "Date fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"agence": {
+				"title": "Agence",
+				"type": "string",
+				"maxLength": 50
+			},
+			"fioul": {
+				"title": "Type énergie Fioul",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"gaz": {
+				"title": "Type énergie Gaz",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"elec": {
+				"title": "Type énergie Electricité",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"bois": {
+				"title": "Type énergie Bois",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"geother": {
+				"title": "Type énergie Géothermie",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"solaire": {
+				"title": "Type énergie Solaire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"eautre": {
+				"title": "Type énergie Autre",
+				"type": "string",
+				"maxLength": 30
+			}
+		}
+	},
+	"TICAPACITE": {
+		"tableName": "TICAPACITE",
+		"name": "SpoTiersCapacite",
+		"title": "Capacité du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"exercice"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice"
+			},
+			"captheo": {
+				"title": "Capacité théorique",
+				"type": "integer"
+			},
+			"captheofille": {
+				"title": "Capacité internat théorique Fille",
+				"type": "integer"
+			},
+			"captheogarcon": {
+				"title": "Capacité internat théorique Garçon",
+				"type": "integer"
+			},
+			"nbdiv": {
+				"title": "Nombre total de division",
+				"type": "integer"
+			},
+			"nbplaces": {
+				"title": "Capacité théorique restauration : nombre maximun de places au restaurant",
+				"type": "integer"
+			},
+			"nbrepas": {
+				"title": "Capacité théorique restauration : nombre de repas maximun fabriqués",
+				"type": "integer"
+			}
+		}
+	},
+	"TICARTEFOR": {
+		"tableName": "TICARTEFOR",
+		"name": "SpoTiersCarteFormations",
+		"title": "Carte des formations du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"exercice",
+			"domprof",
+			"niveau",
+			"diplome"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"domprof": {
+				"title": "Domaine professionnel"
+			},
+			"niveau": {
+				"title": "Niveau"
+			},
+			"diplome": {
+				"title": "Diplôme"
+			},
+			"statutform": {
+				"title": "Statut de formation"
+			},
+			"effectif": {
+				"title": "Effectif",
+				"type": "integer"
+			},
+			"fluxmax": {
+				"title": "Flux Maxi",
+				"type": "integer"
+			},
+			"nbdivreel": {
+				"title": "Nombre de divisions réel",
+				"type": "integer"
+			},
+			"nbdivtheo": {
+				"title": "Nombre de divisions théorique",
+				"type": "integer"
+			}
+		}
+	},
+	"TIEFFECTIF": {
+		"tableName": "TIEFFECTIF",
+		"name": "SpoTiersEffectifs",
+		"title": "Effectifs du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"exercice"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice"
+			},
+			"effdempensf": {
+				"title": "Effectif demi-pensionnaire fille",
+				"type": "integer"
+			},
+			"effdempensg": {
+				"title": "Effectif demi-pensionnaire garçon",
+				"type": "integer"
+			},
+			"effextf": {
+				"title": "Effectif externe fille",
+				"type": "integer"
+			},
+			"effextg": {
+				"title": "Effectif externe garçon",
+				"type": "integer"
+			},
+			"effintf": {
+				"title": "Effectif interne fille",
+				"type": "integer"
+			},
+			"effintg": {
+				"title": "Effectif interne garçon",
+				"type": "integer"
+			},
+			"effintextf": {
+				"title": "Effectif interne externe fille",
+				"type": "integer"
+			},
+			"effintextg": {
+				"title": "Effectif interne externe garçon",
+				"type": "integer"
+			},
+			"effhebintf": {
+				"title": "Effectif élèves hébergés internes filles",
+				"type": "integer"
+			},
+			"effhebintg": {
+				"title": "Effectif élèves hébergés internes garçons",
+				"type": "integer"
+			},
+			"effhebdpf": {
+				"title": "Effectif élèves hébergés demi-pensionnaire filles",
+				"type": "integer"
+			},
+			"effhebdpg": {
+				"title": "Effectif élèves hébergés demi-pensionnaire garçons",
+				"type": "integer"
+			},
+			"effhebextintf": {
+				"title": "Effectif élèves hébergés à l’extérieur internes filles",
+				"type": "integer"
+			},
+			"effhebextintg": {
+				"title": "Effectif élèves hébergés à l’extérieur internes garçons",
+				"type": "integer"
+			},
+			"effhebextdpf": {
+				"title": "Effectif élèves hébergés à l’extérieur demi-pensionnaire filles",
+				"type": "integer"
+			},
+			"effhebextdpg": {
+				"title": "Effectif élèves hébergés à l’extérieur demi-pensionnaire garçons",
+				"type": "integer"
+			},
+			"effpostbacf": {
+				"title": "Effectif élèves Post-BAC interne fille",
+				"type": "integer"
+			},
+			"effpostbacg": {
+				"title": "Effectif élèves Post-BAC interne garçon",
+				"type": "integer"
+			}
+		}
+	},
+	"TISURFACE": {
+		"tableName": "TISURFACE",
+		"name": "SpoTiersSurface",
+		"title": "Surface du tiers lycée",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"exercice"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code du domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code du dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice"
+			},
+			"batie": {
+				"title": "Surface bâtie (SHON)",
+				"type": "number",
+				"decimals": 2
+			},
+			"estimbatie": {
+				"title": "Surface bâtie (SHON) éstimé",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"nbatie": {
+				"title": "Surface non bâtie",
+				"type": "number",
+				"decimals": 2
+			},
+			"estimnbatie": {
+				"title": "Surface non bâtie éstimé",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"TISUBNAT": {
+		"tableName": "TISUBNAT",
+		"name": "SpoSubventionsEnNatures",
+		"title": "Subventions en natures",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idelmt",
+			"exe"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code Domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code Dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idelmt": {
+				"title": "Code élément",
+				"type": "integer"
+			},
+			"exe": {
+				"title": "Exercice",
+				"type": "integer"
+			},
+			"typaidenat": {
+				"title": "Type d’aide en nature"
+			},
+			"lbaidenat": {
+				"title": "Objet",
+				"type": "string",
+				"maxLength": 100
+			},
+			"qtunit": {
+				"title": "Quantité",
+				"type": "number",
+				"decimals": 2
+			},
+			"pxunit": {
+				"title": "Prix Unitaire",
+				"type": "number",
+				"decimals": 2
+			},
+			"mteval": {
+				"title": "Montant évalué",
+				"type": "number",
+				"decimals": 2
+			},
+			"dtattrib": {
+				"title": "Attribution",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"notesubnat": {
+				"title": "Note",
+				"type": "string",
+				"maxLength": 600
+			}
+		}
+	}
+}
