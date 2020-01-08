@@ -32,7 +32,8 @@
     "test": "mocha  test/**/*.specs.js",
     "schema": "node ./bin/gen-schema.js  -xml data/xml/M82-Budget_MPD.xml -d data/json/M82-Budget_MPD.json",
     "schema-dom": "node ./bin/gen-schema.js  -xml data/xml/M75-BailleursSociaux_MPD_BASEREF.xml -d data/json/M75-BailleursSociaux_MPD_BASEREF.json",
-    "schema-tiers": "node ./bin/gen-schema.js  -xml data/xml/M01-Tiers_MPD_BASEREF.xml -d data/json/M01-Tiers_MPD_BASEREF.json"
+    "schema-tiers": "node ./bin/gen-schema.js  -xml data/xml/M01-Tiers_MPD_BASEREF.xml -d data/json/M01-Tiers_MPD_BASEREF.json",
+    "schema-n02": "node ./bin/gen-schema.js  -xml data/xml/N02-GestionDossier_MPD_BASEREF.xml -d data/json/N02-GestionDossier_MPD_BASEREF.json"
   },
   "bin": {
     "sop-schema-gen": "./app.js"

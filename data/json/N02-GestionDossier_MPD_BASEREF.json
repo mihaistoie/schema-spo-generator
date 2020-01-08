@@ -1,0 +1,3364 @@
+{
+	"INDOM": {
+		"tableName": "INDOM",
+		"name": "SpoDomaineInterrogationN02",
+		"title": "Domaine interrogation",
+		"type": "object",
+		"primaryKey": [
+			"iddom"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbdom": {
+				"title": "Libellé de domaine",
+				"type": "string",
+				"maxLength": 30
+			},
+			"actif": {
+				"title": "Actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"domaineInterrogationParametrageN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoDomaineInterrogationParametrageN02",
+				"localFields": [
+					"iddom"
+				],
+				"foreignFields": [
+					"iddom"
+				],
+				"invRel": "domaineInterrogationN02"
+			}
+		}
+	},
+	"INDOMPARA": {
+		"tableName": "INDOMPARA",
+		"name": "SpoDomaineInterrogationParametrageN02",
+		"title": "Domaine interrogation - Paramétrage",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"typeparam"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typeparam": {
+				"title": "Type de valeur",
+				"type": "string",
+				"maxLength": 30
+			},
+			"param": {
+				"title": "Valeur paramétrage",
+				"type": "string",
+				"maxLength": 255
+			}
+		},
+		"relations": {
+			"domaineInterrogationN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoDomaineInterrogationN02",
+				"localFields": [
+					"iddom"
+				],
+				"foreignFields": [
+					"iddom"
+				],
+				"invRel": "domaineInterrogationParametrageN02List"
+			}
+		}
+	},
+	"INDOSSIER": {
+		"tableName": "INDOSSIER",
+		"name": "SpoDossierN02",
+		"title": "Dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtcreat": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtmaj": {
+				"title": "Date de modification",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"hrmaj": {
+				"title": "Heure de mise à jour",
+				"type": "string",
+				"maxLength": 8
+			},
+			"idutimod": {
+				"title": "Modifié par",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtdeb": {
+				"title": "Date de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtdeb_th": {
+				"title": "Date de début théorique",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtfin": {
+				"title": "Date de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"etatdos": {
+				"title": "Etat du dossier"
+			},
+			"nvtrans": {
+				"title": "Est  transmis",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idserv": {
+				"title": "Code service",
+				"type": "integer"
+			},
+			"iddirect": {
+				"title": "Code direction",
+				"type": "integer"
+			},
+			"idutiproprio": {
+				"title": "Code utilisateur du propriétaire",
+				"type": "string",
+				"maxLength": 32
+			},
+			"bloque": {
+				"title": "Bloqué",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"hrfin": {
+				"title": "Heure de fin",
+				"type": "string",
+				"maxLength": 8
+			},
+			"dtarchiv": {
+				"title": "Date d’archivage",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"hrarchiv": {
+				"title": "Heure d’archivage",
+				"type": "string",
+				"maxLength": 8
+			},
+			"origine": {
+				"title": "Code de l’application externe qui à demandé la création du dossier"
+			},
+			"dossmasq": {
+				"title": "Dossier masqué en externe",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"historiqueTransfertsDossiersN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoHistoriqueTransfertsDossiersN02",
+				"localFields": [
+					"iddom",
+					"iddoss"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss"
+				],
+				"invRel": "dossierN02"
+			}
+		}
+	},
+	"INDOSSIERPLAN": {
+		"tableName": "INDOSSIERPLAN",
+		"name": "SpoDossierPlanN02",
+		"title": "Suivi de dossier en mode plan",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"image": {
+				"title": "Image du plan",
+				"type": "string",
+				"maxLength": 250
+			}
+		}
+	},
+	"INTRANSMIS": {
+		"tableName": "INTRANSMIS",
+		"name": "SpoHistoriqueTransfertsDossiersN02",
+		"title": "Historique des transferts de dossiers",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"notransf"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"notransf": {
+				"title": "Numéro de transfert",
+				"type": "integer"
+			},
+			"creatuti": {
+				"title": "Utilisateur créateur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"creatdir": {
+				"title": "Direction créatrice",
+				"type": "string",
+				"maxLength": 100
+			},
+			"creatser": {
+				"title": "Service créateur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"emetuti": {
+				"title": "Utilisateur émetteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"emetdir": {
+				"title": "Direction émettrice",
+				"type": "string",
+				"maxLength": 100
+			},
+			"emetser": {
+				"title": "Service émetteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"dtemet": {
+				"title": "Date de transfert",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"objtrans": {
+				"title": "Objet du transfert",
+				"type": "string",
+				"maxLength": 255
+			},
+			"receputi": {
+				"title": "Utilisateur récepteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"recepdir": {
+				"title": "Direction réceptrice",
+				"type": "string",
+				"maxLength": 100
+			},
+			"recepser": {
+				"title": "Service récepteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"dtrecep": {
+				"title": "Date de réception",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"proced": {
+				"title": "Procédure d’instruction",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idemetuti": {
+				"title": "Id Utilisateur émetteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idemetdir": {
+				"title": "Id Direction émettrice",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idemetser": {
+				"title": "Id Service émetteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idreceputi": {
+				"title": "Id Utilisateur récepteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idrecepdir": {
+				"title": "Id Direction réceptrice",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idrecepser": {
+				"title": "Id Service récepteur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idcreatuti": {
+				"title": "Id Utilisateur créateur",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idcreatdir": {
+				"title": "Id Direction créatrice",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idcreatser": {
+				"title": "Id Service créateur",
+				"type": "string",
+				"maxLength": 100
+			}
+		},
+		"relations": {
+			"dossierN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss"
+				],
+				"invRel": "historiqueTransfertsDossiersN02List"
+			}
+		}
+	},
+	"INTYPDOSS": {
+		"tableName": "INTYPDOSS",
+		"name": "SpoTypeDeDossierN02",
+		"title": "Type de dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idtype",
+			"composant",
+			"idproced",
+			"idclas",
+			"idpref"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtype": {
+				"title": "Code type",
+				"type": "string",
+				"maxLength": 32
+			},
+			"composant": {
+				"title": "Code composant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idclas": {
+				"title": "Code classeur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpref": {
+				"title": "Code prefixe",
+				"type": "string",
+				"maxLength": 20
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbtype": {
+				"title": "Libelle du type",
+				"type": "string",
+				"maxLength": 100
+			},
+			"actif": {
+				"title": "Actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INETATSUIVIDOS": {
+		"tableName": "INETATSUIVIDOS",
+		"name": "SpoEtatSuiviDossier",
+		"title": "Etat du suivi de dossier par utilisateur",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idutil"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutil": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"etatsuividos": {
+				"title": "Etat du suivi de dossier (contexte XML)",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			}
+		}
+	},
+	"INCORRELATION": {
+		"tableName": "INCORRELATION",
+		"name": "SpoCorrelationApplication",
+		"title": "Correlation applications",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"origineentite",
+			"typecorrelation"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"origineentite": {
+				"title": "Origine entité"
+			},
+			"typecorrelation": {
+				"title": "Type de corrélation"
+			},
+			"reference": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datecreation": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"INLOCALDOS": {
+		"tableName": "INLOCALDOS",
+		"name": "SpoLocalisationUnDossierN02",
+		"title": "Localisation d’un dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idlocal"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idlocal": {
+				"title": "Code localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"pctnumer": {
+				"title": "Pourcentage répartition numérateur",
+				"type": "number",
+				"decimals": 2
+			},
+			"pctdenom": {
+				"title": "Pourcentage répartition dénominateur",
+				"type": "integer"
+			}
+		}
+	},
+	"INREGRDOS": {
+		"tableName": "INREGRDOS",
+		"name": "SpoCriteresStatistiquesUnDossierN02",
+		"title": "Critères statistiques d’un dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idhier",
+			"ident",
+			"identmere"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idhier": {
+				"title": "Code hierarchie",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ident": {
+				"title": "Code entité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"identmere": {
+				"title": "Code entité mère",
+				"type": "string",
+				"maxLength": 32
+			},
+			"pctrepartition": {
+				"title": "Répartition",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"INREGRPROCED": {
+		"tableName": "INREGRPROCED",
+		"name": "SpoCriteresStatistiquesUneProcedureN02",
+		"title": "Critères statistiques d’une procedure",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idhier",
+			"ident",
+			"identmere"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idhier": {
+				"title": "Code hierarchie",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ident": {
+				"title": "Code entité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"identmere": {
+				"title": "Code entité mère",
+				"type": "string",
+				"maxLength": 32
+			},
+			"pctrepartition": {
+				"title": "Répartition",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"INHIERARPI": {
+		"tableName": "INHIERARPI",
+		"name": "SpoHierarchieAssociationParDomaineOuProcedure",
+		"title": "Association de Hierarchie sur un domaine ou procédure",
+		"type": "object",
+		"primaryKey": [
+			"idhier",
+			"iddom",
+			"idproced"
+		],
+		"properties": {
+			"idhier": {
+				"title": "Code hierarchie",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INACTEUR": {
+		"tableName": "INACTEUR",
+		"name": "SpoActeurN02",
+		"title": "Acteur",
+		"type": "object",
+		"primaryKey": [
+			"idacteur"
+		],
+		"properties": {
+			"idacteur": {
+				"title": "Code acteur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbacteur": {
+				"title": "Libellé acteur",
+				"type": "string",
+				"maxLength": 40
+			},
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"uniq": {
+				"title": "Intervenant unique",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"localis": {
+				"title": "Acteur localisable",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"statutact": {
+				"title": "Statut de l’acteur"
+			}
+		},
+		"relations": {
+			"procedureInstructionN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoProcedureInstructionN02",
+				"localFields": [
+					"idacteur"
+				],
+				"foreignFields": [
+					"idacteur"
+				],
+				"invRel": "acteurN02"
+			},
+			"acteursSurActionsPIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActeursSurActionsPIN02",
+				"localFields": [
+					"idacteur"
+				],
+				"foreignFields": [
+					"idacteur"
+				],
+				"invRel": "acteurN02"
+			}
+		}
+	},
+	"INACTION": {
+		"tableName": "INACTION",
+		"name": "SpoActionN02",
+		"title": "Action",
+		"type": "object",
+		"primaryKey": [
+			"idaction"
+		],
+		"properties": {
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbaction": {
+				"title": "Libellé action",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idsupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idforme": {
+				"title": "Code forme",
+				"type": "integer"
+			},
+			"lbforme": {
+				"title": "Libellé de la forme",
+				"type": "string",
+				"maxLength": 60
+			},
+			"nataction": {
+				"title": "Nature du composant"
+			},
+			"trtvx": {
+				"title": "Traitement transversal",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"extranet": {
+				"title": "Extranet",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"requeteActionN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoRequeteActionN02",
+				"localFields": [
+					"idaction"
+				],
+				"foreignFields": [
+					"idaction"
+				],
+				"invRel": "actionN02"
+			},
+			"modeleActionN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoModeleActionN02",
+				"localFields": [
+					"idaction"
+				],
+				"foreignFields": [
+					"idaction"
+				],
+				"invRel": "actionN02"
+			},
+			"composantsUneEtapeUnPIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoComposantsUneEtapeUnPIN02",
+				"localFields": [
+					"idaction"
+				],
+				"foreignFields": [
+					"idaction"
+				],
+				"invRel": "actionN02"
+			},
+			"sousActionsUnePIList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoSousActionsUnePI",
+				"localFields": [
+					"idactionss"
+				],
+				"foreignFields": [
+					"idaction"
+				],
+				"invRel": "actionN02"
+			}
+		}
+	},
+	"INACTIONRQ": {
+		"tableName": "INACTIONRQ",
+		"name": "SpoRequeteActionN02",
+		"title": "Requête d’action",
+		"type": "object",
+		"primaryKey": [
+			"idaction",
+			"idsgbd"
+		],
+		"properties": {
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idsgbd": {
+				"title": "Code SGBD ou driver ODBC",
+				"type": "string",
+				"maxLength": 32
+			},
+			"reqsql": {
+				"title": "Requête SQL"
+			}
+		},
+		"relations": {
+			"actionN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionN02",
+				"localFields": [
+					"idaction"
+				],
+				"foreignFields": [
+					"idaction"
+				],
+				"invRel": "requeteActionN02List"
+			}
+		}
+	},
+	"INACTMOD": {
+		"tableName": "INACTMOD",
+		"name": "SpoModeleActionN02",
+		"title": "Modèle d’action",
+		"type": "object",
+		"primaryKey": [
+			"idaction",
+			"idmod"
+		],
+		"properties": {
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idmod": {
+				"title": "Code modèle",
+				"type": "integer"
+			},
+			"modele": {
+				"title": "Nom du modèle",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"lbmodele": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"idobjappele": {
+				"title": "Code de l’objet appelé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"imagelien": {
+				"title": "Image liée à l’action",
+				"type": "string",
+				"maxLength": 200
+			}
+		},
+		"relations": {
+			"actionN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionN02",
+				"localFields": [
+					"idaction"
+				],
+				"foreignFields": [
+					"idaction"
+				],
+				"invRel": "modeleActionN02List"
+			}
+		}
+	},
+	"INCPCONPI": {
+		"tableName": "INCPCONPI",
+		"name": "SpoActionsConditionnellesPIN02",
+		"title": "Actions conditionnelles PI",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idetape",
+			"idaction",
+			"idacteur",
+			"etapcon"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code Acteur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"etapcon": {
+				"title": "Code étape conditionnée",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"acteursSurActionsPIN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActeursSurActionsPIN02",
+				"localFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"invRel": "actionsConditionnellesPIN02List"
+			}
+		}
+	},
+	"INCPETAPI": {
+		"tableName": "INCPETAPI",
+		"name": "SpoComposantsUneEtapeUnPIN02",
+		"title": "Composants d’une etape d’une PI",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idetape",
+			"idaction"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"administ": {
+				"title": "Administrative",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"autoraf": {
+				"title": "Auto-rafraîchissement",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"oblig": {
+				"title": "Obligatoire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"destin": {
+				"title": "Destiné",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"delai": {
+				"title": "Délai de réalisation",
+				"type": "integer"
+			},
+			"useicon": {
+				"title": "Utilise l’icône du support",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"gantt": {
+				"title": "Gantt",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"etapeUnePIN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoEtapeUnePIN02",
+				"localFields": [
+					"iddom",
+					"idproced",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced",
+					"idetape"
+				],
+				"invRel": "composantsUneEtapeUnPIN02List"
+			},
+			"actionN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionN02",
+				"localFields": [
+					"idaction"
+				],
+				"foreignFields": [
+					"idaction"
+				],
+				"invRel": "composantsUneEtapeUnPIN02List"
+			},
+			"acteursSurActionsPIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActeursSurActionsPIN02",
+				"localFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction"
+				],
+				"invRel": "composantsUneEtapeUnPIN02"
+			}
+		}
+	},
+	"INCPSSPI": {
+		"tableName": "INCPSSPI",
+		"name": "SpoSousActionsUnePI",
+		"title": "Sous-actions d’une PI",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idaction",
+			"idactionss"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idactionss": {
+				"title": "Code sous-action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			}
+		},
+		"relations": {
+			"actionN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionN02",
+				"localFields": [
+					"idaction"
+				],
+				"foreignFields": [
+					"idactionss"
+				],
+				"invRel": "sousActionsUnePIList"
+			}
+		}
+	},
+	"INEMETPI": {
+		"tableName": "INEMETPI",
+		"name": "SpoActeursSurActionsPIN02",
+		"title": "Acteurs sur Actions PI",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idetape",
+			"idaction",
+			"idacteur"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code Acteur",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"composantsUneEtapeUnPIN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoComposantsUneEtapeUnPIN02",
+				"localFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction"
+				],
+				"invRel": "acteursSurActionsPIN02List"
+			},
+			"actionsConditionnellesPIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActionsConditionnellesPIN02",
+				"localFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"invRel": "acteursSurActionsPIN02"
+			},
+			"acteurN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActeurN02",
+				"localFields": [
+					"idacteur"
+				],
+				"foreignFields": [
+					"idacteur"
+				],
+				"invRel": "acteursSurActionsPIN02List"
+			}
+		}
+	},
+	"INETAPE": {
+		"tableName": "INETAPE",
+		"name": "SpoEtapeN02",
+		"title": "Etape",
+		"type": "object",
+		"primaryKey": [
+			"idetape"
+		],
+		"properties": {
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbetape": {
+				"title": "Libellé  étape",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"extranet": {
+				"title": "Extranet",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"etapeUnePIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoEtapeUnePIN02",
+				"localFields": [
+					"idetape"
+				],
+				"foreignFields": [
+					"idetape"
+				],
+				"invRel": "etapeN02"
+			}
+		}
+	},
+	"INETAPPI": {
+		"tableName": "INETAPPI",
+		"name": "SpoEtapeUnePIN02",
+		"title": "Etape d’une PI",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idetape"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"oblig": {
+				"title": "Obligatoire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"condit": {
+				"title": "OBSOLETEConditionnelle",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"administ": {
+				"title": "Administrative",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"prevision": {
+				"title": "Prévisionnelle",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"delai": {
+				"title": "Délai de réalisation",
+				"type": "integer"
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"gantt": {
+				"title": "Gantt",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"suividoscreat": {
+				"title": "Dans suivi de dossier à la création",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"procedureInstructionN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoProcedureInstructionN02",
+				"localFields": [
+					"iddom",
+					"idproced"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced"
+				],
+				"invRel": "etapeUnePIN02List"
+			},
+			"etapeN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoEtapeN02",
+				"localFields": [
+					"idetape"
+				],
+				"foreignFields": [
+					"idetape"
+				],
+				"invRel": "etapeUnePIN02List"
+			},
+			"composantsUneEtapeUnPIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoComposantsUneEtapeUnPIN02",
+				"localFields": [
+					"iddom",
+					"idproced",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced",
+					"idetape"
+				],
+				"invRel": "etapeUnePIN02"
+			}
+		}
+	},
+	"INPARATT": {
+		"tableName": "INPARATT",
+		"name": "SpoParametrageRattachementDossiersN02",
+		"title": "Paramétrage du rattachement de dossiers",
+		"type": "object",
+		"primaryKey": [
+			"iddom1",
+			"iddom2"
+		],
+		"properties": {
+			"iddom1": {
+				"title": "Code domaine 1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddom2": {
+				"title": "Code domaine 2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"procdom1": {
+				"title": "Liste des procédures du domaine 1",
+				"type": "string",
+				"maxLength": 3900,
+				"format": "memo"
+			},
+			"procdom2": {
+				"title": "Liste des procédures du domaine 2",
+				"type": "string",
+				"maxLength": 3900,
+				"format": "memo"
+			},
+			"oblig1": {
+				"title": "Rattachement obligatoire du domaine 1 vers domaine 2",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"uniq1": {
+				"title": "Rattachement unique du domaine 1 vers domaine 2",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"oblig2": {
+				"title": "Rattachement obligatoire du domaine 2 vers domaine 1",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"uniq2": {
+				"title": "Rattachement unique du domaine 2 vers domaine 1",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INPROCED": {
+		"tableName": "INPROCED",
+		"name": "SpoProcedureInstructionN02",
+		"title": "Procédure d’instruction",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbproced": {
+				"title": "Libellé long",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idacteur": {
+				"title": "Acteur principal",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtmaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"hrmaj": {
+				"title": "Heure de mise à jour",
+				"type": "string",
+				"maxLength": 8
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idref": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"objet": {
+				"title": "Objet",
+				"type": "string",
+				"maxLength": 200
+			},
+			"typdispo": {
+				"title": "Type du dispositif"
+			},
+			"idfamille": {
+				"title": "Code famille",
+				"type": "string",
+				"maxLength": 32
+			},
+			"famille": {
+				"title": "Famille",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"extranet": {
+				"title": "Extranet",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"etat": {
+				"title": "Etat"
+			},
+			"idprocedfille": {
+				"title": "Code procédure d’instruction fille",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idinfodynprop": {
+				"title": "Code Information Dynamique de l’écran des propriétés",
+				"type": "string",
+				"maxLength": 32
+			},
+			"visibiliteext": {
+				"title": "Visibilité externe",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"datedebutvalidite": {
+				"title": "Date de début de validité de la procédure",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datefinvalidite": {
+				"title": "Date de fin de validité de la procédure",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		},
+		"relations": {
+			"donneesComplementairesInvisiblesParPIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoDonneesComplementairesInvisiblesParPIN02",
+				"localFields": [
+					"iddom",
+					"idproced"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced"
+				],
+				"invRel": "procedureInstructionN02"
+			},
+			"classeurPIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoClasseurPIN02",
+				"localFields": [
+					"iddom",
+					"idproced"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced"
+				],
+				"invRel": "procedureInstructionN02"
+			},
+			"acteurN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActeurN02",
+				"localFields": [
+					"idacteur"
+				],
+				"foreignFields": [
+					"idacteur"
+				],
+				"invRel": "procedureInstructionN02List"
+			},
+			"etapeUnePIN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoEtapeUnePIN02",
+				"localFields": [
+					"iddom",
+					"idproced"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced"
+				],
+				"invRel": "procedureInstructionN02"
+			}
+		}
+	},
+	"INPROCEDDON": {
+		"tableName": "INPROCEDDON",
+		"name": "SpoDonneesComplementairesInvisiblesParPIN02",
+		"title": "Données complémentaires invisibles par PI",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"nomcol",
+			"typeparam",
+			"filtre"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomcol": {
+				"title": "Code colonne",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typeparam": {
+				"title": "Type de paramètre dynamique",
+				"type": "string",
+				"maxLength": 30
+			},
+			"filtre": {
+				"title": "Filtre complémentaire",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"procedureInstructionN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoProcedureInstructionN02",
+				"localFields": [
+					"iddom",
+					"idproced"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced"
+				],
+				"invRel": "donneesComplementairesInvisiblesParPIN02List"
+			}
+		}
+	},
+	"INPROCLAS": {
+		"tableName": "INPROCLAS",
+		"name": "SpoClasseurPIN02",
+		"title": "Classeur des PI",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idclas"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idclas": {
+				"title": "Code classeur",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"procedureInstructionN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoProcedureInstructionN02",
+				"localFields": [
+					"iddom",
+					"idproced"
+				],
+				"foreignFields": [
+					"iddom",
+					"idproced"
+				],
+				"invRel": "classeurPIN02List"
+			}
+		}
+	},
+	"INMODELCOMP": {
+		"tableName": "INMODELCOMP",
+		"name": "SpoComplementModeleN02",
+		"title": "Complément de modèles",
+		"type": "object",
+		"primaryKey": [
+			"modele",
+			"idcmpmod"
+		],
+		"properties": {
+			"modele": {
+				"title": "Code modèle SOGOS",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcmpmod": {
+				"title": "Code complément",
+				"type": "string",
+				"maxLength": 32
+			},
+			"profils": {
+				"title": "Profils concernés",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"inclu": {
+				"title": "inclu",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"xmldesc": {
+				"title": "Description Xml"
+			}
+		}
+	},
+	"INDISPOPARAM": {
+		"tableName": "INDISPOPARAM",
+		"name": "SpoParametrageDispositif",
+		"title": "Paramétrage des dispositifs sur les éléments remplaçables",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddispo"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddispo": {
+				"title": "Code dispositif",
+				"type": "string",
+				"maxLength": 32
+			},
+			"codeparam": {
+				"title": "Code du paramètre"
+			},
+			"remplacer": {
+				"title": "Remplacer le paramètre (le lien avec la famille est supprimé)",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INPROCEDACTTIERS": {
+		"tableName": "INPROCEDACTTIERS",
+		"name": "SpoParametrageProcedureActeurTiers",
+		"title": "Paramétrage des tiers à des acteurs par procédure",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idprof",
+			"idacteur",
+			"idtiers"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code Acteur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"PRGPIACTBLOQ": {
+		"tableName": "PRGPIACTBLOQ",
+		"name": "SpoParametrageActionsBloqueesPI",
+		"title": "Paramétrage des actions bloquées sur procédure",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code Domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typblocage": {
+				"title": "Type du blocage"
+			},
+			"lstactionsbloc": {
+				"title": "Liste des actions bloquées"
+			}
+		}
+	},
+	"PRGPIPARAMGEN": {
+		"tableName": "PRGPIPARAMGEN",
+		"name": "SpoParametrageAppliWeb",
+		"title": "Paramétrage général procédure pour application Web",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code Domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"duredosactif": {
+				"title": "Durée de vie de conservation des dossiers dans la base active (en mois)",
+				"type": "integer"
+			},
+			"chdosactif": {
+				"title": "Champs date utilisée pour le calcul de la durée de vie avant archivage"
+			},
+			"duredosarchinter": {
+				"title": "Durée de conservation des dossiers en archives intermédiaires (en mois)",
+				"type": "integer"
+			},
+			"chdebdosarchinter": {
+				"title": "Champs calcul de la durée de vie en archives intermédiaires"
+			},
+			"sortfinaldoss": {
+				"title": "Sort final des dossiers"
+			}
+		}
+	},
+	"INACTDOS": {
+		"tableName": "INACTDOS",
+		"name": "SpoActeursSurDossiersN02",
+		"title": "Acteurs sur dossiers",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idacteur",
+			"idtiers"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code acteur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"coderib": {
+				"title": "BBAN",
+				"type": "string",
+				"maxLength": 30
+			},
+			"idrepresentant": {
+				"title": "Code du représentant",
+				"type": "integer"
+			},
+			"codiban": {
+				"title": "Code IBAN",
+				"type": "string",
+				"maxLength": 4
+			},
+			"bic": {
+				"title": "Code BIC",
+				"type": "string",
+				"maxLength": 11
+			},
+			"horssepa": {
+				"title": "Hors SEPA",
+				"type": "string",
+				"maxLength": 30
+			}
+		},
+		"relations": {
+			"elementsDossierN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoElementsDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idtiers"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idtiers"
+				],
+				"invRel": "acteursSurDossiersN02"
+			}
+		}
+	},
+	"INCOMPUN": {
+		"tableName": "INCOMPUN",
+		"name": "SpoComporteUnN02",
+		"title": "Comporte un",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idproced"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure d’instruction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbproced": {
+				"title": "Libellé long",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idacteur": {
+				"title": "Acteur principal",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtmaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"defaut": {
+				"title": "Défaut",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INCPCONDOS": {
+		"tableName": "INCPCONDOS",
+		"name": "SpoActionsConditionnellesDossierN02",
+		"title": "Actions conditionnelles Dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idaction",
+			"idacteur",
+			"etapcon"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code acteur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"etapcon": {
+				"title": "Code étape conditionnée",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"acteursSurActionsDossierN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActeursSurActionsDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"invRel": "actionsConditionnellesDossierN02List"
+			},
+			"etapeUnDossierN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoEtapeUnDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"invRel": "actionsConditionnellesDossierN02List"
+			}
+		}
+	},
+	"INCPDOS": {
+		"tableName": "INCPDOS",
+		"name": "SpoActionsSurDossiersN02",
+		"title": "Actions sur dossiers",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idaction"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbaction": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idsupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idforme": {
+				"title": "Code forme",
+				"type": "integer"
+			},
+			"lbforme": {
+				"title": "Libellé de la forme",
+				"type": "string",
+				"maxLength": 60
+			},
+			"nataction": {
+				"title": "Nature du composant"
+			},
+			"prevu": {
+				"title": "Prévu sur les PI",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"actionsNonSuiviesN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActionsNonSuiviesN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"invRel": "actionsSurDossiersN02"
+			},
+			"modeleActionSurDossiersN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoModeleActionSurDossiersN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"invRel": "actionsSurDossiersN02"
+			},
+			"requetesSurDossiersN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoRequetesSurDossiersN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"invRel": "actionsSurDossiersN02"
+			}
+		}
+	},
+	"INCPDOSRQ": {
+		"tableName": "INCPDOSRQ",
+		"name": "SpoRequetesSurDossiersN02",
+		"title": "Requêtes sur dossiers",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idaction"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"reqsql": {
+				"title": "Requête SQL"
+			}
+		},
+		"relations": {
+			"actionsSurDossiersN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionsSurDossiersN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"invRel": "requetesSurDossiersN02List"
+			}
+		}
+	},
+	"INCPDOSMOD": {
+		"tableName": "INCPDOSMOD",
+		"name": "SpoModeleActionSurDossiersN02",
+		"title": "Modèle d’action sur dossiers",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idaction",
+			"idmod"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idmod": {
+				"title": "Code modèle",
+				"type": "integer"
+			},
+			"modele": {
+				"title": "Nom du modèle",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"lbmodele": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"idobjappele": {
+				"title": "Code de l’objet appelé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"imagelien": {
+				"title": "Image liée à l’action",
+				"type": "string",
+				"maxLength": 200
+			}
+		},
+		"relations": {
+			"actionsSurDossiersN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionsSurDossiersN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"invRel": "modeleActionSurDossiersN02List"
+			}
+		}
+	},
+	"INCPDOSMODDOC": {
+		"tableName": "INCPDOSMODDOC",
+		"name": "SpoProprietesDocumentJointSurDossierN02",
+		"title": "Propriétés d’un document joint sur dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idaction",
+			"idmod"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idmod": {
+				"title": "Code modèle",
+				"type": "integer"
+			},
+			"docprinc": {
+				"title": "Document principal",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"origine": {
+				"title": "Origine"
+			},
+			"refexterne": {
+				"title": "Référence externe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"refinterne": {
+				"title": "Référence interne",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtemission": {
+				"title": "Date d’émission",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"objetdoc": {
+				"title": "Objet du document"
+			},
+			"typedoc": {
+				"title": "Type du document"
+			}
+		}
+	},
+	"INCPETADOS": {
+		"tableName": "INCPETADOS",
+		"name": "SpoActionsNonSuiviesN02",
+		"title": "Actions non suivies",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idaction"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"administ": {
+				"title": "Administrative",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"autoraf": {
+				"title": "Auto-rafraîchissement",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"oblig": {
+				"title": "Obligatoire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"destin": {
+				"title": "Destiné",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"delai": {
+				"title": "Délai de réalisation",
+				"type": "integer"
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"useicon": {
+				"title": "Utilise l’icône du support",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"gantt": {
+				"title": "Gantt",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"elementsDossierN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoElementsDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"invRel": "actionsNonSuiviesN02"
+			},
+			"acteursSurActionsDossierN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActeursSurActionsDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"invRel": "actionsNonSuiviesN02"
+			},
+			"etapeUnDossierN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoEtapeUnDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"invRel": "actionsNonSuiviesN02List"
+			},
+			"actionsSurDossiersN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionsSurDossiersN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idaction"
+				],
+				"invRel": "actionsNonSuiviesN02List"
+			}
+		}
+	},
+	"INELEMDOS": {
+		"tableName": "INELEMDOS",
+		"name": "SpoElementsDossierN02",
+		"title": "Elements du dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idaction",
+			"idacteur",
+			"idtiers",
+			"idactelem"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code Acteur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtiers": {
+				"title": "Code Tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idactelem": {
+				"title": "Code action réalisée",
+				"type": "integer"
+			},
+			"lbaction": {
+				"title": "Libellé action",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idref": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtprev": {
+				"title": "Date prévue",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtcreat": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtreal": {
+				"title": "Date de réalisation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"prevu": {
+				"title": "Tiers prévu",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtmaj": {
+				"title": "Date de dernière maj",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"hrmaj": {
+				"title": "Heure de  dernière maj",
+				"type": "string",
+				"maxLength": 8
+			},
+			"noelem": {
+				"title": "No d’élement sur le support",
+				"type": "integer"
+			},
+			"param": {
+				"title": "Liste des paramètres",
+				"type": "string",
+				"maxLength": 255
+			},
+			"fullname": {
+				"title": "Chemin complet du fichier associé à l’élément",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"urlexterne": {
+				"title": "URL externe du fichier associé à l’élément",
+				"type": "string",
+				"maxLength": 300
+			}
+		},
+		"relations": {
+			"acteursSurDossiersN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActeursSurDossiersN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idtiers"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idtiers"
+				],
+				"invRel": "elementsDossierN02List"
+			},
+			"actionsNonSuiviesN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionsNonSuiviesN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"invRel": "elementsDossierN02List"
+			}
+		}
+	},
+	"INELEMDOSPOS": {
+		"tableName": "INELEMDOSPOS",
+		"name": "SpoPositionElementsDossierN02",
+		"title": "Position des elements du dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idaction",
+			"idacteur",
+			"idtiers",
+			"idactelem"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code Acteur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtiers": {
+				"title": "Code Tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idactelem": {
+				"title": "Code action réalisée",
+				"type": "integer"
+			},
+			"posx": {
+				"title": "Coordonnée en abscisse",
+				"type": "integer"
+			},
+			"posy": {
+				"title": "Coordonnée en ordonnée",
+				"type": "integer"
+			},
+			"longueur": {
+				"title": "Longueur",
+				"type": "integer"
+			},
+			"hauteur": {
+				"title": "Hauteur",
+				"type": "integer"
+			},
+			"lbvisible": {
+				"title": "Visibilité du libellé de l’action",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INEMETDOS": {
+		"tableName": "INEMETDOS",
+		"name": "SpoActeursSurActionsDossierN02",
+		"title": "Acteurs sur Actions Dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idaction",
+			"idacteur"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idacteur": {
+				"title": "Code acteur",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"actionsNonSuiviesN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoActionsNonSuiviesN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction"
+				],
+				"invRel": "acteursSurActionsDossierN02List"
+			},
+			"actionsConditionnellesDossierN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActionsConditionnellesDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape",
+					"idaction",
+					"idacteur"
+				],
+				"invRel": "acteursSurActionsDossierN02"
+			}
+		}
+	},
+	"INETAPDOS": {
+		"tableName": "INETAPDOS",
+		"name": "SpoEtapeUnDossierN02",
+		"title": "Etape d’un dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbetape": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 80
+			},
+			"condit": {
+				"title": "Conditionnelle",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"oblig": {
+				"title": "Obligatoire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"administ": {
+				"title": "Administrative",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"prevision": {
+				"title": "Prévisionnelle",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"delai": {
+				"title": "Délai de réalisation",
+				"type": "integer"
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"gantt": {
+				"title": "Gantt",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		},
+		"relations": {
+			"actionsNonSuiviesN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActionsNonSuiviesN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"invRel": "etapeUnDossierN02"
+			},
+			"actionsConditionnellesDossierN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoActionsConditionnellesDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"invRel": "etapeUnDossierN02"
+			},
+			"suitEtapeN02List": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoSuitEtapeN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"invRel": "etapeUnDossierN02"
+			}
+		}
+	},
+	"INSETAP": {
+		"tableName": "INSETAP",
+		"name": "SpoSuitEtapeN02",
+		"title": "Suit étape",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbetape": {
+				"title": "Libellé étape",
+				"type": "string",
+				"maxLength": 80
+			},
+			"dtdeb": {
+				"title": "Date début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtfin_th": {
+				"title": "Date de fin théorique",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtfin": {
+				"title": "Date de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"ctdinit": {
+				"title": "Contrainte de début",
+				"type": "string",
+				"maxLength": 1
+			},
+			"debinit": {
+				"title": "Date de début initiale",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"ctfinit": {
+				"title": "Contrainte de fin",
+				"type": "string",
+				"maxLength": 1
+			},
+			"fininit": {
+				"title": "Date de fin initiale",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureej": {
+				"title": "Durée en jours réels",
+				"type": "integer"
+			},
+			"idcalen": {
+				"title": "Code calendrier type",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"etapeUnDossierN02": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoEtapeUnDossierN02",
+				"localFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"foreignFields": [
+					"iddom",
+					"iddoss",
+					"idetape"
+				],
+				"invRel": "suitEtapeN02List"
+			}
+		}
+	},
+	"INCPDOSLIES": {
+		"tableName": "INCPDOSLIES",
+		"name": "SpoActionsLieesN02",
+		"title": "Lien entre deux actions d’un dossier",
+		"type": "object",
+		"primaryKey": [
+			"idaction2",
+			"iddom",
+			"iddoss",
+			"idaction1"
+		],
+		"properties": {
+			"idaction2": {
+				"title": "Code action liée",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddom": {
+				"title": "Code domaine ",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier ",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction1": {
+				"title": "Code action ",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCPDOSPOS": {
+		"tableName": "INCPDOSPOS",
+		"name": "SpoPositionActionN02",
+		"title": "Position des actions sur dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idaction"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"posx": {
+				"title": "Coordonnée en abscisse",
+				"type": "integer"
+			},
+			"posy": {
+				"title": "Coordonnée en ordonnée",
+				"type": "integer"
+			}
+		}
+	},
+	"INRATTDOS": {
+		"tableName": "INRATTDOS",
+		"name": "SpoRattachementDossiersN02",
+		"title": "Rattachement de dossiers",
+		"type": "object",
+		"primaryKey": [
+			"iddom1",
+			"iddoss1",
+			"iddom2",
+			"iddoss2"
+		],
+		"properties": {
+			"iddom1": {
+				"title": "Code domaine 1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss1": {
+				"title": "Code dossier 1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddom2": {
+				"title": "Code domaine 2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss2": {
+				"title": "Code dossier 2",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"RI_INVAL": {
+		"tableName": "RI_INVAL",
+		"name": "SpoValeursCodifications",
+		"title": "Valeurs des Codifications",
+		"type": "object",
+		"primaryKey": [
+			"typlist",
+			"codval"
+		],
+		"properties": {
+			"typlist": {
+				"title": "Type de liste",
+				"type": "string",
+				"maxLength": 32
+			},
+			"codval": {
+				"title": "Code",
+				"type": "string",
+				"maxLength": 10
+			},
+			"lbval": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 150
+			}
+		}
+	},
+	"RI_INCODIF": {
+		"tableName": "RI_INCODIF",
+		"name": "SpoCodification",
+		"title": "Codification",
+		"type": "object",
+		"primaryKey": [
+			"idcodifri"
+		],
+		"properties": {
+			"idcodifri": {
+				"title": "Code Codification RI",
+				"type": "integer"
+			},
+			"lbcodif": {
+				"title": "Libellé Codification",
+				"type": "string",
+				"maxLength": 80
+			},
+			"taille": {
+				"title": "taille",
+				"type": "integer"
+			},
+			"idcodif": {
+				"title": "Code Codification",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"RI_INDICTRANS": {
+		"tableName": "RI_INDICTRANS",
+		"name": "SpoIndicateursTransversaux",
+		"title": "Indicateurs Transversaux",
+		"type": "object",
+		"primaryKey": [
+			"idindic"
+		],
+		"properties": {
+			"idindic": {
+				"title": "Code de l’indicateur",
+				"type": "integer"
+			},
+			"lbindic": {
+				"title": "Libellé de l’indicateur",
+				"type": "string",
+				"maxLength": 80
+			},
+			"typindic": {
+				"title": "Type d’indicateur"
+			},
+			"typlist": {
+				"title": "Type de liste",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtable": {
+				"title": "Table associée",
+				"type": "string",
+				"maxLength": 20
+			}
+		}
+	},
+	"RI_MODELE": {
+		"tableName": "RI_MODELE",
+		"name": "SpoModele",
+		"title": "Modèle",
+		"type": "object",
+		"primaryKey": [
+			"idmodel"
+		],
+		"properties": {
+			"idmodel": {
+				"title": "Code du Modèle",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbmodel": {
+				"title": "Libellé du Modèle",
+				"type": "string",
+				"maxLength": 100
+			}
+		}
+	},
+	"RI_TABLE": {
+		"tableName": "RI_TABLE",
+		"name": "SpoTableIndicateur",
+		"title": "Table Indicateur",
+		"type": "object",
+		"primaryKey": [
+			"idtable"
+		],
+		"properties": {
+			"idtable": {
+				"title": "Code de la table",
+				"type": "string",
+				"maxLength": 20
+			},
+			"lbtable": {
+				"title": "Libellé de la table",
+				"type": "string",
+				"maxLength": 100
+			}
+		}
+	}
+}
