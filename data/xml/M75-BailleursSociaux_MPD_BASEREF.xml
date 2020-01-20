@@ -909,6 +909,7 @@
               <Champ id="societerv" libelle="Société" nomInterne="SocieteRV" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
 			  <Champ id="isversion" libelle="operation version" nomInterne="isversion" type="Booleen" taille="1" clePrimaire="N" obligatoire="O" valeurDefaut="0" crypte="N" />
 			  <Champ id="statutope" libelle="Statut d'opération" nomInterne="StatutOperation" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />			  
+			  <Champ id="uniteloyer" libelle="Unité Loyer" nomInterne="UniteLoyer" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
             </Champs>
             <Indexes>
               <Index nom="I1" unique="N">

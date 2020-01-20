@@ -1339,6 +1339,26 @@
 				"title": "Préfinancement",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"numpiece": {
+				"title": "N° pièce comptable",
+				"type": "string",
+				"maxLength": 32
+			},
+			"codecompta": {
+				"title": "Code comptable du compte bancaire",
+				"type": "string",
+				"maxLength": 32
+			},
+			"codejournal": {
+				"title": "Code journal du compte bancaire",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libellecompte": {
+				"title": "Libellé du compte bancaire",
+				"type": "string",
+				"maxLength": 256
 			}
 		}
 	},
@@ -2017,6 +2037,11 @@
 				"title": "idProced",
 				"type": "string",
 				"maxLength": 32
+			},
+			"idinitial": {
+				"title": "IdInitial",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -2600,6 +2625,34 @@
 				"title": "IsKeuro",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"estautorisationbud": {
+				"title": "EstAutorisationBud",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"nivcontrole": {
+				"title": "NivControle",
+				"type": "integer"
+			},
+			"nivautorisation": {
+				"title": "NivAutorisation",
+				"type": "integer"
+			},
+			"lissage": {
+				"title": "Lissage",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"isautoht": {
+				"title": "IsAutoHT",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"etapeavtravaux": {
+				"title": "EtapeAvTravaux",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -2756,6 +2809,36 @@
 				"title": "MntHTFige",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"mnthtforce": {
+				"title": "MntHTForce",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"mntttcforce": {
+				"title": "MntTTCForce",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"mntautoht": {
+				"title": "MntAutoHT",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntpreviht": {
+				"title": "MntPreviHT",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntprevip1ht": {
+				"title": "MntPreviP1HT",
+				"type": "number",
+				"decimals": 4
+			},
+			"saisiemntautoht": {
+				"title": "SaisieMntAutoHT",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -2840,6 +2923,21 @@
 			},
 			"mnttva": {
 				"title": "Montant Tva",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntautoht": {
+				"title": "MntAutoHT",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntpreviht": {
+				"title": "MntPreviHT",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntprevip1ht": {
+				"title": "MntPreviP1HT",
 				"type": "number",
 				"decimals": 4
 			}
@@ -3045,6 +3143,7 @@
 			"id",
 			"idposte",
 			"idprog",
+			"budgetref",
 			"budgetcomp"
 		],
 		"properties": {
@@ -3060,6 +3159,11 @@
 			},
 			"idprog": {
 				"title": "IdProg",
+				"type": "string",
+				"maxLength": 32
+			},
+			"budgetref": {
+				"title": "BudgetRef",
 				"type": "string",
 				"maxLength": 32
 			},
@@ -3096,6 +3200,63 @@
 					"id"
 				],
 				"invRel": "budgetComparatifList"
+			}
+		}
+	},
+	"BUDVARIATIONAUTO": {
+		"tableName": "BUDVARIATIONAUTO",
+		"name": "SpoBudgetVariationAutorisation",
+		"title": "Variation autorisation du budget",
+		"type": "object",
+		"primaryKey": [
+			"idvar"
+		],
+		"properties": {
+			"idvar": {
+				"title": "IdVar",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idbudget": {
+				"title": "IdBudget",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "IdPoste",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "IdProg",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datevar": {
+				"title": "DateVar",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"heurevar": {
+				"title": "HeureVar",
+				"type": "string",
+				"maxLength": 10
+			},
+			"iduti": {
+				"title": "IdUti",
+				"type": "string",
+				"maxLength": 32
+			},
+			"commentaire": {
+				"title": "Commentaire",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"mntautoht": {
+				"title": "MntAutoHT",
+				"type": "number",
+				"decimals": 4
 			}
 		}
 	},
@@ -3490,6 +3651,25 @@
 				"title": "reference",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"autorisationbud": {
+				"title": "Autorisation budgetaire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"nivautorisation": {
+				"title": "Niveau autorisation budgétaire",
+				"type": "integer"
+			},
+			"etapebud": {
+				"title": "Etape budgetaire",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lissage": {
+				"title": "Lissage pluriannuel",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -3808,6 +3988,11 @@
 			},
 			"prorata": {
 				"title": "Prorata TVA",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"identique": {
+				"title": "Identique",
 				"type": "boolean",
 				"format": "mgdis-boolean"
 			}
@@ -4182,7 +4367,7 @@
 			"modelebudget": {
 				"title": "ModeleBudget",
 				"type": "string",
-				"maxLength": 10
+				"maxLength": 32
 			},
 			"moderepart": {
 				"title": "ModeRepart",
@@ -4303,6 +4488,11 @@
 			},
 			"pourcent": {
 				"title": "Pourcent",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"identique": {
+				"title": "Identique",
 				"type": "boolean",
 				"format": "mgdis-boolean"
 			}
@@ -4576,6 +4766,11 @@
 			},
 			"postedation": {
 				"title": "PosteDation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idinitial": {
+				"title": "IdInitial",
 				"type": "string",
 				"maxLength": 32
 			}
@@ -7285,6 +7480,16 @@
 				"type": "string",
 				"maxLength": 32
 			},
+			"iban": {
+				"title": "IBAN",
+				"type": "string",
+				"maxLength": 34
+			},
+			"bic": {
+				"title": "BIC",
+				"type": "string",
+				"maxLength": 11
+			},
 			"activite": {
 				"title": "Activite",
 				"type": "string",
@@ -8982,6 +9187,11 @@
 			},
 			"mois": {
 				"title": "MOIS",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"inventaire": {
+				"title": "Inventaire",
 				"type": "boolean",
 				"format": "mgdis-boolean"
 			}

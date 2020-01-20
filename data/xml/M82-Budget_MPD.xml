@@ -845,6 +845,10 @@
               <Champ id="dtsignature" libelle="Date signature" nomInterne="DateSignature" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="dtdecision" libelle="Date décision" nomInterne="DateDecision" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="prefin" libelle="Préfinancement" nomInterne="Prefinancement" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+              <Champ id="numpiece" libelle="N° pièce comptable" nomInterne="NumPiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="codecompta" libelle="Code comptable du compte bancaire" nomInterne="CodeCompta" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="codejournal" libelle="Code journal du compte bancaire" nomInterne="CodeJournal" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="libellecompte" libelle="Libellé du compte bancaire" nomInterne="LibelleCompte" clePrimaire="N" obligatoire="N" type="String" taille="256" crypte="N" />
             </Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -1011,6 +1015,7 @@
               <Champ id="codegf" libelle="Code programme GF" nomInterne="CodeGF" clePrimaire="N" obligatoire="N" type="String" taille="50" crypte="N" />
               <Champ id="etapebud" libelle="Etape Budgétaire" nomInterne="EtapeBud" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
 			  <Champ id="idproced" libelle="idProced" nomInterne="idProced" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+			  <Champ id="idinitial" libelle="IdInitial" nomInterne="IdInitial" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
             </Champs>
             <Indexes />
           </Table>
@@ -1517,6 +1522,12 @@
               <Champ id="hierarchie" libelle="Hierarchie" nomInterne="Hierarchie" clePrimaire="N" obligatoire="N" type="Entier" taillePartieEntiere="0" crypte="N" />
 			  <Champ id="isposteinfo" libelle="IsPosteInfo" nomInterne="IsPosteInfo" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
 			  <Champ id="iskeuro" libelle="IsKeuro" nomInterne="IsKeuro" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+              <Champ id="estautorisationbud" libelle="EstAutorisationBud" nomInterne="EstAutorisationBud" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+              <Champ id="nivcontrole" libelle="NivControle" nomInterne="NivControle" clePrimaire="N" obligatoire="N" type="Entier" taillePartieEntiere="2" crypte="N" />
+              <Champ id="nivautorisation" libelle="NivAutorisation" nomInterne="NivAutorisation" clePrimaire="N" obligatoire="N" type="Entier" taillePartieEntiere="2" crypte="N" />
+			  <Champ id="lissage" libelle="Lissage" nomInterne="Lissage" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+			  <Champ id="isautoht" libelle="IsAutoHT" nomInterne="IsAutoHT" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+			  <Champ id="etapeavtravaux" libelle="EtapeAvTravaux" nomInterne="EtapeAvTravaux" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
             </Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -1547,6 +1558,12 @@
 			  <Champ id="txtvacal" libelle="Taux Tva Calcule" nomInterne="TauxCalcule" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="3" taillePartieDecimale="3" crypte="N" />
 			  <Champ id="saisiemntttc" libelle="SaisieMntTTC" nomInterne="SaisieMntTTC" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
 			  <Champ id="mnthtfige" libelle="MntHTFige" nomInterne="MntHTFige" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+			  <Champ id="mnthtforce" libelle="MntHTForce" nomInterne="MntHTForce" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+              <Champ id="mntttcforce" libelle="MntTTCForce" nomInterne="MntTTCForce" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+			  <Champ id="mntautoht" libelle="MntAutoHT" nomInterne="MntAutoHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
+              <Champ id="mntpreviht" libelle="MntPreviHT" nomInterne="MntPreviHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
+              <Champ id="mntprevip1ht" libelle="MntPreviP1HT" nomInterne="MntPreviP1HT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
+			  <Champ id="saisiemntautoht" libelle="SaisieMntAutoHT" nomInterne="SaisieMntAutoHT" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
             </Champs>
             <Indexes />
           </Table>
@@ -1564,6 +1581,9 @@
               <Champ id="iduti" libelle="Utilisateur" nomInterne="IdUti" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="cmnt" libelle="Commentaire" nomInterne="Commentaire" clePrimaire="N" obligatoire="N" type="String" taille="4000" crypte="N" />
 			  <Champ id="mnttva" libelle="Montant Tva" nomInterne="MntTva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
+			  <Champ id="mntautoht" libelle="MntAutoHT" nomInterne="MntAutoHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
+			  <Champ id="mntpreviht" libelle="MntPreviHT" nomInterne="MntPreviHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
+              <Champ id="mntprevip1ht" libelle="MntPreviP1HT" nomInterne="MntPreviP1HT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
             </Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -1615,10 +1635,25 @@
               <Champ id="id" libelle="Code" nomInterne="Id" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
               <Champ id="idposte" libelle="IdPoste" nomInterne="IdPoste" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
               <Champ id="idprog" libelle="IdProg" nomInterne="IdProg" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
+			  <Champ id="budgetref" libelle="BudgetRef" nomInterne="BudgetRef" clePrimaire="O" obligatoire="O" type="String" taille="32" valeurDefaut="*" crypte="N" />
               <Champ id="budgetcomp" libelle="BudgetComp" nomInterne="BudgetComp" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
               <Champ id="comment" libelle="Comment" nomInterne="Comment" clePrimaire="N" obligatoire="N" type="String" taille="120" crypte="N" />
               <Champ id="usercomment" libelle="UserComment" nomInterne="UserComment" clePrimaire="N" obligatoire="N" type="String" taille="50" crypte="N" />
               <Champ id="datecomment" libelle="DateComment" nomInterne="DateComment" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+            </Champs>
+            <Indexes />
+		  </Table>
+		  <Table id="BUDVARIATIONAUTO" libelle="Variation autorisation du budget" nomInterne="BudgetVariationAutorisation" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="idvar" libelle="IdVar" nomInterne="IdVar" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
+              <Champ id="idbudget" libelle="IdBudget" nomInterne="IdBudget" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idposte" libelle="IdPoste" nomInterne="IdPoste" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idprog" libelle="IdProg" nomInterne="IdProg" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="datevar" libelle="DateVar" nomInterne="DateVar" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="heurevar" libelle="HeureVar" nomInterne="HeureVar" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
+              <Champ id="iduti" libelle="IdUti" nomInterne="IdUti" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="commentaire" libelle="Commentaire" nomInterne="Commentaire" clePrimaire="N" obligatoire="N" type="String" taille="4000" crypte="N" />
+              <Champ id="mntautoht" libelle="MntAutoHT" nomInterne="MntAutoHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
             </Champs>
             <Indexes />
 		  </Table>
@@ -1780,6 +1815,10 @@
               <Champ id="position2" libelle="Position2" nomInterne="Position2" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="position3" libelle="Position3" nomInterne="Position3" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
 			  <Champ id="reference" libelle="reference" nomInterne="reference" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+			  <Champ id="autorisationbud" libelle="Autorisation budgetaire" nomInterne="AutorisationBud" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+              <Champ id="nivautorisation" libelle="Niveau autorisation budgétaire" nomInterne="NivAutorisation" clePrimaire="N" obligatoire="N" type="Entier" taillePartieEntiere="2" crypte="N" />
+              <Champ id="etapebud" libelle="Etape budgetaire" nomInterne="EtapeBud" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="lissage" libelle="Lissage pluriannuel" nomInterne="Lissage" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
             </Champs>
             <Indexes />
           </Table>
@@ -1846,6 +1885,7 @@
               <Champ id="txtva" libelle="Taux TVA" nomInterne="TauxTVA" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="3" taillePartieDecimale="2" crypte="N" />
               <Champ id="txtvaf" libelle="Taux TVA final" nomInterne="TauxTVAFinal" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="3" taillePartieDecimale="2" crypte="N" />
               <Champ id="prorata" libelle="Prorata TVA" nomInterne="ProrataTVA" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+			  <Champ id="identique" libelle="Identique" nomInterne="Identique" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
             </Champs>
             <Indexes />
           </Table>
@@ -1927,7 +1967,7 @@
             <Champs>
               <Champ id="id" libelle="Code" nomInterne="Id" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
               <Champ id="idposte" libelle="IdPoste" nomInterne="IdPoste" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
-              <Champ id="modelebudget" libelle="ModeleBudget" nomInterne="ModeleBudget" clePrimaire="O" obligatoire="O" type="String" taille="10" crypte="N" />
+              <Champ id="modelebudget" libelle="ModeleBudget" nomInterne="ModeleBudget" clePrimaire="O" obligatoire="O" type="String" taille="32" valeurDefaut="*" crypte="N" />
               <Champ id="moderepart" libelle="ModeRepart" nomInterne="ModeRepart" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="modereparttranche" libelle="ModeRepartTranche" nomInterne="ModeRepartTranche" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
 			  <Champ id="societe" libelle="Societe" nomInterne="Societe" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
@@ -1938,7 +1978,7 @@
             <Champs>
               <Champ id="id" libelle="Code" nomInterne="Id" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
               <Champ id="idligne" libelle="IdLigne" nomInterne="IdLigne" clePrimaire="O" obligatoire="O" type="Entier" taillePartieEntiere="5" crypte="N" />
-              <Champ id="modelebudget" libelle="ModeleBudget" nomInterne="ModeleBudget" clePrimaire="O" obligatoire="O" type="String" taille="32" crypte="N" />
+              <Champ id="modelebudget" libelle="ModeleBudget" nomInterne="ModeleBudget" clePrimaire="O" obligatoire="O" type="String" taille="32" valeurDefaut="*" crypte="N" />
               <Champ id="activite" libelle="Activite" nomInterne="Activite" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="naturetravaux" libelle="NatureTravaux" nomInterne="NatureTravaux" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="typeprog" libelle="TypeProg" nomInterne="TypeProg" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
@@ -1952,6 +1992,7 @@
               <Champ id="impact" libelle="Impact" nomInterne="Impact" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="valeur" libelle="Valeur" nomInterne="Valeur" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="pourcent" libelle="Pourcent" nomInterne="Pourcent" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+			  <Champ id="identique" libelle="Identique" nomInterne="Identique" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
             </Champs>
             <Indexes />
           </Table>
@@ -2411,6 +2452,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="postetvamarge" libelle="posteTvaMarge" nomInterne="posteTvaMarge" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
 			  <Champ id="idproced" libelle="idProced" nomInterne="idProced" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
 			  <Champ id="postedation" libelle="PosteDation" nomInterne="PosteDation" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+			  <Champ id="idinitial" libelle="IdInitial" nomInterne="IdInitial" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
 			</Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -5289,6 +5331,8 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="moderecept" libelle="Mode réception" nomInterne="ModeRecept" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="statut" libelle="Statut délégation" nomInterne="Statut" clePrimaire="N" obligatoire="O" type="String" taille="10" crypte="N" />
               <Champ id="opposant" libelle="Tiers opposant" nomInterne="Opposant" clePrimaire="N" obligatoire="O" type="String" taille="32" crypte="N" />
+			  <Champ id="iban" libelle="IBAN" nomInterne="IBAN" clePrimaire="N" obligatoire="N" type="String" taille="34" crypte="N" />
+              <Champ id="bic" libelle="BIC" nomInterne="BIC" clePrimaire="N" obligatoire="N" type="String" taille="11" crypte="N" />
               <Champ id="activite" libelle="Activite" nomInterne="Activite" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="dtacte" libelle="Date acte" nomInterne="DateActe" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="dtrecept" libelle="Date réception" nomInterne="DateRecept" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
@@ -5858,6 +5902,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="methodecomptaacc" libelle="MethodeComptaAcc" nomInterne="MethodeComptaAcc" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="typecommacc" libelle="TypeCommAcc" nomInterne="TypeCommAcc" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />		  
 			  <Champ id="mois" libelle="MOIS" nomInterne="MOIS" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />
+              <Champ id="inventaire" libelle="Inventaire" nomInterne="Inventaire" clePrimaire="N" obligatoire="N" type="Booleen" crypte="N" />			  
             </Champs>
             <Indexes />
           </Table>

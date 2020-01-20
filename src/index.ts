@@ -60,6 +60,8 @@ const
                     if (field.taillePartieDecimale)
                         fd.decimals = parseInt(field.taillePartieDecimale, 10);
 
+                } else {
+                    fd.type = 'string';
                 }
                 td.properties[field.id] = fd;
 
