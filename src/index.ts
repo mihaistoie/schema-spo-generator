@@ -59,7 +59,9 @@ const
                     fd.type = 'number';
                     if (field.taillePartieDecimale)
                         fd.decimals = parseInt(field.taillePartieDecimale, 10);
-
+                } else if (field.type === 'Codif') {
+                    fd.type = 'string';
+                    fd.maxLength = 32;
                 } else {
                     fd.type = 'string';
                 }

@@ -146,7 +146,9 @@
 				"format": "mgdis-date"
 			},
 			"etatdos": {
-				"title": "Etat du dossier"
+				"title": "Etat du dossier",
+				"type": "string",
+				"maxLength": 32
 			},
 			"nvtrans": {
 				"title": "Est  transmis",
@@ -192,7 +194,9 @@
 				"maxLength": 8
 			},
 			"origine": {
-				"title": "Code de l’application externe qui à demandé la création du dossier"
+				"title": "Code de l’application externe qui à demandé la création du dossier",
+				"type": "string",
+				"maxLength": 32
 			},
 			"dossmasq": {
 				"title": "Dossier masqué en externe",
@@ -515,10 +519,14 @@
 				"maxLength": 32
 			},
 			"origineentite": {
-				"title": "Origine entité"
+				"title": "Origine entité",
+				"type": "string",
+				"maxLength": 32
 			},
 			"typecorrelation": {
-				"title": "Type de corrélation"
+				"title": "Type de corrélation",
+				"type": "string",
+				"maxLength": 32
 			},
 			"reference": {
 				"title": "Référence",
@@ -722,7 +730,9 @@
 				"format": "mgdis-boolean"
 			},
 			"statutact": {
-				"title": "Statut de l’acteur"
+				"title": "Statut de l’acteur",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -786,7 +796,9 @@
 				"maxLength": 60
 			},
 			"nataction": {
-				"title": "Nature du composant"
+				"title": "Nature du composant",
+				"type": "string",
+				"maxLength": 32
 			},
 			"trtvx": {
 				"title": "Traitement transversal",
@@ -881,7 +893,8 @@
 				"maxLength": 32
 			},
 			"reqsql": {
-				"title": "Requête SQL"
+				"title": "Requête SQL",
+				"type": "string"
 			}
 		},
 		"relations": {
@@ -1563,7 +1576,9 @@
 				"maxLength": 200
 			},
 			"typdispo": {
-				"title": "Type du dispositif"
+				"title": "Type du dispositif",
+				"type": "string",
+				"maxLength": 32
 			},
 			"idfamille": {
 				"title": "Code famille",
@@ -1581,7 +1596,9 @@
 				"format": "mgdis-boolean"
 			},
 			"etat": {
-				"title": "Etat"
+				"title": "Etat",
+				"type": "string",
+				"maxLength": 32
 			},
 			"idprocedfille": {
 				"title": "Code procédure d’instruction fille",
@@ -1798,7 +1815,8 @@
 				"format": "mgdis-boolean"
 			},
 			"xmldesc": {
-				"title": "Description Xml"
+				"title": "Description Xml",
+				"type": "string"
 			}
 		}
 	},
@@ -1823,7 +1841,9 @@
 				"maxLength": 32
 			},
 			"codeparam": {
-				"title": "Code du paramètre"
+				"title": "Code du paramètre",
+				"type": "string",
+				"maxLength": 32
 			},
 			"remplacer": {
 				"title": "Remplacer le paramètre (le lien avec la famille est supprimé)",
@@ -1893,10 +1913,13 @@
 				"maxLength": 32
 			},
 			"typblocage": {
-				"title": "Type du blocage"
+				"title": "Type du blocage",
+				"type": "string",
+				"maxLength": 32
 			},
 			"lstactionsbloc": {
-				"title": "Liste des actions bloquées"
+				"title": "Liste des actions bloquées",
+				"type": "string"
 			}
 		}
 	},
@@ -1925,17 +1948,23 @@
 				"type": "integer"
 			},
 			"chdosactif": {
-				"title": "Champs date utilisée pour le calcul de la durée de vie avant archivage"
+				"title": "Champs date utilisée pour le calcul de la durée de vie avant archivage",
+				"type": "string",
+				"maxLength": 32
 			},
 			"duredosarchinter": {
 				"title": "Durée de conservation des dossiers en archives intermédiaires (en mois)",
 				"type": "integer"
 			},
 			"chdebdosarchinter": {
-				"title": "Champs calcul de la durée de vie en archives intermédiaires"
+				"title": "Champs calcul de la durée de vie en archives intermédiaires",
+				"type": "string",
+				"maxLength": 32
 			},
 			"sortfinaldoss": {
-				"title": "Sort final des dossiers"
+				"title": "Sort final des dossiers",
+				"type": "string",
+				"maxLength": 32
 			}
 		}
 	},
@@ -2193,7 +2222,9 @@
 				"maxLength": 60
 			},
 			"nataction": {
-				"title": "Nature du composant"
+				"title": "Nature du composant",
+				"type": "string",
+				"maxLength": 32
 			},
 			"prevu": {
 				"title": "Prévu sur les PI",
@@ -2289,7 +2320,8 @@
 				"maxLength": 32
 			},
 			"reqsql": {
-				"title": "Requête SQL"
+				"title": "Requête SQL",
+				"type": "string"
 			}
 		},
 		"relations": {
@@ -2421,7 +2453,9 @@
 				"format": "mgdis-boolean"
 			},
 			"origine": {
-				"title": "Origine"
+				"title": "Origine",
+				"type": "string",
+				"maxLength": 32
 			},
 			"refexterne": {
 				"title": "Référence externe",
@@ -2439,10 +2473,14 @@
 				"format": "mgdis-date"
 			},
 			"objetdoc": {
-				"title": "Objet du document"
+				"title": "Objet du document",
+				"type": "string",
+				"maxLength": 32
 			},
 			"typedoc": {
-				"title": "Type du document"
+				"title": "Type du document",
+				"type": "string",
+				"maxLength": 32
 			}
 		}
 	},
@@ -3305,7 +3343,9 @@
 				"maxLength": 80
 			},
 			"typindic": {
-				"title": "Type d’indicateur"
+				"title": "Type d’indicateur",
+				"type": "string",
+				"maxLength": 32
 			},
 			"typlist": {
 				"title": "Type de liste",
