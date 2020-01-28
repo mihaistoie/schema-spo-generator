@@ -972,7 +972,7 @@
               <Champ id="prixunitairettc" libelle="Prix unitaire TTC par lot" nomInterne="PrixUnitaireTTC" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
 			  <Champ id="loyerannuelht" libelle="Loyer Annuel HT" nomInterne="LoyerAnnuelHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
               <Champ id="loyerannuelttc" libelle="Loyer Annuel TTC" nomInterne="LoyerAnnuelTTC" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
-
+			  <Champ id="deptvamarge" libelle="DepTvaMarge" nomInterne="DepTvaMarge" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
 			</Champs>
             <Indexes />
           </Table>
@@ -1858,7 +1858,8 @@
               <Champ id="logicielcomptable" libelle="Logiciel comptable" nomInterne="LogicielComptable" clePrimaire="N" obligatoire="N" type="String" taille="50" crypte="N" />
               <Champ id="chemincomptable" libelle="Chemin comptable" nomInterne="CheminComptable" clePrimaire="N" obligatoire="N" type="String" taille="256" crypte="N" />
               <Champ id="optiontva" libelle="optionTva" nomInterne="optionTva" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
-              <Champ id="repartvamarge" libelle="reparTvaMarge" nomInterne="reparTvaMarge" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />            
+              <Champ id="repartvamarge" libelle="reparTvaMarge" nomInterne="reparTvaMarge" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />   
+			  <Champ id="methodetvamarge" libelle="MethodeTvaMarge" nomInterne="MethodeTvaMarge" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
 			</Champs>
             <Indexes />
           </Table>
@@ -2453,6 +2454,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
 			  <Champ id="idproced" libelle="idProced" nomInterne="idProced" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
 			  <Champ id="postedation" libelle="PosteDation" nomInterne="PosteDation" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
 			  <Champ id="idinitial" libelle="IdInitial" nomInterne="IdInitial" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+			  <Champ id="methodetvamarge" libelle="MethodeTvaMarge" nomInterne="MethodeTvaMarge" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
 			</Champs>
             <Indexes>
               <Index nom="I1" unique="N">
@@ -5331,8 +5333,6 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="moderecept" libelle="Mode réception" nomInterne="ModeRecept" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="statut" libelle="Statut délégation" nomInterne="Statut" clePrimaire="N" obligatoire="O" type="String" taille="10" crypte="N" />
               <Champ id="opposant" libelle="Tiers opposant" nomInterne="Opposant" clePrimaire="N" obligatoire="O" type="String" taille="32" crypte="N" />
-			  <Champ id="iban" libelle="IBAN" nomInterne="IBAN" clePrimaire="N" obligatoire="N" type="String" taille="34" crypte="N" />
-              <Champ id="bic" libelle="BIC" nomInterne="BIC" clePrimaire="N" obligatoire="N" type="String" taille="11" crypte="N" />
               <Champ id="activite" libelle="Activite" nomInterne="Activite" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="dtacte" libelle="Date acte" nomInterne="DateActe" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="dtrecept" libelle="Date réception" nomInterne="DateRecept" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />

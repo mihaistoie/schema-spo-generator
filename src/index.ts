@@ -174,6 +174,13 @@ const
                     });
 
                 }
+                if (classeur.Vues && classeur.Vues.length && classeur.Vues[0].Vue && classeur.Vues[0].Vue.length) {
+                    classeur.Vues[0].Vue.forEach((table: any) => {
+                        generateTable(schemas, table, nameSpace)
+
+                    });
+
+                }
 
             })
         } else {

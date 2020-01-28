@@ -159,6 +159,11 @@ const generateTable = (schemas, table, nameSpace) => {
                     generateTable(schemas, table, nameSpace);
                 });
             }
+            if (classeur.Vues && classeur.Vues.length && classeur.Vues[0].Vue && classeur.Vues[0].Vue.length) {
+                classeur.Vues[0].Vue.forEach((table) => {
+                    generateTable(schemas, table, nameSpace);
+                });
+            }
         });
     }
     else {

@@ -1779,6 +1779,11 @@
 				"title": "Loyer Annuel TTC",
 				"type": "number",
 				"decimals": 2
+			},
+			"deptvamarge": {
+				"title": "DepTvaMarge",
+				"type": "number",
+				"decimals": 2
 			}
 		},
 		"relations": {
@@ -2504,6 +2509,377 @@
 				"title": "Opération supprimé ?",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"M82TIERSREPDEF_V": {
+		"tableName": "M82TIERSREPDEF_V",
+		"name": "SpoM82TiersRepDef_V",
+		"title": "Représentants principals actifs",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idtiers": {
+				"title": "idtiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcompteur": {
+				"title": "idcompteur",
+				"type": "integer"
+			}
+		}
+	},
+	"M82ACTTIEREP_V": {
+		"tableName": "M82ACTTIEREP_V",
+		"name": "SpoM82ActTieRep_V",
+		"title": "Corresp Acteur Tiers Repres",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idtiers": {
+				"title": "idtiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idrepresentant": {
+				"title": "idrepresentant",
+				"type": "integer"
+			},
+			"idcompteur": {
+				"title": "idcompteur",
+				"type": "integer"
+			}
+		}
+	},
+	"M82ORGA_V": {
+		"tableName": "M82ORGA_V",
+		"name": "SpoM82Orga_V",
+		"title": "Info organisme pour courrier",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"orga_nom": {
+				"title": "orga_nom",
+				"type": "string",
+				"maxLength": 200
+			},
+			"orga_ville": {
+				"title": "orga_ville",
+				"type": "string",
+				"maxLength": 40
+			},
+			"orga_numvoie": {
+				"title": "orga_numvoie",
+				"type": "string",
+				"maxLength": 10
+			},
+			"orga_compnumvoie": {
+				"title": "orga_compnumvoie",
+				"type": "string",
+				"maxLength": 20
+			},
+			"orga_rue1": {
+				"title": "orga_rue1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"orga_rue2": {
+				"title": "orga_rue2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"orga_rue3": {
+				"title": "orga_rue3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"orga_rue4": {
+				"title": "orga_rue4",
+				"type": "string",
+				"maxLength": 100
+			},
+			"orga_boitepost": {
+				"title": "orga_boitepost",
+				"type": "string",
+				"maxLength": 20
+			},
+			"orga_postal": {
+				"title": "orga_postal",
+				"type": "string",
+				"maxLength": 10
+			},
+			"dg_titre": {
+				"title": "dg_titre",
+				"type": "string",
+				"maxLength": 100
+			},
+			"dg_nom": {
+				"title": "dg_nom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"dg_prenom": {
+				"title": "dg_prenom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"dg_genre": {
+				"title": "dg_genre",
+				"type": "string",
+				"maxLength": 5
+			},
+			"dg_libgenre": {
+				"title": "dg_libgenre",
+				"type": "string",
+				"maxLength": 100
+			},
+			"dfi_lib": {
+				"title": "dfi_lib",
+				"type": "string",
+				"maxLength": 200
+			},
+			"dfi_titre": {
+				"title": "dfi_titre",
+				"type": "string",
+				"maxLength": 200
+			},
+			"dfi_libdir": {
+				"title": "dfi_libdir",
+				"type": "string",
+				"maxLength": 200
+			},
+			"dfi_nom": {
+				"title": "dfi_nom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"dfi_prenom": {
+				"title": "dfi_prenom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"dfi_genre": {
+				"title": "dfi_genre",
+				"type": "string",
+				"maxLength": 5
+			},
+			"dfi_libgenre": {
+				"title": "dfi_libgenre",
+				"type": "string",
+				"maxLength": 100
+			},
+			"dfi_ref": {
+				"title": "dfi_ref",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dfi_telephone": {
+				"title": "dfi_telephone",
+				"type": "string",
+				"maxLength": 25
+			},
+			"dfi_adremail": {
+				"title": "dfi_adremail",
+				"type": "string",
+				"maxLength": 64
+			}
+		}
+	},
+	"M82TIERSDEST_V": {
+		"tableName": "M82TIERSDEST_V",
+		"name": "SpoM82TiersDest_V",
+		"title": "Tiers destinataire du courrier",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idtiers": {
+				"title": "idtiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idadresse": {
+				"title": "idadresse",
+				"type": "string",
+				"maxLength": 32
+			},
+			"des_lib": {
+				"title": "des_lib",
+				"type": "string",
+				"maxLength": 200
+			},
+			"des_numvoie": {
+				"title": "des_numvoie",
+				"type": "string",
+				"maxLength": 10
+			},
+			"des_compnumvoie": {
+				"title": "des_compnumvoie",
+				"type": "string",
+				"maxLength": 20
+			},
+			"des_rue1": {
+				"title": "des_rue1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_rue2": {
+				"title": "des_rue2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_rue3": {
+				"title": "des_rue3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_rue4": {
+				"title": "des_rue4",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_boitepost": {
+				"title": "des_boitepost",
+				"type": "string",
+				"maxLength": 20
+			},
+			"des_postal": {
+				"title": "des_postal",
+				"type": "string",
+				"maxLength": 10
+			},
+			"des_ville": {
+				"title": "des_ville",
+				"type": "string",
+				"maxLength": 40
+			},
+			"des_app": {
+				"title": "des_app",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_pol": {
+				"title": "des_pol",
+				"type": "string",
+				"maxLength": 200
+			},
+			"rep_nom": {
+				"title": "rep_nom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"rep_prenom": {
+				"title": "rep_prenom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"rep_genre": {
+				"title": "rep_genre",
+				"type": "string",
+				"maxLength": 5
+			},
+			"rep_libgenre": {
+				"title": "rep_libgenre",
+				"type": "string",
+				"maxLength": 100
+			}
+		}
+	},
+	"M82TIERSREPDEST_V": {
+		"tableName": "M82TIERSREPDEST_V",
+		"name": "SpoM82TiersRepDest_V",
+		"title": "Tiers destinataire du courrier",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idtiers": {
+				"title": "idtiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"des_lib": {
+				"title": "des_lib",
+				"type": "string",
+				"maxLength": 200
+			},
+			"des_numvoie": {
+				"title": "des_numvoie",
+				"type": "string",
+				"maxLength": 10
+			},
+			"des_compnumvoie": {
+				"title": "des_compnumvoie",
+				"type": "string",
+				"maxLength": 20
+			},
+			"des_rue1": {
+				"title": "des_rue1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_rue2": {
+				"title": "des_rue2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_rue3": {
+				"title": "des_rue3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_rue4": {
+				"title": "des_rue4",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_boitepost": {
+				"title": "des_boitepost",
+				"type": "string",
+				"maxLength": 20
+			},
+			"des_postal": {
+				"title": "des_postal",
+				"type": "string",
+				"maxLength": 10
+			},
+			"des_ville": {
+				"title": "des_ville",
+				"type": "string",
+				"maxLength": 40
+			},
+			"des_app": {
+				"title": "des_app",
+				"type": "string",
+				"maxLength": 100
+			},
+			"des_pol": {
+				"title": "des_pol",
+				"type": "string",
+				"maxLength": 200
+			},
+			"rep_nom": {
+				"title": "rep_nom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"rep_prenom": {
+				"title": "rep_prenom",
+				"type": "string",
+				"maxLength": 50
+			},
+			"rep_genre": {
+				"title": "rep_genre",
+				"type": "string",
+				"maxLength": 5
+			},
+			"rep_libgenre": {
+				"title": "rep_libgenre",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idrepresentant": {
+				"title": "idrepresentant",
+				"type": "integer"
 			}
 		}
 	},
@@ -3260,6 +3636,40 @@
 			}
 		}
 	},
+	"BUDPOSTE_V": {
+		"tableName": "BUDPOSTE_V",
+		"name": "SpoBudPosteCalcIsLeaf",
+		"title": "Propriétés poste avec calc isleaf",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"id": {
+				"title": "Id",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "IdPoste",
+				"type": "string",
+				"maxLength": 32
+			},
+			"moderepart": {
+				"title": "ModeRepart",
+				"type": "string",
+				"maxLength": 10
+			},
+			"isleaf": {
+				"title": "IsLeaf",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"persistisleaf": {
+				"title": "PersistIsLeaf",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
 	"PBPOSTEINFOCAL": {
 		"tableName": "PBPOSTEINFOCAL",
 		"name": "SpoPosteInfoCalcul",
@@ -3854,6 +4264,11 @@
 			},
 			"repartvamarge": {
 				"title": "reparTvaMarge",
+				"type": "string",
+				"maxLength": 10
+			},
+			"methodetvamarge": {
+				"title": "MethodeTvaMarge",
 				"type": "string",
 				"maxLength": 10
 			}
@@ -4565,6 +4980,239 @@
 			}
 		}
 	},
+	"SPOOPPHASE": {
+		"tableName": "SPOOPPHASE",
+		"name": "SpoSPOOpPhase",
+		"title": "Etapes planning opération",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "Code opération",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idphase": {
+				"title": "Code phase",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libelle": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 200
+			},
+			"libellecourt": {
+				"title": "Libellé court",
+				"type": "string",
+				"maxLength": 80
+			},
+			"codecouleur": {
+				"title": "Code couleur",
+				"type": "string",
+				"maxLength": 20
+			},
+			"isspecial": {
+				"title": "Est spécial",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dtdeb": {
+				"title": "Date début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtfin": {
+				"title": "Date fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"statut": {
+				"title": "Statut",
+				"type": "string",
+				"maxLength": 10
+			}
+		}
+	},
+	"ACTPROCGANTT": {
+		"tableName": "ACTPROCGANTT",
+		"name": "SpoActProcGantt",
+		"title": "Actions planning procédure",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idproc": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbetape": {
+				"title": "Etape",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbaction": {
+				"title": "Action",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"ETAPEOPGANTT": {
+		"tableName": "ETAPEOPGANTT",
+		"name": "SpoEtapeOpGantt",
+		"title": "Etapes planning opération",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "Code opération",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbetape": {
+				"title": "Etape",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"ETAPEPROCGANTT": {
+		"tableName": "ETAPEPROCGANTT",
+		"name": "SpoEtapeProcGantt",
+		"title": "Etapes planning procédure",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idproc": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbetape": {
+				"title": "Etape",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"ACTOPGANTT": {
+		"tableName": "ACTOPGANTT",
+		"name": "SpoActOpGantt",
+		"title": "Actions planning opération",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "Code opération",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbetape": {
+				"title": "Etape",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbaction": {
+				"title": "Action",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"SPOAPPEVENTDEF": {
+		"tableName": "SPOAPPEVENTDEF",
+		"name": "SpoSPOAppEventDef",
+		"title": "SPOAppEventDef",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idev": {
+				"title": "IdEv",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idop": {
+				"title": "IdOp",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "IdEtape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "IdAction",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"SPOAPPEVENTDATE": {
+		"tableName": "SPOAPPEVENTDATE",
+		"name": "SpoSPOAppEventDate",
+		"title": "SPOAppEventDate",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idev": {
+				"title": "IdEv",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idop": {
+				"title": "IdOp",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "IdEtape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtprev": {
+				"title": "DtPrev",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtreal": {
+				"title": "DtReal",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
 	"PROG": {
 		"tableName": "PROG",
 		"name": "SpoProgramme",
@@ -4773,6 +5421,11 @@
 				"title": "IdInitial",
 				"type": "string",
 				"maxLength": 32
+			},
+			"methodetvamarge": {
+				"title": "MethodeTvaMarge",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -6076,6 +6729,1922 @@
 					"id"
 				],
 				"invRel": "progAdresse"
+			}
+		}
+	},
+	"M82CLASSDOSS_V": {
+		"tableName": "M82CLASSDOSS_V",
+		"name": "SpoM82ClassDoss_V",
+		"title": "Classeur du dossier",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Domaine - Code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Dossier - Code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbclassdoss": {
+				"title": "Classeur",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idclassdoss": {
+				"title": "Classeur - Code",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"M82LOGTTYPEFIN2_V": {
+		"tableName": "M82LOGTTYPEFIN2_V",
+		"name": "SpoM82LogtTypeFin2_V",
+		"title": "LogtTypeFin2",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddoss": {
+				"title": "Code opération",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nblogt": {
+				"title": "Nb logt",
+				"type": "integer"
+			},
+			"c1": {
+				"title": "T1 collectif",
+				"type": "integer"
+			},
+			"c1b": {
+				"title": "T1 bis collectif",
+				"type": "integer"
+			},
+			"c2": {
+				"title": "T2 collectif",
+				"type": "integer"
+			},
+			"c3": {
+				"title": "T3 Collectif",
+				"type": "integer"
+			},
+			"c4": {
+				"title": "T4 collectif",
+				"type": "integer"
+			},
+			"c5": {
+				"title": "T5 collectif",
+				"type": "integer"
+			},
+			"i1": {
+				"title": "T1 individuel",
+				"type": "integer"
+			},
+			"i1b": {
+				"title": "T1 bis individuel",
+				"type": "integer"
+			},
+			"i2": {
+				"title": "T2 individuel",
+				"type": "integer"
+			},
+			"i3": {
+				"title": "T3 individuel",
+				"type": "integer"
+			},
+			"i4": {
+				"title": "T4 individuel",
+				"type": "integer"
+			},
+			"i5": {
+				"title": "T5 individuel",
+				"type": "integer"
+			}
+		}
+	},
+	"M82LOGTTYPEFIN_V": {
+		"tableName": "M82LOGTTYPEFIN_V",
+		"name": "SpoM82LogtTypeFin_V",
+		"title": "LogtTypeFin",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code Domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code Dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nblogt": {
+				"title": "Total Logements",
+				"type": "integer"
+			},
+			"cdc": {
+				"title": "Code Programme Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libc": {
+				"title": "Libellé Programme Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"c1": {
+				"title": "Collectif T1",
+				"type": "integer"
+			},
+			"c1b": {
+				"title": "Collectif T1b",
+				"type": "integer"
+			},
+			"c2": {
+				"title": "Collectif T2",
+				"type": "integer"
+			},
+			"c3": {
+				"title": "Collectif T3",
+				"type": "integer"
+			},
+			"c4": {
+				"title": "Collectif T4",
+				"type": "integer"
+			},
+			"c5": {
+				"title": "Collectif T5",
+				"type": "integer"
+			},
+			"c6": {
+				"title": "Collectif T6",
+				"type": "integer"
+			},
+			"c7": {
+				"title": "Collectif T7",
+				"type": "integer"
+			},
+			"cdi": {
+				"title": "Code Programme Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libi": {
+				"title": "Libellé Programme Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"i1": {
+				"title": "Individuel T1",
+				"type": "integer"
+			},
+			"i1b": {
+				"title": "Individuel T1b",
+				"type": "integer"
+			},
+			"i2": {
+				"title": "Individuel T2",
+				"type": "integer"
+			},
+			"i3": {
+				"title": "Individuel T3",
+				"type": "integer"
+			},
+			"i4": {
+				"title": "Individuel T4",
+				"type": "integer"
+			},
+			"i5": {
+				"title": "Individuel T5",
+				"type": "integer"
+			},
+			"i6": {
+				"title": "Individuel T6",
+				"type": "integer"
+			},
+			"i7": {
+				"title": "Individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"M82PROGLOGT_V": {
+		"tableName": "M82PROGLOGT_V",
+		"name": "SpoM82ProgLogt_V",
+		"title": "Programme - Logements",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idprog": {
+				"title": "IdProg",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nblogt": {
+				"title": "NbLogt",
+				"type": "integer"
+			},
+			"nblogthp": {
+				"title": "NbLogtHP",
+				"type": "integer"
+			},
+			"nblits": {
+				"title": "NbLits",
+				"type": "integer"
+			},
+			"nbt1": {
+				"title": "NbT1",
+				"type": "integer"
+			},
+			"nbt1hp": {
+				"title": "NbT1HP",
+				"type": "integer"
+			},
+			"nbt1lits": {
+				"title": "NbT1Lits",
+				"type": "integer"
+			},
+			"nbt1b": {
+				"title": "NbT1b",
+				"type": "integer"
+			},
+			"nbt1bhp": {
+				"title": "NbT1bHP",
+				"type": "integer"
+			},
+			"nbt1blits": {
+				"title": "NbT1bLits",
+				"type": "integer"
+			},
+			"nbt2": {
+				"title": "NbT2",
+				"type": "integer"
+			},
+			"nbt1p": {
+				"title": "NbT1p",
+				"type": "integer"
+			},
+			"nbt1php": {
+				"title": "NbT1pHP",
+				"type": "integer"
+			},
+			"nbt1plits": {
+				"title": "NbT1pLits",
+				"type": "integer"
+			},
+			"nbt2hp": {
+				"title": "NbT2HP",
+				"type": "integer"
+			},
+			"nbt2lits": {
+				"title": "NbT2Lits",
+				"type": "integer"
+			},
+			"nbt3": {
+				"title": "NbT3",
+				"type": "integer"
+			},
+			"nbt3hp": {
+				"title": "NbT3HP",
+				"type": "integer"
+			},
+			"nbt3lits": {
+				"title": "NbT3Lits",
+				"type": "integer"
+			},
+			"nbt4": {
+				"title": "NbT4",
+				"type": "integer"
+			},
+			"nbt4hp": {
+				"title": "NbT4HP",
+				"type": "integer"
+			},
+			"nbt4lits": {
+				"title": "NbT4Lits",
+				"type": "integer"
+			},
+			"nbt5": {
+				"title": "NbT5",
+				"type": "integer"
+			},
+			"nbt5hp": {
+				"title": "NbT5HP",
+				"type": "integer"
+			},
+			"nbt5lits": {
+				"title": "NbT5Lits",
+				"type": "integer"
+			},
+			"nbt6": {
+				"title": "NbT6",
+				"type": "integer"
+			},
+			"nbt6hp": {
+				"title": "NbT6HP",
+				"type": "integer"
+			},
+			"nbt6lits": {
+				"title": "NbT6Lits",
+				"type": "integer"
+			},
+			"nbt7": {
+				"title": "NbT7",
+				"type": "integer"
+			},
+			"nbt7hp": {
+				"title": "NbT7HP",
+				"type": "integer"
+			},
+			"nbt7lits": {
+				"title": "NbT7Lits",
+				"type": "integer"
+			}
+		}
+	},
+	"M82PROGLOTSEC_V": {
+		"tableName": "M82PROGLOTSEC_V",
+		"name": "SpoM82ProgLotSec_V",
+		"title": "Programme - Lots secondaires",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idprog": {
+				"title": "IdProg",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nblotsec": {
+				"title": "NbLotSec",
+				"type": "integer"
+			},
+			"nbautsec": {
+				"title": "NbAutSec",
+				"type": "integer"
+			},
+			"nbcave": {
+				"title": "NbCave",
+				"type": "integer"
+			},
+			"nbcell": {
+				"title": "NbCell",
+				"type": "integer"
+			},
+			"nbgarba": {
+				"title": "NbGarBA",
+				"type": "integer"
+			},
+			"nbgarbs": {
+				"title": "NbGarBS",
+				"type": "integer"
+			},
+			"nbgarpa": {
+				"title": "NbGarPA",
+				"type": "integer"
+			},
+			"nbgarps": {
+				"title": "NbGarPS",
+				"type": "integer"
+			},
+			"nbgari": {
+				"title": "NbGarI",
+				"type": "integer"
+			},
+			"nbgarni": {
+				"title": "NbGarNI",
+				"type": "integer"
+			},
+			"nbterr": {
+				"title": "NbTerr",
+				"type": "integer"
+			},
+			"suterr": {
+				"title": "SuTerr",
+				"type": "number",
+				"decimals": 2
+			},
+			"nbjard": {
+				"title": "NbJard",
+				"type": "integer"
+			},
+			"sujard": {
+				"title": "SuJard",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"M82PROGRESERV_V": {
+		"tableName": "M82PROGRESERV_V",
+		"name": "SpoM82ProgReserv_V",
+		"title": "Programme - Réservataires",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idprog": {
+				"title": "IdProg",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nbrdpt": {
+				"title": "NbRdpt",
+				"type": "integer"
+			},
+			"nbrpref": {
+				"title": "NbRpref",
+				"type": "integer"
+			},
+			"nbrreg": {
+				"title": "NbRreg",
+				"type": "integer"
+			},
+			"nbraggl": {
+				"title": "NbRaggl",
+				"type": "integer"
+			},
+			"nbrcoll": {
+				"title": "NbRcoll",
+				"type": "integer"
+			},
+			"nbrcomm": {
+				"title": "NbRcomm",
+				"type": "integer"
+			},
+			"nbraut": {
+				"title": "NbRaut",
+				"type": "integer"
+			}
+		}
+	},
+	"BSPLS_V": {
+		"tableName": "BSPLS_V",
+		"name": "SpoPLS_V",
+		"title": "PLS",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logpls": {
+				"title": "Total logements PLS",
+				"type": "integer"
+			},
+			"cdplsc": {
+				"title": "Code programme PLS Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplsc": {
+				"title": "Libellé programme PLS Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plsc1": {
+				"title": "PLS collectif T1",
+				"type": "integer"
+			},
+			"plsc1b": {
+				"title": "PLS collectif T1b",
+				"type": "integer"
+			},
+			"plsc2": {
+				"title": "PLS collectif T2",
+				"type": "integer"
+			},
+			"plsc3": {
+				"title": "PLS collectif T3",
+				"type": "integer"
+			},
+			"plsc4": {
+				"title": "PLS collectif T4",
+				"type": "integer"
+			},
+			"plsc5": {
+				"title": "PLS collectif T5",
+				"type": "integer"
+			},
+			"plsc6": {
+				"title": "PLS collectif T6",
+				"type": "integer"
+			},
+			"plsc7": {
+				"title": "PLS collectif T7",
+				"type": "integer"
+			},
+			"cdplsi": {
+				"title": "Code programme PL Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplsi": {
+				"title": "Libellé programme PLS Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plsi1": {
+				"title": "PLS individuel T1",
+				"type": "integer"
+			},
+			"plsi1b": {
+				"title": "PLS individuel T1b",
+				"type": "integer"
+			},
+			"plsi2": {
+				"title": "PLS individuel T2",
+				"type": "integer"
+			},
+			"plsi3": {
+				"title": "PLS individuel T3",
+				"type": "integer"
+			},
+			"plsi4": {
+				"title": "PLS individuel T4",
+				"type": "integer"
+			},
+			"plsi5": {
+				"title": "PLS individuel T5",
+				"type": "integer"
+			},
+			"plsi6": {
+				"title": "PLS individuel T6",
+				"type": "integer"
+			},
+			"plsi7": {
+				"title": "PLS individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSPCL_V": {
+		"tableName": "BSPCL_V",
+		"name": "SpoPCL_V",
+		"title": "PCL",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logpcl": {
+				"title": "Total logements PSLA",
+				"type": "integer"
+			},
+			"cdpslac": {
+				"title": "Code programme PSLA Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libpslac": {
+				"title": "Libellé programme PSLA Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"pclc1": {
+				"title": "PSLA collectif T1",
+				"type": "integer"
+			},
+			"pclc1b": {
+				"title": "PSLA collectif T1b",
+				"type": "integer"
+			},
+			"pclc2": {
+				"title": "PSLA collectif T2",
+				"type": "integer"
+			},
+			"pclc3": {
+				"title": "PSLA collectif T3",
+				"type": "integer"
+			},
+			"pclc4": {
+				"title": "PSLA collectif T4",
+				"type": "integer"
+			},
+			"pclc5": {
+				"title": "PSLA collectif T5",
+				"type": "integer"
+			},
+			"pclc6": {
+				"title": "PSLA collectif T6",
+				"type": "integer"
+			},
+			"pclc7": {
+				"title": "PSLA collectif T7",
+				"type": "integer"
+			},
+			"cdpslai": {
+				"title": "Code programme PSLA Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libpslai": {
+				"title": "Libellé programme PSLA Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"pcli1": {
+				"title": "PSLA individuel T1",
+				"type": "integer"
+			},
+			"pcli1b": {
+				"title": "PSLA individuel T1b",
+				"type": "integer"
+			},
+			"pcli2": {
+				"title": "PSLA individuel T2",
+				"type": "integer"
+			},
+			"pcli3": {
+				"title": "PSLA individuel T3",
+				"type": "integer"
+			},
+			"pcli4": {
+				"title": "PSLA individuel T4",
+				"type": "integer"
+			},
+			"pcli5": {
+				"title": "PSLA individuel T5",
+				"type": "integer"
+			},
+			"pcli6": {
+				"title": "PSLA individuel T6",
+				"type": "integer"
+			},
+			"pcli7": {
+				"title": "PSLA individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSPLI_V": {
+		"tableName": "BSPLI_V",
+		"name": "SpoPLI_V",
+		"title": "PLI",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logautre1": {
+				"title": "Total logements PLI",
+				"type": "integer"
+			},
+			"cdplic": {
+				"title": "Code programme PLI Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplic": {
+				"title": "Libellé programme PLI Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"a1c1": {
+				"title": "PLI collectif T1",
+				"type": "integer"
+			},
+			"a1c1b": {
+				"title": "PLI collectif T1b",
+				"type": "integer"
+			},
+			"a1c2": {
+				"title": "PLI collectif T2",
+				"type": "integer"
+			},
+			"a1c3": {
+				"title": "PLI collectif T3",
+				"type": "integer"
+			},
+			"a1c4": {
+				"title": "PLI collectif T4",
+				"type": "integer"
+			},
+			"a1c5": {
+				"title": "PLI collectif T5",
+				"type": "integer"
+			},
+			"a1c6": {
+				"title": "PLI collectif T6",
+				"type": "integer"
+			},
+			"a1c7": {
+				"title": "PLI collectif T7",
+				"type": "integer"
+			},
+			"cdplii": {
+				"title": "Code programme PLI Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplii": {
+				"title": "Libellé programme PLI Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"a1i1": {
+				"title": "PLI individuel T1",
+				"type": "integer"
+			},
+			"a1i1b": {
+				"title": "PLI individuel T1b",
+				"type": "integer"
+			},
+			"a1i2": {
+				"title": "PLI individuel T2",
+				"type": "integer"
+			},
+			"a1i3": {
+				"title": "PLI individuel T3",
+				"type": "integer"
+			},
+			"a1i4": {
+				"title": "PLI individuel T4",
+				"type": "integer"
+			},
+			"a1i5": {
+				"title": "PLI individuel T5",
+				"type": "integer"
+			},
+			"a1i6": {
+				"title": "PLI individuel T6",
+				"type": "integer"
+			},
+			"a1i7": {
+				"title": "PLI individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSPLUSAA_V": {
+		"tableName": "BSPLUSAA_V",
+		"name": "SpoPLUSAA_V",
+		"title": "PLUSAA",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logplusaa": {
+				"title": "Total logements PLUS AA",
+				"type": "integer"
+			},
+			"cdplusaac": {
+				"title": "Code programme PLUS AA Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplusaac": {
+				"title": "Libellé programme PLUS AA Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plusaac1": {
+				"title": "PLUS AA collectif T1",
+				"type": "integer"
+			},
+			"plusaac1b": {
+				"title": "PLUS AA collectif T1b",
+				"type": "integer"
+			},
+			"plusaac2": {
+				"title": "PLUS AA collectif T2",
+				"type": "integer"
+			},
+			"plusaac3": {
+				"title": "PLUS AA collectif T3",
+				"type": "integer"
+			},
+			"plusaac4": {
+				"title": "PLUS AA collectif T4",
+				"type": "integer"
+			},
+			"plusaac5": {
+				"title": "PLUS AA collectif T5",
+				"type": "integer"
+			},
+			"plusaac6": {
+				"title": "PLUS AA collectif T6",
+				"type": "integer"
+			},
+			"plusaac7": {
+				"title": "PLUS AA collectif T7",
+				"type": "integer"
+			},
+			"cdplusaai": {
+				"title": "Code programme PLUS AA Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplusaai": {
+				"title": "Libellé programme PLUS AA Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plusaai1": {
+				"title": "PLUS AA individuel T1",
+				"type": "integer"
+			},
+			"plusaai1b": {
+				"title": "PLUS AA individuel T1b",
+				"type": "integer"
+			},
+			"plusaai2": {
+				"title": "PLUS AA individuel T2",
+				"type": "integer"
+			},
+			"plusaai3": {
+				"title": "PLUS AA individuel T3",
+				"type": "integer"
+			},
+			"plusaai4": {
+				"title": "PLUS AA individuel T4",
+				"type": "integer"
+			},
+			"plusaai5": {
+				"title": "PLUS AA individuel T5",
+				"type": "integer"
+			},
+			"plusaai6": {
+				"title": "PLUS AA individuel T6",
+				"type": "integer"
+			},
+			"plusaai7": {
+				"title": "PLUS AA individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSECO_V": {
+		"tableName": "BSECO_V",
+		"name": "SpoECO_V",
+		"title": "ECO",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logeco": {
+				"title": "Total logements ECO",
+				"type": "integer"
+			},
+			"cdecoc": {
+				"title": "Code programme ECO collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libecoc": {
+				"title": "Libellé programme ECO Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"ecoct1": {
+				"title": "ECO T1 collectifs",
+				"type": "integer"
+			},
+			"ecoct1b": {
+				"title": "ECO T1bis collectifs",
+				"type": "integer"
+			},
+			"ecoct2": {
+				"title": "ECO T2 collectifs",
+				"type": "integer"
+			},
+			"ecoct3": {
+				"title": "ECO T3 collectifs",
+				"type": "integer"
+			},
+			"ecoct4": {
+				"title": "ECO T4 collectifs",
+				"type": "integer"
+			},
+			"ecoct5": {
+				"title": "ECO T5 collectifs",
+				"type": "integer"
+			},
+			"ecoct6": {
+				"title": "ECO T6 collectifs",
+				"type": "integer"
+			},
+			"ecoct7": {
+				"title": "ECO T7 collectifs",
+				"type": "integer"
+			},
+			"cdecoi": {
+				"title": "Code programme ECO Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libecoi": {
+				"title": "Libellé programme ECO Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"ecoit1": {
+				"title": "ECO T1 individuels",
+				"type": "integer"
+			},
+			"ecoit1b": {
+				"title": "ECO individuel T1bis",
+				"type": "integer"
+			},
+			"ecoit2": {
+				"title": "ECO individuel T2",
+				"type": "integer"
+			},
+			"ecoit3": {
+				"title": "ECO individuel T3",
+				"type": "integer"
+			},
+			"ecoit4": {
+				"title": "ECO individuel T4",
+				"type": "integer"
+			},
+			"ecoit5": {
+				"title": "ECO individuel T5",
+				"type": "integer"
+			},
+			"ecoit6": {
+				"title": "ECO individuel T6",
+				"type": "integer"
+			},
+			"ecoit7": {
+				"title": "ECO individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSAUTRE2_V": {
+		"tableName": "BSAUTRE2_V",
+		"name": "SpoAutre2_V",
+		"title": "Autre 2",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logautre3": {
+				"title": "Total logements Autre 2",
+				"type": "integer"
+			},
+			"cda2c": {
+				"title": "Code programme AUTRE 2 Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"liba2c": {
+				"title": "Libellé programme AUTRE 2 Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"a3c1": {
+				"title": "AUTRE 2 collectif T1",
+				"type": "integer"
+			},
+			"a3c1b": {
+				"title": "AUTRE 2 collectif T1b",
+				"type": "integer"
+			},
+			"a3c2": {
+				"title": "AUTRE 2 collectif T2",
+				"type": "integer"
+			},
+			"a3c3": {
+				"title": "AUTRE 2 collectif T3",
+				"type": "integer"
+			},
+			"a3c4": {
+				"title": "AUTRE 2 collectif T4",
+				"type": "integer"
+			},
+			"a3c5": {
+				"title": "AUTRE 2 collectif T5",
+				"type": "integer"
+			},
+			"a3c6": {
+				"title": "AUTRE 2 collectif T6",
+				"type": "integer"
+			},
+			"a3c7": {
+				"title": "AUTRE 2 collectif T7",
+				"type": "integer"
+			},
+			"cda2i": {
+				"title": "Code programme AUTRE 2 Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"liba2i": {
+				"title": "Libellé programme AUTRE 2 Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"a3i1": {
+				"title": "AUTRE 2 individuel T1",
+				"type": "integer"
+			},
+			"a3i1b": {
+				"title": "AUTRE 2 individuel T1b",
+				"type": "integer"
+			},
+			"a3i2": {
+				"title": "AUTRE 2 individuel T2",
+				"type": "integer"
+			},
+			"a3i3": {
+				"title": "AUTRE 2 individuel T3",
+				"type": "integer"
+			},
+			"a3i4": {
+				"title": "AUTRE 2 individuel T4",
+				"type": "integer"
+			},
+			"a3i5": {
+				"title": "AUTRE 2 individuel T5",
+				"type": "integer"
+			},
+			"a3i6": {
+				"title": "AUTRE 2 individuel T6",
+				"type": "integer"
+			},
+			"a3i7": {
+				"title": "AUTRE 2 individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSAUTRE1_V": {
+		"tableName": "BSAUTRE1_V",
+		"name": "SpoAutre1_V",
+		"title": "Autre 1",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logautre2": {
+				"title": "Total logements Autre 1",
+				"type": "integer"
+			},
+			"cda1c": {
+				"title": "Code programme AUTRE 1 Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"liba1c": {
+				"title": "Libellé programme AUTRE 1 Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"a2c1": {
+				"title": "Autre 1 collectif T1",
+				"type": "integer"
+			},
+			"a2c1b": {
+				"title": "Autre 1 collectif T1b",
+				"type": "integer"
+			},
+			"a2c2": {
+				"title": "Autre 1 collectif T2",
+				"type": "integer"
+			},
+			"a2c3": {
+				"title": "Autre 1 collectif T3",
+				"type": "integer"
+			},
+			"a2c4": {
+				"title": "Autre 1 collectif T4",
+				"type": "integer"
+			},
+			"a2c5": {
+				"title": "Autre 1 collectif T5",
+				"type": "integer"
+			},
+			"a2c6": {
+				"title": "Autre 1 collectif T6",
+				"type": "integer"
+			},
+			"a2c7": {
+				"title": "Autre 1 collectif T7",
+				"type": "integer"
+			},
+			"cda1i": {
+				"title": "Code programme AUTRE 1 Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"liba1i": {
+				"title": "Libellé programme AUTRE 1 Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"a2i1": {
+				"title": "Autre 1 individuel T1",
+				"type": "integer"
+			},
+			"a2i1b": {
+				"title": "Autre 1 individuel T1b",
+				"type": "integer"
+			},
+			"a2i2": {
+				"title": "Autre 1 individuel T2",
+				"type": "integer"
+			},
+			"a2i3": {
+				"title": "Autre 1 individuel T3",
+				"type": "integer"
+			},
+			"a2i4": {
+				"title": "Autre 1 individuel T4",
+				"type": "integer"
+			},
+			"a2i5": {
+				"title": "Autre 1 individuel T5",
+				"type": "integer"
+			},
+			"a2i6": {
+				"title": "Autre 1 individuel T6",
+				"type": "integer"
+			},
+			"a2i7": {
+				"title": "Autre 1 individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSLOCTER_V": {
+		"tableName": "BSLOCTER_V",
+		"name": "SpoLocauxTertiaires_V",
+		"title": "Locaux Tertiaires",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ltlib": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 120
+			},
+			"ltsurfutil": {
+				"title": "Surface utile en m²",
+				"type": "number",
+				"decimals": 2
+			},
+			"ltnbc": {
+				"title": "Nombre de cellules commercialisées",
+				"type": "integer"
+			},
+			"ltnivliv": {
+				"title": "Niveau de livraison",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ltstat": {
+				"title": "Stationnement",
+				"type": "string",
+				"maxLength": 120
+			},
+			"ltannexe": {
+				"title": "Annexe",
+				"type": "string",
+				"maxLength": 120
+			},
+			"ltdest": {
+				"title": "Destination",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ltshon": {
+				"title": " SHON réglementaire",
+				"type": "number",
+				"decimals": 2
+			},
+			"ltshob": {
+				"title": " SHOB",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"BSLOCCOM_V": {
+		"tableName": "BSLOCCOM_V",
+		"name": "SpoLocauxCommerciaux_V",
+		"title": "Locaux Commerciaux",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lclib": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 120
+			},
+			"lccp": {
+				"title": "Code programme Locaux Commerciaux",
+				"type": "string",
+				"maxLength": 80
+			},
+			"lclp": {
+				"title": "Libellé programme Locaux Commerciaux",
+				"type": "string",
+				"maxLength": 120
+			},
+			"lcsurfutil": {
+				"title": "Surface utile en m²",
+				"type": "number",
+				"decimals": 2
+			},
+			"lcnbc": {
+				"title": "Nombre de cellules commercialisées",
+				"type": "integer"
+			},
+			"lcnivliv": {
+				"title": "Niveau de livraison",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lcstat": {
+				"title": "Stationnement",
+				"type": "string",
+				"maxLength": 120
+			},
+			"lcannexe": {
+				"title": "Annexe",
+				"type": "string",
+				"maxLength": 120
+			},
+			"lcdest": {
+				"title": "Destination",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lcshon": {
+				"title": " SHON réglementaire",
+				"type": "number",
+				"decimals": 2
+			},
+			"lcshob": {
+				"title": " SHOB",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"BSLOGEMENTS_V": {
+		"tableName": "BSLOGEMENTS_V",
+		"name": "SpoLogements_V",
+		"title": "Logements",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"loginsc": {
+				"title": "Total logements",
+				"type": "integer"
+			},
+			"logtri": {
+				"title": "Nb équivalents logements",
+				"type": "integer"
+			},
+			"logcol": {
+				"title": "Total logements collectifs",
+				"type": "integer"
+			},
+			"logind": {
+				"title": "Total logements individuels",
+				"type": "integer"
+			},
+			"nblogtame": {
+				"title": "Total logements aménagés",
+				"type": "integer"
+			},
+			"totalequilgt": {
+				"title": "Total équivalent logements",
+				"type": "integer"
+			},
+			"semt1": {
+				"title": "Nombre T1",
+				"type": "integer"
+			},
+			"semt1b": {
+				"title": "Nombre T1bis",
+				"type": "integer"
+			},
+			"semt2": {
+				"title": "Nombre T2",
+				"type": "integer"
+			},
+			"semt3": {
+				"title": "Nombre T3",
+				"type": "integer"
+			},
+			"semt4": {
+				"title": "Nombre T4",
+				"type": "integer"
+			},
+			"semt5": {
+				"title": "Nombre T5",
+				"type": "integer"
+			},
+			"semt6": {
+				"title": "Nombre T6",
+				"type": "integer"
+			},
+			"semt7": {
+				"title": "Nombre T7 et +",
+				"type": "integer"
+			},
+			"synthtyp": {
+				"title": "Synthèse nb log. par type",
+				"type": "string",
+				"maxLength": 80
+			},
+			"synthmod": {
+				"title": "Synthèse nb log par mode de fi.",
+				"type": "string",
+				"maxLength": 80
+			},
+			"logsemcol": {
+				"title": "Synthèse par typologie",
+				"type": "string",
+				"maxLength": 60
+			},
+			"garint": {
+				"title": "Nombre Lgts avec garage intégré",
+				"type": "integer"
+			},
+			"garnint": {
+				"title": "Garages non intégrés",
+				"type": "integer"
+			},
+			"garaer": {
+				"title": "Nb de places de parking aérien",
+				"type": "integer"
+			},
+			"bxss": {
+				"title": "boxe en sous-sol",
+				"type": "integer"
+			},
+			"nbxss": {
+				"title": "Non boxé en sous-sol",
+				"type": "integer"
+			},
+			"nbloghp": {
+				"title": "Nb total logements HP",
+				"type": "integer"
+			},
+			"nbloghp1": {
+				"title": "Nombre T1 HP",
+				"type": "integer"
+			},
+			"nbloghp1b": {
+				"title": "Nombre T1bis HP",
+				"type": "integer"
+			},
+			"nbloghp2": {
+				"title": "Nombre T2 HP",
+				"type": "integer"
+			},
+			"nbloghp3": {
+				"title": "Nombre T3 HP",
+				"type": "integer"
+			},
+			"nbloghp4": {
+				"title": "Nombre T4 HP",
+				"type": "integer"
+			},
+			"nbloghp5": {
+				"title": "Nombre T5 HP",
+				"type": "integer"
+			},
+			"nbloghp6": {
+				"title": "Nombre T6 HP",
+				"type": "integer"
+			},
+			"nbcellier": {
+				"title": "Nb de celliers",
+				"type": "integer"
+			},
+			"nbcave": {
+				"title": "Nb de caves",
+				"type": "integer"
+			},
+			"resaunpct": {
+				"title": "Nb Lgts réservataires Collecteurs 1%",
+				"type": "integer"
+			},
+			"resacol": {
+				"title": "Nb Lgts réservataires Collectivité",
+				"type": "integer"
+			},
+			"resapref": {
+				"title": "Nb Lgts réservataires Préfecture (PLUS)",
+				"type": "integer"
+			},
+			"resadep": {
+				"title": "Nb Lgts réservataires Département",
+				"type": "integer"
+			},
+			"resabg": {
+				"title": "Besoins Généraux",
+				"type": "integer"
+			},
+			"resadivers": {
+				"title": "Divers",
+				"type": "integer"
+			},
+			"surfjard": {
+				"title": "M2 de surface Jardins",
+				"type": "number",
+				"decimals": 2
+			},
+			"surfterras": {
+				"title": "M2 de surface Terrasses",
+				"type": "number",
+				"decimals": 2
+			},
+			"bxsstruct": {
+				"title": "Boxes en super structure",
+				"type": "integer"
+			},
+			"nbjard": {
+				"title": "Nb Jardins",
+				"type": "integer"
+			},
+			"nbterras": {
+				"title": "Nb Terasses",
+				"type": "integer"
+			}
+		}
+	},
+	"BSEQPUB_V": {
+		"tableName": "BSEQPUB_V",
+		"name": "SpoEquipementsPublics_V",
+		"title": "Equipements Publics",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"eplib": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 120
+			},
+			"epsurfutil": {
+				"title": "Surface utile en m²",
+				"type": "number",
+				"decimals": 2
+			},
+			"epnivliv": {
+				"title": "Niveau de livraison",
+				"type": "string",
+				"maxLength": 32
+			},
+			"epstat": {
+				"title": "Stationnement",
+				"type": "string",
+				"maxLength": 120
+			},
+			"epannexe": {
+				"title": "Annexe",
+				"type": "string",
+				"maxLength": 120
+			},
+			"epdest": {
+				"title": "Destination",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lcinterv": {
+				"title": "Mode d’intervention",
+				"type": "string",
+				"maxLength": 32
+			},
+			"epshon": {
+				"title": " SHON réglementaire",
+				"type": "number",
+				"decimals": 2
+			},
+			"epshob": {
+				"title": " SHOB",
+				"type": "number",
+				"decimals": 2
+			}
+		}
+	},
+	"BSPLAI_V": {
+		"tableName": "BSPLAI_V",
+		"name": "SpoPLAI_V",
+		"title": "PLAI",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logplai": {
+				"title": "Total logements PLAI",
+				"type": "integer"
+			},
+			"cdplaic": {
+				"title": "Code programme PLAI Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplaic": {
+				"title": "Libellé programme PLAI Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plaict1": {
+				"title": "PLAI collectif T1",
+				"type": "integer"
+			},
+			"plaict1b": {
+				"title": "PLAI collectif T1b",
+				"type": "integer"
+			},
+			"plaict2": {
+				"title": "PLAI collectif T 2",
+				"type": "integer"
+			},
+			"plaict3": {
+				"title": "PLAI collectif T 3",
+				"type": "integer"
+			},
+			"plaict4": {
+				"title": "PLAI collectif T 4",
+				"type": "integer"
+			},
+			"plaict5": {
+				"title": "PLAI collectif T 5",
+				"type": "integer"
+			},
+			"plaict6": {
+				"title": "PLAI collectif T 6",
+				"type": "integer"
+			},
+			"plaict7": {
+				"title": "PLAI collectif T 7",
+				"type": "integer"
+			},
+			"cdplaii": {
+				"title": "Code programme PLAI Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplaii": {
+				"title": "Libellé programme PLAI Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plaiit1": {
+				"title": "PLAI individuel T1",
+				"type": "integer"
+			},
+			"plaiit1b": {
+				"title": "PLAI individuel T1b",
+				"type": "integer"
+			},
+			"plaiit2": {
+				"title": "PLAI individuel T2",
+				"type": "integer"
+			},
+			"plaiit3": {
+				"title": "PLAI individuel T3",
+				"type": "integer"
+			},
+			"plaiit4": {
+				"title": "PLAI individuel T4",
+				"type": "integer"
+			},
+			"plaiit5": {
+				"title": "PLAI individuel T5",
+				"type": "integer"
+			},
+			"plaiit6": {
+				"title": "PLAI individuel T6",
+				"type": "integer"
+			},
+			"plaiit7": {
+				"title": "PLAI individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSPLUSCD_V": {
+		"tableName": "BSPLUSCD_V",
+		"name": "SpoPLUSCD_V",
+		"title": "PLUSCD",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"logpluscd": {
+				"title": "Total logements PLUS CD",
+				"type": "integer"
+			},
+			"cdpluscdc": {
+				"title": "Code programme PLUS CD Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libpluscdc": {
+				"title": "Libellé programme PLUS CD Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plusccd1": {
+				"title": "PLUS CD collectif T1",
+				"type": "integer"
+			},
+			"plusccd1b": {
+				"title": "PLUS CD collectif T1b",
+				"type": "integer"
+			},
+			"plusccd2": {
+				"title": "PLUS CD collectif T2",
+				"type": "integer"
+			},
+			"plusccd3": {
+				"title": "PLUS CD collectif T3",
+				"type": "integer"
+			},
+			"plusccd4": {
+				"title": "PLUS CD collectif T4",
+				"type": "integer"
+			},
+			"plusccd5": {
+				"title": "PLUS CD collectif T5",
+				"type": "integer"
+			},
+			"plusccd6": {
+				"title": "PLUS CD collectif T6",
+				"type": "integer"
+			},
+			"plusccd7": {
+				"title": "PLUS CD collectif T7",
+				"type": "integer"
+			},
+			"cdpluscdi": {
+				"title": "Code programme PLUS CD Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libpluscdi": {
+				"title": "Libellé programme PLUS CD Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"plusicd1": {
+				"title": "PLUS CD individuel T1",
+				"type": "integer"
+			},
+			"plusicd1b": {
+				"title": "PLUS CD individuel T1b",
+				"type": "integer"
+			},
+			"plusicd2": {
+				"title": "PLUS CD individuel T2",
+				"type": "integer"
+			},
+			"plusicd3": {
+				"title": "PLUS CD individuel T3",
+				"type": "integer"
+			},
+			"plusicd4": {
+				"title": "PLUS CD individuel T4",
+				"type": "integer"
+			},
+			"plusicd5": {
+				"title": "PLUS CD individuel T5",
+				"type": "integer"
+			},
+			"plusicd6": {
+				"title": "PLUS CD individuel T6",
+				"type": "integer"
+			},
+			"plusicd7": {
+				"title": "PLUS CD individuel T7",
+				"type": "integer"
+			}
+		}
+	},
+	"BSPLUS_V": {
+		"tableName": "BSPLUS_V",
+		"name": "SpoPLUS_V",
+		"title": "PLUS",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"inscbud": {
+				"title": "Total logements PLUS",
+				"type": "integer"
+			},
+			"cdplusc": {
+				"title": "Code programme PLUS Collectif",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplusc": {
+				"title": "Libellé programme PLUS Collectif",
+				"type": "string",
+				"maxLength": 120
+			},
+			"colt1": {
+				"title": "PLUS T1 collectifs",
+				"type": "integer"
+			},
+			"colt1b": {
+				"title": "PLUS T1bis collectifs",
+				"type": "integer"
+			},
+			"colt2": {
+				"title": "PLUS T2 collectifs",
+				"type": "integer"
+			},
+			"colt3": {
+				"title": "PLUS T3 collectifs",
+				"type": "integer"
+			},
+			"colt4": {
+				"title": "PLUS T4 collectifs",
+				"type": "integer"
+			},
+			"colt5": {
+				"title": "PLUS T5 collectifs",
+				"type": "integer"
+			},
+			"colt6": {
+				"title": "PLUS T6 collectifs",
+				"type": "integer"
+			},
+			"colt7": {
+				"title": "PLUS T7 et + collectifs",
+				"type": "integer"
+			},
+			"cdplusi": {
+				"title": "Code programme PLUS Individuel",
+				"type": "string",
+				"maxLength": 80
+			},
+			"libplusi": {
+				"title": "Libellé programme PLUS Individuel",
+				"type": "string",
+				"maxLength": 120
+			},
+			"indt1": {
+				"title": "PLUS T1 individuels",
+				"type": "integer"
+			},
+			"indt1b": {
+				"title": "PLUS T1bis individuels",
+				"type": "integer"
+			},
+			"indt2": {
+				"title": "PLUS T2 individuels",
+				"type": "integer"
+			},
+			"indt3": {
+				"title": "PLUS T3 individuels",
+				"type": "integer"
+			},
+			"indt4": {
+				"title": "PLUS T4 individuels",
+				"type": "integer"
+			},
+			"indt5": {
+				"title": "PLUS T5 individuels",
+				"type": "integer"
+			},
+			"indt6": {
+				"title": "PLUS T6 individuels",
+				"type": "integer"
+			},
+			"indt7": {
+				"title": "PLUS T7 et + individuels",
+				"type": "integer"
 			}
 		}
 	},
@@ -7479,16 +10048,6 @@
 				"title": "Tiers opposant",
 				"type": "string",
 				"maxLength": 32
-			},
-			"iban": {
-				"title": "IBAN",
-				"type": "string",
-				"maxLength": 34
-			},
-			"bic": {
-				"title": "BIC",
-				"type": "string",
-				"maxLength": 11
 			},
 			"activite": {
 				"title": "Activite",
@@ -10864,6 +13423,409 @@
 			}
 		}
 	},
+	"VIEW_ECHEANCES": {
+		"tableName": "VIEW_ECHEANCES",
+		"name": "SpoView_Echeances",
+		"title": "View_Echeances",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"VIEW_FIN_PREVU": {
+		"tableName": "VIEW_FIN_PREVU",
+		"name": "SpoView_Fin_Prevu",
+		"title": "View_Fin_Prevu",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"acompte": {
+				"title": "acompte",
+				"type": "string",
+				"maxLength": 10
+			}
+		}
+	},
+	"VIEW_FIN_PAYE": {
+		"tableName": "VIEW_FIN_PAYE",
+		"name": "SpoView_Fin_Paye",
+		"title": "View_Fin_Paye",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"acompte": {
+				"title": "acompte",
+				"type": "string",
+				"maxLength": 10
+			}
+		}
+	},
+	"VIEW_FACTSIT_PAYE": {
+		"tableName": "VIEW_FACTSIT_PAYE",
+		"name": "SpoView_FactSit_Paye",
+		"title": "View_FactSit_Paye",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"type": {
+				"title": "type",
+				"type": "string",
+				"maxLength": 2
+			}
+		}
+	},
+	"VIEW_FACTSIT_PREVUE": {
+		"tableName": "VIEW_FACTSIT_PREVUE",
+		"name": "SpoView_FactSit_Prevue",
+		"title": "View_FactSit_Prevue",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datepaie": {
+				"title": "Date de paiement",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"type": {
+				"title": "type",
+				"type": "string",
+				"maxLength": 2
+			}
+		}
+	},
+	"VIEW_FIN_PREVU_IMPORT": {
+		"tableName": "VIEW_FIN_PREVU_IMPORT",
+		"name": "SpoView_Fin_Prevu_Import",
+		"title": "View_Fin_Prevu_Import",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"VIEW_FIN_PAYE_IMPORT": {
+		"tableName": "VIEW_FIN_PAYE_IMPORT",
+		"name": "SpoView_Fin_Paye_Import",
+		"title": "View_Fin_Paye_Import",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
 	"EXT_BUDGET": {
 		"tableName": "EXT_BUDGET",
 		"name": "SpoEXT_BUDGET",
@@ -11014,6 +13976,150 @@
 			"iddoss",
 			"id"
 		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"id": {
+				"title": "Id objet métier",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"X2_M82EXTOPERATION_W": {
+		"tableName": "X2_M82EXTOPERATION_W",
+		"name": "SpoX2_M82ExtOperation_W",
+		"title": "Extension Opération",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"id": {
+				"title": "Id objet métier",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"X2_M82EXTPROGRAMME_W": {
+		"tableName": "X2_M82EXTPROGRAMME_W",
+		"name": "SpoX2_M82ExtProgramme_W",
+		"title": "Extension Programme",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"id": {
+				"title": "Id objet métier",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"X2_M82EXTSITUATION_W": {
+		"tableName": "X2_M82EXTSITUATION_W",
+		"name": "SpoX2_M82ExtSituation_W",
+		"title": "Extension Situation",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"id": {
+				"title": "Id objet métier",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"X2_M82EXTBUDGET_W": {
+		"tableName": "X2_M82EXTBUDGET_W",
+		"name": "SpoX2_M82ExtBudget_W",
+		"title": "Extension budget",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"id": {
+				"title": "Id objet métier",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"X2_M82EXTFACTURE_W": {
+		"tableName": "X2_M82EXTFACTURE_W",
+		"name": "SpoX2_M82ExtFacture_W",
+		"title": "Extension Facture",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"id": {
+				"title": "Id objet métier",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"X2_M82EXTMARCHE_W": {
+		"tableName": "X2_M82EXTMARCHE_W",
+		"name": "SpoX2_M82ExtMarche_W",
+		"title": "Extension Marché",
+		"type": "object",
+		"primaryKey": [],
 		"properties": {
 			"iddom": {
 				"title": "Code domaine",
