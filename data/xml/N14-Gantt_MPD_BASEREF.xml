@@ -1,0 +1,843 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="N:\I03-Build\admin\scripts\xslt\MPD_BASEREF_LITE.xslt"?>
+<root nom="N14-Gantt" xsi:noNamespaceSchemaLocation="http://devprod32/Production/Modeles/N03-XMLFILE/MPD_BASEREF.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <MPD id="N14" libelle="Modèle physique de données du composant N14-Gantt">
+    <Codifications>
+      <Codification idcodif="N14_MARQUEUR" lbcodif="Marqueurs de dates pour les plannings de Gantt" taille="32" visibilite="M" />
+      <Codification idcodif="N14_CALENDRIER" lbcodif="Calendriers Gantt" taille="32" visibilite="M" />
+      <Codification idcodif="N14_TYPE_TACHE" lbcodif="Type de tâche" taille="32" visibilite="N">
+        <ValCodification valeur="ETAPE" lbval="Tâche étape" visibilite="N" />
+        <ValCodification valeur="ETAPE_PARAM" lbval="Tâche étape de paramétrage" visibilite="N" />
+        <ValCodification valeur="ETAPE_EXTERNE" lbval="Tâche étape externe" visibilite="N" />
+        <ValCodification valeur="ETAPE_AJOUTEE" lbval="Tâche étape ajoutée" visibilite="N" />
+        <ValCodification valeur="ACTION" lbval="Action" visibilite="N" />
+        <ValCodification valeur="ACTION_PARAM" lbval="Tâche action de paramétrage" visibilite="N" />
+        <ValCodification valeur="ACTION_EXTERNE" lbval="Tâche action externe" visibilite="N" />
+        <ValCodification valeur="TACHE" lbval="Tache" visibilite="N" />
+        <ValCodification valeur="TACHE_PARAM" lbval="Tâche de paramétrage" visibilite="N" />
+        <ValCodification valeur="TACHE_EXTERNE" lbval="Tâche externe" visibilite="N" />
+      </Codification>
+      <Codification idcodif="N14_TYPE_CONTRAINTE" lbcodif="Type de contrainte" taille="32" visibilite="N">
+        <ValCodification valeur="FD" lbval="Fin / Début" visibilite="N" />
+        <ValCodification valeur="FF" lbval="Fin / Fin" visibilite="N" />
+        <ValCodification valeur="DD" lbval="Début / Début" visibilite="N" />
+        <ValCodification valeur="DF" lbval="Début / Fin" visibilite="N" />
+      </Codification>
+      <Codification idcodif="N14_MODE_PROJET" lbcodif="Mode de projet" taille="32" visibilite="N">
+        <ValCodification valeur="PREVISIONNEL" lbval="Planning type" visibilite="N" />
+        <ValCodification valeur="REELSURDEMANDE" lbval="Planning en cours" visibilite="N" />
+        <ValCodification valeur="REELENAUTOMATIQUE" lbval="Passage en réel du planning" visibilite="N" />
+        <ValCodification valeur="REEL" lbval="Planning validé" visibilite="N" />
+      </Codification>
+    </Codifications>
+    <Classeurs>
+      <Classeur id="GANTT" libelle="Gantt" svg_height="160">
+        <Tables>
+          <Table id="INPROJETGANTTDATEHISTO" libelle="Historisation des modifications de dates" nomInterne="ProjetGanttDateHisto" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="idmodif" libelle="Code de modification" nomInterne="CodeModification" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idplanning" libelle="Code planning" nomInterne="CodePlanning" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idtache" libelle="Code tâche" nomInterne="CodeTache" type="String" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="datmodif" libelle="Date de modification" nomInterne="DateModif" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datprevdeb" libelle="Date prévisionnelle de début" nomInterne="DatePrevisionnelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datprevfin" libelle="Date prévisionnelle de fin" nomInterne="DatePrevisionnelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureeprev" libelle="Durée prévisionnelle" nomInterne="DureePrevisionnelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevdeb" libelle="Date revue de début" nomInterne="DateRevueDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevfin" libelle="Date revue de fin" nomInterne="DateRevueFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureerevue" libelle="Durée revue" nomInterne="DureeRevue" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreelledeb" libelle="Date réelle de début" nomInterne="DateReelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreellefin" libelle="Date réelle de fin" nomInterne="DateReelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureereelle" libelle="Durée réelle" nomInterne="DureeReelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="comrevu" libelle="Commentaire revu" nomInterne="CommentaireRevu" type="String" taille="2000" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="comecart" libelle="Commentaire écart" nomInterne="CommentaireEcart" type="String" taille="2000" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="iduti" libelle="Code utilisateur" nomInterne="CodeUtilisateur" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INPROJETGANTTXML" libelle="Planning stocké au format XML" nomInterne="ProjetGanttXML" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="iddoss" libelle="Code dossier" nomInterne="CodeDossier" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idplanning" libelle="Code planning" nomInterne="CodePlanning" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="lbplanning" libelle="Libellé du planning" nomInterne="LibellePlanning" type="String" taille="200" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INMARQPROJGANTT" libelle="Marqueurs de date dans un projet Gantt" nomInterne="MarqueursProjGantt" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="idmarq" libelle="Code marqueur" nomInterne="CodeMarqueur" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="actif" libelle="Marqueur actif" nomInterne="Actif" type="Booleen" taille="1" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INACTGANTT" libelle="Action paramétrées de type Gantt" nomInterne="ActionGanttParametree" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idproced" libelle="Code procédure" nomInterne="CodeProcedure" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idetape" libelle="Code étape" nomInterne="CodeEtape" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idaction" libelle="Code action" nomInterne="CodeAction" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idtache" libelle="Code tâche" nomInterne="CodeTache" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INCPDOSGANTT" libelle="Action sur dossier de type Gantt" nomInterne="ActionGanttDossier" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="iddoss" libelle="Code dossier" nomInterne="CodeDossier" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idetape" libelle="Code étape" nomInterne="CodeEtape" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idaction" libelle="Code action" nomInterne="CodeAction" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idtache" libelle="Code tâche" nomInterne="CodeTache" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INTACHEGANTT" libelle="Tache Gantt" nomInterne="TacheGantt" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idtache" libelle="Code tâche" nomInterne="CodeTache" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="numordre" libelle="Ordre" nomInterne="Ordre" type="Entier" taillePartieEntiere="6" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="lbtache" libelle="Libellé tâche" nomInterne="LibelleTache" type="String" taille="200" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="typetache" libelle="Type de tâche" nomInterne="TypeTache" type="Codif" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" idCodif="N14_TYPE_TACHE" />
+              <Champ id="datprevdeb" libelle="Date prévisionnelle de début" nomInterne="DatePrevisionnelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datprevfin" libelle="Date prévisionnelle de fin" nomInterne="DatePrevisionnelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureeprev" libelle="Durée prévisionnelle" nomInterne="DureePrevisionnelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreeldeb" libelle="Date réelle de début" nomInterne="DateReelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreelfin" libelle="Date réelle de fin" nomInterne="DateReelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureereel" libelle="Durée réelle" nomInterne="DureeReelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="calendrier" libelle="Calendrier" nomInterne="Calendrier" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="progression" libelle="Progression" nomInterne="Progression" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="niveau" libelle="Niveau" nomInterne="Niveau" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="ressource" libelle="Ressource" nomInterne="Ressource" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="idtachemere" libelle="Code tâche mere" nomInterne="CodeTacheMere" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="idtacheprec" libelle="Code tâche precedente" nomInterne="CodeTachePrecedente" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="typecontrainte" libelle="Type de contrainte" nomInterne="TypeContrainte" type="Codif" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="FD" crypte="N" idCodif="N14_TYPE_CONTRAINTE" />
+              <Champ id="delaicontrainte" libelle="Delai de la contrainte" nomInterne="DelaiContrainte" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="commentaires" libelle="Commentaires" nomInterne="Commentaires" type="String" taille="4000" clePrimaire="N" obligatoire="N" crypte="N" />
+              <Champ id="datrevuedeb" libelle="Date revue de début" nomInterne="DateRevueDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevuefin" libelle="Date revue de fin" nomInterne="DateRevueFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureerevue" libelle="Durée revue" nomInterne="DureeRevue" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INPROCEDGANTT" libelle="Projet Gantt sur une procédure" nomInterne="ProjetGanttProcedure" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idproced" libelle="Code procédure" nomInterne="CodeProcedure" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INMODELEGANTT" libelle="Modèle de planning Gantt" nomInterne="ModeleGantt" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idmodele" libelle="Code modèle" nomInterne="CodeModele" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="datemaj" libelle="Date de mise à jour du modèle" nomInterne="DateMajModele" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="lbmodele" libelle="Libellé du modèle" nomInterne="LibelleModele" type="String" taille="200" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INMODPROCGANTT" libelle="Modele Gantt sur une procédure" nomInterne="ProjetGanttModele" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idproced" libelle="Code procédure" nomInterne="CodeProcedure" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idmodele" libelle="Code du modèle" nomInterne="CodeModele" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INDOSSIERGANTT" libelle="Projet Gantt sur un dossier" nomInterne="ProjetGanttDossier" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="iddoss" libelle="Code dossier" nomInterne="CodeDossier" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+          <Table id="INPROJETGANTT" libelle="Projet Gantt" nomInterne="ProjetGantt" visibilite="N" tableStorage="" indexStorage="" abstraite="N">
+            <Champs>
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="lbprojet" libelle="Libellé projet" nomInterne="LibelleProjet" type="String" taille="200" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="modeprojet" libelle="Mode de projet" nomInterne="ModeProjet" type="Codif" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="PREVISIONNEL" crypte="N" idCodif="N14_MODE_PROJET" />
+              <Champ id="datdeb" libelle="Date de début" nomInterne="DateDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datfin" libelle="Date de fin" nomInterne="DateFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="calendrier" libelle="Calendrier" nomInterne="Calendrier" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="commentaires" libelle="Commentaires" nomInterne="Commentaires" type="String" taille="4000" clePrimaire="N" obligatoire="N" crypte="N" />
+              <Champ id="migre" libelle="Migré vers le referentiel-planning" nomInterne="Migre" type="Booleen" taille="1" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+            </Champs>
+            <Indexes />
+          </Table>
+        </Tables>
+        <Vues>
+          <Vue id="X1_GANTT_HISTODATE_W" libelle="Gantt historisation des dates" nomInterne="X1GanttHistoDate" abstraite="N" visibilite="N">
+            <Champs>
+              <Champ id="idplanning" libelle="Code planning" nomInterne="CodePlanning" type="String" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idtache" libelle="Code tâche" nomInterne="CodeTache" type="String" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="lbtache" libelle="Libellé tâche" nomInterne="LibelleTache" type="String" taille="200" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="datmodif" libelle="Date de modification" nomInterne="DateModif" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datprevdeb" libelle="Date prévisionnelle de début" nomInterne="DatePrevisionnelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datprevfin" libelle="Date prévisionnelle de fin" nomInterne="DatePrevisionnelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureeprev" libelle="Durée prévisionnelle" nomInterne="DureePrevisionnelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevdeb" libelle="Date revu de début" nomInterne="DateRevueDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevfin" libelle="Date revue de fin" nomInterne="DateRevueFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureerevue" libelle="Durée revue" nomInterne="DureeRevue" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreelledeb" libelle="Date réelle de début" nomInterne="DateReelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreellefin" libelle="Date réelle de fin" nomInterne="DateReelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureereelle" libelle="Durée réelle" nomInterne="DureeReelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="comrevu" libelle="Commentaire revu" nomInterne="CommentaireRevu" type="String" taille="2000" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="comecart" libelle="Commentaire écart" nomInterne="CommentaireEcart" type="String" taille="2000" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="numordre" libelle="Ordre" nomInterne="Ordre" type="Entier" taillePartieEntiere="6" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="iduti" libelle="Modifié par - Code" nomInterne="CodeUtilisateur" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="lbuti" libelle="Modifié par" nomInterne="LibelleUtilisateur" type="String" taille="40" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <SQLSERVER>
+						SELECT
+						HISTO.idplanning,
+						HISTO.idtache,
+						TACHE.lbtache,
+						HISTO.datmodif,
+						HISTO.datprevdeb,
+						HISTO.datprevfin,
+						HISTO.dureeprev,
+						HISTO.datrevdeb,
+						HISTO.datrevfin,
+						HISTO.dureerevue,
+						HISTO.datreelledeb,
+						HISTO.datreellefin,
+						HISTO.dureereelle,
+						HISTO.comrevu,
+						HISTO.comecart,
+						TACHE.numordre,
+						HISTO.iduti,
+						UTI.lbuti
+						FROM INPROJETGANTTDATEHISTO HISTO
+						INNER JOIN INTACHEGANTT TACHE ON HISTO.idtache = TACHE.idtache AND HISTO.idplanning = TACHE.idprojet AND (TACHE.typetache = 'ACTION' OR TACHE.typetache = 'TACHE')
+						LEFT JOIN INUTI UTI ON HISTO.iduti = UTI.idutil
+						</SQLSERVER>
+            <ORACLE>
+						SELECT
+						HISTO.idplanning,
+						HISTO.idtache,
+						TACHE.lbtache,
+						HISTO.datmodif,
+						HISTO.datprevdeb,
+						HISTO.datprevfin,
+						HISTO.dureeprev,
+						HISTO.datrevdeb,
+						HISTO.datrevfin,
+						HISTO.dureerevue,
+						HISTO.datreelledeb,
+						HISTO.datreellefin,
+						HISTO.dureereelle,
+						HISTO.comrevu,
+						HISTO.comecart,
+						TACHE.numordre,
+						HISTO.iduti,
+						UTI.lbuti
+						FROM INPROJETGANTTDATEHISTO HISTO
+						INNER JOIN INTACHEGANTT TACHE ON HISTO.idtache = TACHE.idtache AND HISTO.idplanning = TACHE.idprojet AND (TACHE.typetache = 'ACTION' OR TACHE.typetache = 'TACHE')
+						LEFT JOIN INUTI UTI ON HISTO.iduti = UTI.idutil
+						</ORACLE>
+            <POSTGRESQL>
+						SELECT
+						HISTO.idplanning,
+						HISTO.idtache,
+						TACHE.lbtache,
+						HISTO.datmodif,
+						HISTO.datprevdeb,
+						HISTO.datprevfin,
+						HISTO.dureeprev,
+						HISTO.datrevdeb,
+						HISTO.datrevfin,
+						HISTO.dureerevue,
+						HISTO.datreelledeb,
+						HISTO.datreellefin,
+						HISTO.dureereelle,
+						HISTO.comrevu,
+						HISTO.comecart,
+						TACHE.numordre,
+						HISTO.iduti,
+						UTI.lbuti
+						FROM INPROJETGANTTDATEHISTO HISTO
+						INNER JOIN INTACHEGANTT TACHE ON HISTO.idtache = TACHE.idtache AND HISTO.idplanning = TACHE.idprojet AND (TACHE.typetache = 'ACTION' OR TACHE.typetache = 'TACHE')
+						LEFT JOIN INUTI UTI ON HISTO.iduti = UTI.idutil
+						</POSTGRESQL>
+          </Vue>
+          <Vue id="MGLSTTACHEGANTT_PARAM_V" libelle="Liste des taches gantt d'un dossier" nomInterne="MGLSTTACHEGANTT_PARAM_V" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idproced" libelle="Code procédure" nomInterne="CodeProcedure" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idetape" libelle="Code étape" nomInterne="CodeEtape" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idaction" libelle="Code action" nomInterne="CodeAction" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idtache" libelle="Code tâche" nomInterne="CodeTache" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="numordre" libelle="Ordre" nomInterne="Ordre" type="Entier" taillePartieEntiere="6" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="lbtache" libelle="Libellé tâche" nomInterne="LibelleTache" type="String" taille="200" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="typetache" libelle="Type de tâche" nomInterne="TypeTache" type="Codif" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" idCodif="N14_TYPE_TACHE" />
+              <Champ id="datprevdeb" libelle="Date prévisionnelle de début" nomInterne="DatePrevisionnelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datprevfin" libelle="Date prévisionnelle de fin" nomInterne="DatePrevisionnelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureeprev" libelle="Durée prévisionnelle" nomInterne="DureePrevisionnelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreeldeb" libelle="Date réelle de début" nomInterne="DateReelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreelfin" libelle="Date réelle de fin" nomInterne="DateReelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureereel" libelle="Durée réelle" nomInterne="DureeReelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="calendrier" libelle="Calendrier" nomInterne="Calendrier" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="progression" libelle="Progression" nomInterne="Progression" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="niveau" libelle="Niveau" nomInterne="Niveau" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="ressource" libelle="Ressource" nomInterne="Ressource" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="idtacheprec" libelle="Code tâche precedente" nomInterne="CodeTachePrecedente" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="typecontrainte" libelle="Type de contrainte" nomInterne="TypeContrainte" type="Codif" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" idCodif="N14_TYPE_CONTRAINTE" />
+              <Champ id="delaicontrainte" libelle="Delai de la contrainte" nomInterne="DelaiContrainte" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="commentaires" libelle="Commentaires" nomInterne="Commentaires" type="String" taille="4000" clePrimaire="N" obligatoire="N" crypte="N" />
+              <Champ id="idtachemere" libelle="Code tâche mère" nomInterne="CodeTacheMere" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevuedeb" libelle="Date revue de début" nomInterne="DateRevueDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevuefin" libelle="Date revue de fin" nomInterne="DateRevueFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureerevue" libelle="Durée revue" nomInterne="DureeRevue" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <SQLSERVER>
+SELECT 
+	INACTGANTT.iddom, INACTGANTT.idproced, INACTGANTT.idetape,
+	INACTGANTT.idaction, INTACHEGANTT.idprojet, INTACHEGANTT.idtache,
+	INTACHEGANTT.numordre, INTACHEGANTT.lbtache, INTACHEGANTT.typetache,
+	INTACHEGANTT.datprevdeb, INTACHEGANTT.datprevfin, INTACHEGANTT.dureeprev,
+	INTACHEGANTT.datreeldeb, INTACHEGANTT.datreelfin, INTACHEGANTT.dureereel,
+	INTACHEGANTT.calendrier, INTACHEGANTT.progression, INTACHEGANTT.niveau,
+	INTACHEGANTT.ressource, INTACHEGANTT.idtacheprec, INTACHEGANTT.typecontrainte,
+	INTACHEGANTT.delaicontrainte, INTACHEGANTT.commentaires, 
+	INTACHEGANTT.idtachemere idtachemere,
+	INTACHEGANTT.datrevuedeb,
+	INTACHEGANTT.datrevuefin,
+	INTACHEGANTT.dureerevue
+FROM INACTGANTT 
+	INNER JOIN INTACHEGANTT ON  
+		INACTGANTT.idprojet=INTACHEGANTT.idprojet 
+		AND INACTGANTT.idtache=INTACHEGANTT.idtache
+						</SQLSERVER>
+            <ORACLE>
+SELECT 
+	INACTGANTT.iddom, INACTGANTT.idproced, INACTGANTT.idetape,
+	INACTGANTT.idaction, INTACHEGANTT.idprojet, INTACHEGANTT.idtache, 
+	INTACHEGANTT.numordre, INTACHEGANTT. lbtache, INTACHEGANTT.typetache,
+	INTACHEGANTT.datprevdeb, INTACHEGANTT.datprevfin, INTACHEGANTT.dureeprev,
+	INTACHEGANTT.datreeldeb, INTACHEGANTT.datreelfin, INTACHEGANTT.dureereel,
+	INTACHEGANTT.calendrier, INTACHEGANTT.progression, INTACHEGANTT.niveau,
+	INTACHEGANTT.ressource, INTACHEGANTT.idtacheprec, INTACHEGANTT.typecontrainte,
+	INTACHEGANTT.delaicontrainte, INTACHEGANTT.commentaires, 
+	INTACHEGANTT.idtachemere idtachemere,
+	INTACHEGANTT.datrevuedeb,
+	INTACHEGANTT.datrevuefin,
+	INTACHEGANTT.dureerevue
+FROM INACTGANTT, INTACHEGANTT
+WHERE INACTGANTT.idprojet=INTACHEGANTT.idprojet
+	AND INACTGANTT.idtache=INTACHEGANTT.idtache
+						</ORACLE>
+            <POSTGRESQL>
+SELECT 
+	INACTGANTT.iddom, INACTGANTT.idproced, INACTGANTT.idetape,
+	INACTGANTT.idaction, INTACHEGANTT.idprojet, INTACHEGANTT.idtache,
+	INTACHEGANTT.numordre, INTACHEGANTT.lbtache, INTACHEGANTT.typetache,
+	INTACHEGANTT.datprevdeb, INTACHEGANTT.datprevfin, INTACHEGANTT.dureeprev,
+	INTACHEGANTT.datreeldeb, INTACHEGANTT.datreelfin, INTACHEGANTT.dureereel,
+	INTACHEGANTT.calendrier, INTACHEGANTT.progression, INTACHEGANTT.niveau,
+	INTACHEGANTT.ressource, INTACHEGANTT.idtacheprec, INTACHEGANTT.typecontrainte,
+	INTACHEGANTT.delaicontrainte, INTACHEGANTT.commentaires, 
+	INTACHEGANTT.idtachemere idtachemere,
+	INTACHEGANTT.datrevuedeb,
+	INTACHEGANTT.datrevuefin,
+	INTACHEGANTT.dureerevue
+FROM INACTGANTT 
+	INNER JOIN INTACHEGANTT ON  
+		INACTGANTT.idprojet=INTACHEGANTT.idprojet 
+		AND INACTGANTT.idtache=INTACHEGANTT.idtache
+						</POSTGRESQL>
+          </Vue>
+          <Vue id="MGLSTTACHEGANTT_DOSSIER_V" libelle="Liste des taches gantt d'un dossier" nomInterne="MGLSTTACHEGANTT_DOSSIER_V" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="iddoss" libelle="Code dossier" nomInterne="CodeDossier" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idetape" libelle="Code étape" nomInterne="CodeEtape" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idaction" libelle="Code action" nomInterne="CodeAction" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idtache" libelle="Code tâche" nomInterne="CodeTache" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="numordre" libelle="Ordre" nomInterne="Ordre" type="Entier" taillePartieEntiere="6" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="lbtache" libelle="Libellé tâche" nomInterne="LibelleTache" type="String" taille="200" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="typetache" libelle="Type de tâche" nomInterne="TypeTache" type="Codif" taille="32" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" idCodif="N14_TYPE_TACHE" />
+              <Champ id="datprevdeb" libelle="Date prévisionnelle de début" nomInterne="DatePrevisionnelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datprevfin" libelle="Date prévisionnelle de fin" nomInterne="DatePrevisionnelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureeprev" libelle="Durée prévisionnelle" nomInterne="DureePrevisionnelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreeldeb" libelle="Date réelle de début" nomInterne="DateReelleDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datreelfin" libelle="Date réelle de fin" nomInterne="DateReelleFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureereel" libelle="Durée réelle" nomInterne="DureeReelle" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="calendrier" libelle="Calendrier" nomInterne="Calendrier" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="progression" libelle="Progression" nomInterne="Progression" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="niveau" libelle="Niveau" nomInterne="Niveau" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="ressource" libelle="Ressource" nomInterne="Ressource" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="idtacheprec" libelle="Code tâche precedente" nomInterne="CodeTachePrecedente" type="String" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="typecontrainte" libelle="Type de contrainte" nomInterne="TypeContrainte" type="Codif" taille="32" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" idCodif="N14_TYPE_CONTRAINTE" />
+              <Champ id="delaicontrainte" libelle="Delai de la contrainte" nomInterne="DelaiContrainte" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="0" crypte="N" />
+              <Champ id="commentaires" libelle="Commentaires" nomInterne="Commentaires" type="String" taille="4000" clePrimaire="N" obligatoire="N" crypte="N" />
+              <Champ id="idtachemere" libelle="Code tâche mère" nomInterne="CodeTacheMere" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="datrevuedeb" libelle="Date revue de début" nomInterne="DateRevueDebut" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="datrevuefin" libelle="Date revue de fin" nomInterne="DateRevueFin" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+              <Champ id="dureerevue" libelle="Durée revue" nomInterne="DureeRevue" type="Entier" taillePartieEntiere="5" taillePartieDecimale="0" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <SQLSERVER>
+			SELECT
+				INCPDOSGANTT.iddom, 
+				INCPDOSGANTT.iddoss, 
+				INCPDOSGANTT.idetape,
+				INCPDOSGANTT.idaction, 
+				INTACHEGANTT.idprojet, 
+				INTACHEGANTT.idtache,
+				INTACHEGANTT.numordre,
+				(CASE WHEN INTACHEGANTT.idtache = INCPDOSGANTT.iddoss THEN X1_DOSS_PROP_W.LBDOSS ELSE INTACHEGANTT.lbtache END) lbtache,
+				INTACHEGANTT.typetache,
+				INTACHEGANTT.datprevdeb,
+				INTACHEGANTT.datprevfin,
+				INTACHEGANTT.dureeprev,
+				INTACHEGANTT.datreeldeb,
+				INTACHEGANTT.datreelfin,
+				INTACHEGANTT.dureereel,
+				INTACHEGANTT.calendrier,
+				INTACHEGANTT.progression,
+				INTACHEGANTT.niveau,
+				INTACHEGANTT.ressource,
+				INTACHEGANTT.idtacheprec,
+				INTACHEGANTT.typecontrainte,
+				INTACHEGANTT.delaicontrainte,
+				INTACHEGANTT.commentaires,
+				INTACHEGANTT.idtachemere idtachemere,
+				INTACHEGANTT.datrevuedeb,
+				INTACHEGANTT.datrevuefin,
+				INTACHEGANTT.dureerevue
+			FROM 
+				INCPDOSGANTT
+				INNER JOIN INDOM ON INDOM.iddom = INCPDOSGANTT.iddom AND INDOM.actif = '-1'
+				INNER JOIN INDOSSIERGANTT ON INDOSSIERGANTT.iddoss = INCPDOSGANTT.iddoss AND INDOSSIERGANTT.idprojet = INCPDOSGANTT.idprojet
+				INNER JOIN INTACHEGANTT ON INTACHEGANTT.idprojet = INCPDOSGANTT.idprojet AND INTACHEGANTT.idtache = INCPDOSGANTT.idtache
+				LEFT JOIN X1_DOSS_PROP_W ON X1_DOSS_PROP_W.iddom = INCPDOSGANTT.iddom AND X1_DOSS_PROP_W.iddoss = INCPDOSGANTT.iddoss
+            </SQLSERVER>
+            <ORACLE>
+			SELECT
+				INCPDOSGANTT.iddom, 
+				INCPDOSGANTT.iddoss, 
+				INCPDOSGANTT.idetape,
+				INCPDOSGANTT.idaction, 
+				INTACHEGANTT.idprojet, 
+				INTACHEGANTT.idtache,
+				INTACHEGANTT.numordre,
+				(CASE WHEN INTACHEGANTT.idtache = INCPDOSGANTT.iddoss THEN X1_DOSS_PROP_W.LBDOSS ELSE INTACHEGANTT.lbtache END) lbtache,
+				INTACHEGANTT.typetache,
+				INTACHEGANTT.datprevdeb,
+				INTACHEGANTT.datprevfin,
+				INTACHEGANTT.dureeprev,
+				INTACHEGANTT.datreeldeb,
+				INTACHEGANTT.datreelfin,
+				INTACHEGANTT.dureereel,
+				INTACHEGANTT.calendrier,
+				INTACHEGANTT.progression,
+				INTACHEGANTT.niveau,
+				INTACHEGANTT.ressource,
+				INTACHEGANTT.idtacheprec,
+				INTACHEGANTT.typecontrainte,
+				INTACHEGANTT.delaicontrainte,
+				INTACHEGANTT.commentaires,
+				INTACHEGANTT.idtachemere idtachemere,
+				INTACHEGANTT.datrevuedeb,
+				INTACHEGANTT.datrevuefin,
+				INTACHEGANTT.dureerevue
+			FROM 
+				INCPDOSGANTT
+				INNER JOIN INDOM ON INDOM.iddom = INCPDOSGANTT.iddom AND INDOM.actif = '-1'
+				INNER JOIN INDOSSIERGANTT ON INDOSSIERGANTT.iddoss = INCPDOSGANTT.iddoss AND INDOSSIERGANTT.idprojet = INCPDOSGANTT.idprojet
+				INNER JOIN INTACHEGANTT ON INTACHEGANTT.idprojet = INCPDOSGANTT.idprojet AND INTACHEGANTT.idtache = INCPDOSGANTT.idtache
+				LEFT JOIN X1_DOSS_PROP_W ON X1_DOSS_PROP_W.iddom = INCPDOSGANTT.iddom AND X1_DOSS_PROP_W.iddoss = INCPDOSGANTT.iddoss
+            </ORACLE>
+            <POSTGRESQL>
+			SELECT
+				INCPDOSGANTT.iddom, 
+				INCPDOSGANTT.iddoss, 
+				INCPDOSGANTT.idetape,
+				INCPDOSGANTT.idaction, 
+				INTACHEGANTT.idprojet, 
+				INTACHEGANTT.idtache,
+				INTACHEGANTT.numordre,
+				(CASE WHEN INTACHEGANTT.idtache = INCPDOSGANTT.iddoss THEN X1_DOSS_PROP_W.LBDOSS ELSE INTACHEGANTT.lbtache END) lbtache,
+				INTACHEGANTT.typetache,
+				INTACHEGANTT.datprevdeb,
+				INTACHEGANTT.datprevfin,
+				INTACHEGANTT.dureeprev,
+				INTACHEGANTT.datreeldeb,
+				INTACHEGANTT.datreelfin,
+				INTACHEGANTT.dureereel,
+				INTACHEGANTT.calendrier,
+				INTACHEGANTT.progression,
+				INTACHEGANTT.niveau,
+				INTACHEGANTT.ressource,
+				INTACHEGANTT.idtacheprec,
+				INTACHEGANTT.typecontrainte,
+				INTACHEGANTT.delaicontrainte,
+				INTACHEGANTT.commentaires,
+				INTACHEGANTT.idtachemere idtachemere,
+				INTACHEGANTT.datrevuedeb,
+				INTACHEGANTT.datrevuefin,
+				INTACHEGANTT.dureerevue
+			FROM 
+				INCPDOSGANTT
+				INNER JOIN INDOM ON INDOM.iddom = INCPDOSGANTT.iddom AND INDOM.actif = '-1'
+				INNER JOIN INDOSSIERGANTT ON INDOSSIERGANTT.iddoss = INCPDOSGANTT.iddoss AND INDOSSIERGANTT.idprojet = INCPDOSGANTT.idprojet
+				INNER JOIN INTACHEGANTT ON INTACHEGANTT.idprojet = INCPDOSGANTT.idprojet AND INTACHEGANTT.idtache = INCPDOSGANTT.idtache
+				LEFT JOIN X1_DOSS_PROP_W ON X1_DOSS_PROP_W.iddom = INCPDOSGANTT.iddom AND X1_DOSS_PROP_W.iddoss = INCPDOSGANTT.iddoss
+            </POSTGRESQL>
+          </Vue>
+          <Vue id="MODELEGANTT_PROC_V" libelle="Liste des modèles de planning Gantt associés à une procédure" nomInterne="MODELEGANTT_PROC_V" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="iddom" libelle="Code domaine" nomInterne="CodeDomaine" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idproced" libelle="Code procedure" nomInterne="CodeProcedure" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idmodele" libelle="Code modèle" nomInterne="CodeModele" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="idprojet" libelle="Code projet" nomInterne="CodeProjet" type="String" taille="32" clePrimaire="O" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="lbmodele" libelle="Libellé modèle" nomInterne="LibelleModele" type="String" taille="200" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="lbprojet" libelle="Libellé projet" nomInterne="LibelleProjet" type="String" taille="200" clePrimaire="N" obligatoire="O" valeurDefaut="" crypte="N" />
+              <Champ id="datemaj" libelle="Date de modification" nomInterne="DateModification" type="DateMG" taille="10" clePrimaire="N" obligatoire="N" valeurDefaut="" crypte="N" />
+            </Champs>
+            <SQLSERVER>
+SELECT INMODPROCGANTT.iddom, INMODPROCGANTT.idproced, INMODELEGANTT.idmodele, INPROJETGANTT.idprojet, INMODELEGANTT.lbmodele, INPROJETGANTT.lbprojet, INMODELEGANTT.datemaj
+FROM INMODELEGANTT LEFT JOIN INPROJETGANTT ON INMODELEGANTT.idprojet = INPROJETGANTT.idprojet, INMODPROCGANTT
+WHERE INMODELEGANTT.idmodele = INMODPROCGANTT.idmodele
+						</SQLSERVER>
+            <ORACLE>
+SELECT INMODPROCGANTT.iddom, INMODPROCGANTT.idproced, INMODELEGANTT.idmodele, INPROJETGANTT.idprojet, INMODELEGANTT.lbmodele, INPROJETGANTT.lbprojet, INMODELEGANTT.datemaj
+FROM INMODELEGANTT LEFT JOIN INPROJETGANTT ON INMODELEGANTT.idprojet = INPROJETGANTT.idprojet, INMODPROCGANTT
+WHERE INMODELEGANTT.idmodele = INMODPROCGANTT.idmodele
+						</ORACLE>
+            <POSTGRESQL>
+SELECT INMODPROCGANTT.iddom, INMODPROCGANTT.idproced, INMODELEGANTT.idmodele, INPROJETGANTT.idprojet, INMODELEGANTT.lbmodele, INPROJETGANTT.lbprojet, INMODELEGANTT.datemaj
+FROM INMODELEGANTT LEFT JOIN INPROJETGANTT ON INMODELEGANTT.idprojet = INPROJETGANTT.idprojet, INMODPROCGANTT
+WHERE INMODELEGANTT.idmodele = INMODPROCGANTT.idmodele
+						</POSTGRESQL>
+          </Vue>
+        </Vues>
+        <Relations>
+          <Associations />
+          <AssociationsSpeciales />
+          <Heritages />
+        </Relations>
+      </Classeur>
+    </Classeurs>
+    <Relations>
+      <Associations />
+      <AssociationsSpeciales />
+      <Heritages />
+    </Relations>
+  </MPD>
+  <BASEREF>
+    <INCOMPOS>
+      <idcompos ClefPrimaire="1">N14</idcompos>
+      <lbcompos>MGDIS -- Gantt</lbcompos>
+      <versioncp>1.61.01</versioncp>
+      <idcppere />
+      <typecp>C</typecp>
+      <cleactif />
+    </INCOMPOS>
+    <!-- Gestion des dates revues : PDF-->
+    <!-- Paramétrage du support N14-Gantt -->
+    <INSUP>
+      <idsupport ClefPrimaire="1">N14</idsupport>
+      <lbsupport>MGDIS -- Gantt</lbsupport>
+      <typsup>D</typsup>
+      <actif>True</actif>
+      <useado>False</useado>
+      <executable>MGDIS60DotNet.dll</executable>
+      <argument />
+      <progid1>MGDIS60DotNet</progid1>
+      <modaff />
+      <tclass />
+      <tcaption />
+      <crefic>False</crefic>
+      <usenum>False</usenum>
+      <utilisation />
+    </INSUP>
+    <INSUPFO>
+      <idsupport ClefPrimaire="1">N14</idsupport>
+      <idforme ClefPrimaire="2">1</idforme>
+      <lbforme>Fenêtre</lbforme>
+      <lbmodele>Fenêtre(s)</lbmodele>
+      <assistant>True</assistant>
+      <attache>False</attache>
+      <autoraf>False</autoraf>
+      <extension />
+      <usenum>False</usenum>
+      <usereq>False</usereq>
+      <requniq>False</requniq>
+      <execreq>False</execreq>
+      <sepchamp>0</sepchamp>
+      <deltexte>0</deltexte>
+      <progid2>CMenu</progid2>
+      <poke />
+      <attente>EXE</attente>
+    </INSUPFO>
+    <INACTION>
+      <idaction ClefPrimaire="1">N14GANTTPROJETDOSSIER</idaction>
+      <lbaction>Planning du dossier</lbaction>
+      <idsupport>N14</idsupport>
+      <idforme>1</idforme>
+      <lbforme>Fenêtre</lbforme>
+      <nataction>C</nataction>
+      <trtvx>True</trtvx>
+      <idprof>ADMIN</idprof>
+      <iduti>ADMIN</iduti>
+    </INACTION>
+    <INACTMOD>
+      <idaction ClefPrimaire="1">N14GANTTPROJETDOSSIER</idaction>
+      <idmod ClefPrimaire="2">1</idmod>
+      <modele>N14GANTT</modele>
+      <lbmodele>Planning</lbmodele>
+      <xmlcontext><![CDATA[<?xml version="1.0"?>
+<MGFluxContexte xmlns="http://www.mgdis.fr/2005/XMLData">
+  <TABLE0>
+    <modeGantt>PROJET</modeGantt>
+  </TABLE0>
+</MGFluxContexte>]]></xmlcontext>
+    </INACTMOD>
+    <INACTION>
+      <idaction ClefPrimaire="1">N14GANTTDOSSIER</idaction>
+      <lbaction>Planning du dossier</lbaction>
+      <idsupport>N14</idsupport>
+      <idforme>1</idforme>
+      <lbforme>Fenêtre</lbforme>
+      <nataction>C</nataction>
+      <trtvx>True</trtvx>
+      <idprof>ADMIN</idprof>
+      <iduti>ADMIN</iduti>
+    </INACTION>
+    <INACTMOD>
+      <idaction ClefPrimaire="1">N14GANTTDOSSIER</idaction>
+      <idmod ClefPrimaire="2">1</idmod>
+      <modele>N14GANTT</modele>
+      <lbmodele>Planning</lbmodele>
+      <xmlcontext><![CDATA[<?xml version="1.0"?>
+<MGFluxContexte xmlns="http://www.mgdis.fr/2005/XMLData">
+  <TABLE0>
+    <modeGantt>DOSSIER</modeGantt>
+  </TABLE0>
+</MGFluxContexte>]]></xmlcontext>
+    </INACTMOD>
+    <!-- Paramétrage de l'information dynamique de saisie de projet -->
+    <TBINFODYN>
+      <idinfodyn ClefPrimaire="1">N14-PROJET-GANTT</idinfodyn>
+      <idactionassoc />
+      <lstprofils>*</lstprofils>
+      <idaxe>INPROJETGANTT</idaxe>
+      <cle1>idprojet</cle1>
+      <cle2 />
+      <cle3 />
+      <cle4 />
+      <cle5 />
+      <cle6 />
+      <cle7 />
+      <exercice>0</exercice>
+      <xmldescription>xmlfile://N14-PROJET-GANTT.xml</xmldescription>
+      <inclu>-1</inclu>
+    </TBINFODYN>
+    <!-- Paramétrage de l'information dynamique de saisie de projet de paramétrage -->
+    <TBINFODYN>
+      <idinfodyn ClefPrimaire="1">N14-PROJET-PARAM-GANTT</idinfodyn>
+      <idactionassoc />
+      <lstprofils>*</lstprofils>
+      <idaxe>INPROJETGANTT</idaxe>
+      <cle1>idprojet</cle1>
+      <cle2 />
+      <cle3 />
+      <cle4 />
+      <cle5 />
+      <cle6 />
+      <cle7 />
+      <exercice>0</exercice>
+      <xmldescription>xmlfile://N14-PROJET-PARAM-GANTT.xml</xmldescription>
+      <inclu>-1</inclu>
+    </TBINFODYN>
+    <!--Ajout de l'option pour la gestion des Gantts -->
+    <INPARAMWEB>
+      <idparam ClefPrimaire="1">N14_VALIDATION_ACTION_SIMPLIFIEE</idparam>
+      <idmetier ClefPrimaire="2">*</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Option permettant d'activer la validation simplifiée des jalons - optimisation</lbopt>
+      <typeparam>S</typeparam>
+      <modeparam>S</modeparam>
+      <actif>0</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <INPARAMWEB>
+      <idparam ClefPrimaire="1">N14_REPORTDATESREELLES</idparam>
+      <idmetier ClefPrimaire="2">*</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Option permettant d'activer le report des dates réelles dans les plannings de Gantt</lbopt>
+      <typeparam>S</typeparam>
+      <modeparam>S</modeparam>
+      <actif>0</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <INDESC>
+      <nomaxe ClefPrimaire="1">INPARAMWEB</nomaxe>
+      <critere1 ClefPrimaire="2">description</critere1>
+      <critere2 ClefPrimaire="3">N14_REPORTDATESREELLES</critere2>
+      <critere3 ClefPrimaire="4">*</critere3>
+      <critere4 ClefPrimaire="5">*</critere4>
+      <critere5 ClefPrimaire="6">*</critere5>
+      <critere6 ClefPrimaire="7">*</critere6>
+      <critere7 ClefPrimaire="8">*</critere7>
+      <critere8 ClefPrimaire="9">*</critere8>
+      <ficdesc>Option permettant d'activer le report des dates réellese dans les plannings de Gantt</ficdesc>
+    </INDESC>
+    <INPARAMWEB>
+      <idparam ClefPrimaire="1">N14_GESTIONDATESREVUES</idparam>
+      <idmetier ClefPrimaire="2">*</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Option permettant d'activer la gestion de l'historsation des dates revues dans les plannings de Gantt</lbopt>
+      <typeparam>S</typeparam>
+      <modeparam>S</modeparam>
+      <actif>0</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <INDESC>
+      <nomaxe ClefPrimaire="1">INPARAMWEB</nomaxe>
+      <critere1 ClefPrimaire="2">description</critere1>
+      <critere2 ClefPrimaire="3">N14_GESTIONDATESREVUES</critere2>
+      <critere3 ClefPrimaire="4">*</critere3>
+      <critere4 ClefPrimaire="5">*</critere4>
+      <critere5 ClefPrimaire="6">*</critere5>
+      <critere6 ClefPrimaire="7">*</critere6>
+      <critere7 ClefPrimaire="8">*</critere7>
+      <critere8 ClefPrimaire="9">*</critere8>
+      <ficdesc>Cette option permet d'activer la gestion de l'historsation des dates revues dans les plannings de Gantt</ficdesc>
+    </INDESC>
+    <INPARAMWEB>
+      <idparam ClefPrimaire="1">N14_GESTIONMODELEGANTT</idparam>
+      <idmetier ClefPrimaire="2">*</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Option permettant d'activer la gestion des modèles de Gantt</lbopt>
+      <typeparam>S</typeparam>
+      <modeparam>S</modeparam>
+      <actif>0</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <INDESC>
+      <nomaxe ClefPrimaire="1">INPARAMWEB</nomaxe>
+      <critere1 ClefPrimaire="2">description</critere1>
+      <critere2 ClefPrimaire="3">N14_GESTIONMODELEGANTT</critere2>
+      <critere3 ClefPrimaire="4">*</critere3>
+      <critere4 ClefPrimaire="5">*</critere4>
+      <critere5 ClefPrimaire="6">*</critere5>
+      <critere6 ClefPrimaire="7">*</critere6>
+      <critere7 ClefPrimaire="8">*</critere7>
+      <critere8 ClefPrimaire="9">*</critere8>
+      <ficdesc>Cette option permet d'activer la gestion des modèles de plannings Gantts. Les modèles ne sont plus calqués sur le suivi de dossier</ficdesc>
+    </INDESC>
+    <INPARAMWEB PermanentInsert="-1">
+      <idparam ClefPrimaire="1">N14_GANTT_OPTION_DOMAINE</idparam>
+      <idmetier ClefPrimaire="2">DOMOPE</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Gestion du Gantt au niveau Domaine</lbopt>
+      <typeparam>M</typeparam>
+      <modeparam>S</modeparam>
+      <actif>-1</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <INDESC PermanentInsert="-1">
+      <nomaxe ClefPrimaire="1">INPARAMWEB</nomaxe>
+      <critere1 ClefPrimaire="2">N14_GANTT_OPTION_DOMAINE</critere1>
+      <critere2 ClefPrimaire="3">DOMOPE</critere2>
+      <critere3 ClefPrimaire="4">*</critere3>
+      <critere4 ClefPrimaire="5">*</critere4>
+      <critere5 ClefPrimaire="6">*</critere5>
+      <critere6 ClefPrimaire="7">*</critere6>
+      <critere7 ClefPrimaire="8">*</critere7>
+      <critere8 ClefPrimaire="9">*</critere8>
+      <ficdesc>Cette option permet d'activer la gestion des plannings au niveau d'un ou plusieurs domaine(s).</ficdesc>
+    </INDESC>
+    <INPARAMWEB PermanentInsert="-1">
+      <idparam ClefPrimaire="1">N14_GANTT_OPTION_DOMAINE</idparam>
+      <idmetier ClefPrimaire="2">DOMMAR</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Gestion du Gantt au niveau Domaine</lbopt>
+      <typeparam>M</typeparam>
+      <modeparam>S</modeparam>
+      <actif>-1</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <INDESC PermanentInsert="-1">
+      <nomaxe ClefPrimaire="1">INPARAMWEB</nomaxe>
+      <critere1 ClefPrimaire="2">N14_GANTT_OPTION_DOMAINE</critere1>
+      <critere2 ClefPrimaire="3">DOMMAR</critere2>
+      <critere3 ClefPrimaire="4">*</critere3>
+      <critere4 ClefPrimaire="5">*</critere4>
+      <critere5 ClefPrimaire="6">*</critere5>
+      <critere6 ClefPrimaire="7">*</critere6>
+      <critere7 ClefPrimaire="8">*</critere7>
+      <critere8 ClefPrimaire="9">*</critere8>
+      <ficdesc>Cette option permet d'activer la gestion des plannings au niveau d'un ou plusieurs domaine(s).</ficdesc>
+    </INDESC>
+    <INPARAMWEB PermanentInsert="-1">
+      <idparam ClefPrimaire="1">N14_GANTT_OPTION_SITE</idparam>
+      <idmetier ClefPrimaire="2">*</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Activation de la gestion des plannings</lbopt>
+      <typeparam>S</typeparam>
+      <modeparam>S</modeparam>
+      <actif>0</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <INDESC PermanentInsert="-1">
+      <nomaxe ClefPrimaire="1">INPARAMWEB</nomaxe>
+      <critere1 ClefPrimaire="2">N14_GANTT_OPTION_DOMAINE</critere1>
+      <critere2 ClefPrimaire="3">*</critere2>
+      <critere3 ClefPrimaire="4">*</critere3>
+      <critere4 ClefPrimaire="5">*</critere4>
+      <critere5 ClefPrimaire="6">*</critere5>
+      <critere6 ClefPrimaire="7">*</critere6>
+      <critere7 ClefPrimaire="8">*</critere7>
+      <critere8 ClefPrimaire="9">*</critere8>
+      <ficdesc>Cette option permet d'activer la gestion des plannings, il faut ensuite activer chaque domaines concernés par les plannings.</ficdesc>
+    </INDESC>
+    <INPARAMWEB>
+      <idparam ClefPrimaire="1">N14_GANTT_OPTION_BLOCAGE_SOURIS</idparam>
+      <idmetier ClefPrimaire="2">*</idmetier>
+      <idproced ClefPrimaire="3">*</idproced>
+      <lbopt>Activation du blocage des modifications d'activités avec la souris</lbopt>
+      <typeparam>S</typeparam>
+      <modeparam>S</modeparam>
+      <actif>0</actif>
+      <param1 />
+      <param2 />
+      <param3 />
+    </INPARAMWEB>
+    <!-- Paramétrage Modeles GANTT-->
+    <TBSELECTIONTYPE>
+      <typeselection ClefPrimaire="1">M19_N14_MODELEGANTT</typeselection>
+      <srcselection ClefPrimaire="2">MODELEGANTT_PROC_V</srcselection>
+      <lbsrcselection>Modèles de plannings Gantt</lbsrcselection>
+      <xmldescription>xmlfile://M19_N14_MODELEGANTT-M19_N14_MODELEGANTT.xml</xmldescription>
+      <defaut>-1</defaut>
+    </TBSELECTIONTYPE>
+    <TBSELECTIONTYPE>
+      <typeselection ClefPrimaire="1">N14_HISTOGANTT</typeselection>
+      <srcselection ClefPrimaire="2">X1_GANTT_HISTODATE_W</srcselection>
+      <lbsrcselection>Gantt - Historique des tâches</lbsrcselection>
+      <xmldescription>xmlfile://N14_HISTOGANTT-GANTT_HISTODATE.xml</xmldescription>
+      <defaut>-1</defaut>
+    </TBSELECTIONTYPE>
+  </BASEREF>
+</root>

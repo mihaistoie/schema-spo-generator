@@ -1,0 +1,964 @@
+{
+	"INPROJETGANTTDATEHISTO": {
+		"tableName": "INPROJETGANTTDATEHISTO",
+		"name": "SpoProjetGanttDateHisto",
+		"title": "Historisation des modifications de dates",
+		"type": "object",
+		"primaryKey": [
+			"idmodif",
+			"idplanning"
+		],
+		"properties": {
+			"idmodif": {
+				"title": "Code de modification",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idplanning": {
+				"title": "Code planning",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtache": {
+				"title": "Code tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datmodif": {
+				"title": "Date de modification",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datprevdeb": {
+				"title": "Date prévisionnelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datprevfin": {
+				"title": "Date prévisionnelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureeprev": {
+				"title": "Durée prévisionnelle",
+				"type": "integer"
+			},
+			"datrevdeb": {
+				"title": "Date revue de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datrevfin": {
+				"title": "Date revue de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureerevue": {
+				"title": "Durée revue",
+				"type": "integer"
+			},
+			"datreelledeb": {
+				"title": "Date réelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datreellefin": {
+				"title": "Date réelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureereelle": {
+				"title": "Durée réelle",
+				"type": "integer"
+			},
+			"comrevu": {
+				"title": "Commentaire revu",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"comecart": {
+				"title": "Commentaire écart",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INPROJETGANTTXML": {
+		"tableName": "INPROJETGANTTXML",
+		"name": "SpoProjetGanttXML",
+		"title": "Planning stocké au format XML",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idplanning"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idplanning": {
+				"title": "Code planning",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbplanning": {
+				"title": "Libellé du planning",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"INMARQPROJGANTT": {
+		"tableName": "INMARQPROJGANTT",
+		"name": "SpoMarqueursProjGantt",
+		"title": "Marqueurs de date dans un projet Gantt",
+		"type": "object",
+		"primaryKey": [
+			"idmarq",
+			"idprojet"
+		],
+		"properties": {
+			"idmarq": {
+				"title": "Code marqueur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"actif": {
+				"title": "Marqueur actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INACTGANTT": {
+		"tableName": "INACTGANTT",
+		"name": "SpoActionGanttParametree",
+		"title": "Action paramétrées de type Gantt",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idetape",
+			"idaction",
+			"idprojet",
+			"idtache"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtache": {
+				"title": "Code tâche",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCPDOSGANTT": {
+		"tableName": "INCPDOSGANTT",
+		"name": "SpoActionGanttDossier",
+		"title": "Action sur dossier de type Gantt",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idaction",
+			"idprojet",
+			"idtache"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtache": {
+				"title": "Code tâche",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INTACHEGANTT": {
+		"tableName": "INTACHEGANTT",
+		"name": "SpoTacheGantt",
+		"title": "Tache Gantt",
+		"type": "object",
+		"primaryKey": [
+			"idprojet",
+			"idtache"
+		],
+		"properties": {
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtache": {
+				"title": "Code tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Ordre",
+				"type": "integer"
+			},
+			"lbtache": {
+				"title": "Libellé tâche",
+				"type": "string",
+				"maxLength": 200
+			},
+			"typetache": {
+				"title": "Type de tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datprevdeb": {
+				"title": "Date prévisionnelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datprevfin": {
+				"title": "Date prévisionnelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureeprev": {
+				"title": "Durée prévisionnelle",
+				"type": "integer"
+			},
+			"datreeldeb": {
+				"title": "Date réelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datreelfin": {
+				"title": "Date réelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureereel": {
+				"title": "Durée réelle",
+				"type": "integer"
+			},
+			"calendrier": {
+				"title": "Calendrier",
+				"type": "integer"
+			},
+			"progression": {
+				"title": "Progression",
+				"type": "integer"
+			},
+			"niveau": {
+				"title": "Niveau",
+				"type": "integer"
+			},
+			"ressource": {
+				"title": "Ressource",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtachemere": {
+				"title": "Code tâche mere",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtacheprec": {
+				"title": "Code tâche precedente",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typecontrainte": {
+				"title": "Type de contrainte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"delaicontrainte": {
+				"title": "Delai de la contrainte",
+				"type": "integer"
+			},
+			"commentaires": {
+				"title": "Commentaires",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"datrevuedeb": {
+				"title": "Date revue de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datrevuefin": {
+				"title": "Date revue de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureerevue": {
+				"title": "Durée revue",
+				"type": "integer"
+			}
+		}
+	},
+	"INPROCEDGANTT": {
+		"tableName": "INPROCEDGANTT",
+		"name": "SpoProjetGanttProcedure",
+		"title": "Projet Gantt sur une procédure",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INMODELEGANTT": {
+		"tableName": "INMODELEGANTT",
+		"name": "SpoModeleGantt",
+		"title": "Modèle de planning Gantt",
+		"type": "object",
+		"primaryKey": [
+			"idmodele"
+		],
+		"properties": {
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idmodele": {
+				"title": "Code modèle",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datemaj": {
+				"title": "Date de mise à jour du modèle",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"lbmodele": {
+				"title": "Libellé du modèle",
+				"type": "string",
+				"maxLength": 200
+			}
+		}
+	},
+	"INMODPROCGANTT": {
+		"tableName": "INMODPROCGANTT",
+		"name": "SpoProjetGanttModele",
+		"title": "Modele Gantt sur une procédure",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idmodele"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idmodele": {
+				"title": "Code du modèle",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INDOSSIERGANTT": {
+		"tableName": "INDOSSIERGANTT",
+		"name": "SpoProjetGanttDossier",
+		"title": "Projet Gantt sur un dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INPROJETGANTT": {
+		"tableName": "INPROJETGANTT",
+		"name": "SpoProjetGantt",
+		"title": "Projet Gantt",
+		"type": "object",
+		"primaryKey": [
+			"idprojet"
+		],
+		"properties": {
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbprojet": {
+				"title": "Libellé projet",
+				"type": "string",
+				"maxLength": 200
+			},
+			"modeprojet": {
+				"title": "Mode de projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datdeb": {
+				"title": "Date de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datfin": {
+				"title": "Date de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"calendrier": {
+				"title": "Calendrier",
+				"type": "integer"
+			},
+			"commentaires": {
+				"title": "Commentaires",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"migre": {
+				"title": "Migré vers le referentiel-planning",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"X1_GANTT_HISTODATE_W": {
+		"tableName": "X1_GANTT_HISTODATE_W",
+		"name": "SpoX1GanttHistoDate",
+		"title": "Gantt historisation des dates",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idplanning": {
+				"title": "Code planning",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtache": {
+				"title": "Code tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbtache": {
+				"title": "Libellé tâche",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datmodif": {
+				"title": "Date de modification",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datprevdeb": {
+				"title": "Date prévisionnelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datprevfin": {
+				"title": "Date prévisionnelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureeprev": {
+				"title": "Durée prévisionnelle",
+				"type": "integer"
+			},
+			"datrevdeb": {
+				"title": "Date revu de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datrevfin": {
+				"title": "Date revue de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureerevue": {
+				"title": "Durée revue",
+				"type": "integer"
+			},
+			"datreelledeb": {
+				"title": "Date réelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datreellefin": {
+				"title": "Date réelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureereelle": {
+				"title": "Durée réelle",
+				"type": "integer"
+			},
+			"comrevu": {
+				"title": "Commentaire revu",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"comecart": {
+				"title": "Commentaire écart",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"numordre": {
+				"title": "Ordre",
+				"type": "integer"
+			},
+			"iduti": {
+				"title": "Modifié par - Code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbuti": {
+				"title": "Modifié par",
+				"type": "string",
+				"maxLength": 40
+			}
+		}
+	},
+	"MGLSTTACHEGANTT_PARAM_V": {
+		"tableName": "MGLSTTACHEGANTT_PARAM_V",
+		"name": "SpoMGLSTTACHEGANTT_PARAM_V",
+		"title": "Liste des taches gantt d’un dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idetape",
+			"idaction",
+			"idprojet",
+			"idtache"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtache": {
+				"title": "Code tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Ordre",
+				"type": "integer"
+			},
+			"lbtache": {
+				"title": "Libellé tâche",
+				"type": "string",
+				"maxLength": 200
+			},
+			"typetache": {
+				"title": "Type de tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datprevdeb": {
+				"title": "Date prévisionnelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datprevfin": {
+				"title": "Date prévisionnelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureeprev": {
+				"title": "Durée prévisionnelle",
+				"type": "integer"
+			},
+			"datreeldeb": {
+				"title": "Date réelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datreelfin": {
+				"title": "Date réelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureereel": {
+				"title": "Durée réelle",
+				"type": "integer"
+			},
+			"calendrier": {
+				"title": "Calendrier",
+				"type": "integer"
+			},
+			"progression": {
+				"title": "Progression",
+				"type": "integer"
+			},
+			"niveau": {
+				"title": "Niveau",
+				"type": "integer"
+			},
+			"ressource": {
+				"title": "Ressource",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtacheprec": {
+				"title": "Code tâche precedente",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typecontrainte": {
+				"title": "Type de contrainte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"delaicontrainte": {
+				"title": "Delai de la contrainte",
+				"type": "integer"
+			},
+			"commentaires": {
+				"title": "Commentaires",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"idtachemere": {
+				"title": "Code tâche mère",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datrevuedeb": {
+				"title": "Date revue de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datrevuefin": {
+				"title": "Date revue de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureerevue": {
+				"title": "Durée revue",
+				"type": "integer"
+			}
+		}
+	},
+	"MGLSTTACHEGANTT_DOSSIER_V": {
+		"tableName": "MGLSTTACHEGANTT_DOSSIER_V",
+		"name": "SpoMGLSTTACHEGANTT_DOSSIER_V",
+		"title": "Liste des taches gantt d’un dossier",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idaction",
+			"idprojet",
+			"idtache",
+			"idtachemere"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idaction": {
+				"title": "Code action",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtache": {
+				"title": "Code tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Ordre",
+				"type": "integer"
+			},
+			"lbtache": {
+				"title": "Libellé tâche",
+				"type": "string",
+				"maxLength": 200
+			},
+			"typetache": {
+				"title": "Type de tâche",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datprevdeb": {
+				"title": "Date prévisionnelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datprevfin": {
+				"title": "Date prévisionnelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureeprev": {
+				"title": "Durée prévisionnelle",
+				"type": "integer"
+			},
+			"datreeldeb": {
+				"title": "Date réelle de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datreelfin": {
+				"title": "Date réelle de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureereel": {
+				"title": "Durée réelle",
+				"type": "integer"
+			},
+			"calendrier": {
+				"title": "Calendrier",
+				"type": "integer"
+			},
+			"progression": {
+				"title": "Progression",
+				"type": "integer"
+			},
+			"niveau": {
+				"title": "Niveau",
+				"type": "integer"
+			},
+			"ressource": {
+				"title": "Ressource",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtacheprec": {
+				"title": "Code tâche precedente",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typecontrainte": {
+				"title": "Type de contrainte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"delaicontrainte": {
+				"title": "Delai de la contrainte",
+				"type": "integer"
+			},
+			"commentaires": {
+				"title": "Commentaires",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"idtachemere": {
+				"title": "Code tâche mère",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datrevuedeb": {
+				"title": "Date revue de début",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"datrevuefin": {
+				"title": "Date revue de fin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dureerevue": {
+				"title": "Durée revue",
+				"type": "integer"
+			}
+		}
+	},
+	"MODELEGANTT_PROC_V": {
+		"tableName": "MODELEGANTT_PROC_V",
+		"name": "SpoMODELEGANTT_PROC_V",
+		"title": "Liste des modèles de planning Gantt associés à une procédure",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idproced",
+			"idmodele",
+			"idprojet"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procedure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idmodele": {
+				"title": "Code modèle",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprojet": {
+				"title": "Code projet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbmodele": {
+				"title": "Libellé modèle",
+				"type": "string",
+				"maxLength": 200
+			},
+			"lbprojet": {
+				"title": "Libellé projet",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datemaj": {
+				"title": "Date de modification",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	}
+}
