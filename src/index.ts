@@ -3,6 +3,12 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { parseString } from 'xml2js';
 
+const readdir = util.promisify(fs.readdir);
+const readFile = util.promisify(fs.readFile);
+const lstat = util.promisify(fs.lstat);
+const writeFile = util.promisify(fs.writeFile);
+const mkdir = util.promisify(fs.mkdir);
+
 
 
 const
@@ -219,10 +225,6 @@ const
         });
     },
     generate = async (src: string, dest: string, defaultNameSpace: string, entryName: string, mapNameSpaces?: any): Promise<void> => {
-        const readdir = util.promisify(fs.readdir);
-        const readFile = util.promisify(fs.readFile);
-        const lstat = util.promisify(fs.lstat);
-        const writeFile = util.promisify(fs.writeFile);
         const schemas = {};
         const statsrc = await lstat(src);
         let files: string[] = [];
@@ -249,7 +251,19 @@ const
         for (let i = 0; i < jsons.length; i++) {
             const value = jsons[i]
             generateTableRelations(schemas, value.json, value.nameSpace, entryName);
+            await writeFragments(dest, schemas);
             await writeFile(path.join(dest), JSON.stringify(schemas, null, '\t'), 'utf-8');
+        }
+    },
+    writeFragments = async (dest: string, schemas: any) => {
+        const ext = path.extname(dest);
+        if (ext) {
+            dest = dest.substring(0, dest.length - ext.length)
+        }
+        await mkdir(dest, { recursive: true });
+        for (const schemaName of Object.getOwnPropertyNames(schemas)) {
+            const fileName = path.join(dest, `${schemaName}.json`);
+            await writeFile(fileName, JSON.stringify(schemas[schemaName], null, '\t'), 'utf-8');
         }
     }
 

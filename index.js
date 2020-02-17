@@ -4,6 +4,11 @@ const util = require("util");
 const fs = require("fs");
 const path = require("path");
 const xml2js_1 = require("xml2js");
+const readdir = util.promisify(fs.readdir);
+const readFile = util.promisify(fs.readFile);
+const lstat = util.promisify(fs.lstat);
+const writeFile = util.promisify(fs.writeFile);
+const mkdir = util.promisify(fs.mkdir);
 const generateTable = (schemas, table, nameSpace) => {
     if (table.$.abstraite !== 'N')
         return;
@@ -194,10 +199,6 @@ const generateTable = (schemas, table, nameSpace) => {
         });
     });
 }, generate = async (src, dest, defaultNameSpace, entryName, mapNameSpaces) => {
-    const readdir = util.promisify(fs.readdir);
-    const readFile = util.promisify(fs.readFile);
-    const lstat = util.promisify(fs.lstat);
-    const writeFile = util.promisify(fs.writeFile);
     const schemas = {};
     const statsrc = await lstat(src);
     let files = [];
@@ -225,7 +226,18 @@ const generateTable = (schemas, table, nameSpace) => {
     for (let i = 0; i < jsons.length; i++) {
         const value = jsons[i];
         generateTableRelations(schemas, value.json, value.nameSpace, entryName);
+        await writeFragments(dest, schemas);
         await writeFile(path.join(dest), JSON.stringify(schemas, null, '\t'), 'utf-8');
+    }
+}, writeFragments = async (dest, schemas) => {
+    const ext = path.extname(dest);
+    if (ext) {
+        dest = dest.substring(0, dest.length - ext.length);
+    }
+    await mkdir(dest, { recursive: true });
+    for (const schemaName of Object.getOwnPropertyNames(schemas)) {
+        const fileName = path.join(dest, `${schemaName}.json`);
+        await writeFile(fileName, JSON.stringify(schemas[schemaName], null, '\t'), 'utf-8');
     }
 };
 exports.generateSchemas = generate;
