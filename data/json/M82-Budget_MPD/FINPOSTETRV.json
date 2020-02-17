@@ -1,0 +1,40 @@
+{
+	"tableName": "FINPOSTETRV",
+	"name": "SpoFinPosteTravaux",
+	"title": "Poste travaux règle acompte",
+	"type": "object",
+	"primaryKey": [
+		"idtable",
+		"iddoss",
+		"ac",
+		"soc",
+		"idposte"
+	],
+	"properties": {
+		"idtable": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ac": {
+			"title": "Acompte",
+			"type": "string",
+			"maxLength": 32
+		},
+		"soc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

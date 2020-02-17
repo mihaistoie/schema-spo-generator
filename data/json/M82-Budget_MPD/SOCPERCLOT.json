@@ -1,0 +1,42 @@
+{
+	"tableName": "SOCPERCLOT",
+	"name": "SpoSocPerCloture",
+	"title": "Périodes de clôture",
+	"type": "object",
+	"primaryKey": [
+		"idsoc",
+		"dtdeb",
+		"dtfin"
+	],
+	"properties": {
+		"idsoc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtdeb": {
+			"title": "Date début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"periode": {
+			"title": "Période",
+			"type": "integer"
+		},
+		"estclos": {
+			"title": "Est clos (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtprevi": {
+			"title": "Date prévisionnelle",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

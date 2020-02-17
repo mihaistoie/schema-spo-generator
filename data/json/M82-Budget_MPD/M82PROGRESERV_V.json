@@ -1,0 +1,42 @@
+{
+	"tableName": "M82PROGRESERV_V",
+	"name": "SpoM82ProgReserv_V",
+	"title": "Programme - Réservataires",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nbrdpt": {
+			"title": "NbRdpt",
+			"type": "integer"
+		},
+		"nbrpref": {
+			"title": "NbRpref",
+			"type": "integer"
+		},
+		"nbrreg": {
+			"title": "NbRreg",
+			"type": "integer"
+		},
+		"nbraggl": {
+			"title": "NbRaggl",
+			"type": "integer"
+		},
+		"nbrcoll": {
+			"title": "NbRcoll",
+			"type": "integer"
+		},
+		"nbrcomm": {
+			"title": "NbRcomm",
+			"type": "integer"
+		},
+		"nbraut": {
+			"title": "NbRaut",
+			"type": "integer"
+		}
+	}
+}

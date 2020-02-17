@@ -1,0 +1,49 @@
+{
+	"tableName": "SPOEVENT",
+	"name": "SpoSpoEvent",
+	"title": "Evenement de SPO",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"evt",
+		"dtevt"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"evt": {
+			"title": "Code événement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtevt": {
+			"title": "Date événement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mnt": {
+			"title": "Montant",
+			"type": "number",
+			"decimals": 4
+		},
+		"soc": {
+			"title": "Société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"exporte": {
+			"title": "Exporté (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

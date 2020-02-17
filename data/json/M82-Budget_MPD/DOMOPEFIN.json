@@ -1,0 +1,209 @@
+{
+	"tableName": "DOMOPEFIN",
+	"name": "SpoDossierFin",
+	"title": "Dossier financement",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"objdos": {
+			"title": "Objet",
+			"type": "string",
+			"maxLength": 255
+		},
+		"iddossreg": {
+			"title": "Fils de",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro ordre",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code tiers principal",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"idpere": {
+			"title": "Dossier générique",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idfin": {
+			"title": "Financement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtdem": {
+			"title": "Date demande",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntdem": {
+			"title": "Montant demandé",
+			"type": "number",
+			"decimals": 4
+		},
+		"idcontrat": {
+			"title": "Contrat cadre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"soc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"extref": {
+			"title": "Référence externe",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"demandeAcompteList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoDemandeAcompte",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "dossierFin"
+		},
+		"versementFinList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoVersementFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "dossierFin"
+		},
+		"decisionFin": {
+			"type": "hasOne",
+			"aggregationKind": "composite",
+			"model": "SpoDecisionFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "dossierFin"
+		},
+		"pieceFournieList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoPieceFournie",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "dossierFin"
+		},
+		"versementAcompteList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoVersementAcompte",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "dossierFin"
+		},
+		"garantieFinList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoGarantieFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "dossierFin"
+		},
+		"financement": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoFinancement",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"idfin"
+			],
+			"invRel": "dossierFinList"
+		},
+		"contratCadre": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoContratCadre",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "dossierFinList"
+		}
+	}
+}

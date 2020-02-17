@@ -1,0 +1,51 @@
+{
+	"tableName": "FINCONTRAT",
+	"name": "SpoContratCadre",
+	"title": "Contrat cadre",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"financeur": {
+			"title": "Financeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mnt": {
+			"title": "Montant",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"dossierFinList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoDossierFin",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "contratCadre"
+		}
+	}
+}

@@ -1,0 +1,51 @@
+{
+	"tableName": "PBREGIMEFISC",
+	"name": "SpoRegimeFiscal",
+	"title": "Régime fiscal",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"txtvaf": {
+			"title": "Taux TVA final",
+			"type": "number",
+			"decimals": 2
+		},
+		"prorata": {
+			"title": "Prorata TVA",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"typereg": {
+			"title": "Type de régime fiscal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"tvasurmarge": {
+			"title": "TVASurMarge",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"defaut": {
+			"title": "Defaut",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

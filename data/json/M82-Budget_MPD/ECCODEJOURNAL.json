@@ -1,0 +1,26 @@
+{
+	"tableName": "ECCODEJOURNAL",
+	"name": "SpoECCodeJournal",
+	"title": "ECCodeJournal",
+	"type": "object",
+	"primaryKey": [
+		"code"
+	],
+	"properties": {
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"typejournal": {
+			"title": "Type Journal",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}

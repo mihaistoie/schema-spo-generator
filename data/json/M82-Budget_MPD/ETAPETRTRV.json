@@ -1,0 +1,22 @@
+{
+	"tableName": "ETAPETRTRV",
+	"name": "SpoEtapeTrTrv",
+	"title": "Association étapes et tranches travaux",
+	"type": "object",
+	"primaryKey": [
+		"idetape",
+		"idtranchetrav"
+	],
+	"properties": {
+		"idetape": {
+			"title": "idEtape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtranchetrav": {
+			"title": "idTrancheTrav",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

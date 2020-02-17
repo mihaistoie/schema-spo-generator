@@ -1,0 +1,51 @@
+{
+	"tableName": "CONSOPOSTETRESO",
+	"name": "SpoConsoPosteTreso",
+	"title": "ConsoPosteTreso",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idconso"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idconso": {
+			"title": "IdConso",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmodelebud": {
+			"title": "IdModeleBud",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"posteTreso": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoPosteTreso",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "consoPosteTresoList"
+		}
+	}
+}

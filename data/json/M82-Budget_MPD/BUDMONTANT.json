@@ -1,0 +1,162 @@
+{
+	"tableName": "BUDMONTANT",
+	"name": "SpoBudgetMontant",
+	"title": "Montant du budget",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte",
+		"idprog"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste budget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libprog": {
+			"title": "Programme - libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"quoteprog": {
+			"title": "Quote part du programme",
+			"type": "number",
+			"decimals": 2
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntfinal": {
+			"title": "Montant final",
+			"type": "number",
+			"decimals": 4
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"txtvaf": {
+			"title": "Taux TVA final",
+			"type": "number",
+			"decimals": 2
+		},
+		"proratatva": {
+			"title": "Prorata TVA",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"comment": {
+			"title": "Comment",
+			"type": "string",
+			"maxLength": 120
+		},
+		"usercomment": {
+			"title": "UserComment",
+			"type": "string",
+			"maxLength": 50
+		},
+		"datecomment": {
+			"title": "DateComment",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"commentecart": {
+			"title": "CommentEcart",
+			"type": "string",
+			"maxLength": 120
+		},
+		"mnthtformule": {
+			"title": "MntHTFormule",
+			"type": "number",
+			"decimals": 4
+		},
+		"saisieformule": {
+			"title": "SaisieFormule",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"txtvacal": {
+			"title": "Taux Tva Calcule",
+			"type": "number",
+			"decimals": 3
+		},
+		"saisiemntttc": {
+			"title": "SaisieMntTTC",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mnthtfige": {
+			"title": "MntHTFige",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mnthtforce": {
+			"title": "MntHTForce",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mntttcforce": {
+			"title": "MntTTCForce",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mntautoht": {
+			"title": "MntAutoHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntpreviht": {
+			"title": "MntPreviHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntprevip1ht": {
+			"title": "MntPreviP1HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"saisiemntautoht": {
+			"title": "SaisieMntAutoHT",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"budget": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoBudget",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "budgetMontantList"
+		}
+	}
+}

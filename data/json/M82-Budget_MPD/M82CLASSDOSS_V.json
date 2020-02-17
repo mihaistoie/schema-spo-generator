@@ -1,0 +1,29 @@
+{
+	"tableName": "M82CLASSDOSS_V",
+	"name": "SpoM82ClassDoss_V",
+	"title": "Classeur du dossier",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Domaine - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Dossier - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbclassdoss": {
+			"title": "Classeur",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idclassdoss": {
+			"title": "Classeur - Code",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"tableName": "MCPARAM",
+	"name": "SpoParamMarche",
+	"title": "Paramètres marché",
+	"type": "object",
+	"primaryKey": [
+		"societe",
+		"code"
+	],
+	"properties": {
+		"societe": {
+			"title": "Société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"code": {
+			"title": "Code paramètre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"valeur": {
+			"title": "Valeur paramètre",
+			"type": "string",
+			"maxLength": 2000,
+			"format": "memo"
+		},
+		"fmt": {
+			"title": "Format paramètre",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,47 @@
+{
+	"tableName": "FINVERSEMAC",
+	"name": "SpoVersementAcompte",
+	"title": "Versement acompte",
+	"type": "object",
+	"primaryKey": [
+		"iddoss",
+		"ac",
+		"refver"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ac": {
+			"title": "Acompte",
+			"type": "string",
+			"maxLength": 32
+		},
+		"refver": {
+			"title": "Référence versement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mnt": {
+			"title": "Montant",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"dossierFin": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoDossierFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "versementAcompteList"
+		}
+	}
+}

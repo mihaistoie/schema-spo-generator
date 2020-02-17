@@ -1,0 +1,55 @@
+{
+	"tableName": "REGLEACTUTRESO",
+	"name": "SpoRegleActuTreso",
+	"title": "Règle actualisation",
+	"type": "object",
+	"primaryKey": [
+		"idregleactu"
+	],
+	"properties": {
+		"idregleactu": {
+			"title": "Code règle",
+			"type": "string",
+			"maxLength": 32
+		},
+		"niveau": {
+			"title": "Niveau",
+			"type": "string",
+			"maxLength": 10
+		},
+		"societe": {
+			"title": "Societé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmodbud": {
+			"title": "Code modèle budget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeregle": {
+			"title": "Type règle",
+			"type": "string",
+			"maxLength": 10
+		},
+		"perdecalage": {
+			"title": "Type période",
+			"type": "string",
+			"maxLength": 10
+		},
+		"decalage": {
+			"title": "Décalage",
+			"type": "integer"
+		}
+	}
+}

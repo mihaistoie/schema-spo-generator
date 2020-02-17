@@ -1,0 +1,27 @@
+{
+	"tableName": "IEDDATEPREV",
+	"name": "SpoIEDDatePrev",
+	"title": "Dates prévi",
+	"type": "object",
+	"primaryKey": [
+		"idop",
+		"idevt"
+	],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idevt": {
+			"title": "Code action",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dateevt": {
+			"title": "DateEvt",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

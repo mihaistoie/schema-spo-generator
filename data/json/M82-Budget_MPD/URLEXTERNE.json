@@ -1,0 +1,28 @@
+{
+	"tableName": "URLEXTERNE",
+	"name": "SpoUrlExterne",
+	"title": "Paramétrage des Url",
+	"type": "object",
+	"primaryKey": [
+		"idurl"
+	],
+	"properties": {
+		"idurl": {
+			"title": "Code du modèle",
+			"type": "string",
+			"maxLength": 32
+		},
+		"adresseurl": {
+			"title": "Adresse Url",
+			"type": "string",
+			"maxLength": 2000,
+			"format": "memo"
+		},
+		"commentaire": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		}
+	}
+}

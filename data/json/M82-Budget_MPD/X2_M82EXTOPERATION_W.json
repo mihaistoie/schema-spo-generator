@@ -1,0 +1,24 @@
+{
+	"tableName": "X2_M82EXTOPERATION_W",
+	"name": "SpoX2_M82ExtOperation_W",
+	"title": "Extension Opération",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"id": {
+			"title": "Id objet métier",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

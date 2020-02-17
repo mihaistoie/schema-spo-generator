@@ -1,0 +1,32 @@
+{
+	"tableName": "PERIODETRESO",
+	"name": "SpoPeriodeTreso",
+	"title": "PeriodeTreso",
+	"type": "object",
+	"primaryKey": [
+		"societe",
+		"datedebut"
+	],
+	"properties": {
+		"societe": {
+			"title": "Societe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"datedebut": {
+			"title": "DateDebut",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"typeperiode": {
+			"title": "TypePeriode",
+			"type": "string",
+			"maxLength": 10
+		},
+		"datefin": {
+			"title": "DateFin",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

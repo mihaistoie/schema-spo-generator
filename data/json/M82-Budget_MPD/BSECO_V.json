@@ -1,0 +1,107 @@
+{
+	"tableName": "BSECO_V",
+	"name": "SpoECO_V",
+	"title": "ECO",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logeco": {
+			"title": "Total logements ECO",
+			"type": "integer"
+		},
+		"cdecoc": {
+			"title": "Code programme ECO collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libecoc": {
+			"title": "Libellé programme ECO Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"ecoct1": {
+			"title": "ECO T1 collectifs",
+			"type": "integer"
+		},
+		"ecoct1b": {
+			"title": "ECO T1bis collectifs",
+			"type": "integer"
+		},
+		"ecoct2": {
+			"title": "ECO T2 collectifs",
+			"type": "integer"
+		},
+		"ecoct3": {
+			"title": "ECO T3 collectifs",
+			"type": "integer"
+		},
+		"ecoct4": {
+			"title": "ECO T4 collectifs",
+			"type": "integer"
+		},
+		"ecoct5": {
+			"title": "ECO T5 collectifs",
+			"type": "integer"
+		},
+		"ecoct6": {
+			"title": "ECO T6 collectifs",
+			"type": "integer"
+		},
+		"ecoct7": {
+			"title": "ECO T7 collectifs",
+			"type": "integer"
+		},
+		"cdecoi": {
+			"title": "Code programme ECO Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libecoi": {
+			"title": "Libellé programme ECO Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"ecoit1": {
+			"title": "ECO T1 individuels",
+			"type": "integer"
+		},
+		"ecoit1b": {
+			"title": "ECO individuel T1bis",
+			"type": "integer"
+		},
+		"ecoit2": {
+			"title": "ECO individuel T2",
+			"type": "integer"
+		},
+		"ecoit3": {
+			"title": "ECO individuel T3",
+			"type": "integer"
+		},
+		"ecoit4": {
+			"title": "ECO individuel T4",
+			"type": "integer"
+		},
+		"ecoit5": {
+			"title": "ECO individuel T5",
+			"type": "integer"
+		},
+		"ecoit6": {
+			"title": "ECO individuel T6",
+			"type": "integer"
+		},
+		"ecoit7": {
+			"title": "ECO individuel T7",
+			"type": "integer"
+		}
+	}
+}

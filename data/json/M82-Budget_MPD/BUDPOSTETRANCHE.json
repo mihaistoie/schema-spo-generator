@@ -1,0 +1,52 @@
+{
+	"tableName": "BUDPOSTETRANCHE",
+	"name": "SpoBudgetPosteTranche",
+	"title": "BudPosteTranche",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte",
+		"idprog"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"moderepart": {
+			"title": "ModeRepart",
+			"type": "string",
+			"maxLength": 10
+		},
+		"isleaf": {
+			"title": "IsLeaf",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"budget": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoBudget",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "budgetPosteTrancheList"
+		}
+	}
+}

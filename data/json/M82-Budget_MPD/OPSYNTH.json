@@ -1,0 +1,56 @@
+{
+	"tableName": "OPSYNTH",
+	"name": "SpoOpSynthese",
+	"title": "Synthèse lots sur opération",
+	"type": "object",
+	"primaryKey": [
+		"idop"
+	],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"soc": {
+			"title": "Société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logtypouv": {
+			"title": "Synthèse nb logt par ouvrage",
+			"type": "string",
+			"maxLength": 100
+		},
+		"logtypfin": {
+			"title": "Synthèse nb logt par financement",
+			"type": "string",
+			"maxLength": 100
+		},
+		"logtypo": {
+			"title": "Synthèse nb logt par typologie",
+			"type": "string",
+			"maxLength": 100
+		},
+		"sdp": {
+			"title": "SDP",
+			"type": "number",
+			"decimals": 2
+		},
+		"shon": {
+			"title": "SHON",
+			"type": "number",
+			"decimals": 2
+		},
+		"clerpt": {
+			"title": "Clé répartition SHON",
+			"type": "string",
+			"maxLength": 10
+		},
+		"clerepartsdp": {
+			"title": "CleRepartSDP",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}

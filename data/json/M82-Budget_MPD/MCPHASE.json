@@ -1,0 +1,55 @@
+{
+	"tableName": "MCPHASE",
+	"name": "SpoMCPhase",
+	"title": "Phases du marché",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"tranche",
+		"phase"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"phase": {
+			"title": "N° Phase",
+			"type": "integer"
+		},
+		"lib": {
+			"title": "Phase",
+			"type": "string",
+			"maxLength": 200
+		},
+		"prct": {
+			"title": "%",
+			"type": "number",
+			"decimals": 2
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCPhaseList"
+		}
+	}
+}

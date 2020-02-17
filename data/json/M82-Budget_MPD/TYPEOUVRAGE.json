@@ -1,0 +1,62 @@
+{
+	"tableName": "TYPEOUVRAGE",
+	"name": "SpoTypeOuvrage",
+	"title": "TypeOuvrage",
+	"type": "object",
+	"primaryKey": [
+		"code"
+	],
+	"properties": {
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"codesurfvendu": {
+			"title": "CodeSurfVendu",
+			"type": "string",
+			"maxLength": 10
+		},
+		"codeproctc": {
+			"title": "Code procédure tranche commerciale",
+			"type": "string",
+			"maxLength": 32
+		},
+		"prixfige": {
+			"title": "prixFige",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"natureTrTypeOuvList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoNatureTrTypeOuv",
+			"localFields": [
+				"typeouvrage"
+			],
+			"foreignFields": [
+				"code"
+			],
+			"invRel": "typeOuvrage"
+		},
+		"typeOuvTypeLotList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoTypeOuvTypeLot",
+			"localFields": [
+				"typeouvrage"
+			],
+			"foreignFields": [
+				"code"
+			],
+			"invRel": "typeOuvrage"
+		}
+	}
+}

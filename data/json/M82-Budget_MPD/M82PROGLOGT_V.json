@@ -1,0 +1,134 @@
+{
+	"tableName": "M82PROGLOGT_V",
+	"name": "SpoM82ProgLogt_V",
+	"title": "Programme - Logements",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nblogt": {
+			"title": "NbLogt",
+			"type": "integer"
+		},
+		"nblogthp": {
+			"title": "NbLogtHP",
+			"type": "integer"
+		},
+		"nblits": {
+			"title": "NbLits",
+			"type": "integer"
+		},
+		"nbt1": {
+			"title": "NbT1",
+			"type": "integer"
+		},
+		"nbt1hp": {
+			"title": "NbT1HP",
+			"type": "integer"
+		},
+		"nbt1lits": {
+			"title": "NbT1Lits",
+			"type": "integer"
+		},
+		"nbt1b": {
+			"title": "NbT1b",
+			"type": "integer"
+		},
+		"nbt1bhp": {
+			"title": "NbT1bHP",
+			"type": "integer"
+		},
+		"nbt1blits": {
+			"title": "NbT1bLits",
+			"type": "integer"
+		},
+		"nbt2": {
+			"title": "NbT2",
+			"type": "integer"
+		},
+		"nbt1p": {
+			"title": "NbT1p",
+			"type": "integer"
+		},
+		"nbt1php": {
+			"title": "NbT1pHP",
+			"type": "integer"
+		},
+		"nbt1plits": {
+			"title": "NbT1pLits",
+			"type": "integer"
+		},
+		"nbt2hp": {
+			"title": "NbT2HP",
+			"type": "integer"
+		},
+		"nbt2lits": {
+			"title": "NbT2Lits",
+			"type": "integer"
+		},
+		"nbt3": {
+			"title": "NbT3",
+			"type": "integer"
+		},
+		"nbt3hp": {
+			"title": "NbT3HP",
+			"type": "integer"
+		},
+		"nbt3lits": {
+			"title": "NbT3Lits",
+			"type": "integer"
+		},
+		"nbt4": {
+			"title": "NbT4",
+			"type": "integer"
+		},
+		"nbt4hp": {
+			"title": "NbT4HP",
+			"type": "integer"
+		},
+		"nbt4lits": {
+			"title": "NbT4Lits",
+			"type": "integer"
+		},
+		"nbt5": {
+			"title": "NbT5",
+			"type": "integer"
+		},
+		"nbt5hp": {
+			"title": "NbT5HP",
+			"type": "integer"
+		},
+		"nbt5lits": {
+			"title": "NbT5Lits",
+			"type": "integer"
+		},
+		"nbt6": {
+			"title": "NbT6",
+			"type": "integer"
+		},
+		"nbt6hp": {
+			"title": "NbT6HP",
+			"type": "integer"
+		},
+		"nbt6lits": {
+			"title": "NbT6Lits",
+			"type": "integer"
+		},
+		"nbt7": {
+			"title": "NbT7",
+			"type": "integer"
+		},
+		"nbt7hp": {
+			"title": "NbT7HP",
+			"type": "integer"
+		},
+		"nbt7lits": {
+			"title": "NbT7Lits",
+			"type": "integer"
+		}
+	}
+}

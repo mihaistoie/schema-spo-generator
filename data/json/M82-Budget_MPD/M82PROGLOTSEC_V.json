@@ -1,0 +1,72 @@
+{
+	"tableName": "M82PROGLOTSEC_V",
+	"name": "SpoM82ProgLotSec_V",
+	"title": "Programme - Lots secondaires",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nblotsec": {
+			"title": "NbLotSec",
+			"type": "integer"
+		},
+		"nbautsec": {
+			"title": "NbAutSec",
+			"type": "integer"
+		},
+		"nbcave": {
+			"title": "NbCave",
+			"type": "integer"
+		},
+		"nbcell": {
+			"title": "NbCell",
+			"type": "integer"
+		},
+		"nbgarba": {
+			"title": "NbGarBA",
+			"type": "integer"
+		},
+		"nbgarbs": {
+			"title": "NbGarBS",
+			"type": "integer"
+		},
+		"nbgarpa": {
+			"title": "NbGarPA",
+			"type": "integer"
+		},
+		"nbgarps": {
+			"title": "NbGarPS",
+			"type": "integer"
+		},
+		"nbgari": {
+			"title": "NbGarI",
+			"type": "integer"
+		},
+		"nbgarni": {
+			"title": "NbGarNI",
+			"type": "integer"
+		},
+		"nbterr": {
+			"title": "NbTerr",
+			"type": "integer"
+		},
+		"suterr": {
+			"title": "SuTerr",
+			"type": "number",
+			"decimals": 2
+		},
+		"nbjard": {
+			"title": "NbJard",
+			"type": "integer"
+		},
+		"sujard": {
+			"title": "SuJard",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

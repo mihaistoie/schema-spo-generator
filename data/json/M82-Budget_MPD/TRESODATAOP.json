@@ -1,0 +1,57 @@
+{
+	"tableName": "TRESODATAOP",
+	"name": "SpoTresoDataOp",
+	"title": "TresoDataOp",
+	"type": "object",
+	"primaryKey": [
+		"idop",
+		"dateflux"
+	],
+	"properties": {
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dateflux": {
+			"title": "DateFlux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntverseregle": {
+			"title": "Montant total versé/réglé",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntdepenses": {
+			"title": "Dépenses d’investissment",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntrecettes": {
+			"title": "Recettes d’investissment",
+			"type": "number",
+			"decimals": 4
+		},
+		"tauxemprunt": {
+			"title": "Taux d’imprunt",
+			"type": "number",
+			"decimals": 4
+		},
+		"tresofinmois": {
+			"title": "Trésorerie fin de mois",
+			"type": "number",
+			"decimals": 4
+		},
+		"dategen": {
+			"title": "Date de la dérniere génération",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"heuregen": {
+			"title": "L’heure de la dérniere génération",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}

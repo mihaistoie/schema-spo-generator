@@ -1,0 +1,41 @@
+{
+	"tableName": "SPOAPPPHASE",
+	"name": "SpoSPOAppPhase",
+	"title": "Etapes planning",
+	"type": "object",
+	"primaryKey": [
+		"idphase"
+	],
+	"properties": {
+		"idphase": {
+			"title": "Code étape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"libellecourt": {
+			"title": "Libellé court",
+			"type": "string",
+			"maxLength": 80
+		},
+		"ideventdeb": {
+			"title": "Code événement début",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ideventfin": {
+			"title": "Code événement fin",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codecouleur": {
+			"title": "Code couleur",
+			"type": "string",
+			"maxLength": 20
+		}
+	}
+}

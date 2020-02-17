@@ -3439,6 +3439,11 @@
 				"title": "Pourcent",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"typedetaille": {
+				"title": "TypeDetaille",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -3759,6 +3764,11 @@
 				"title": "ModeleBudget",
 				"type": "string",
 				"maxLength": 32
+			},
+			"typedetaille": {
+				"title": "TypeDetaille",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -4910,6 +4920,11 @@
 				"title": "Identique",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"typedetaille": {
+				"title": "TypeDetaille",
+				"type": "string",
+				"maxLength": 10
 			}
 		},
 		"relations": {
@@ -10049,6 +10064,16 @@
 				"type": "string",
 				"maxLength": 32
 			},
+			"iban": {
+				"title": "IBAN",
+				"type": "string",
+				"maxLength": 34
+			},
+			"bic": {
+				"title": "BIC",
+				"type": "string",
+				"maxLength": 11
+			},
 			"activite": {
 				"title": "Activite",
 				"type": "string",
@@ -12754,6 +12779,10 @@
 				"title": "Code événement fin",
 				"type": "string",
 				"maxLength": 32
+			},
+			"decalagefin": {
+				"title": "DecalageFin",
+				"type": "integer"
 			}
 		},
 		"relations": {
@@ -13122,6 +13151,16 @@
 			},
 			"mnt": {
 				"title": "Montant échéance",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntht": {
+				"title": "MntHT",
+				"type": "number",
+				"decimals": 4
+			},
+			"mnttva": {
+				"title": "MntTVA",
 				"type": "number",
 				"decimals": 4
 			},

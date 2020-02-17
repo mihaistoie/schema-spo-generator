@@ -1,0 +1,163 @@
+{
+	"tableName": "MCAFFECBUD",
+	"name": "SpoMCAffectationBudget",
+	"title": "Affectation budget",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typemnt": {
+			"title": "Type montant",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idcontrat": {
+			"title": "Code contrat",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idfact": {
+			"title": "Code facturation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmnt": {
+			"title": "Code montant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"avenant": {
+			"title": "Avenant",
+			"type": "integer"
+		},
+		"reval": {
+			"title": "Revalorisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lot": {
+			"title": "Lot",
+			"type": "integer"
+		},
+		"phase": {
+			"title": "Phase",
+			"type": "integer"
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtsaisie": {
+			"title": "Date saisie",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"statut": {
+			"title": "Statut engagement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtengage": {
+			"title": "Date engagement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtannul": {
+			"title": "Date annulation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"mntlasm": {
+			"title": "Montant LASM",
+			"type": "number",
+			"decimals": 4
+		},
+		"txlasm": {
+			"title": "Taux LASM",
+			"type": "number",
+			"decimals": 2
+		},
+		"mntfisc": {
+			"title": "MntFisc",
+			"type": "number",
+			"decimals": 4
+		},
+		"posposte": {
+			"title": "Position poste budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"forcer": {
+			"title": "Forcer",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtcompta": {
+			"title": "Date de comptabilisation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"codetva": {
+			"title": "Code TVA",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}

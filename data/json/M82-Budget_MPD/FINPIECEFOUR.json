@@ -1,0 +1,41 @@
+{
+	"tableName": "FINPIECEFOUR",
+	"name": "SpoPieceFournie",
+	"title": "Pièce dossier fournie",
+	"type": "object",
+	"primaryKey": [
+		"iddoss",
+		"piece"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"piece": {
+			"title": "Pièce",
+			"type": "string",
+			"maxLength": 32
+		},
+		"flag": {
+			"title": "Fournie (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"dossierFin": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoDossierFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "pieceFournieList"
+		}
+	}
+}

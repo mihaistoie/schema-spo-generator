@@ -1,0 +1,57 @@
+{
+	"tableName": "NATURETRAVAUX",
+	"name": "SpoNatureTravaux",
+	"title": "Nature de travaux",
+	"type": "object",
+	"primaryKey": [
+		"code"
+	],
+	"properties": {
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 100
+		},
+		"codeprocedure": {
+			"title": "CodeProcedure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typesurfbrute": {
+			"title": "TypeSurfBrute",
+			"type": "string",
+			"maxLength": 100
+		}
+	},
+	"relations": {
+		"natureTrTypeOuvList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoNatureTrTypeOuv",
+			"localFields": [
+				"idnaturetravaux"
+			],
+			"foreignFields": [
+				"code"
+			],
+			"invRel": "natureTravaux"
+		},
+		"trancheTravauxList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoTrancheTravaux",
+			"localFields": [
+				"idnaturetravaux"
+			],
+			"foreignFields": [
+				"code"
+			],
+			"invRel": "natureTravaux"
+		}
+	}
+}

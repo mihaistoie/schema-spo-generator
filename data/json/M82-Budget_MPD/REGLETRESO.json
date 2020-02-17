@@ -1,0 +1,65 @@
+{
+	"tableName": "REGLETRESO",
+	"name": "SpoRegleTreso",
+	"title": "RegleTreso",
+	"type": "object",
+	"primaryKey": [
+		"idregletreso"
+	],
+	"properties": {
+		"idregletreso": {
+			"title": "IdRegleTreso",
+			"type": "string",
+			"maxLength": 32
+		},
+		"niveau": {
+			"title": "Niveau",
+			"type": "string",
+			"maxLength": 10
+		},
+		"societe": {
+			"title": "Code societé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmodbud": {
+			"title": "Code modèle budget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modebudget": {
+			"title": "Base de calcul",
+			"type": "string",
+			"maxLength": 10
+		},
+		"totalcoeff": {
+			"title": "TotalCoeff",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"detRegleTresoList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoDetRegleTreso",
+			"localFields": [
+				"idregletreso"
+			],
+			"foreignFields": [
+				"idregletreso"
+			],
+			"invRel": "regleTreso"
+		}
+	}
+}

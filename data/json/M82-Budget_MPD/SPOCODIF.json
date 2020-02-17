@@ -1,0 +1,31 @@
+{
+	"tableName": "SPOCODIF",
+	"name": "SpoSpoCodif",
+	"title": "Table des codifs",
+	"type": "object",
+	"primaryKey": [
+		"idcodif",
+		"code"
+	],
+	"properties": {
+		"idcodif": {
+			"title": "Codification",
+			"type": "string",
+			"maxLength": 32
+		},
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"val": {
+			"title": "Valeur",
+			"type": "string",
+			"maxLength": 200
+		},
+		"numordre": {
+			"title": "N° ordre",
+			"type": "integer"
+		}
+	}
+}

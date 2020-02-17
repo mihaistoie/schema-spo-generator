@@ -1,0 +1,51 @@
+{
+	"tableName": "FINVERSEM",
+	"name": "SpoVersementFin",
+	"title": "Versement",
+	"type": "object",
+	"primaryKey": [
+		"iddoss",
+		"refver"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"refver": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dtver": {
+			"title": "Date versement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntver": {
+			"title": "Montant versé",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"dossierFin": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoDossierFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "versementFinList"
+		}
+	}
+}

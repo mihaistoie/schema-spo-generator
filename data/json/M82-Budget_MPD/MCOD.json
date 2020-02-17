@@ -1,0 +1,101 @@
+{
+	"tableName": "MCOD",
+	"name": "SpoMCOD",
+	"title": "Opérations diverses",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code OD",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeod": {
+			"title": "Type OD",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idop": {
+			"title": "Code Opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"refod": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dateod": {
+			"title": "Date OD",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idtiers": {
+			"title": "Code Tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"doc": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"dateannul": {
+			"title": "Date annulation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"motifannul": {
+			"title": "Motif annulation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"evt": {
+			"title": "Evénement comptable modèle",
+			"type": "string",
+			"maxLength": 10
+		},
+		"journal": {
+			"title": "Journal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"datecompta": {
+			"title": "Date comptabilisation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"codesc": {
+			"title": "Code schema comptable",
+			"type": "string",
+			"maxLength": 50
+		},
+		"typemntaff": {
+			"title": "Type de ligné des afféctations",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"mCODTvaProvList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCODTvaProv",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "mCOD"
+		}
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"tableName": "PBPOSTETVA",
+	"name": "SpoPosteTauxTVA",
+	"title": "Taux TVA spécifique du poste",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"regfisc",
+		"modelebudget"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"regfisc": {
+			"title": "Code régime fiscal",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modelebudget": {
+			"title": "ModeleBudget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"txtvaf": {
+			"title": "Taux TVA final",
+			"type": "number",
+			"decimals": 2
+		},
+		"prorata": {
+			"title": "Prorata TVA",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"identique": {
+			"title": "Identique",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"poste": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoPoste",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "posteTauxTVAList"
+		}
+	}
+}

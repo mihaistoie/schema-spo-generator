@@ -1,0 +1,71 @@
+{
+	"tableName": "DOMPORTAILTIERS",
+	"name": "SpoDossierTiers",
+	"title": "Dossier portail tiers",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "IdRef",
+			"type": "string",
+			"maxLength": 32
+		},
+		"objdos": {
+			"title": "Objet",
+			"type": "string",
+			"maxLength": 255
+		},
+		"iddossreg": {
+			"title": "Fils de",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro ordre",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code tiers principal",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"idpere": {
+			"title": "Dossier parent",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"soc": {
+			"title": "Code societé",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

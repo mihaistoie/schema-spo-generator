@@ -1,0 +1,98 @@
+{
+	"tableName": "M82TIERSREPDEST_V",
+	"name": "SpoM82TiersRepDest_V",
+	"title": "Tiers destinataire du courrier",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idtiers": {
+			"title": "idtiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"des_lib": {
+			"title": "des_lib",
+			"type": "string",
+			"maxLength": 200
+		},
+		"des_numvoie": {
+			"title": "des_numvoie",
+			"type": "string",
+			"maxLength": 10
+		},
+		"des_compnumvoie": {
+			"title": "des_compnumvoie",
+			"type": "string",
+			"maxLength": 20
+		},
+		"des_rue1": {
+			"title": "des_rue1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"des_rue2": {
+			"title": "des_rue2",
+			"type": "string",
+			"maxLength": 100
+		},
+		"des_rue3": {
+			"title": "des_rue3",
+			"type": "string",
+			"maxLength": 100
+		},
+		"des_rue4": {
+			"title": "des_rue4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"des_boitepost": {
+			"title": "des_boitepost",
+			"type": "string",
+			"maxLength": 20
+		},
+		"des_postal": {
+			"title": "des_postal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"des_ville": {
+			"title": "des_ville",
+			"type": "string",
+			"maxLength": 40
+		},
+		"des_app": {
+			"title": "des_app",
+			"type": "string",
+			"maxLength": 100
+		},
+		"des_pol": {
+			"title": "des_pol",
+			"type": "string",
+			"maxLength": 200
+		},
+		"rep_nom": {
+			"title": "rep_nom",
+			"type": "string",
+			"maxLength": 50
+		},
+		"rep_prenom": {
+			"title": "rep_prenom",
+			"type": "string",
+			"maxLength": 50
+		},
+		"rep_genre": {
+			"title": "rep_genre",
+			"type": "string",
+			"maxLength": 5
+		},
+		"rep_libgenre": {
+			"title": "rep_libgenre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"idrepresentant": {
+			"title": "idrepresentant",
+			"type": "integer"
+		}
+	}
+}

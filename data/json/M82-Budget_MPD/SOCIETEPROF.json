@@ -1,0 +1,36 @@
+{
+	"tableName": "SOCIETEPROF",
+	"name": "SpoSocieteProfil",
+	"title": "Association société - profil",
+	"type": "object",
+	"primaryKey": [
+		"soc",
+		"idprof"
+	],
+	"properties": {
+		"soc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"societe": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoSociete",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"soc"
+			],
+			"invRel": "societeProfilList"
+		}
+	}
+}

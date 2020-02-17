@@ -1,0 +1,41 @@
+{
+	"tableName": "FINPOSTE",
+	"name": "SpoFinPoste",
+	"title": "Poste lié au financement",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"soc"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"soc": {
+			"title": "Société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"financement": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoFinancement",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "finPosteList"
+		}
+	}
+}

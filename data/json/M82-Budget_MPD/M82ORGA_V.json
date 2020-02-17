@@ -1,0 +1,134 @@
+{
+	"tableName": "M82ORGA_V",
+	"name": "SpoM82Orga_V",
+	"title": "Info organisme pour courrier",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"orga_nom": {
+			"title": "orga_nom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"orga_ville": {
+			"title": "orga_ville",
+			"type": "string",
+			"maxLength": 40
+		},
+		"orga_numvoie": {
+			"title": "orga_numvoie",
+			"type": "string",
+			"maxLength": 10
+		},
+		"orga_compnumvoie": {
+			"title": "orga_compnumvoie",
+			"type": "string",
+			"maxLength": 20
+		},
+		"orga_rue1": {
+			"title": "orga_rue1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orga_rue2": {
+			"title": "orga_rue2",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orga_rue3": {
+			"title": "orga_rue3",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orga_rue4": {
+			"title": "orga_rue4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orga_boitepost": {
+			"title": "orga_boitepost",
+			"type": "string",
+			"maxLength": 20
+		},
+		"orga_postal": {
+			"title": "orga_postal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dg_titre": {
+			"title": "dg_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dg_nom": {
+			"title": "dg_nom",
+			"type": "string",
+			"maxLength": 50
+		},
+		"dg_prenom": {
+			"title": "dg_prenom",
+			"type": "string",
+			"maxLength": 50
+		},
+		"dg_genre": {
+			"title": "dg_genre",
+			"type": "string",
+			"maxLength": 5
+		},
+		"dg_libgenre": {
+			"title": "dg_libgenre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dfi_lib": {
+			"title": "dfi_lib",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dfi_titre": {
+			"title": "dfi_titre",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dfi_libdir": {
+			"title": "dfi_libdir",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dfi_nom": {
+			"title": "dfi_nom",
+			"type": "string",
+			"maxLength": 50
+		},
+		"dfi_prenom": {
+			"title": "dfi_prenom",
+			"type": "string",
+			"maxLength": 50
+		},
+		"dfi_genre": {
+			"title": "dfi_genre",
+			"type": "string",
+			"maxLength": 5
+		},
+		"dfi_libgenre": {
+			"title": "dfi_libgenre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dfi_ref": {
+			"title": "dfi_ref",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dfi_telephone": {
+			"title": "dfi_telephone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"dfi_adremail": {
+			"title": "dfi_adremail",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

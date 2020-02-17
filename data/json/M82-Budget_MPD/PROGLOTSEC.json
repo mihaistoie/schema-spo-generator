@@ -1,0 +1,45 @@
+{
+	"tableName": "PROGLOTSEC",
+	"name": "SpoProgLotSecond",
+	"title": "Lot secondaire",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"typlot"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typlot": {
+			"title": "Type lot secondaire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nb": {
+			"title": "Nombre",
+			"type": "integer"
+		},
+		"surface": {
+			"title": "Surface",
+			"type": "number",
+			"decimals": 2
+		}
+	},
+	"relations": {
+		"programme": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "progLotSecondList"
+		}
+	}
+}

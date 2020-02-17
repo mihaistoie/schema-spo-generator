@@ -1,0 +1,107 @@
+{
+	"tableName": "BSPLI_V",
+	"name": "SpoPLI_V",
+	"title": "PLI",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logautre1": {
+			"title": "Total logements PLI",
+			"type": "integer"
+		},
+		"cdplic": {
+			"title": "Code programme PLI Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplic": {
+			"title": "Libellé programme PLI Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"a1c1": {
+			"title": "PLI collectif T1",
+			"type": "integer"
+		},
+		"a1c1b": {
+			"title": "PLI collectif T1b",
+			"type": "integer"
+		},
+		"a1c2": {
+			"title": "PLI collectif T2",
+			"type": "integer"
+		},
+		"a1c3": {
+			"title": "PLI collectif T3",
+			"type": "integer"
+		},
+		"a1c4": {
+			"title": "PLI collectif T4",
+			"type": "integer"
+		},
+		"a1c5": {
+			"title": "PLI collectif T5",
+			"type": "integer"
+		},
+		"a1c6": {
+			"title": "PLI collectif T6",
+			"type": "integer"
+		},
+		"a1c7": {
+			"title": "PLI collectif T7",
+			"type": "integer"
+		},
+		"cdplii": {
+			"title": "Code programme PLI Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplii": {
+			"title": "Libellé programme PLI Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"a1i1": {
+			"title": "PLI individuel T1",
+			"type": "integer"
+		},
+		"a1i1b": {
+			"title": "PLI individuel T1b",
+			"type": "integer"
+		},
+		"a1i2": {
+			"title": "PLI individuel T2",
+			"type": "integer"
+		},
+		"a1i3": {
+			"title": "PLI individuel T3",
+			"type": "integer"
+		},
+		"a1i4": {
+			"title": "PLI individuel T4",
+			"type": "integer"
+		},
+		"a1i5": {
+			"title": "PLI individuel T5",
+			"type": "integer"
+		},
+		"a1i6": {
+			"title": "PLI individuel T6",
+			"type": "integer"
+		},
+		"a1i7": {
+			"title": "PLI individuel T7",
+			"type": "integer"
+		}
+	}
+}

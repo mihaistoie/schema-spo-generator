@@ -1,0 +1,16 @@
+{
+	"tableName": "IEDEVENT",
+	"name": "SpoIEDEvent",
+	"title": "Actions impex",
+	"type": "object",
+	"primaryKey": [
+		"idaction"
+	],
+	"properties": {
+		"idaction": {
+			"title": "Code action",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

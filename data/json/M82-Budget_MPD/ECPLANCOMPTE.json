@@ -1,0 +1,132 @@
+{
+	"tableName": "ECPLANCOMPTE",
+	"name": "SpoECPlanCompte",
+	"title": "Plan de compte",
+	"type": "object",
+	"primaryKey": [
+		"idpc"
+	],
+	"properties": {
+		"idpc": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idsoc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rd": {
+			"title": "Recette/Dépense",
+			"type": "string",
+			"maxLength": 10
+		},
+		"activite": {
+			"title": "Activité",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nattrv": {
+			"title": "Nature de travaux",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typefin": {
+			"title": "Type de financement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeouv": {
+			"title": "Type ouvrage",
+			"type": "string",
+			"maxLength": 10
+		},
+		"etape": {
+			"title": "Etape budgétaire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"csa": {
+			"title": "CSA",
+			"type": "string",
+			"maxLength": 10
+		},
+		"tva": {
+			"title": "TVA",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"gh": {
+			"title": "GH",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"nattrvacc": {
+			"title": "Nature de travaux accession",
+			"type": "string",
+			"maxLength": 10
+		},
+		"etapebudacc": {
+			"title": "Etape budgétaire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeouvracc": {
+			"title": "Type ouvrage accession",
+			"type": "string",
+			"maxLength": 10
+		},
+		"promoteur": {
+			"title": "Promoteur",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"methodecomptaacc": {
+			"title": "MethodeComptaAcc",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typecommacc": {
+			"title": "TypeCommAcc",
+			"type": "string",
+			"maxLength": 10
+		},
+		"mois": {
+			"title": "MOIS",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"inventaire": {
+			"title": "Inventaire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"eCPosteCompteList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoECPosteCompte",
+			"localFields": [
+				"idpc"
+			],
+			"foreignFields": [
+				"idpc"
+			],
+			"invRel": "eCPlanCompte"
+		},
+		"eCListeTypeCompteList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoECListeTypeCompte",
+			"localFields": [
+				"idpc"
+			],
+			"foreignFields": [
+				"idpc"
+			],
+			"invRel": "eCPlanCompte"
+		}
+	}
+}

@@ -1,0 +1,71 @@
+{
+	"tableName": "FLUXTRESOOP",
+	"name": "SpoFluxTresoOp",
+	"title": "Flux tréso opération",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeflux": {
+			"title": "TypeFlux",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typemnt": {
+			"title": "TypeMnt",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dateflux": {
+			"title": "DateFlux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"periode": {
+			"title": "Periode",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntht": {
+			"title": "MntHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "MntTVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "MntTTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"idref": {
+			"title": "IdRef",
+			"type": "string",
+			"maxLength": 200
+		}
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"tableName": "OPCHANGE",
+	"name": "SpoOpChange",
+	"title": "Trace les modif dans les operations",
+	"type": "object",
+	"primaryKey": [
+		"idop"
+	],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dthmodif": {
+			"title": "Date de la derniere modif",
+			"type": "string",
+			"maxLength": 32
+		},
+		"deleted": {
+			"title": "Opération supprimé ?",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

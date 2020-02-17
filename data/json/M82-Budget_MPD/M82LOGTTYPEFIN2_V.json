@@ -1,0 +1,66 @@
+{
+	"tableName": "M82LOGTTYPEFIN2_V",
+	"name": "SpoM82LogtTypeFin2_V",
+	"title": "LogtTypeFin2",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nblogt": {
+			"title": "Nb logt",
+			"type": "integer"
+		},
+		"c1": {
+			"title": "T1 collectif",
+			"type": "integer"
+		},
+		"c1b": {
+			"title": "T1 bis collectif",
+			"type": "integer"
+		},
+		"c2": {
+			"title": "T2 collectif",
+			"type": "integer"
+		},
+		"c3": {
+			"title": "T3 Collectif",
+			"type": "integer"
+		},
+		"c4": {
+			"title": "T4 collectif",
+			"type": "integer"
+		},
+		"c5": {
+			"title": "T5 collectif",
+			"type": "integer"
+		},
+		"i1": {
+			"title": "T1 individuel",
+			"type": "integer"
+		},
+		"i1b": {
+			"title": "T1 bis individuel",
+			"type": "integer"
+		},
+		"i2": {
+			"title": "T2 individuel",
+			"type": "integer"
+		},
+		"i3": {
+			"title": "T3 individuel",
+			"type": "integer"
+		},
+		"i4": {
+			"title": "T4 individuel",
+			"type": "integer"
+		},
+		"i5": {
+			"title": "T5 individuel",
+			"type": "integer"
+		}
+	}
+}

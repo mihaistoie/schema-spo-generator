@@ -1,0 +1,18 @@
+{
+	"tableName": "M82TIERSREPDEF_V",
+	"name": "SpoM82TiersRepDef_V",
+	"title": "Représentants principals actifs",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idtiers": {
+			"title": "idtiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcompteur": {
+			"title": "idcompteur",
+			"type": "integer"
+		}
+	}
+}

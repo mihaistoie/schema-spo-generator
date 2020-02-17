@@ -1,0 +1,26 @@
+{
+	"tableName": "PBPRORATATVA",
+	"name": "SpoProrataTVA",
+	"title": "Prorata TVA",
+	"type": "object",
+	"primaryKey": [
+		"dtexe"
+	],
+	"properties": {
+		"dtexe": {
+			"title": "Date détermination",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"debutapp": {
+			"title": "Début application",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"val": {
+			"title": "Prorata",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

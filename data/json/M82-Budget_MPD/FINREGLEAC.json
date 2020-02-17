@@ -1,0 +1,113 @@
+{
+	"tableName": "FINREGLEAC",
+	"name": "SpoRegleAcompte",
+	"title": "Règle acompte",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"ac"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ac": {
+			"title": "Acompte",
+			"type": "string",
+			"maxLength": 32
+		},
+		"evt": {
+			"title": "Evénement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"txac": {
+			"title": "Taux acompte",
+			"type": "number",
+			"decimals": 2
+		},
+		"avance": {
+			"title": "Taux avancement",
+			"type": "number",
+			"decimals": 2
+		},
+		"calavance": {
+			"title": "Méthode avancement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"postes": {
+			"title": "Postes travaux",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"depart": {
+			"title": "Départ du délai",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delaidem": {
+			"title": "Delai demande",
+			"type": "integer"
+		},
+		"delaiver": {
+			"title": "Délai versement",
+			"type": "integer"
+		},
+		"delaifact": {
+			"title": "Délai facturation",
+			"type": "integer"
+		},
+		"iscalcdv": {
+			"title": "IsCalcDV",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"etapeevt": {
+			"title": "Etape événement déclencheur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"etapeevtdv": {
+			"title": "Etape début calcul date de validité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"evtdv": {
+			"title": "Evénement début calcul date de validité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delaidv": {
+			"title": "Délai calcul date de validité",
+			"type": "integer"
+		},
+		"basedelaidv": {
+			"title": "Base délai calcul date de validité",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idactiondoc": {
+			"title": "Code action document",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"financement": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoFinancement",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "regleAcompteList"
+		}
+	}
+}

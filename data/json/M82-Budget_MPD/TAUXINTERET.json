@@ -1,0 +1,27 @@
+{
+	"tableName": "TAUXINTERET",
+	"name": "SpoTauxInteret",
+	"title": "Taux d’intérêt",
+	"type": "object",
+	"primaryKey": [
+		"code",
+		"datetaux"
+	],
+	"properties": {
+		"code": {
+			"title": "Type taux",
+			"type": "string",
+			"maxLength": 10
+		},
+		"datetaux": {
+			"title": "Date taux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"valeur": {
+			"title": "Valeur taux",
+			"type": "number",
+			"decimals": 4
+		}
+	}
+}

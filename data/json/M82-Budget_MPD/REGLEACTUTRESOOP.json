@@ -1,0 +1,27 @@
+{
+	"tableName": "REGLEACTUTRESOOP",
+	"name": "SpoRegleActuTresoOp",
+	"title": "RegleActuTresoOp",
+	"type": "object",
+	"primaryKey": [
+		"idop",
+		"idposte"
+	],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idregleactu": {
+			"title": "Code règle d’actualisation",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

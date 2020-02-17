@@ -1,0 +1,16 @@
+{
+	"tableName": "IEDPROCEDURE",
+	"name": "SpoIEDProcedure",
+	"title": "Procédures impex",
+	"type": "object",
+	"primaryKey": [
+		"idproced"
+	],
+	"properties": {
+		"idproced": {
+			"title": "Code procédure",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

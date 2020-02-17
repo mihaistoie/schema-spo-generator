@@ -1,0 +1,28 @@
+{
+	"tableName": "EXT_FACTURE",
+	"name": "SpoEXT_FACTURE",
+	"title": "Table EXT_FACTURE",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"id"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"id": {
+			"title": "Id objet métier",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

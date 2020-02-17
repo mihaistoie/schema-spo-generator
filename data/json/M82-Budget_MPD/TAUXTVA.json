@@ -1,0 +1,40 @@
+{
+	"tableName": "TAUXTVA",
+	"name": "SpoTauxTVA",
+	"title": "Taux de TVA",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"taux": {
+			"title": "Taux",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtdeb": {
+			"title": "Date début de validité",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date fin de validité",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"numordre": {
+			"title": "Ordre",
+			"type": "integer"
+		},
+		"defaut": {
+			"title": "Defaut",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

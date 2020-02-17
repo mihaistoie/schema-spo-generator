@@ -1,0 +1,209 @@
+{
+	"tableName": "MCFACTURE",
+	"name": "SpoMCFacture",
+	"title": "Facture",
+	"type": "object",
+	"primaryKey": [
+		"idfact"
+	],
+	"properties": {
+		"idfact": {
+			"title": "Code facture",
+			"type": "string",
+			"maxLength": 32
+		},
+		"avoir": {
+			"title": "Avoir (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"type": {
+			"title": "Type",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typefac": {
+			"title": "Type facture",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcontrat": {
+			"title": "Code Commande",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"numfact": {
+			"title": "N° facture",
+			"type": "string",
+			"maxLength": 50
+		},
+		"dtfact": {
+			"title": "Date facture",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtrecep": {
+			"title": "Date réception",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtech": {
+			"title": "Date échéance",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"modepaie": {
+			"title": "Mode de règlement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"condpaie": {
+			"title": "Condition de paiement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"condpaienb": {
+			"title": "Condition de paiement - nombre",
+			"type": "integer"
+		},
+		"factlie": {
+			"title": "Facture liée",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tiersfact": {
+			"title": "Tiers facturé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"activite": {
+			"title": "Activité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"doc": {
+			"title": "Document",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"dtcompta": {
+			"title": "Date validation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtannul": {
+			"title": "Date annulation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"motif": {
+			"title": "Motif annulation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cotraitant": {
+			"title": "Cotraitant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmarche": {
+			"title": "Marché",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "string",
+			"maxLength": 32
+		},
+		"myguid": {
+			"title": "MyGuid",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typepresta": {
+			"title": "TypePresta",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtpaie": {
+			"title": "Date paiement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"exigiblepaie": {
+			"title": "ExigiblePaie",
+			"type": "integer"
+		},
+		"dtcomptabilisation": {
+			"title": "Date comptabilisation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"refurl": {
+			"title": "Paramètre de construction de l’URL",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dthimport": {
+			"title": "Date heure import",
+			"type": "string",
+			"maxLength": 20
+		},
+		"iban": {
+			"title": "IBAN",
+			"type": "string",
+			"maxLength": 34
+		},
+		"bic": {
+			"title": "BIC",
+			"type": "string",
+			"maxLength": 11
+		},
+		"dtcreation": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"iduticreation": {
+			"title": "Utilisateur à l’origine de la création",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtmodification": {
+			"title": "Date de dernière modification",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idutimodification": {
+			"title": "Utilisateur ayant fait la dernière modification",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"mCFactMntList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCFactMnt",
+			"localFields": [
+				"idfact"
+			],
+			"foreignFields": [
+				"idfact"
+			],
+			"invRel": "mCFacture"
+		}
+	}
+}

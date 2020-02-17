@@ -1,0 +1,114 @@
+{
+	"tableName": "PBMODELE",
+	"name": "SpoModeleBudget",
+	"title": "Modèle de budget",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typmod": {
+			"title": "Type modèle",
+			"type": "string",
+			"maxLength": 10
+		},
+		"codesmo": {
+			"title": "Code SMO",
+			"type": "string",
+			"maxLength": 50
+		},
+		"soc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nivcontrole": {
+			"title": "Niveau de contrôle budgétaire",
+			"type": "integer"
+		},
+		"controlebud": {
+			"title": "Application du contrôle budgetaire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"position1": {
+			"title": "Position1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"position2": {
+			"title": "Position2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"position3": {
+			"title": "Position3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"reference": {
+			"title": "reference",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"autorisationbud": {
+			"title": "Autorisation budgetaire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"nivautorisation": {
+			"title": "Niveau autorisation budgétaire",
+			"type": "integer"
+		},
+		"etapebud": {
+			"title": "Etape budgetaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lissage": {
+			"title": "Lissage pluriannuel",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"modelePosteList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoModelePoste",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "modeleBudget"
+		}
+	}
+}

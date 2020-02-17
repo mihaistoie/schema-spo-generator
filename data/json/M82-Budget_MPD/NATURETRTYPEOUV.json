@@ -1,0 +1,52 @@
+{
+	"tableName": "NATURETRTYPEOUV",
+	"name": "SpoNatureTrTypeOuv",
+	"title": "NatureTrTypeOuv",
+	"type": "object",
+	"primaryKey": [
+		"idnature"
+	],
+	"properties": {
+		"idnature": {
+			"title": "IdNature",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeouvrage": {
+			"title": "TypeOuvrage",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idnaturetravaux": {
+			"title": "IdNatureTravaux",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"natureTravaux": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoNatureTravaux",
+			"localFields": [
+				"code"
+			],
+			"foreignFields": [
+				"idnaturetravaux"
+			],
+			"invRel": "natureTrTypeOuvList"
+		},
+		"typeOuvrage": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoTypeOuvrage",
+			"localFields": [
+				"code"
+			],
+			"foreignFields": [
+				"typeouvrage"
+			],
+			"invRel": "natureTrTypeOuvList"
+		}
+	}
+}

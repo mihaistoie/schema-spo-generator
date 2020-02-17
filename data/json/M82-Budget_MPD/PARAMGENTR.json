@@ -1,0 +1,37 @@
+{
+	"tableName": "PARAMGENTR",
+	"name": "SpoParamTranche",
+	"title": "Paramétrage générique",
+	"type": "object",
+	"primaryKey": [
+		"soc",
+		"code"
+	],
+	"properties": {
+		"soc": {
+			"title": "soc",
+			"type": "string",
+			"maxLength": 32
+		},
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"fraisnotaire": {
+			"title": "FraisNotaire",
+			"type": "number",
+			"decimals": 2
+		},
+		"methodesaisiel": {
+			"title": "MethodeSaisieL",
+			"type": "string",
+			"maxLength": 10
+		},
+		"libsurfcompl": {
+			"title": "Libelle de la surface complementaire",
+			"type": "string",
+			"maxLength": 100
+		}
+	}
+}

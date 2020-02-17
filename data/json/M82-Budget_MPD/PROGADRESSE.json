@@ -1,0 +1,60 @@
+{
+	"tableName": "PROGADRESSE",
+	"name": "SpoProgAdresse",
+	"title": "ProgAdresse",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rue1": {
+			"title": "Rue1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue2": {
+			"title": "Rue2",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue3": {
+			"title": "Rue3",
+			"type": "string",
+			"maxLength": 100
+		},
+		"codepostal": {
+			"title": "CodePostal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nomville": {
+			"title": "NomVille",
+			"type": "string",
+			"maxLength": 50
+		},
+		"pays": {
+			"title": "Pays",
+			"type": "string",
+			"maxLength": 40
+		}
+	},
+	"relations": {
+		"programme": {
+			"type": "belongsTo",
+			"aggregationKind": "none",
+			"model": "SpoProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "progAdresse"
+		}
+	}
+}

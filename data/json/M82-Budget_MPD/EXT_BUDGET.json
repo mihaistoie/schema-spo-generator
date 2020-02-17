@@ -1,0 +1,28 @@
+{
+	"tableName": "EXT_BUDGET",
+	"name": "SpoEXT_BUDGET",
+	"title": "Table EXT_BUDGET",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"id"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"id": {
+			"title": "Id objet métier",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

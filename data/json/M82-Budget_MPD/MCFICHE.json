@@ -1,0 +1,286 @@
+{
+	"tableName": "MCFICHE",
+	"name": "SpoMCFiche",
+	"title": "Marché/commande",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecontrat": {
+			"title": "Type de contrat",
+			"type": "string",
+			"maxLength": 10
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"refcontrat": {
+			"title": "Référence contrat",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"tc": {
+			"title": "Tranche conditionnelle",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"titulaire": {
+			"title": "Titulaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"interloc": {
+			"title": "Interlocuteur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"isgrp": {
+			"title": "Groupement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"nomgrp": {
+			"title": "Nom groupement",
+			"type": "string",
+			"maxLength": 50
+		},
+		"typegrp": {
+			"title": "Type groupement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"lot": {
+			"title": "N° lot",
+			"type": "integer"
+		},
+		"liblot": {
+			"title": "Libellé lot",
+			"type": "string",
+			"maxLength": 200
+		},
+		"typelot": {
+			"title": "Type lot",
+			"type": "string",
+			"maxLength": 10
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtdevis": {
+			"title": "Date du devis",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntdevis": {
+			"title": "Montant HT du devis",
+			"type": "number",
+			"decimals": 4
+		},
+		"refdevis": {
+			"title": "Référence du devis",
+			"type": "string",
+			"maxLength": 200
+		},
+		"doc": {
+			"title": "Document",
+			"type": "string",
+			"maxLength": 200
+		},
+		"signataire": {
+			"title": "Signataire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"intervenant": {
+			"title": "Intervenant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"activite": {
+			"title": "Activite",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcontrat": {
+			"title": "Date contrat",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"refmar": {
+			"title": "Référence marché",
+			"type": "string",
+			"maxLength": 32
+		},
+		"myguid": {
+			"title": "MyGuid",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typepaiement": {
+			"title": "TypePaiement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"soc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idadresse": {
+			"title": "Type adresse du titulaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iban": {
+			"title": "IBAN",
+			"type": "string",
+			"maxLength": 34
+		},
+		"bic": {
+			"title": "BIC",
+			"type": "string",
+			"maxLength": 11
+		}
+	},
+	"relations": {
+		"mCMontantList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCMontant",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCConditionList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCCondition",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCContractantList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCContractant",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCLotList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCLot",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCPhaseList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCPhase",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCCautionList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCCaution",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCMntSeuilList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCMntSeuil",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCContractSTList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCContractST",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		},
+		"mCDelegPaieList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCDelegPaie",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCFiche"
+		}
+	}
+}

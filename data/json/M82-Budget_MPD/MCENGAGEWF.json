@@ -1,0 +1,31 @@
+{
+	"tableName": "MCENGAGEWF",
+	"name": "SpoMCEngageWF",
+	"title": "Workflow engagement commande",
+	"type": "object",
+	"primaryKey": [
+		"idcmd"
+	],
+	"properties": {
+		"idcmd": {
+			"title": "Id commande",
+			"type": "string",
+			"maxLength": 32
+		},
+		"emet": {
+			"title": "Emetteur",
+			"type": "string",
+			"maxLength": 200
+		},
+		"desti": {
+			"title": "Destinataire",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dthemis": {
+			"title": "Date heure émis",
+			"type": "string",
+			"maxLength": 20
+		}
+	}
+}

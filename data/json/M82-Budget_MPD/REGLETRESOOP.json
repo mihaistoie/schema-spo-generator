@@ -1,0 +1,33 @@
+{
+	"tableName": "REGLETRESOOP",
+	"name": "SpoRegleTresoOp",
+	"title": "Règles de trésorerie par opération/poste",
+	"type": "object",
+	"primaryKey": [
+		"idop",
+		"idposte",
+		"modebudget"
+	],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modebudget": {
+			"title": "Mode budget",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idregletreso": {
+			"title": "Code règle de trésorerie",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

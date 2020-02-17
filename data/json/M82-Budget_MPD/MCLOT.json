@@ -1,0 +1,45 @@
+{
+	"tableName": "MCLOT",
+	"name": "SpoMCLot",
+	"title": "Lot technique du marché",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"lot"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lot": {
+			"title": "Lot",
+			"type": "integer"
+		},
+		"typelot": {
+			"title": "Type lot",
+			"type": "string",
+			"maxLength": 10
+		},
+		"lib": {
+			"title": "Libellé lot",
+			"type": "string",
+			"maxLength": 200
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCLotList"
+		}
+	}
+}

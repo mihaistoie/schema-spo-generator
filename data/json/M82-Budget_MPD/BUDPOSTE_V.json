@@ -1,0 +1,34 @@
+{
+	"tableName": "BUDPOSTE_V",
+	"name": "SpoBudPosteCalcIsLeaf",
+	"title": "Propriétés poste avec calc isleaf",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"moderepart": {
+			"title": "ModeRepart",
+			"type": "string",
+			"maxLength": 10
+		},
+		"isleaf": {
+			"title": "IsLeaf",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"persistisleaf": {
+			"title": "PersistIsLeaf",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

@@ -1,0 +1,142 @@
+{
+	"tableName": "MCDELEGPAIE",
+	"name": "SpoMCDelegPaie",
+	"title": "Délégation paiement",
+	"type": "object",
+	"primaryKey": [
+		"iddeleg"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Id contrat",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"num": {
+			"title": "N°",
+			"type": "integer"
+		},
+		"idfacture": {
+			"title": "Code facture",
+			"type": "string",
+			"maxLength": 32
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"contractant": {
+			"title": "Contractant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typedeleg": {
+			"title": "Type délégation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"moderecept": {
+			"title": "Mode réception",
+			"type": "string",
+			"maxLength": 10
+		},
+		"statut": {
+			"title": "Statut délégation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"opposant": {
+			"title": "Tiers opposant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iban": {
+			"title": "IBAN",
+			"type": "string",
+			"maxLength": 34
+		},
+		"bic": {
+			"title": "BIC",
+			"type": "string",
+			"maxLength": 11
+		},
+		"activite": {
+			"title": "Activite",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtacte": {
+			"title": "Date acte",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtrecept": {
+			"title": "Date réception",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtaccept": {
+			"title": "Date acceptation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mnt": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntaccept": {
+			"title": "Montant TTC accepté",
+			"type": "number",
+			"decimals": 4
+		},
+		"delai": {
+			"title": "Délai",
+			"type": "integer"
+		},
+		"dtbutoir": {
+			"title": "Date butoir",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtlevee": {
+			"title": "Date de main levée",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"motif": {
+			"title": "Motif de refus",
+			"type": "string",
+			"maxLength": 200
+		},
+		"doc": {
+			"title": "Document",
+			"type": "string",
+			"maxLength": 200
+		},
+		"iddeleg": {
+			"title": "Id délégation",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCDelegPaieList"
+		}
+	}
+}

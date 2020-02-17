@@ -1,0 +1,128 @@
+{
+	"tableName": "ELEMENTCLOTURE",
+	"name": "SpoElementCloture",
+	"title": "Eléments de clôture",
+	"type": "object",
+	"primaryKey": [
+		"idcloture",
+		"idelem"
+	],
+	"properties": {
+		"idcloture": {
+			"title": "Code clôture",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idelem": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeelem": {
+			"title": "Type d’élément",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idcontrat": {
+			"title": "Code contrat",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idfact": {
+			"title": "Code facturation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelleposte": {
+			"title": "Libellé du poste",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelleprogramme": {
+			"title": "Libellé du programme",
+			"type": "string",
+			"maxLength": 200
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"avenant": {
+			"title": "Avenant",
+			"type": "integer"
+		},
+		"lot": {
+			"title": "Lot",
+			"type": "integer"
+		},
+		"phase": {
+			"title": "Phase",
+			"type": "integer"
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelleentreprise": {
+			"title": "Libellé entreprise",
+			"type": "string",
+			"maxLength": 200
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		}
+	},
+	"relations": {
+		"opCloture": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoOpCloture",
+			"localFields": [
+				"idcloture"
+			],
+			"foreignFields": [
+				"idcloture"
+			],
+			"invRel": "elementClotureList"
+		}
+	}
+}

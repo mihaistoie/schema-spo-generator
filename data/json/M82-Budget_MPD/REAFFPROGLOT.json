@@ -1,0 +1,48 @@
+{
+	"tableName": "REAFFPROGLOT",
+	"name": "SpoReaffProgLot",
+	"title": "Typologie logement",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"typlot"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typlot": {
+			"title": "Type lot",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nblogt": {
+			"title": "Nombre de logement",
+			"type": "integer"
+		},
+		"nblogthp": {
+			"title": "Nombre de logement handicapé",
+			"type": "integer"
+		},
+		"nblits": {
+			"title": "Nombre de lits",
+			"type": "integer"
+		}
+	},
+	"relations": {
+		"reaffProgramme": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoReaffProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "reaffProgLotList"
+		}
+	}
+}

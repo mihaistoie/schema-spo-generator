@@ -1,0 +1,50 @@
+{
+	"tableName": "PARAMLIENPROC",
+	"name": "SpoParamLienProc",
+	"title": "ParamLienProc",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproc1": {
+			"title": "IdProc1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape1": {
+			"title": "IdEtape1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction1": {
+			"title": "IdAction1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproc2": {
+			"title": "IdProc2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape2": {
+			"title": "IdEtape2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction2": {
+			"title": "IdAction2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"priorite": {
+			"title": "Priorite",
+			"type": "integer"
+		}
+	}
+}

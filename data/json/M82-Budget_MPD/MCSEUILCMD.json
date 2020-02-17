@@ -1,0 +1,52 @@
+{
+	"tableName": "MCSEUILCMD",
+	"name": "SpoSeuilCommande",
+	"title": "Seuil commande",
+	"type": "object",
+	"primaryKey": [
+		"societe",
+		"proced",
+		"ordre"
+	],
+	"properties": {
+		"societe": {
+			"title": "Société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"proced": {
+			"title": "Procédure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ordre": {
+			"title": "N° ordre",
+			"type": "integer"
+		},
+		"acteur": {
+			"title": "Acteur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tiers": {
+			"title": "Tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rep": {
+			"title": "Représentant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntmin": {
+			"title": "Montant mini",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntmax": {
+			"title": "Montant maxi",
+			"type": "number",
+			"decimals": 4
+		}
+	}
+}

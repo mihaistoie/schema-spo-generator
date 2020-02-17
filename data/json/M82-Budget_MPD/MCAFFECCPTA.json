@@ -1,0 +1,61 @@
+{
+	"tableName": "MCAFFECCPTA",
+	"name": "SpoMCAffectationCompta",
+	"title": "Affectation comptable",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typemnt": {
+			"title": "Type montant",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idfact": {
+			"title": "Facture/Situation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"forcer": {
+			"title": "Forcer",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

@@ -1,0 +1,74 @@
+{
+	"tableName": "ECPOSTECOMPTE",
+	"name": "SpoECPosteCompte",
+	"title": "Comptes par poste",
+	"type": "object",
+	"primaryKey": [
+		"idpc",
+		"typecpt",
+		"idposte",
+		"gh",
+		"mois",
+		"idtva"
+	],
+	"properties": {
+		"idpc": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecpt": {
+			"title": "Type compte",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"compte": {
+			"title": "Compte",
+			"type": "string",
+			"maxLength": 20
+		},
+		"tva": {
+			"title": "TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"gh": {
+			"title": "GH",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mois": {
+			"title": "MOIS",
+			"type": "integer"
+		},
+		"inventaire": {
+			"title": "Compte stockable",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idtva": {
+			"title": "IdTva",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"eCPlanCompte": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoECPlanCompte",
+			"localFields": [
+				"idpc"
+			],
+			"foreignFields": [
+				"idpc"
+			],
+			"invRel": "eCPosteCompteList"
+		}
+	}
+}

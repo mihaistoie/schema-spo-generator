@@ -1,0 +1,65 @@
+{
+	"tableName": "ECSCHEMALIGNES",
+	"name": "SpoECSchemaLignes",
+	"title": "Schéma comptable - Lignes",
+	"type": "object",
+	"primaryKey": [
+		"idsc",
+		"num"
+	],
+	"properties": {
+		"idsc": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"num": {
+			"title": "N° ligne",
+			"type": "integer"
+		},
+		"sens": {
+			"title": "Sens",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typecpt": {
+			"title": "Type compte",
+			"type": "string",
+			"maxLength": 10
+		},
+		"ana": {
+			"title": "Compte analytique",
+			"type": "string",
+			"maxLength": 10
+		},
+		"aux": {
+			"title": "Compte auxiliaire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typemnt": {
+			"title": "Montant",
+			"type": "string",
+			"maxLength": 10
+		},
+		"temoinsp": {
+			"title": "Témoin sous-pièce",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"eCSchemaCompte": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoECSchemaCompte",
+			"localFields": [
+				"idsc"
+			],
+			"foreignFields": [
+				"idsc"
+			],
+			"invRel": "eCSchemaLignesList"
+		}
+	}
+}

@@ -1,0 +1,107 @@
+{
+	"tableName": "BSAUTRE2_V",
+	"name": "SpoAutre2_V",
+	"title": "Autre 2",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logautre3": {
+			"title": "Total logements Autre 2",
+			"type": "integer"
+		},
+		"cda2c": {
+			"title": "Code programme AUTRE 2 Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"liba2c": {
+			"title": "Libellé programme AUTRE 2 Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"a3c1": {
+			"title": "AUTRE 2 collectif T1",
+			"type": "integer"
+		},
+		"a3c1b": {
+			"title": "AUTRE 2 collectif T1b",
+			"type": "integer"
+		},
+		"a3c2": {
+			"title": "AUTRE 2 collectif T2",
+			"type": "integer"
+		},
+		"a3c3": {
+			"title": "AUTRE 2 collectif T3",
+			"type": "integer"
+		},
+		"a3c4": {
+			"title": "AUTRE 2 collectif T4",
+			"type": "integer"
+		},
+		"a3c5": {
+			"title": "AUTRE 2 collectif T5",
+			"type": "integer"
+		},
+		"a3c6": {
+			"title": "AUTRE 2 collectif T6",
+			"type": "integer"
+		},
+		"a3c7": {
+			"title": "AUTRE 2 collectif T7",
+			"type": "integer"
+		},
+		"cda2i": {
+			"title": "Code programme AUTRE 2 Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"liba2i": {
+			"title": "Libellé programme AUTRE 2 Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"a3i1": {
+			"title": "AUTRE 2 individuel T1",
+			"type": "integer"
+		},
+		"a3i1b": {
+			"title": "AUTRE 2 individuel T1b",
+			"type": "integer"
+		},
+		"a3i2": {
+			"title": "AUTRE 2 individuel T2",
+			"type": "integer"
+		},
+		"a3i3": {
+			"title": "AUTRE 2 individuel T3",
+			"type": "integer"
+		},
+		"a3i4": {
+			"title": "AUTRE 2 individuel T4",
+			"type": "integer"
+		},
+		"a3i5": {
+			"title": "AUTRE 2 individuel T5",
+			"type": "integer"
+		},
+		"a3i6": {
+			"title": "AUTRE 2 individuel T6",
+			"type": "integer"
+		},
+		"a3i7": {
+			"title": "AUTRE 2 individuel T7",
+			"type": "integer"
+		}
+	}
+}

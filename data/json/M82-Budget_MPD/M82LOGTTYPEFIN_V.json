@@ -1,0 +1,107 @@
+{
+	"tableName": "M82LOGTTYPEFIN_V",
+	"name": "SpoM82LogtTypeFin_V",
+	"title": "LogtTypeFin",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nblogt": {
+			"title": "Total Logements",
+			"type": "integer"
+		},
+		"cdc": {
+			"title": "Code Programme Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libc": {
+			"title": "Libellé Programme Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"c1": {
+			"title": "Collectif T1",
+			"type": "integer"
+		},
+		"c1b": {
+			"title": "Collectif T1b",
+			"type": "integer"
+		},
+		"c2": {
+			"title": "Collectif T2",
+			"type": "integer"
+		},
+		"c3": {
+			"title": "Collectif T3",
+			"type": "integer"
+		},
+		"c4": {
+			"title": "Collectif T4",
+			"type": "integer"
+		},
+		"c5": {
+			"title": "Collectif T5",
+			"type": "integer"
+		},
+		"c6": {
+			"title": "Collectif T6",
+			"type": "integer"
+		},
+		"c7": {
+			"title": "Collectif T7",
+			"type": "integer"
+		},
+		"cdi": {
+			"title": "Code Programme Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libi": {
+			"title": "Libellé Programme Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"i1": {
+			"title": "Individuel T1",
+			"type": "integer"
+		},
+		"i1b": {
+			"title": "Individuel T1b",
+			"type": "integer"
+		},
+		"i2": {
+			"title": "Individuel T2",
+			"type": "integer"
+		},
+		"i3": {
+			"title": "Individuel T3",
+			"type": "integer"
+		},
+		"i4": {
+			"title": "Individuel T4",
+			"type": "integer"
+		},
+		"i5": {
+			"title": "Individuel T5",
+			"type": "integer"
+		},
+		"i6": {
+			"title": "Individuel T6",
+			"type": "integer"
+		},
+		"i7": {
+			"title": "Individuel T7",
+			"type": "integer"
+		}
+	}
+}

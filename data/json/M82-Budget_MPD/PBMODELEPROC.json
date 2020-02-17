@@ -1,0 +1,31 @@
+{
+	"tableName": "PBMODELEPROC",
+	"name": "SpoModeleBudgetProcedure",
+	"title": "ModeleBudgetProcedure",
+	"type": "object",
+	"primaryKey": [
+		"code"
+	],
+	"properties": {
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeprocedure": {
+			"title": "CodeProcedure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modelebudget": {
+			"title": "ModeleBudget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"societe": {
+			"title": "Societe",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

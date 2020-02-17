@@ -1,0 +1,92 @@
+{
+	"tableName": "ECSCHEMACOMPTE",
+	"name": "SpoECSchemaCompte",
+	"title": "Schéma comptable",
+	"type": "object",
+	"primaryKey": [
+		"idsc"
+	],
+	"properties": {
+		"idsc": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idsoc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"evt": {
+			"title": "Evénement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"regfisc": {
+			"title": "Type de régime fiscal",
+			"type": "string",
+			"maxLength": 32
+		},
+		"journal": {
+			"title": "Journal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"invneg": {
+			"title": "Inversion négatif (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"libmod": {
+			"title": "Libellé type (code)",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"libmodlib": {
+			"title": "Libellé type",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"codesc": {
+			"title": "Code schéma",
+			"type": "string",
+			"maxLength": 50
+		},
+		"journalreaff": {
+			"title": "Journal réaffectation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"methodecomptaacc": {
+			"title": "MethodeComptaAcc",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typecommacc": {
+			"title": "TypeCommAcc",
+			"type": "string",
+			"maxLength": 10
+		},
+		"etapebudacc": {
+			"title": "Etape budgétaire",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"eCSchemaLignesList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoECSchemaLignes",
+			"localFields": [
+				"idsc"
+			],
+			"foreignFields": [
+				"idsc"
+			],
+			"invRel": "eCSchemaCompte"
+		}
+	}
+}

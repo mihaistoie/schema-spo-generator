@@ -1,0 +1,91 @@
+{
+	"tableName": "MCAFFECBUDST",
+	"name": "SpoMCAffectationBudgetST",
+	"title": "Affectation budget Sous-traitants",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typemnt": {
+			"title": "Type montant",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idcontrat": {
+			"title": "IdContrat",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idfact": {
+			"title": "IdFact",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmnt": {
+			"title": "Code montant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"soustrait": {
+			"title": "Code sous-traitant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"statut": {
+			"title": "Statut engagement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtengage": {
+			"title": "Date engagement",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

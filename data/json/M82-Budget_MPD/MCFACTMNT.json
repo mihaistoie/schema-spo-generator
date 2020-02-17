@@ -1,0 +1,65 @@
+{
+	"tableName": "MCFACTMNT",
+	"name": "SpoMCFactMnt",
+	"title": "Facture - Montants",
+	"type": "object",
+	"primaryKey": [
+		"idmnt"
+	],
+	"properties": {
+		"idmnt": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idfact": {
+			"title": "Code facture",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmntcmd": {
+			"title": "Code montant commande",
+			"type": "string",
+			"maxLength": 32
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"codetva": {
+			"title": "Code TVA",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"mCFacture": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFacture",
+			"localFields": [
+				"idfact"
+			],
+			"foreignFields": [
+				"idfact"
+			],
+			"invRel": "mCFactMntList"
+		}
+	}
+}

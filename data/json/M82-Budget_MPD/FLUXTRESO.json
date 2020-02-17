@@ -1,0 +1,38 @@
+{
+	"tableName": "FLUXTRESO",
+	"name": "SpoFluxTreso",
+	"title": "Flux de trésorerie",
+	"type": "object",
+	"primaryKey": [
+		"soc",
+		"idpostetreso",
+		"dateflux"
+	],
+	"properties": {
+		"soc": {
+			"title": "soc",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idpostetreso": {
+			"title": "IdPosteTreso",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dateflux": {
+			"title": "DateFlux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mnt": {
+			"title": "Mnt",
+			"type": "number",
+			"decimals": 4
+		},
+		"periode": {
+			"title": "Periode",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

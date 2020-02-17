@@ -1,0 +1,117 @@
+{
+	"tableName": "PBPOSTEINFOCALMOD",
+	"name": "SpoPosteInfoCalculModel",
+	"title": "PosteInfoCalculModel",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idligne",
+		"modelebudget"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idligne": {
+			"title": "IdLigne",
+			"type": "integer"
+		},
+		"modelebudget": {
+			"title": "ModeleBudget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"activite": {
+			"title": "Activite",
+			"type": "string",
+			"maxLength": 10
+		},
+		"naturetravaux": {
+			"title": "NatureTravaux",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeprog": {
+			"title": "TypeProg",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typefin": {
+			"title": "TypeFin",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeouvrage": {
+			"title": "TypeOuvrage",
+			"type": "string",
+			"maxLength": 10
+		},
+		"regimefiscal": {
+			"title": "RegimeFiscal",
+			"type": "string",
+			"maxLength": 32
+		},
+		"priorite": {
+			"title": "Priorite",
+			"type": "integer"
+		},
+		"typecalcul": {
+			"title": "TypeCalcul",
+			"type": "string",
+			"maxLength": 10
+		},
+		"formexpr": {
+			"title": "FormExpr",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"formtexte": {
+			"title": "FormTexte",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"impact": {
+			"title": "Impact",
+			"type": "string",
+			"maxLength": 10
+		},
+		"valeur": {
+			"title": "Valeur",
+			"type": "number",
+			"decimals": 4
+		},
+		"pourcent": {
+			"title": "Pourcent",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"identique": {
+			"title": "Identique",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"typedetaille": {
+			"title": "TypeDetaille",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"poste": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoPoste",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "posteInfoCalculModelList"
+		}
+	}
+}

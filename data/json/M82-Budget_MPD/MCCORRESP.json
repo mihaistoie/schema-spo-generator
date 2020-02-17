@@ -1,0 +1,27 @@
+{
+	"tableName": "MCCORRESP",
+	"name": "SpoCorresp",
+	"title": "Table de Correspondance",
+	"type": "object",
+	"primaryKey": [
+		"cat",
+		"code"
+	],
+	"properties": {
+		"cat": {
+			"title": "Catégorie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"val": {
+			"title": "Valeur",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

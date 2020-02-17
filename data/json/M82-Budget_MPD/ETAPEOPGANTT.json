@@ -1,0 +1,24 @@
+{
+	"tableName": "ETAPEOPGANTT",
+	"name": "SpoEtapeOpGantt",
+	"title": "Etapes planning opération",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "Code étape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbetape": {
+			"title": "Etape",
+			"type": "string",
+			"maxLength": 200
+		}
+	}
+}

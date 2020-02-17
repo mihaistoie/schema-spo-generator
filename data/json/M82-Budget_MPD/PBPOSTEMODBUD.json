@@ -1,0 +1,57 @@
+{
+	"tableName": "PBPOSTEMODBUD",
+	"name": "SpoPosteModeleBudget",
+	"title": "PosteModeleBudget",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte",
+		"modelebudget"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modelebudget": {
+			"title": "ModeleBudget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"moderepart": {
+			"title": "ModeRepart",
+			"type": "string",
+			"maxLength": 10
+		},
+		"modereparttranche": {
+			"title": "ModeRepartTranche",
+			"type": "string",
+			"maxLength": 10
+		},
+		"societe": {
+			"title": "Societe",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"poste": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoPoste",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "posteModeleBudgetList"
+		}
+	}
+}

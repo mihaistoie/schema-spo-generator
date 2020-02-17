@@ -1,0 +1,55 @@
+{
+	"tableName": "EVENTOP",
+	"name": "SpoEventOp",
+	"title": "EventOp",
+	"type": "object",
+	"primaryKey": [
+		"idev",
+		"num"
+	],
+	"properties": {
+		"idev": {
+			"title": "Id Evènement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"num": {
+			"title": "Numéro",
+			"type": "integer"
+		},
+		"idop": {
+			"title": "Id opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproc": {
+			"title": "Id procédure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "Id etape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "Id Action",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"sPOAppEvent": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoSPOAppEvent",
+			"localFields": [
+				"idev"
+			],
+			"foreignFields": [
+				"idev"
+			],
+			"invRel": "eventOpList"
+		}
+	}
+}

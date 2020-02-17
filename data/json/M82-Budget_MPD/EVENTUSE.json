@@ -1,0 +1,41 @@
+{
+	"tableName": "EVENTUSE",
+	"name": "SpoEventUse",
+	"title": "EventUse",
+	"type": "object",
+	"primaryKey": [
+		"idev",
+		"utilisation"
+	],
+	"properties": {
+		"idev": {
+			"title": "Id Evènement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"utilisation": {
+			"title": "Utilisation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"eststandard": {
+			"title": "EstStandard",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"sPOAppEvent": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoSPOAppEvent",
+			"localFields": [
+				"idev"
+			],
+			"foreignFields": [
+				"idev"
+			],
+			"invRel": "eventUseList"
+		}
+	}
+}

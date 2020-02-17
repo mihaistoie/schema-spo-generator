@@ -1,0 +1,36 @@
+{
+	"tableName": "MCDELEGFACT",
+	"name": "SpoMCDelegFact",
+	"title": "Délégation facturée",
+	"type": "object",
+	"primaryKey": [
+		"iddf"
+	],
+	"properties": {
+		"iddf": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddeleg": {
+			"title": "Id délégation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idfact": {
+			"title": "Id facturation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numtiers": {
+			"title": "N° tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mnt": {
+			"title": "Montant",
+			"type": "number",
+			"decimals": 4
+		}
+	}
+}

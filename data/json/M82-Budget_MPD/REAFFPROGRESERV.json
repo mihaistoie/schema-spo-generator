@@ -1,0 +1,40 @@
+{
+	"tableName": "REAFFPROGRESERV",
+	"name": "SpoReaffProgReservataire",
+	"title": "Réservataire du programme",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"typreserv"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typreserv": {
+			"title": "Réservataire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nblogt": {
+			"title": "Nombre de logement",
+			"type": "integer"
+		}
+	},
+	"relations": {
+		"reaffProgramme": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoReaffProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "reaffProgReservataireList"
+		}
+	}
+}

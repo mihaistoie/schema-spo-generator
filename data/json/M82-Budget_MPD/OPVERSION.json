@@ -1,0 +1,93 @@
+{
+	"tableName": "OPVERSION",
+	"name": "SpoOpVersion",
+	"title": "Version d’une opération",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idop"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libversion": {
+			"title": "LibVersion",
+			"type": "string",
+			"maxLength": 200
+		},
+		"datecreat": {
+			"title": "DateCreat",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datemodif": {
+			"title": "DateModif",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datearchiv": {
+			"title": "DateArchiv",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idparent": {
+			"title": "IdParent",
+			"type": "string",
+			"maxLength": 32
+		},
+		"commentaire": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"idutil": {
+			"title": "IdUtil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"isactuel": {
+			"title": "IsActuel",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"statut": {
+			"title": "Statut",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idcompteur": {
+			"title": "IdCompteur",
+			"type": "integer"
+		},
+		"typeversion": {
+			"title": "TypeVersion",
+			"type": "string",
+			"maxLength": 10
+		},
+		"datecompt": {
+			"title": "Date Comptable",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"commentaireutil": {
+			"title": "Commentaire utilisateur",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"idlastutil": {
+			"title": "IdLastUtil",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

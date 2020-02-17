@@ -1,0 +1,216 @@
+{
+	"tableName": "TYPOLOT",
+	"name": "SpoTypoLot",
+	"title": "Typologie lots",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code typologie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"estprincipal": {
+			"title": "Lot principal",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"parent": {
+			"title": "Lot principal",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Code programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codesmo": {
+			"title": "Code SMO",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numero": {
+			"title": "Numéro lot",
+			"type": "string",
+			"maxLength": 10
+		},
+		"codetype": {
+			"title": "Type/Nature",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtypologie": {
+			"title": "IdTypologie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libtype": {
+			"title": "Libellé type/nature",
+			"type": "string",
+			"maxLength": 200
+		},
+		"libnaturelot": {
+			"title": "LibNatureLot",
+			"type": "string",
+			"maxLength": 100
+		},
+		"nombre": {
+			"title": "Nombre de lots",
+			"type": "integer"
+		},
+		"shab": {
+			"title": "SHAB",
+			"type": "number",
+			"decimals": 2
+		},
+		"su": {
+			"title": "Surface utile",
+			"type": "number",
+			"decimals": 2
+		},
+		"sdp": {
+			"title": "SDP",
+			"type": "number",
+			"decimals": 2
+		},
+		"prixhtshab": {
+			"title": "Prix HT au m2 SHAB",
+			"type": "number",
+			"decimals": 2
+		},
+		"prixhtsu": {
+			"title": "Prix HT au m2 SU",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"statut": {
+			"title": "Statut",
+			"type": "string",
+			"maxLength": 10
+		},
+		"shon": {
+			"title": "SHON",
+			"type": "number",
+			"decimals": 2
+		},
+		"shob": {
+			"title": "SHOB",
+			"type": "number",
+			"decimals": 2
+		},
+		"surfter": {
+			"title": "Surface terrain",
+			"type": "number",
+			"decimals": 2
+		},
+		"surfpar": {
+			"title": "Surface parcelle",
+			"type": "number",
+			"decimals": 2
+		},
+		"surfparam": {
+			"title": "Surface paramétrable",
+			"type": "number",
+			"decimals": 2
+		},
+		"annexe": {
+			"title": "Annexe",
+			"type": "number",
+			"decimals": 2
+		},
+		"loyerht": {
+			"title": "Loyer HT (mensuel)",
+			"type": "number",
+			"decimals": 2
+		},
+		"loyerttc": {
+			"title": "LoyerTTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"rentabilite": {
+			"title": "Rentabilité(% annuel)",
+			"type": "number",
+			"decimals": 2
+		},
+		"surfvendu": {
+			"title": "SurfVendu",
+			"type": "number",
+			"decimals": 2
+		},
+		"prixht": {
+			"title": "Prix HT / m² (surface vendu)",
+			"type": "number",
+			"decimals": 2
+		},
+		"prixttc": {
+			"title": "Prix TTC / m² (surface vendu)",
+			"type": "number",
+			"decimals": 2
+		},
+		"prixunitaireht": {
+			"title": "Prix unitaire HT par lot",
+			"type": "number",
+			"decimals": 2
+		},
+		"prixunitairettc": {
+			"title": "Prix unitaire TTC par lot",
+			"type": "number",
+			"decimals": 2
+		},
+		"loyerannuelht": {
+			"title": "Loyer Annuel HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"loyerannuelttc": {
+			"title": "Loyer Annuel TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"deptvamarge": {
+			"title": "DepTvaMarge",
+			"type": "number",
+			"decimals": 2
+		}
+	},
+	"relations": {
+		"typeOuvTypeLot": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoTypeOuvTypeLot",
+			"localFields": [
+				"idtypologie"
+			],
+			"foreignFields": [
+				"idtypologie"
+			],
+			"invRel": "typoLotList"
+		},
+		"programme": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"idprog"
+			],
+			"invRel": "typoLotList"
+		}
+	}
+}

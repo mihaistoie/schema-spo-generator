@@ -1,0 +1,163 @@
+{
+	"tableName": "MCSITUATION",
+	"name": "SpoMCSituation",
+	"title": "Situation de travaux",
+	"type": "object",
+	"primaryKey": [
+		"idsitu"
+	],
+	"properties": {
+		"idsitu": {
+			"title": "Code situation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcontrat": {
+			"title": "Code marché ou commande",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"numordre": {
+			"title": "N° ordre",
+			"type": "integer"
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"typesitu": {
+			"title": "Type situation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtsitu": {
+			"title": "Date situation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtmoerec": {
+			"title": "Date réception MOE",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtmoeacc": {
+			"title": "Date accord MOE",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtexec": {
+			"title": "Date exécution",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtpaieprev": {
+			"title": "Date prévu de paiement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtpaie": {
+			"title": "Date paiement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"flagttc": {
+			"title": "Saisie en TTC",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"flagcumul": {
+			"title": "Saisie en cumulé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtcompta": {
+			"title": "Date validation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtannul": {
+			"title": "Date annulation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"motif": {
+			"title": "Motif annulation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"myguid": {
+			"title": "MyGuid",
+			"type": "string",
+			"maxLength": 32
+		},
+		"flagtotal": {
+			"title": "Saisie sur le total",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtcomptabilisation": {
+			"title": "Date comptabilisation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"refurl": {
+			"title": "Paramètre de construction de l’URL",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dthimport": {
+			"title": "Date heure import",
+			"type": "string",
+			"maxLength": 20
+		},
+		"flaginitialavenant": {
+			"title": "Marché initial et le cumul avenant (2 lignes seront affichées)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtcreation": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"iduticreation": {
+			"title": "Utilisateur à l’origine de la création",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtmodification": {
+			"title": "Date de dernière modification",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idutimodification": {
+			"title": "Utilisateur ayant fait la dernière modification",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"mCSituTiersList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCSituTiers",
+			"localFields": [
+				"idsitu"
+			],
+			"foreignFields": [
+				"idsitu"
+			],
+			"invRel": "mCSituation"
+		}
+	}
+}

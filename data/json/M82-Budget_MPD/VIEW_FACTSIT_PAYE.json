@@ -1,0 +1,59 @@
+{
+	"tableName": "VIEW_FACTSIT_PAYE",
+	"name": "SpoView_FactSit_Paye",
+	"title": "View_FactSit_Paye",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idop": {
+			"title": "idop",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "idprog",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "idposte",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mnt": {
+			"title": "mnt",
+			"type": "number",
+			"decimals": 2
+		},
+		"date": {
+			"title": "date",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idpostetreso": {
+			"title": "idpostetreso",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idpiece": {
+			"title": "idpiece",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libpiece": {
+			"title": "libpiece",
+			"type": "string",
+			"maxLength": 200
+		},
+		"datepiece": {
+			"title": "datepiece",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"type": {
+			"title": "type",
+			"type": "string",
+			"maxLength": 2
+		}
+	}
+}

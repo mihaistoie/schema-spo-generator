@@ -1,0 +1,40 @@
+{
+	"tableName": "MCINDICE",
+	"name": "SpoIndiceBTP",
+	"title": "Indice BTP",
+	"type": "object",
+	"primaryKey": [
+		"indice"
+	],
+	"properties": {
+		"indice": {
+			"title": "Indice",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"famille": {
+			"title": "Famille",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"valeurIndiceBTPList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoValeurIndiceBTP",
+			"localFields": [
+				"indice"
+			],
+			"foreignFields": [
+				"indice"
+			],
+			"invRel": "indiceBTP"
+		}
+	}
+}

@@ -1,0 +1,87 @@
+{
+	"tableName": "BUDVARIATION",
+	"name": "SpoBudgetVariation",
+	"title": "Variation de budget",
+	"type": "object",
+	"primaryKey": [
+		"idvar"
+	],
+	"properties": {
+		"idvar": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idbudget": {
+			"title": "Budget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtvar": {
+			"title": "Date variation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"hvar": {
+			"title": "Heure variation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntfinal": {
+			"title": "Montant final",
+			"type": "number",
+			"decimals": 4
+		},
+		"iduti": {
+			"title": "Utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"mnttva": {
+			"title": "Montant Tva",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntautoht": {
+			"title": "MntAutoHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntpreviht": {
+			"title": "MntPreviHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntprevip1ht": {
+			"title": "MntPreviP1HT",
+			"type": "number",
+			"decimals": 4
+		}
+	}
+}

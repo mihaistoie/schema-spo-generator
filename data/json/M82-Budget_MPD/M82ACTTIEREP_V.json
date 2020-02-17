@@ -1,0 +1,22 @@
+{
+	"tableName": "M82ACTTIEREP_V",
+	"name": "SpoM82ActTieRep_V",
+	"title": "Corresp Acteur Tiers Repres",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idtiers": {
+			"title": "idtiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idrepresentant": {
+			"title": "idrepresentant",
+			"type": "integer"
+		},
+		"idcompteur": {
+			"title": "idcompteur",
+			"type": "integer"
+		}
+	}
+}

@@ -1,0 +1,61 @@
+{
+	"tableName": "PBPARAMVENTE",
+	"name": "SpoPBParamVente",
+	"title": "PBParamVente",
+	"type": "object",
+	"primaryKey": [
+		"idpp"
+	],
+	"properties": {
+		"idpp": {
+			"title": "idpp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"societe": {
+			"title": "societe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeouvrage": {
+			"title": "typeOuvrage",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecomm": {
+			"title": "typeComm",
+			"type": "string",
+			"maxLength": 32
+		},
+		"posteca": {
+			"title": "posteCA",
+			"type": "string",
+			"maxLength": 32
+		},
+		"postetma": {
+			"title": "posteTMA",
+			"type": "string",
+			"maxLength": 32
+		},
+		"postedes": {
+			"title": "posteDES",
+			"type": "string",
+			"maxLength": 32
+		},
+		"posterv": {
+			"title": "posteRV",
+			"type": "string",
+			"maxLength": 32
+		},
+		"postetvamarge": {
+			"title": "posteTvaMarge",
+			"type": "string",
+			"maxLength": 32
+		},
+		"postedation": {
+			"title": "PosteDation",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

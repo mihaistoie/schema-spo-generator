@@ -1,0 +1,35 @@
+{
+	"tableName": "ECLISTETYPECOMPTE",
+	"name": "SpoECListeTypeCompte",
+	"title": "ECListeTypeCompte",
+	"type": "object",
+	"primaryKey": [
+		"idpc"
+	],
+	"properties": {
+		"idpc": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecompte": {
+			"title": "TypeCompte",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"eCPlanCompte": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoECPlanCompte",
+			"localFields": [
+				"idpc"
+			],
+			"foreignFields": [
+				"idpc"
+			],
+			"invRel": "eCListeTypeCompteList"
+		}
+	}
+}

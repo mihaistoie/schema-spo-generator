@@ -1,0 +1,21 @@
+{
+	"tableName": "MCFORMULEREV",
+	"name": "SpoFormuleRevalorisation",
+	"title": "Formule revalorisation",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code Formule",
+			"type": "string",
+			"maxLength": 32
+		},
+		"formule": {
+			"title": "Formule",
+			"type": "string",
+			"maxLength": 200
+		}
+	}
+}

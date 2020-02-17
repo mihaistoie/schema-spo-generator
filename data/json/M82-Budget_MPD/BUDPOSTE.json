@@ -1,0 +1,58 @@
+{
+	"tableName": "BUDPOSTE",
+	"name": "SpoBudgetPoste",
+	"title": "Propriétés poste",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"moderpt": {
+			"title": "Mode répartition",
+			"type": "string",
+			"maxLength": 10
+		},
+		"isleaf": {
+			"title": "Est un poste du niveau le plus détaillé (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"poscontrole": {
+			"title": "Position poste contrôle budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"inclustvamarge": {
+			"title": "inclusTvaMarge",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"budgetInfoCalculList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoBudgetInfoCalcul",
+			"localFields": [
+				"id",
+				"idposte"
+			],
+			"foreignFields": [
+				"id",
+				"idposte"
+			],
+			"invRel": "budgetPoste"
+		}
+	}
+}

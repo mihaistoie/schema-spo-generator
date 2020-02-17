@@ -1,0 +1,107 @@
+{
+	"tableName": "BSPLUSCD_V",
+	"name": "SpoPLUSCD_V",
+	"title": "PLUSCD",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logpluscd": {
+			"title": "Total logements PLUS CD",
+			"type": "integer"
+		},
+		"cdpluscdc": {
+			"title": "Code programme PLUS CD Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libpluscdc": {
+			"title": "Libellé programme PLUS CD Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plusccd1": {
+			"title": "PLUS CD collectif T1",
+			"type": "integer"
+		},
+		"plusccd1b": {
+			"title": "PLUS CD collectif T1b",
+			"type": "integer"
+		},
+		"plusccd2": {
+			"title": "PLUS CD collectif T2",
+			"type": "integer"
+		},
+		"plusccd3": {
+			"title": "PLUS CD collectif T3",
+			"type": "integer"
+		},
+		"plusccd4": {
+			"title": "PLUS CD collectif T4",
+			"type": "integer"
+		},
+		"plusccd5": {
+			"title": "PLUS CD collectif T5",
+			"type": "integer"
+		},
+		"plusccd6": {
+			"title": "PLUS CD collectif T6",
+			"type": "integer"
+		},
+		"plusccd7": {
+			"title": "PLUS CD collectif T7",
+			"type": "integer"
+		},
+		"cdpluscdi": {
+			"title": "Code programme PLUS CD Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libpluscdi": {
+			"title": "Libellé programme PLUS CD Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plusicd1": {
+			"title": "PLUS CD individuel T1",
+			"type": "integer"
+		},
+		"plusicd1b": {
+			"title": "PLUS CD individuel T1b",
+			"type": "integer"
+		},
+		"plusicd2": {
+			"title": "PLUS CD individuel T2",
+			"type": "integer"
+		},
+		"plusicd3": {
+			"title": "PLUS CD individuel T3",
+			"type": "integer"
+		},
+		"plusicd4": {
+			"title": "PLUS CD individuel T4",
+			"type": "integer"
+		},
+		"plusicd5": {
+			"title": "PLUS CD individuel T5",
+			"type": "integer"
+		},
+		"plusicd6": {
+			"title": "PLUS CD individuel T6",
+			"type": "integer"
+		},
+		"plusicd7": {
+			"title": "PLUS CD individuel T7",
+			"type": "integer"
+		}
+	}
+}

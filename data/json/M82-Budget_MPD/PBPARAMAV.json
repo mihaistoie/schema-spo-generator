@@ -1,0 +1,31 @@
+{
+	"tableName": "PBPARAMAV",
+	"name": "SpoPBParamAV",
+	"title": "PBParamAV",
+	"type": "object",
+	"primaryKey": [
+		"idpp"
+	],
+	"properties": {
+		"idpp": {
+			"title": "idpp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"societe": {
+			"title": "societe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeav": {
+			"title": "codeAV",
+			"type": "string",
+			"maxLength": 32
+		},
+		"postedepenseav": {
+			"title": "posteDepenseAV",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

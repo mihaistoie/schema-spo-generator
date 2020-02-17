@@ -1,0 +1,187 @@
+{
+	"tableName": "BUDGET",
+	"name": "SpoBudget",
+	"title": "Budget",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typbud": {
+			"title": "Type budget",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idop": {
+			"title": "Opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modprp": {
+			"title": "Modèle Prix de revient",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modpfin": {
+			"title": "Modèle Plan de financement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modpro": {
+			"title": "Modèle promotion",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcreat": {
+			"title": "Date création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtmodif": {
+			"title": "Date de modification",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"etape": {
+			"title": "Etape budget",
+			"type": "string",
+			"maxLength": 10
+		},
+		"codesmo": {
+			"title": "Code SMO",
+			"type": "string",
+			"maxLength": 50
+		},
+		"soc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"postefp": {
+			"title": "Code Poste FP",
+			"type": "string",
+			"maxLength": 32
+		},
+		"isreparttranche": {
+			"title": "IsRepartTranche",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"estcontrolebud": {
+			"title": "Budget avec contrôle budgetaire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"islignetvares": {
+			"title": "IsLigneTVARes",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"hierarchie": {
+			"title": "Hierarchie",
+			"type": "integer"
+		},
+		"isposteinfo": {
+			"title": "IsPosteInfo",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"iskeuro": {
+			"title": "IsKeuro",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"estautorisationbud": {
+			"title": "EstAutorisationBud",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"nivcontrole": {
+			"title": "NivControle",
+			"type": "integer"
+		},
+		"nivautorisation": {
+			"title": "NivAutorisation",
+			"type": "integer"
+		},
+		"lissage": {
+			"title": "Lissage",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"isautoht": {
+			"title": "IsAutoHT",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"etapeavtravaux": {
+			"title": "EtapeAvTravaux",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"budgetMontantList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoBudgetMontant",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "budget"
+		},
+		"budgetPosteTrancheList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoBudgetPosteTranche",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "budget"
+		},
+		"budgetComparatifList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoBudgetComparatif",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "budget"
+		}
+	}
+}

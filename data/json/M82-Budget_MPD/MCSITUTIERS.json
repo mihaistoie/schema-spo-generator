@@ -1,0 +1,82 @@
+{
+	"tableName": "MCSITUTIERS",
+	"name": "SpoMCSituTiers",
+	"title": "Situation par cotraitant",
+	"type": "object",
+	"primaryKey": [
+		"idsitu",
+		"numtiers"
+	],
+	"properties": {
+		"idsitu": {
+			"title": "Code situation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numtiers": {
+			"title": "Code situation-tiers",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code Tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"actureel": {
+			"title": "Actualisation calculée sur indice réel",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ordre": {
+			"title": "N° ordre du cotraitant",
+			"type": "integer"
+		},
+		"refsitutiers": {
+			"title": "Code situation-tiers",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"mCSituation": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCSituation",
+			"localFields": [
+				"idsitu"
+			],
+			"foreignFields": [
+				"idsitu"
+			],
+			"invRel": "mCSituTiersList"
+		},
+		"mCSituMntList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCSituMnt",
+			"localFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"foreignFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"invRel": "mCSituTiers"
+		},
+		"mCSituMntSTList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCSituMntST",
+			"localFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"foreignFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"invRel": "mCSituTiers"
+		}
+	}
+}

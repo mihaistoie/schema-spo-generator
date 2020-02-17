@@ -1,0 +1,118 @@
+{
+	"tableName": "MCMONTANT",
+	"name": "SpoMCMontant",
+	"title": "Montants du marché",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"idmnt"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmnt": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"niveau": {
+			"title": "Niveau détail",
+			"type": "string",
+			"maxLength": 10
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"avenant": {
+			"title": "Avenant",
+			"type": "integer"
+		},
+		"reval": {
+			"title": "Revalorisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lot": {
+			"title": "Lot",
+			"type": "integer"
+		},
+		"phase": {
+			"title": "phase",
+			"type": "integer"
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"contractant": {
+			"title": "Contractant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"tva": {
+			"title": "TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"mntinitial": {
+			"title": "Montant initial",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntregul": {
+			"title": "Montant régularisé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codetva": {
+			"title": "Code TVA",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCMontantList"
+		}
+	}
+}

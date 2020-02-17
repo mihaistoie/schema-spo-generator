@@ -1,0 +1,52 @@
+{
+	"tableName": "MCCONTRACTST",
+	"name": "SpoMCContractST",
+	"title": "Contract Sous-traitant  ",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"idst",
+		"contractant",
+		"tranche"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idst": {
+			"title": "IdSt",
+			"type": "string",
+			"maxLength": 32
+		},
+		"contractant": {
+			"title": "Contractant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCContractSTList"
+		}
+	}
+}

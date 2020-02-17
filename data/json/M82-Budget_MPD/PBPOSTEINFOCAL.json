@@ -1,0 +1,111 @@
+{
+	"tableName": "PBPOSTEINFOCAL",
+	"name": "SpoPosteInfoCalcul",
+	"title": "Information de calcul du poste",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"ligne"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ligne": {
+			"title": "N° ligne",
+			"type": "integer"
+		},
+		"activite": {
+			"title": "Activité",
+			"type": "string",
+			"maxLength": 10
+		},
+		"natrv": {
+			"title": "Nature travaux",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeprog": {
+			"title": "Type programme",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typfin": {
+			"title": "Type financement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typouv": {
+			"title": "Type ouvrage",
+			"type": "string",
+			"maxLength": 10
+		},
+		"regfisc": {
+			"title": "Régime fiscal",
+			"type": "string",
+			"maxLength": 32
+		},
+		"priorite": {
+			"title": "Priorité",
+			"type": "integer"
+		},
+		"typcal": {
+			"title": "Type calcul",
+			"type": "string",
+			"maxLength": 10
+		},
+		"formexpr": {
+			"title": "Expression formule",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"formtxt": {
+			"title": "Texte formule",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"impact": {
+			"title": "Impact",
+			"type": "string",
+			"maxLength": 10
+		},
+		"valeur": {
+			"title": "Valeur",
+			"type": "number",
+			"decimals": 4
+		},
+		"pourcent": {
+			"title": "Pourcent",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"modelebudget": {
+			"title": "ModeleBudget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typedetaille": {
+			"title": "TypeDetaille",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"poste": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoPoste",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "posteInfoCalculList"
+		}
+	}
+}

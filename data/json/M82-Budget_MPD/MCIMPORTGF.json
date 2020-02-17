@@ -1,0 +1,186 @@
+{
+	"tableName": "MCIMPORTGF",
+	"name": "SpoMCImportGF",
+	"title": "Import GF marché et commande et versement financement",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "N° enregistrement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Code programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste budgétaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typenreg": {
+			"title": "Type enregistrement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"codesoc": {
+			"title": "Code société GF",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeop": {
+			"title": "Code opération GF",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libop": {
+			"title": "Libellé opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"codeprog": {
+			"title": "Code programme GF",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libprog": {
+			"title": "Libellé programme",
+			"type": "string",
+			"maxLength": 200
+		},
+		"codeposte": {
+			"title": "Code budgétaire GF",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libposte": {
+			"title": "Libellé poste",
+			"type": "string",
+			"maxLength": 200
+		},
+		"codemar": {
+			"title": "Code marché",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libmar": {
+			"title": "Libellé marché",
+			"type": "string",
+			"maxLength": 200
+		},
+		"libentreprise": {
+			"title": "Libellé entreprise",
+			"type": "string",
+			"maxLength": 200
+		},
+		"numengage": {
+			"title": "N° engagement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numfact": {
+			"title": "N° facture",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numregle": {
+			"title": "N° règlement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcompta": {
+			"title": "Date compta",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"refer": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 50
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"libtiers": {
+			"title": "Libellé Tiers",
+			"type": "string",
+			"maxLength": 200
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtimport": {
+			"title": "Date import",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtarrete": {
+			"title": "Date arrête",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtsignature": {
+			"title": "Date signature",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdecision": {
+			"title": "Date décision",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"prefin": {
+			"title": "Préfinancement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"numpiece": {
+			"title": "N° pièce comptable",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codecompta": {
+			"title": "Code comptable du compte bancaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codejournal": {
+			"title": "Code journal du compte bancaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libellecompte": {
+			"title": "Libellé du compte bancaire",
+			"type": "string",
+			"maxLength": 256
+		}
+	}
+}

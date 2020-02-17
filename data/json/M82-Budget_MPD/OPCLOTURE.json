@@ -1,0 +1,65 @@
+{
+	"tableName": "OPCLOTURE",
+	"name": "SpoOpCloture",
+	"title": "Clôture opération",
+	"type": "object",
+	"primaryKey": [
+		"idcloture"
+	],
+	"properties": {
+		"idcloture": {
+			"title": "Code clôture",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcloture": {
+			"title": "Date de clôture",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"statut": {
+			"title": "Statut",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtcompta": {
+			"title": "Date comptabilisation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtannul": {
+			"title": "Date annulation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"motif": {
+			"title": "Motif annulation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idbudget": {
+			"title": "Code budget",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"elementClotureList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoElementCloture",
+			"localFields": [
+				"idcloture"
+			],
+			"foreignFields": [
+				"idcloture"
+			],
+			"invRel": "opCloture"
+		}
+	}
+}

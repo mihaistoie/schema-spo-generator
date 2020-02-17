@@ -1,0 +1,57 @@
+{
+	"tableName": "REAFFAFFECBUDPROG",
+	"name": "SpoReaffAffectationBudProg",
+	"title": "Reaffectaion budget programme",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idprog"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		}
+	},
+	"relations": {
+		"reaffAffectationBud": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoReaffAffectationBud",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "reaffAffectationBudProgList"
+		}
+	}
+}

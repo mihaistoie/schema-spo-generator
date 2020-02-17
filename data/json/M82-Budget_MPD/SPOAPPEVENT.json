@@ -1,0 +1,66 @@
+{
+	"tableName": "SPOAPPEVENT",
+	"name": "SpoSPOAppEvent",
+	"title": "Evènement SPO",
+	"type": "object",
+	"primaryKey": [
+		"idev"
+	],
+	"properties": {
+		"idev": {
+			"title": "Id Evènement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeev": {
+			"title": "Type Evènement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"libelle": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"eststandard": {
+			"title": "EstStandard",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"numordre": {
+			"title": "Numéro d’ordre",
+			"type": "integer"
+		},
+		"estmultiple": {
+			"title": "EstMultiple",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"eventOpList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoEventOp",
+			"localFields": [
+				"idev"
+			],
+			"foreignFields": [
+				"idev"
+			],
+			"invRel": "sPOAppEvent"
+		},
+		"eventUseList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoEventUse",
+			"localFields": [
+				"idev"
+			],
+			"foreignFields": [
+				"idev"
+			],
+			"invRel": "sPOAppEvent"
+		}
+	}
+}

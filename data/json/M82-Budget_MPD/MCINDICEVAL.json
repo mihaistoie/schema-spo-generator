@@ -1,0 +1,41 @@
+{
+	"tableName": "MCINDICEVAL",
+	"name": "SpoValeurIndiceBTP",
+	"title": "Valeur indice BTP",
+	"type": "object",
+	"primaryKey": [
+		"indice",
+		"dtval"
+	],
+	"properties": {
+		"indice": {
+			"title": "Indice",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtval": {
+			"title": "Date valeur",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"val": {
+			"title": "Valeur",
+			"type": "number",
+			"decimals": 2
+		}
+	},
+	"relations": {
+		"indiceBTP": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoIndiceBTP",
+			"localFields": [
+				"indice"
+			],
+			"foreignFields": [
+				"indice"
+			],
+			"invRel": "valeurIndiceBTPList"
+		}
+	}
+}

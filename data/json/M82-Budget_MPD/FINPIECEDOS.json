@@ -1,0 +1,36 @@
+{
+	"tableName": "FINPIECEDOS",
+	"name": "SpoPieceDossier",
+	"title": "Pièce dossier à fournir",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"piece"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"piece": {
+			"title": "Pièce",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"financement": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoFinancement",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "pieceDossierList"
+		}
+	}
+}

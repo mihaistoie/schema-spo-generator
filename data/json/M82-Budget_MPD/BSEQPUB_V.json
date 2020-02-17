@@ -1,0 +1,64 @@
+{
+	"tableName": "BSEQPUB_V",
+	"name": "SpoEquipementsPublics_V",
+	"title": "Equipements Publics",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"eplib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 120
+		},
+		"epsurfutil": {
+			"title": "Surface utile en m²",
+			"type": "number",
+			"decimals": 2
+		},
+		"epnivliv": {
+			"title": "Niveau de livraison",
+			"type": "string",
+			"maxLength": 32
+		},
+		"epstat": {
+			"title": "Stationnement",
+			"type": "string",
+			"maxLength": 120
+		},
+		"epannexe": {
+			"title": "Annexe",
+			"type": "string",
+			"maxLength": 120
+		},
+		"epdest": {
+			"title": "Destination",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lcinterv": {
+			"title": "Mode d’intervention",
+			"type": "string",
+			"maxLength": 32
+		},
+		"epshon": {
+			"title": " SHON réglementaire",
+			"type": "number",
+			"decimals": 2
+		},
+		"epshob": {
+			"title": " SHOB",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

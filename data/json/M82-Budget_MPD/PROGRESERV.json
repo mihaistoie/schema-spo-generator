@@ -1,0 +1,40 @@
+{
+	"tableName": "PROGRESERV",
+	"name": "SpoProgReservataire",
+	"title": "Réservataire du programme",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"typreserv"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typreserv": {
+			"title": "Réservataire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nblogt": {
+			"title": "Nombre de logement",
+			"type": "integer"
+		}
+	},
+	"relations": {
+		"programme": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "progReservataireList"
+		}
+	}
+}

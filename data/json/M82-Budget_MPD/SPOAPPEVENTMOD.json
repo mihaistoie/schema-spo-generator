@@ -1,0 +1,38 @@
+{
+	"tableName": "SPOAPPEVENTMOD",
+	"name": "SpoSPOAppEventMod",
+	"title": "Dates connues évènements",
+	"type": "object",
+	"primaryKey": [
+		"idop",
+		"idev",
+		"idetape"
+	],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idev": {
+			"title": "Code évènement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "IdEtape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtprev": {
+			"title": "Date prévue",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtreal": {
+			"title": "Date réelle",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

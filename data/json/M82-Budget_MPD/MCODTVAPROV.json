@@ -1,0 +1,47 @@
+{
+	"tableName": "MCODTVAPROV",
+	"name": "SpoMCODTvaProv",
+	"title": "Montant provision LASM",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte",
+		"idprog"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Code programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mntprovision": {
+			"title": "Montant provision",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"mCOD": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCOD",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "mCODTvaProvList"
+		}
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"tableName": "SPOOPPHASE",
+	"name": "SpoSPOOpPhase",
+	"title": "Etapes planning opération",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idphase": {
+			"title": "Code phase",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"libellecourt": {
+			"title": "Libellé court",
+			"type": "string",
+			"maxLength": 80
+		},
+		"codecouleur": {
+			"title": "Code couleur",
+			"type": "string",
+			"maxLength": 20
+		},
+		"isspecial": {
+			"title": "Est spécial",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtdeb": {
+			"title": "Date début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"statut": {
+			"title": "Statut",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}

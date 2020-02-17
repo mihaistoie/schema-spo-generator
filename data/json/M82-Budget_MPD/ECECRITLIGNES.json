@@ -1,0 +1,214 @@
+{
+	"tableName": "ECECRITLIGNES",
+	"name": "SpoECEcritLignes",
+	"title": "Ecritures comptables",
+	"type": "object",
+	"primaryKey": [
+		"numpiece",
+		"numligne"
+	],
+	"properties": {
+		"numpiece": {
+			"title": "N° pièce",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numligne": {
+			"title": "N° ligne",
+			"type": "integer"
+		},
+		"mnt": {
+			"title": "Montant",
+			"type": "number",
+			"decimals": 4
+		},
+		"sens": {
+			"title": "Sens",
+			"type": "string",
+			"maxLength": 10
+		},
+		"compte": {
+			"title": "Compte",
+			"type": "string",
+			"maxLength": 20
+		},
+		"ana": {
+			"title": "Compte analytique",
+			"type": "string",
+			"maxLength": 50
+		},
+		"aux": {
+			"title": "Compte auxiliaire",
+			"type": "string",
+			"maxLength": 50
+		},
+		"idprog": {
+			"title": "Code programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeprog": {
+			"title": "Programme GF",
+			"type": "string",
+			"maxLength": 50
+		},
+		"codebud": {
+			"title": "Code budgétaire GF",
+			"type": "string",
+			"maxLength": 50
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"activite": {
+			"title": "Activité",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nattrv": {
+			"title": "Nature de travaux",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typefin": {
+			"title": "Type financement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeouv": {
+			"title": "Type ouvrage",
+			"type": "string",
+			"maxLength": 10
+		},
+		"csa": {
+			"title": "CSA (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"txlasm": {
+			"title": "Taux LASM",
+			"type": "number",
+			"decimals": 2
+		},
+		"mnt2": {
+			"title": "Montant 2",
+			"type": "number",
+			"decimals": 4
+		},
+		"idfour": {
+			"title": "Code fournisseur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"etape": {
+			"title": "Etape budget",
+			"type": "string",
+			"maxLength": 10
+		},
+		"iban": {
+			"title": "Code IBAN",
+			"type": "string",
+			"maxLength": 50
+		},
+		"bic": {
+			"title": "Code BIC",
+			"type": "string",
+			"maxLength": 11
+		},
+		"typecpt": {
+			"title": "Type compte",
+			"type": "string",
+			"maxLength": 10
+		},
+		"montant3": {
+			"title": "Montant3",
+			"type": "number",
+			"decimals": 4
+		},
+		"regimetva": {
+			"title": "RegimeTVA",
+			"type": "string",
+			"maxLength": 200
+		},
+		"proratatva": {
+			"title": "ProrataTVA",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"lbtierspaye": {
+			"title": "LbTiersPaye",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idsc": {
+			"title": "Code schema cpt",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numlignesc": {
+			"title": "N° ligne schema cpt",
+			"type": "integer"
+		},
+		"idpc": {
+			"title": "Code plan cpt",
+			"type": "string",
+			"maxLength": 32
+		},
+		"temoinsp": {
+			"title": "Témoin sous-pièce",
+			"type": "string",
+			"maxLength": 10
+		},
+		"souspiece": {
+			"title": "N° sous-pièce",
+			"type": "string",
+			"maxLength": 3
+		},
+		"methodecomptaacc": {
+			"title": "MethodeComptaAcc",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typecommacc": {
+			"title": "TypeCommAcc",
+			"type": "string",
+			"maxLength": 10
+		},
+		"refeng": {
+			"title": "Engagement",
+			"type": "string",
+			"maxLength": 50
+		},
+		"idtranchetravaux": {
+			"title": "Code tranche travaux",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"eCEcritPieces": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoECEcritPieces",
+			"localFields": [
+				"numpiece"
+			],
+			"foreignFields": [
+				"numpiece"
+			],
+			"invRel": "eCEcritLignesList"
+		}
+	}
+}

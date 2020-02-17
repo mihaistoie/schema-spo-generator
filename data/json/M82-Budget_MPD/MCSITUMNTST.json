@@ -1,0 +1,91 @@
+{
+	"tableName": "MCSITUMNTST",
+	"name": "SpoMCSituMntST",
+	"title": "Situation - Montants par sous-traitant",
+	"type": "object",
+	"primaryKey": [
+		"idmnt"
+	],
+	"properties": {
+		"idmnt": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idsitu": {
+			"title": "Code situation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numtiers": {
+			"title": "Code situation-tiers",
+			"type": "integer"
+		},
+		"soustrait": {
+			"title": "Sous traitant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"engageht": {
+			"title": "Engagé HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"cumulht": {
+			"title": "Cumul HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"cumulttc": {
+			"title": "Cumul TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntavance": {
+			"title": "Montant avance",
+			"type": "number",
+			"decimals": 4
+		},
+		"engagettc": {
+			"title": "Engagé TTC",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"mCSituTiers": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCSituTiers",
+			"localFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"foreignFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"invRel": "mCSituMntSTList"
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"tableName": "PBMODELEPOSTE",
+	"name": "SpoModelePoste",
+	"title": "Poste du modèle de budget",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"poscontrole": {
+			"title": "Position poste de contrôle",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"modeleBudget": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoModeleBudget",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "modelePosteList"
+		}
+	}
+}

@@ -1,0 +1,70 @@
+{
+	"tableName": "ECHEANCETRESO",
+	"name": "SpoEcheanceTreso",
+	"title": "Echéance trésorerie",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeposte": {
+			"title": "Type poste",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idpostetreso": {
+			"title": "IdPosteTreso",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dateech": {
+			"title": "Date échéance",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mnt": {
+			"title": "Montant échéance",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntht": {
+			"title": "MntHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "MntTVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"periode": {
+			"title": "Période",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idregletreso": {
+			"title": "Code règle trésorerie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordreregle": {
+			"title": "N° détail règle trésorerie",
+			"type": "integer"
+		}
+	}
+}

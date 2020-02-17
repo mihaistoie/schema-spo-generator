@@ -1,0 +1,260 @@
+{
+	"tableName": "MCCONDITION",
+	"name": "SpoMCCondition",
+	"title": "Conditions du marché",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"tranche",
+		"avenant"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"avenant": {
+			"title": "Avenant",
+			"type": "integer"
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"dtavenant": {
+			"title": "Date avenant",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"cond": {
+			"title": "Conditionnel",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtaff": {
+			"title": "Date limite affermissement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtos": {
+			"title": "Date OS",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtnotif": {
+			"title": "Date de notification",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"lieu": {
+			"title": "Lieu d’exécution",
+			"type": "string",
+			"maxLength": 10
+		},
+		"delai": {
+			"title": "Délai exécution",
+			"type": "integer"
+		},
+		"basedelai": {
+			"title": "Base du délai exécution",
+			"type": "string",
+			"maxLength": 10
+		},
+		"refdebut": {
+			"title": "Référence début exécution",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtdebut": {
+			"title": "Date début exécution",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date fin exécution",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"typereval": {
+			"title": "Type revalorisation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"txrg": {
+			"title": "Taux Retenue de garantie",
+			"type": "number",
+			"decimals": 2
+		},
+		"txpuc": {
+			"title": "Taux Police Unique de Chantier",
+			"type": "number",
+			"decimals": 2
+		},
+		"txcp": {
+			"title": "Taux Contribution Prorata",
+			"type": "number",
+			"decimals": 2
+		},
+		"delaip": {
+			"title": "Délai paiement",
+			"type": "integer"
+		},
+		"basedelaip": {
+			"title": "Base délai paiement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtm0": {
+			"title": "Date référence M0",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"perneut": {
+			"title": "Période neutralisation",
+			"type": "integer"
+		},
+		"dtneut": {
+			"title": "Date de neutralisation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtsignaturemarche": {
+			"title": "Date de signature du marché ",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"coeffneut": {
+			"title": "Coefficient neutralisation",
+			"type": "number",
+			"decimals": 2
+		},
+		"formreval": {
+			"title": "Formule revalorisation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"statut": {
+			"title": "Statut engagement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtengage": {
+			"title": "Date engagement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtannul": {
+			"title": "Date annulation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"motif": {
+			"title": "Motif annulation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"andepart": {
+			"title": "Année de départ",
+			"type": "integer"
+		},
+		"nban": {
+			"title": "Nombre d’années",
+			"type": "integer"
+		},
+		"refavenant": {
+			"title": "Référence avenant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"refdevis": {
+			"title": "Référence du devis",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dtdevis": {
+			"title": "Date du devis",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntdevis": {
+			"title": "Montant HT du devis",
+			"type": "number",
+			"decimals": 4
+		},
+		"idtr": {
+			"title": "ID Tranche-Avenant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"attval": {
+			"title": "Attente validation (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtrecep": {
+			"title": "Date réelle de réception",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"source": {
+			"title": "Origine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"exigiblepaie": {
+			"title": "Exigibilité paiement",
+			"type": "integer"
+		},
+		"dtcomptabilisation": {
+			"title": "Date comptabilisation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"avance": {
+			"title": "Avance",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"rembforce": {
+			"title": "Remboursement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"rembdebut": {
+			"title": "Remboursement % début",
+			"type": "number",
+			"decimals": 2
+		},
+		"rembfin": {
+			"title": "Remboursement % fin",
+			"type": "number",
+			"decimals": 2
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCConditionList"
+		}
+	}
+}

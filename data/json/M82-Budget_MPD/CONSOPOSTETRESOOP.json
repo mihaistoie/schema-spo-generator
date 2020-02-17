@@ -1,0 +1,33 @@
+{
+	"tableName": "CONSOPOSTETRESOOP",
+	"name": "SpoConsoPosteTresoOp",
+	"title": "ConsoPosteTresoOp",
+	"type": "object",
+	"primaryKey": [
+		"idop",
+		"idposte",
+		"estsaisie"
+	],
+	"properties": {
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"estsaisie": {
+			"title": "EstSaisie",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"idpostetreso": {
+			"title": "IdPosteTreso",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

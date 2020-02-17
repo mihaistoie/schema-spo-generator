@@ -1,0 +1,200 @@
+{
+	"tableName": "ECECRITPIECES",
+	"name": "SpoECEcritPieces",
+	"title": "Pièce comptable",
+	"type": "object",
+	"primaryKey": [
+		"numpiece"
+	],
+	"properties": {
+		"numpiece": {
+			"title": "N° pièce",
+			"type": "string",
+			"maxLength": 32
+		},
+		"evt": {
+			"title": "Evénement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"refpiece": {
+			"title": "Référence interne",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idsoc": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Code programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"statut": {
+			"title": "Statut",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtcompta": {
+			"title": "Date comptable",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtpiece": {
+			"title": "Date pièce",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtech": {
+			"title": "Date échéance",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtexp": {
+			"title": "Date transfert",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"codesoc": {
+			"title": "Société GF",
+			"type": "string",
+			"maxLength": 50
+		},
+		"codeop": {
+			"title": "Opération GF",
+			"type": "string",
+			"maxLength": 50
+		},
+		"codeprog": {
+			"title": "Programme GF",
+			"type": "string",
+			"maxLength": 50
+		},
+		"codebud": {
+			"title": "Code budgétaire GF",
+			"type": "string",
+			"maxLength": 50
+		},
+		"refeng": {
+			"title": "Engagement",
+			"type": "string",
+			"maxLength": 50
+		},
+		"journal": {
+			"title": "Journal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"activite": {
+			"title": "Activité",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nattrv": {
+			"title": "Nature de travaux",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typefin": {
+			"title": "Type financement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeouv": {
+			"title": "Type ouvrage",
+			"type": "string",
+			"maxLength": 10
+		},
+		"etape": {
+			"title": "Etape budget",
+			"type": "string",
+			"maxLength": 10
+		},
+		"csa": {
+			"title": "CSA (O/N)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"txlasm": {
+			"title": "Taux LASM",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtarr": {
+			"title": "Date arrivée",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"refmarbdc": {
+			"title": "Référence marché BDC",
+			"type": "string",
+			"maxLength": 32
+		},
+		"annul": {
+			"title": "Statut annulation",
+			"type": "string",
+			"maxLength": 10
+		},
+		"pieceannul": {
+			"title": "Pièce annulée",
+			"type": "string",
+			"maxLength": 32
+		},
+		"reference": {
+			"title": "Reference",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelleop": {
+			"title": "LibelleOp",
+			"type": "string",
+			"maxLength": 200
+		},
+		"libelleeng": {
+			"title": "LibelleEng",
+			"type": "string",
+			"maxLength": 200
+		},
+		"refdossvente": {
+			"title": "Référence dossier de vente",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"eCEcritLignesList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoECEcritLignes",
+			"localFields": [
+				"numpiece"
+			],
+			"foreignFields": [
+				"numpiece"
+			],
+			"invRel": "eCEcritPieces"
+		}
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"tableName": "ACTOPGANTT",
+	"name": "SpoActOpGantt",
+	"title": "Actions planning opération",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "Code étape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbetape": {
+			"title": "Etape",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idaction": {
+			"title": "Code action",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbaction": {
+			"title": "Action",
+			"type": "string",
+			"maxLength": 200
+		}
+	}
+}

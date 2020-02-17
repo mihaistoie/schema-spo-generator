@@ -1,0 +1,29 @@
+{
+	"tableName": "SPOAPPEVENTDEF",
+	"name": "SpoSPOAppEventDef",
+	"title": "SPOAppEventDef",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idev": {
+			"title": "IdEv",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "IdEtape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "IdAction",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

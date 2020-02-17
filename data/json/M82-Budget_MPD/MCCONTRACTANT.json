@@ -1,0 +1,93 @@
+{
+	"tableName": "MCCONTRACTANT",
+	"name": "SpoMCContractant",
+	"title": "Contractant",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"entreprise",
+		"contractant",
+		"tranche"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"contractant": {
+			"title": "Contractant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"role": {
+			"title": "Role contractant",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtacte": {
+			"title": "Date acte",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"activite": {
+			"title": "Activité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iban": {
+			"title": "IBAN",
+			"type": "string",
+			"maxLength": 34
+		},
+		"paiedirect": {
+			"title": "Paiement direct",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"bic": {
+			"title": "BIC",
+			"type": "string",
+			"maxLength": 11
+		},
+		"idadresse": {
+			"title": "Identifiant adresse de l’entreprise",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCContractantList"
+		}
+	}
+}

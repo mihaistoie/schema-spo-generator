@@ -1,0 +1,28 @@
+{
+	"tableName": "FINEVT",
+	"name": "SpoFinEvenement",
+	"title": "Evènements déclancheurs des demandes d’acompte",
+	"type": "object",
+	"primaryKey": [
+		"idproced",
+		"idetape",
+		"idaction"
+	],
+	"properties": {
+		"idproced": {
+			"title": "IdProced",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "IdEtape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "IdAction",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

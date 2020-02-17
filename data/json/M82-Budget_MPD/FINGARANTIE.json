@@ -1,0 +1,56 @@
+{
+	"tableName": "FINGARANTIE",
+	"name": "SpoGarantieFin",
+	"title": "Garantie",
+	"type": "object",
+	"primaryKey": [
+		"iddoss",
+		"garant"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"garant": {
+			"title": "Garant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtdelib": {
+			"title": "Date délibération",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtsign": {
+			"title": "Date signature",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"txgar": {
+			"title": "Taux garantie",
+			"type": "number",
+			"decimals": 2
+		},
+		"mntgar": {
+			"title": "Montant garantie",
+			"type": "number",
+			"decimals": 4
+		}
+	},
+	"relations": {
+		"dossierFin": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoDossierFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "garantieFinList"
+		}
+	}
+}

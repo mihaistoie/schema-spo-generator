@@ -1,0 +1,66 @@
+{
+	"tableName": "MCMNTSEUIL",
+	"name": "SpoMCMntSeuil",
+	"title": "Montant mini et maxi du marché par année",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"avenant",
+		"annee"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"avenant": {
+			"title": "Avenant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"annee": {
+			"title": "Année",
+			"type": "integer"
+		},
+		"mnthtmin": {
+			"title": "Montant HT minimum",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnthtmax": {
+			"title": "Montant HT maximum",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttcmin": {
+			"title": "Montant TTC minimum",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttcmax": {
+			"title": "Montant TTC maximum",
+			"type": "number",
+			"decimals": 4
+		},
+		"txtva": {
+			"title": "Taux TVA",
+			"type": "number",
+			"decimals": 2
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCMntSeuilList"
+		}
+	}
+}

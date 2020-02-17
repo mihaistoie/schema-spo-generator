@@ -1,0 +1,63 @@
+{
+	"tableName": "PBASSIETTEINFOCAL",
+	"name": "SpoAssietteInfoCalcul",
+	"title": "AssietteInfoCalcul",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"commentaire": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"position": {
+			"title": "Position",
+			"type": "integer"
+		},
+		"societe": {
+			"title": "Societe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecalcul": {
+			"title": "TypeCalcul",
+			"type": "string",
+			"maxLength": 10
+		},
+		"fromexpr": {
+			"title": "FromExpr",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"formtexte": {
+			"title": "FormTexte",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"valeur": {
+			"title": "Valeur",
+			"type": "number",
+			"decimals": 4
+		},
+		"pourcent": {
+			"title": "Pourcent",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

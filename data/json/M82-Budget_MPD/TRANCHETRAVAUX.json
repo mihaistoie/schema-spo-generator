@@ -1,0 +1,80 @@
+{
+	"tableName": "TRANCHETRAVAUX",
+	"name": "SpoTrancheTravaux",
+	"title": "TrancheTravaux",
+	"type": "object",
+	"primaryKey": [
+		"idtranche"
+	],
+	"properties": {
+		"idtranche": {
+			"title": "IdTranche",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idnaturetravaux": {
+			"title": "IdNatureTravaux",
+			"type": "string",
+			"maxLength": 32
+		},
+		"surfaceterrain": {
+			"title": "SurfaceTerrain",
+			"type": "number",
+			"decimals": 2
+		},
+		"etapeplanning": {
+			"title": "EtapePlanning",
+			"type": "string",
+			"maxLength": 32
+		},
+		"actif": {
+			"title": "Actif",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"codegf": {
+			"title": "Code programme GF",
+			"type": "string",
+			"maxLength": 50
+		},
+		"etapebud": {
+			"title": "Etape Budgétaire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idproced": {
+			"title": "idProced",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idinitial": {
+			"title": "IdInitial",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"natureTravaux": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoNatureTravaux",
+			"localFields": [
+				"code"
+			],
+			"foreignFields": [
+				"idnaturetravaux"
+			],
+			"invRel": "trancheTravauxList"
+		}
+	}
+}

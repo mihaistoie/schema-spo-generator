@@ -1,0 +1,45 @@
+{
+	"tableName": "MCINFOREVALORISATION",
+	"name": "SpoMCInfoRevalorisation",
+	"title": "MCInfoRevalorisation",
+	"type": "object",
+	"primaryKey": [
+		"idinforeval"
+	],
+	"properties": {
+		"idinforeval": {
+			"title": "IdInfoReval",
+			"type": "string",
+			"maxLength": 32
+		},
+		"m0situation": {
+			"title": "M0Situation",
+			"type": "number",
+			"decimals": 4
+		},
+		"coefficient": {
+			"title": "Coefficient",
+			"type": "number",
+			"decimals": 6
+		},
+		"modecalcul": {
+			"title": "ModeCalcul",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"mCSituMntList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoMCSituMnt",
+			"localFields": [
+				"idinforeval"
+			],
+			"foreignFields": [
+				"idinforeval"
+			],
+			"invRel": "mCInfoRevalorisation"
+		}
+	}
+}

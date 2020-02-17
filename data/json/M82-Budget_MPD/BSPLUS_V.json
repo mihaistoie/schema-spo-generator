@@ -1,0 +1,107 @@
+{
+	"tableName": "BSPLUS_V",
+	"name": "SpoPLUS_V",
+	"title": "PLUS",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"inscbud": {
+			"title": "Total logements PLUS",
+			"type": "integer"
+		},
+		"cdplusc": {
+			"title": "Code programme PLUS Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplusc": {
+			"title": "Libellé programme PLUS Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"colt1": {
+			"title": "PLUS T1 collectifs",
+			"type": "integer"
+		},
+		"colt1b": {
+			"title": "PLUS T1bis collectifs",
+			"type": "integer"
+		},
+		"colt2": {
+			"title": "PLUS T2 collectifs",
+			"type": "integer"
+		},
+		"colt3": {
+			"title": "PLUS T3 collectifs",
+			"type": "integer"
+		},
+		"colt4": {
+			"title": "PLUS T4 collectifs",
+			"type": "integer"
+		},
+		"colt5": {
+			"title": "PLUS T5 collectifs",
+			"type": "integer"
+		},
+		"colt6": {
+			"title": "PLUS T6 collectifs",
+			"type": "integer"
+		},
+		"colt7": {
+			"title": "PLUS T7 et + collectifs",
+			"type": "integer"
+		},
+		"cdplusi": {
+			"title": "Code programme PLUS Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplusi": {
+			"title": "Libellé programme PLUS Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"indt1": {
+			"title": "PLUS T1 individuels",
+			"type": "integer"
+		},
+		"indt1b": {
+			"title": "PLUS T1bis individuels",
+			"type": "integer"
+		},
+		"indt2": {
+			"title": "PLUS T2 individuels",
+			"type": "integer"
+		},
+		"indt3": {
+			"title": "PLUS T3 individuels",
+			"type": "integer"
+		},
+		"indt4": {
+			"title": "PLUS T4 individuels",
+			"type": "integer"
+		},
+		"indt5": {
+			"title": "PLUS T5 individuels",
+			"type": "integer"
+		},
+		"indt6": {
+			"title": "PLUS T6 individuels",
+			"type": "integer"
+		},
+		"indt7": {
+			"title": "PLUS T7 et + individuels",
+			"type": "integer"
+		}
+	}
+}

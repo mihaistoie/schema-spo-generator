@@ -1,0 +1,56 @@
+{
+	"tableName": "FLUXTRESOHISTO",
+	"name": "SpoFluxTresoHisto",
+	"title": "Historique flux trésorerie",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dateflux": {
+			"title": "DateFlux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idpostetreso": {
+			"title": "IdPosteTreso",
+			"type": "string",
+			"maxLength": 32
+		},
+		"isreal": {
+			"title": "IsReal",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mnt": {
+			"title": "Mnt",
+			"type": "number",
+			"decimals": 4
+		},
+		"periode": {
+			"title": "Periode",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

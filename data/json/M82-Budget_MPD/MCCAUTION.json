@@ -1,0 +1,110 @@
+{
+	"tableName": "MCCAUTION",
+	"name": "SpoMCCaution",
+	"title": "Caution du marché",
+	"type": "object",
+	"primaryKey": [
+		"idcontrat",
+		"tranche",
+		"num"
+	],
+	"properties": {
+		"idcontrat": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tranche": {
+			"title": "Tranche",
+			"type": "integer"
+		},
+		"num": {
+			"title": "N°",
+			"type": "integer"
+		},
+		"entreprise": {
+			"title": "Entreprise",
+			"type": "string",
+			"maxLength": 32
+		},
+		"contractant": {
+			"title": "Contractant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecaution": {
+			"title": "Type de caution",
+			"type": "string",
+			"maxLength": 10
+		},
+		"natcaution": {
+			"title": "Nature de caution",
+			"type": "string",
+			"maxLength": 10
+		},
+		"cautionneur": {
+			"title": "Cautionneur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"activite": {
+			"title": "Activité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mnt": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"dtcaution": {
+			"title": "Date caution",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"motif": {
+			"title": "Motif de refus",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dtfin": {
+			"title": "Date fin de validité",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtlevpart": {
+			"title": "Date de main levée partielle",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtlev": {
+			"title": "Date de main levée",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntlev": {
+			"title": "Montant de main levée partielle",
+			"type": "number",
+			"decimals": 4
+		},
+		"refus": {
+			"title": "Refusé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	},
+	"relations": {
+		"mCFiche": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCFiche",
+			"localFields": [
+				"idcontrat"
+			],
+			"foreignFields": [
+				"idcontrat"
+			],
+			"invRel": "mCCautionList"
+		}
+	}
+}

@@ -1,0 +1,92 @@
+{
+	"tableName": "DETREGLETRESO",
+	"name": "SpoDetRegleTreso",
+	"title": "DetRegleTreso",
+	"type": "object",
+	"primaryKey": [
+		"idregletreso",
+		"numordre"
+	],
+	"properties": {
+		"idregletreso": {
+			"title": "IdRegleTreso",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "NumOrdre",
+			"type": "integer"
+		},
+		"typeregle": {
+			"title": "TypeRegle",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idev": {
+			"title": "Code événement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Code poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"datelibre": {
+			"title": "DateLibre",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"coeff": {
+			"title": "Coefficient",
+			"type": "number",
+			"decimals": 4
+		},
+		"decalage": {
+			"title": "Decalage",
+			"type": "integer"
+		},
+		"perdecalage": {
+			"title": "Periode décalage",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nombreech": {
+			"title": "NombreEch",
+			"type": "integer"
+		},
+		"perech": {
+			"title": "Périodicité echéances",
+			"type": "string",
+			"maxLength": 10
+		},
+		"coeffreal": {
+			"title": "Coeff de réalisation",
+			"type": "number",
+			"decimals": 4
+		},
+		"idevend": {
+			"title": "Code événement fin",
+			"type": "string",
+			"maxLength": 32
+		},
+		"decalagefin": {
+			"title": "DecalageFin",
+			"type": "integer"
+		}
+	},
+	"relations": {
+		"regleTreso": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoRegleTreso",
+			"localFields": [
+				"idregletreso"
+			],
+			"foreignFields": [
+				"idregletreso"
+			],
+			"invRel": "detRegleTresoList"
+		}
+	}
+}

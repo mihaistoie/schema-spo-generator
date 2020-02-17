@@ -1,0 +1,155 @@
+{
+	"tableName": "FINDEMAC",
+	"name": "SpoDemandeAcompte",
+	"title": "Demande acompte",
+	"type": "object",
+	"primaryKey": [
+		"iddoss",
+		"ac"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ac": {
+			"title": "Acompte",
+			"type": "string",
+			"maxLength": 32
+		},
+		"evt": {
+			"title": "Evénement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"txac": {
+			"title": "Taux acompte",
+			"type": "number",
+			"decimals": 2
+		},
+		"avance": {
+			"title": "Taux avancement",
+			"type": "number",
+			"decimals": 2
+		},
+		"calavance": {
+			"title": "Méthode avancement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"postes": {
+			"title": "Postes travaux",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"depart": {
+			"title": "Départ délai",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delaidem": {
+			"title": "Délai demande",
+			"type": "integer"
+		},
+		"delaiver": {
+			"title": "Délai versement",
+			"type": "integer"
+		},
+		"dtprev": {
+			"title": "Date prévisionnelle demande",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntac": {
+			"title": "Montant acompte",
+			"type": "number",
+			"decimals": 4
+		},
+		"dtprever": {
+			"title": "Date prévisionnelle versement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtreal": {
+			"title": "Date demande réalisé",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mntreal": {
+			"title": "Montant réalisé",
+			"type": "number",
+			"decimals": 4
+		},
+		"doc": {
+			"title": "Document",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"delaifact": {
+			"title": "Délai facturation",
+			"type": "integer"
+		},
+		"etapeevt": {
+			"title": "Etape événement déclencheur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"etapeevtdv": {
+			"title": "Etape début calcul date de validité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"evtdv": {
+			"title": "Evénement début calcul date de validité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delaidv": {
+			"title": "Délai calcul date de validité",
+			"type": "integer"
+		},
+		"basedelaidv": {
+			"title": "BaseDelaiDV",
+			"type": "string",
+			"maxLength": 10
+		},
+		"iscalcdv": {
+			"title": "La date de validité est calculée",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"datevalidite": {
+			"title": "Date de validité",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idactiondoc": {
+			"title": "Code action document",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		}
+	},
+	"relations": {
+		"dossierFin": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoDossierFin",
+			"localFields": [
+				"iddoss"
+			],
+			"foreignFields": [
+				"iddoss"
+			],
+			"invRel": "demandeAcompteList"
+		}
+	}
+}

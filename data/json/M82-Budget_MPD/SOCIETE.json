@@ -1,0 +1,165 @@
+{
+	"tableName": "SOCIETE",
+	"name": "SpoSociete",
+	"title": "Société",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"code": {
+			"title": "Code société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"codesmo": {
+			"title": "Code SMO",
+			"type": "string",
+			"maxLength": 50
+		},
+		"typeorga": {
+			"title": "Type organisme",
+			"type": "string",
+			"maxLength": 10
+		},
+		"titrerep": {
+			"title": "Titre représentant",
+			"type": "string",
+			"maxLength": 10
+		},
+		"civrep": {
+			"title": "Civilité",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nomrep": {
+			"title": "Nom - prénom",
+			"type": "string",
+			"maxLength": 50
+		},
+		"adr": {
+			"title": "Adresse",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cpville": {
+			"title": "Code postal et ville",
+			"type": "string",
+			"maxLength": 200
+		},
+		"siret": {
+			"title": "SIRET",
+			"type": "string",
+			"maxLength": 20
+		},
+		"numic": {
+			"title": "N° intra communautaire",
+			"type": "string",
+			"maxLength": 20
+		},
+		"ape": {
+			"title": "Code APE",
+			"type": "string",
+			"maxLength": 10
+		},
+		"ecriteng": {
+			"title": "Ecriture engagement Prix de revient",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ecritlasm": {
+			"title": "Ecriture LASM",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ecritrecette": {
+			"title": "Ecriture de financement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ecritengfin": {
+			"title": "Ecriture engagement Financement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ecritinventaire": {
+			"title": "Ecriture d’inventaire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ecritlasmavant": {
+			"title": "Ecriture LASM avant création secteur",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"methodecomptaacc": {
+			"title": "MethodeComptaAcc",
+			"type": "string",
+			"maxLength": 10
+		},
+		"ecritacc": {
+			"title": "Ecritures d’accession",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ecritvarstock": {
+			"title": "Ecritures de variation de stock",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"modesaisiecodanal": {
+			"title": "Mode de Saisie du Code Analytique",
+			"type": "string",
+			"maxLength": 50
+		},
+		"logicielcomptable": {
+			"title": "Logiciel comptable",
+			"type": "string",
+			"maxLength": 50
+		},
+		"chemincomptable": {
+			"title": "Chemin comptable",
+			"type": "string",
+			"maxLength": 256
+		},
+		"optiontva": {
+			"title": "optionTva",
+			"type": "string",
+			"maxLength": 10
+		},
+		"repartvamarge": {
+			"title": "reparTvaMarge",
+			"type": "string",
+			"maxLength": 10
+		},
+		"methodetvamarge": {
+			"title": "MethodeTvaMarge",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"societeProfilList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoSocieteProfil",
+			"localFields": [
+				"soc"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "societe"
+		}
+	}
+}

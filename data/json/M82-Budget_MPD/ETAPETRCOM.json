@@ -1,0 +1,22 @@
+{
+	"tableName": "ETAPETRCOM",
+	"name": "SpoEtapeTrCom",
+	"title": "Association étapes et tranches commerciales",
+	"type": "object",
+	"primaryKey": [
+		"idetape",
+		"idtranchecomm"
+	],
+	"properties": {
+		"idetape": {
+			"title": "IdEtape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtranchecomm": {
+			"title": "IdTrancheComm",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

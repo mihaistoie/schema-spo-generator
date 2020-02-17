@@ -1,0 +1,27 @@
+{
+	"tableName": "SPOPROCPHASE",
+	"name": "SpoSPOProcPhase",
+	"title": "Etapes planning procédure",
+	"type": "object",
+	"primaryKey": [
+		"idphase",
+		"idproc"
+	],
+	"properties": {
+		"idphase": {
+			"title": "Code étape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproc": {
+			"title": "Code procédure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"isspecial": {
+			"title": "Est une étape spéciale",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

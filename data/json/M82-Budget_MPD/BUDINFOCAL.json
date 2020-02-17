@@ -1,0 +1,86 @@
+{
+	"tableName": "BUDINFOCAL",
+	"name": "SpoBudgetInfoCalcul",
+	"title": "Informations de calcul du budget",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte",
+		"idprog"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "Poste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "Programme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typcal": {
+			"title": "Type calcul",
+			"type": "string",
+			"maxLength": 10
+		},
+		"formexpr": {
+			"title": "Formule",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"formtxt": {
+			"title": "Formule - libellé",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"basecal": {
+			"title": "Base calcul",
+			"type": "number",
+			"decimals": 4
+		},
+		"ass": {
+			"title": "Assiette",
+			"type": "number",
+			"decimals": 4
+		},
+		"impact": {
+			"title": "Impact",
+			"type": "string",
+			"maxLength": 10
+		},
+		"pourcent": {
+			"title": "Pourcent",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"typedetaille": {
+			"title": "TypeDetaille",
+			"type": "string",
+			"maxLength": 10
+		}
+	},
+	"relations": {
+		"budgetPoste": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoBudgetPoste",
+			"localFields": [
+				"id",
+				"idposte"
+			],
+			"foreignFields": [
+				"id",
+				"idposte"
+			],
+			"invRel": "budgetInfoCalculList"
+		}
+	}
+}

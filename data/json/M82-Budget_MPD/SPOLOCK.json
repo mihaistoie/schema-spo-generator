@@ -1,0 +1,41 @@
+{
+	"tableName": "SPOLOCK",
+	"name": "SpoSpoLock",
+	"title": "table des locks",
+	"type": "object",
+	"primaryKey": [
+		"idlock"
+	],
+	"properties": {
+		"idlock": {
+			"title": "Code lock",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dthmodif": {
+			"title": "Date heure modif",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "Opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"clientid": {
+			"title": "Client Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"source": {
+			"title": "Source",
+			"type": "string",
+			"maxLength": 200
+		}
+	}
+}

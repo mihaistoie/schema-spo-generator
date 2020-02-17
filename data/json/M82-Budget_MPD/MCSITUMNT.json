@@ -1,0 +1,111 @@
+{
+	"tableName": "MCSITUMNT",
+	"name": "SpoMCSituMnt",
+	"title": "Situation - Montants",
+	"type": "object",
+	"primaryKey": [
+		"idmnt"
+	],
+	"properties": {
+		"idmnt": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idsitu": {
+			"title": "Code situation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numtiers": {
+			"title": "Code situation-tiers",
+			"type": "integer"
+		},
+		"avenant": {
+			"title": "Avenant",
+			"type": "integer"
+		},
+		"lot": {
+			"title": "N° lot ou phase",
+			"type": "integer"
+		},
+		"typemnt": {
+			"title": "Type montant",
+			"type": "string",
+			"maxLength": 10
+		},
+		"engageht": {
+			"title": "Engage HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"engagettc": {
+			"title": "Engage TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "Montant TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"mnttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 4
+		},
+		"cumulht": {
+			"title": "Cumul HT",
+			"type": "number",
+			"decimals": 4
+		},
+		"cumulttc": {
+			"title": "Cumul TTC",
+			"type": "number",
+			"decimals": 4
+		},
+		"taux": {
+			"title": "Taux",
+			"type": "number",
+			"decimals": 2
+		},
+		"idinforeval": {
+			"title": "IdInfoReval",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"mCSituTiers": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCSituTiers",
+			"localFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"foreignFields": [
+				"idsitu",
+				"numtiers"
+			],
+			"invRel": "mCSituMntList"
+		},
+		"mCInfoRevalorisation": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoMCInfoRevalorisation",
+			"localFields": [
+				"idinforeval"
+			],
+			"foreignFields": [
+				"idinforeval"
+			],
+			"invRel": "mCSituMntList"
+		}
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"tableName": "SMSIMGCORRESP",
+	"name": "SpoSmsImgCorresp",
+	"title": "Table de correspondance images",
+	"type": "object",
+	"primaryKey": [
+		"idop",
+		"idaction"
+	],
+	"properties": {
+		"idop": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "Id Action",
+			"type": "string",
+			"maxLength": 32
+		},
+		"code": {
+			"title": "Nom unique d’image",
+			"type": "string",
+			"maxLength": 200
+		},
+		"uploaded": {
+			"title": "Téléchargé sur serveur",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"imgdate": {
+			"title": "Date de l’image",
+			"type": "string",
+			"maxLength": 20
+		}
+	}
+}

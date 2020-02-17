@@ -1,0 +1,62 @@
+{
+	"tableName": "TYPEOUVTYPELOT",
+	"name": "SpoTypeOuvTypeLot",
+	"title": "TypeOuvTypeLot",
+	"type": "object",
+	"primaryKey": [
+		"idtypologie"
+	],
+	"properties": {
+		"idtypologie": {
+			"title": "IdTypologie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeouvrage": {
+			"title": "TypeOuvrage",
+			"type": "string",
+			"maxLength": 32
+		},
+		"estprincipal": {
+			"title": "estPrincipal",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"codetypolot": {
+			"title": "CodeTypoLot",
+			"type": "string",
+			"maxLength": 10
+		},
+		"libtypelot": {
+			"title": "LibTypeLot",
+			"type": "string",
+			"maxLength": 100
+		}
+	},
+	"relations": {
+		"typoLotList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoTypoLot",
+			"localFields": [
+				"idtypologie"
+			],
+			"foreignFields": [
+				"idtypologie"
+			],
+			"invRel": "typeOuvTypeLot"
+		},
+		"typeOuvrage": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoTypeOuvrage",
+			"localFields": [
+				"code"
+			],
+			"foreignFields": [
+				"typeouvrage"
+			],
+			"invRel": "typeOuvTypeLotList"
+		}
+	}
+}

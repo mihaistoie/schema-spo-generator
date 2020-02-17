@@ -1,0 +1,112 @@
+{
+	"tableName": "POSTETRESO",
+	"name": "SpoPosteTreso",
+	"title": "PosteTreso",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"societe": {
+			"title": "Societe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"parent": {
+			"title": "Parent",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ordre": {
+			"title": "Ordre",
+			"type": "integer"
+		},
+		"niveau": {
+			"title": "Niveau",
+			"type": "integer"
+		},
+		"position": {
+			"title": "Position",
+			"type": "string",
+			"maxLength": 8
+		},
+		"libelle": {
+			"title": "Libelle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"commentaire": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"eststandard": {
+			"title": "EstStandard",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"sens": {
+			"title": "Sens",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typeposte": {
+			"title": "TypePoste",
+			"type": "string",
+			"maxLength": 10
+		},
+		"tva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"delairembtva": {
+			"title": "Délai de remboursement de TVA",
+			"type": "integer"
+		}
+	},
+	"relations": {
+		"consoPosteTresoList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoConsoPosteTreso",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "posteTreso"
+		},
+		"posteTresoList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoPosteTreso",
+			"localFields": [
+				"parent"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "posteTreso"
+		},
+		"posteTreso": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoPosteTreso",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"parent"
+			],
+			"invRel": "posteTresoList"
+		}
+	}
+}

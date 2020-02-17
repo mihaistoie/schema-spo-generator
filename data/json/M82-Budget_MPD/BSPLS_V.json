@@ -1,0 +1,107 @@
+{
+	"tableName": "BSPLS_V",
+	"name": "SpoPLS_V",
+	"title": "PLS",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logpls": {
+			"title": "Total logements PLS",
+			"type": "integer"
+		},
+		"cdplsc": {
+			"title": "Code programme PLS Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplsc": {
+			"title": "Libellé programme PLS Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plsc1": {
+			"title": "PLS collectif T1",
+			"type": "integer"
+		},
+		"plsc1b": {
+			"title": "PLS collectif T1b",
+			"type": "integer"
+		},
+		"plsc2": {
+			"title": "PLS collectif T2",
+			"type": "integer"
+		},
+		"plsc3": {
+			"title": "PLS collectif T3",
+			"type": "integer"
+		},
+		"plsc4": {
+			"title": "PLS collectif T4",
+			"type": "integer"
+		},
+		"plsc5": {
+			"title": "PLS collectif T5",
+			"type": "integer"
+		},
+		"plsc6": {
+			"title": "PLS collectif T6",
+			"type": "integer"
+		},
+		"plsc7": {
+			"title": "PLS collectif T7",
+			"type": "integer"
+		},
+		"cdplsi": {
+			"title": "Code programme PL Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplsi": {
+			"title": "Libellé programme PLS Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plsi1": {
+			"title": "PLS individuel T1",
+			"type": "integer"
+		},
+		"plsi1b": {
+			"title": "PLS individuel T1b",
+			"type": "integer"
+		},
+		"plsi2": {
+			"title": "PLS individuel T2",
+			"type": "integer"
+		},
+		"plsi3": {
+			"title": "PLS individuel T3",
+			"type": "integer"
+		},
+		"plsi4": {
+			"title": "PLS individuel T4",
+			"type": "integer"
+		},
+		"plsi5": {
+			"title": "PLS individuel T5",
+			"type": "integer"
+		},
+		"plsi6": {
+			"title": "PLS individuel T6",
+			"type": "integer"
+		},
+		"plsi7": {
+			"title": "PLS individuel T7",
+			"type": "integer"
+		}
+	}
+}

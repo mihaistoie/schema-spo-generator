@@ -1,0 +1,57 @@
+{
+	"tableName": "BUDVARIATIONAUTO",
+	"name": "SpoBudgetVariationAutorisation",
+	"title": "Variation autorisation du budget",
+	"type": "object",
+	"primaryKey": [
+		"idvar"
+	],
+	"properties": {
+		"idvar": {
+			"title": "IdVar",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idbudget": {
+			"title": "IdBudget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"datevar": {
+			"title": "DateVar",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"heurevar": {
+			"title": "HeureVar",
+			"type": "string",
+			"maxLength": 10
+		},
+		"iduti": {
+			"title": "IdUti",
+			"type": "string",
+			"maxLength": 32
+		},
+		"commentaire": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"mntautoht": {
+			"title": "MntAutoHT",
+			"type": "number",
+			"decimals": 4
+		}
+	}
+}

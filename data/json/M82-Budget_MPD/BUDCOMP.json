@@ -1,0 +1,69 @@
+{
+	"tableName": "BUDCOMP",
+	"name": "SpoBudgetComparatif",
+	"title": "Table budget comparatif",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"idposte",
+		"idprog",
+		"budgetref",
+		"budgetcomp"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprog": {
+			"title": "IdProg",
+			"type": "string",
+			"maxLength": 32
+		},
+		"budgetref": {
+			"title": "BudgetRef",
+			"type": "string",
+			"maxLength": 32
+		},
+		"budgetcomp": {
+			"title": "BudgetComp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"comment": {
+			"title": "Comment",
+			"type": "string",
+			"maxLength": 120
+		},
+		"usercomment": {
+			"title": "UserComment",
+			"type": "string",
+			"maxLength": 50
+		},
+		"datecomment": {
+			"title": "DateComment",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	},
+	"relations": {
+		"budget": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoBudget",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "budgetComparatifList"
+		}
+	}
+}

@@ -1,0 +1,221 @@
+{
+	"tableName": "PROGSYNTH",
+	"name": "SpoProgSynthese",
+	"title": "Surface et Lot du Programme",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"shob": {
+			"title": "SHOB",
+			"type": "number",
+			"decimals": 2
+		},
+		"sdp": {
+			"title": "SDP",
+			"type": "number",
+			"decimals": 2
+		},
+		"shon": {
+			"title": "SHON",
+			"type": "number",
+			"decimals": 2
+		},
+		"shab": {
+			"title": "SHAB",
+			"type": "number",
+			"decimals": 2
+		},
+		"sa": {
+			"title": "Surface annexe",
+			"type": "number",
+			"decimals": 2
+		},
+		"su": {
+			"title": "Surface utile",
+			"type": "number",
+			"decimals": 2
+		},
+		"nblotp": {
+			"title": "Nombre lots principaux",
+			"type": "integer"
+		},
+		"nblots": {
+			"title": "Nombre lots secondaires",
+			"type": "integer"
+		},
+		"nblogt": {
+			"title": "Nombre logements",
+			"type": "integer"
+		},
+		"nblogthp": {
+			"title": "Nombre logements HP",
+			"type": "integer"
+		},
+		"nblogtreserv": {
+			"title": "Total réservataire",
+			"type": "integer"
+		},
+		"nblogtav": {
+			"title": "Nombre logements avant",
+			"type": "integer"
+		},
+		"nblogd": {
+			"title": "Nombre de logements démolis",
+			"type": "integer"
+		},
+		"scorr": {
+			"title": "Surface corrigée",
+			"type": "number",
+			"decimals": 2
+		},
+		"scorrav": {
+			"title": "Surface corrigée avant",
+			"type": "number",
+			"decimals": 2
+		},
+		"suav": {
+			"title": "Surface utile avant",
+			"type": "number",
+			"decimals": 2
+		},
+		"shabav": {
+			"title": "SHAB avant",
+			"type": "number",
+			"decimals": 2
+		},
+		"equivlogt": {
+			"title": "Equivalent logements",
+			"type": "integer"
+		},
+		"nblits": {
+			"title": "Nb de lits",
+			"type": "integer"
+		},
+		"scompl": {
+			"title": "Surface complémentaire",
+			"type": "number",
+			"decimals": 2
+		},
+		"slc": {
+			"title": "Surface des Locaux Communs",
+			"type": "number",
+			"decimals": 2
+		},
+		"shabt": {
+			"title": "SHAB totale",
+			"type": "number",
+			"decimals": 2
+		},
+		"loyerret": {
+			"title": "Loyer retenu",
+			"type": "number",
+			"decimals": 2
+		},
+		"sdo": {
+			"title": "Surface dans oeuvre",
+			"type": "number",
+			"decimals": 2
+		},
+		"loyerretav": {
+			"title": "Loyer retenu avant",
+			"type": "number",
+			"decimals": 2
+		},
+		"sdoav": {
+			"title": "Surface dans oeuvre avant",
+			"type": "number",
+			"decimals": 2
+		},
+		"surftotvendu": {
+			"title": "SurfTotVendu",
+			"type": "number",
+			"decimals": 2
+		},
+		"caht": {
+			"title": "CAHT",
+			"type": "number",
+			"decimals": 2
+		},
+		"cattc": {
+			"title": "CATTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"prht": {
+			"title": "PRHT",
+			"type": "number",
+			"decimals": 2
+		},
+		"prttc": {
+			"title": "PRTTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"marge": {
+			"title": "Marge",
+			"type": "number",
+			"decimals": 2
+		},
+		"txmarge": {
+			"title": "TxMarge",
+			"type": "number",
+			"decimals": 2
+		},
+		"sdpav": {
+			"title": "Surface de plancher avant",
+			"type": "number",
+			"decimals": 2
+		},
+		"catvamargeht": {
+			"title": "caTvaMargeHT",
+			"type": "number",
+			"decimals": 2
+		},
+		"catvamargettc": {
+			"title": "caTvaMargeTTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"deptvamarge": {
+			"title": "depTvaMarge",
+			"type": "number",
+			"decimals": 2
+		},
+		"mnttvamarge": {
+			"title": "mntTvaMarge",
+			"type": "number",
+			"decimals": 2
+		},
+		"cadationht": {
+			"title": "CADationHT",
+			"type": "number",
+			"decimals": 2
+		},
+		"cadationttc": {
+			"title": "CADationTTC",
+			"type": "number",
+			"decimals": 2
+		}
+	},
+	"relations": {
+		"programme": {
+			"type": "belongsTo",
+			"aggregationKind": "none",
+			"model": "SpoProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "progSynthese"
+		}
+	}
+}

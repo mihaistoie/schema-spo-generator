@@ -1,0 +1,97 @@
+{
+	"tableName": "FINANCEMENT",
+	"name": "SpoFinancement",
+	"title": "Financement",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typfin": {
+			"title": "Type financement",
+			"type": "string",
+			"maxLength": 10
+		},
+		"lib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cmnt": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"financeur": {
+			"title": "Financeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"procedop": {
+			"title": "Procédure opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"proced": {
+			"title": "Procédure",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"pieceDossierList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoPieceDossier",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "financement"
+		},
+		"regleAcompteList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoRegleAcompte",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "financement"
+		},
+		"finPosteList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoFinPoste",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "financement"
+		},
+		"dossierFinList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoDossierFin",
+			"localFields": [
+				"idfin"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "financement"
+		}
+	}
+}

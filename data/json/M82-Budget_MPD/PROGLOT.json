@@ -1,0 +1,48 @@
+{
+	"tableName": "PROGLOT",
+	"name": "SpoProgLot",
+	"title": "Typologie logement",
+	"type": "object",
+	"primaryKey": [
+		"id",
+		"typlot"
+	],
+	"properties": {
+		"id": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typlot": {
+			"title": "Type lot",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nblogt": {
+			"title": "Nombre de logement",
+			"type": "integer"
+		},
+		"nblogthp": {
+			"title": "Nombre de logement handicapé",
+			"type": "integer"
+		},
+		"nblits": {
+			"title": "Nombre de lits",
+			"type": "integer"
+		}
+	},
+	"relations": {
+		"programme": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoProgramme",
+			"localFields": [
+				"id"
+			],
+			"foreignFields": [
+				"id"
+			],
+			"invRel": "progLotList"
+		}
+	}
+}

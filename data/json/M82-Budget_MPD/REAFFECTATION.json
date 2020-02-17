@@ -1,0 +1,31 @@
+{
+	"tableName": "REAFFECTATION",
+	"name": "SpoReaffectation",
+	"title": "Reaffectation",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "ID",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"username": {
+			"title": "UserName",
+			"type": "string",
+			"maxLength": 50
+		},
+		"statut": {
+			"title": "Statut",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}
