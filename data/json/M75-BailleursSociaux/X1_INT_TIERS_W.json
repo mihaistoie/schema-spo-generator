@@ -1,0 +1,8 @@
+{
+	"tableName": "X1_INT_TIERS_W",
+	"name": "SpoX1TiersComplementG00",
+	"title": "X1- Tiers - Complément G00",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

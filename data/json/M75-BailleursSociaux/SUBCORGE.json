@@ -1,0 +1,77 @@
+{
+	"tableName": "SUBCORGE",
+	"name": "SpoRenseignementsGenerauxCommission",
+	"title": "Renseignements généraux Commission",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idcom"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcom": {
+			"title": "Code commission",
+			"type": "string",
+			"maxLength": 32
+		},
+		"orgadecid": {
+			"title": "Organe de décision",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcom": {
+			"title": "Date commission",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"heurecom": {
+			"title": "Heure",
+			"type": "string",
+			"maxLength": 5
+		},
+		"lieucom": {
+			"title": "Lieu",
+			"type": "string",
+			"maxLength": 50
+		},
+		"sallecom": {
+			"title": "Salle",
+			"type": "string",
+			"maxLength": 50
+		},
+		"adrcom": {
+			"title": "Adresse",
+			"type": "string",
+			"maxLength": 250
+		},
+		"mtenv": {
+			"title": "Montant de l’enveloppe",
+			"type": "number",
+			"decimals": 2
+		},
+		"statut": {
+			"title": "Statut de la commission",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecom": {
+			"title": "Type de commission",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtlimenrol": {
+			"title": "Date limite d’enrôlement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"exebudref": {
+			"title": "Exercice budgétaire de référence",
+			"type": "string",
+			"maxLength": 4
+		}
+	}
+}

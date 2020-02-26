@@ -1,0 +1,76 @@
+{
+	"tableName": "BSLOCCOM",
+	"name": "SpoLocauxCommerciaux",
+	"title": "Locaux Commerciaux",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lclib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 120
+		},
+		"lccp": {
+			"title": "Code programme Locaux Commerciaux",
+			"type": "string",
+			"maxLength": 80
+		},
+		"lclp": {
+			"title": "Libellé programme Locaux Commerciaux",
+			"type": "string",
+			"maxLength": 120
+		},
+		"lcsurfutil": {
+			"title": "Surface utile en m²",
+			"type": "number",
+			"decimals": 2
+		},
+		"lcnbc": {
+			"title": "Nombre de cellules commercialisées",
+			"type": "integer"
+		},
+		"lcnivliv": {
+			"title": "Niveau de livraison",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lcstat": {
+			"title": "Stationnement",
+			"type": "string",
+			"maxLength": 120
+		},
+		"lcannexe": {
+			"title": "Annexe",
+			"type": "string",
+			"maxLength": 120
+		},
+		"lcdest": {
+			"title": "Destination",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lcshon": {
+			"title": " SHON réglementaire",
+			"type": "number",
+			"decimals": 2
+		},
+		"lcshob": {
+			"title": " SHOB",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

@@ -1,0 +1,158 @@
+{
+	"tableName": "X1_OPE_W",
+	"name": "SpoX1Operations",
+	"title": "X1- Opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idope",
+		"idssope"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idope": {
+			"title": "Opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbope": {
+			"title": "Opération - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idssope": {
+			"title": "Sous-opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbssope": {
+			"title": "Sous-opération - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"objope": {
+			"title": "Objet de l_opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence de l_opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Groupe - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbprof": {
+			"title": "Groupe - Libellé",
+			"type": "string",
+			"maxLength": 100
+		},
+		"ancreat": {
+			"title": "Année de création de l_opération",
+			"type": "string",
+			"maxLength": 4
+		},
+		"anreal": {
+			"title": "Année de réalisation de l_opération/sous-Opération",
+			"type": "string",
+			"maxLength": 4
+		},
+		"nbexercice": {
+			"title": "Nombre d_exercice(s) de l_opération/sous-Opération",
+			"type": "number",
+			"decimals": 0
+		},
+		"idtheme": {
+			"title": "Thème - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbtheme": {
+			"title": "Thème - Libellé",
+			"type": "string",
+			"maxLength": 250
+		},
+		"iddecomp": {
+			"title": "Niveau de décomposition - Code",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"lbdecomp": {
+			"title": "Niveau de décomposition - Libellé",
+			"type": "string",
+			"maxLength": 14
+		},
+		"iddemandeur": {
+			"title": "Demandeur - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdemandeur": {
+			"title": "Demandeur - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dtcreat": {
+			"title": "date de création de la sous-opération",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mtprevttc": {
+			"title": "Montant prévu des dépenses TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtttcope": {
+			"title": "Montant de l_opération TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtttcsope": {
+			"title": "Montant de la sous-op. TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"idtypedate": {
+			"title": "Statut de la sous-op. - Code",
+			"type": "string",
+			"maxLength": 10
+		},
+		"lbtypedate": {
+			"title": "Statut de la sous-op. - Libellé",
+			"type": "string",
+			"maxLength": 50
+		},
+		"dtdate": {
+			"title": "Statut de la sous-op. - Date",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdate_th": {
+			"title": "Statut de la sous-op. - Date théorique",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"sousope": {
+			"title": "Décomposé en sous-op. (O/N) - Libellé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"opefin": {
+			"title": "Opération financière (O/N) - Libellé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"sopefin": {
+			"title": "Sous opération financière (O/N) - Libellé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

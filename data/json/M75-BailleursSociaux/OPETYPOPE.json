@@ -1,0 +1,51 @@
+{
+	"tableName": "OPETYPOPE",
+	"name": "SpoTypeOperation",
+	"title": "Type d’opération",
+	"type": "object",
+	"primaryKey": [
+		"natope"
+	],
+	"properties": {
+		"natope": {
+			"title": "Code type opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbtypope": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 100
+		},
+		"actif": {
+			"title": "Actif",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"uniq": {
+			"title": "Unique sur opération",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproced": {
+			"title": "Code procedure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idclas": {
+			"title": "Code classeur",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

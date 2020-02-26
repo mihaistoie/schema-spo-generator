@@ -1,0 +1,131 @@
+{
+	"tableName": "MGLSTTACHEGANTT_AVIS_V",
+	"name": "SpoMGLSTTACHEGANTT_DOSSIER_V",
+	"title": "Liste des taches gantt d’un dossier",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idetape",
+		"idaction",
+		"idprojet",
+		"idtache",
+		"idtachemere"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "Code étape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "Code action",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprojet": {
+			"title": "Code projet",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtache": {
+			"title": "Code tâche",
+			"type": "string",
+			"maxLength": 64
+		},
+		"numordre": {
+			"title": "Ordre",
+			"type": "integer"
+		},
+		"lbtache": {
+			"title": "Libellé tâche",
+			"type": "string",
+			"maxLength": 200
+		},
+		"typetache": {
+			"title": "Type de tâche",
+			"type": "string",
+			"maxLength": 32
+		},
+		"datprevdeb": {
+			"title": "Date prévisionnelle de début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datprevfin": {
+			"title": "Date prévisionnelle de fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dureeprev": {
+			"title": "Durée prévisionnelle",
+			"type": "integer"
+		},
+		"datreeldeb": {
+			"title": "Date réelle de début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datreelfin": {
+			"title": "Date réelle de fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dureereel": {
+			"title": "Durée réelle",
+			"type": "integer"
+		},
+		"calendrier": {
+			"title": "Calendrier",
+			"type": "integer"
+		},
+		"progression": {
+			"title": "Progression",
+			"type": "integer"
+		},
+		"niveau": {
+			"title": "Niveau",
+			"type": "integer"
+		},
+		"ressource": {
+			"title": "Ressource",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtacheprec": {
+			"title": "Code tâche precedente",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecontrainte": {
+			"title": "Type de contrainte",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delaicontrainte": {
+			"title": "Delai de la contrainte",
+			"type": "integer"
+		},
+		"commentaires": {
+			"title": "Commentaires",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"idtachemere": {
+			"title": "Code tâche mère",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

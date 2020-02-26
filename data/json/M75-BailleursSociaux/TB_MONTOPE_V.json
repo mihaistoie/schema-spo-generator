@@ -1,0 +1,54 @@
+{
+	"tableName": "TB_MONTOPE_V",
+	"name": "SpoTB_MONTOPE_V",
+	"title": "TB_MONTOPE_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"montope_genre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"montope_nomprenom": {
+			"title": "Nom Prénom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"montope_titre": {
+			"title": "Titre",
+			"type": "string",
+			"maxLength": 255
+		},
+		"montope_reference": {
+			"title": "Reference",
+			"type": "string",
+			"maxLength": 200
+		},
+		"montope_tel": {
+			"title": "Téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"montope_poste": {
+			"title": "Poste",
+			"type": "string",
+			"maxLength": 25
+		},
+		"montope_fax": {
+			"title": "Fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"montope_email": {
+			"title": "Email",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

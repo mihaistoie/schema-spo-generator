@@ -1,0 +1,43 @@
+{
+	"tableName": "OPEDATES",
+	"name": "SpoDatesPlanification",
+	"title": "Dates de planification",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"iddate"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddate": {
+			"title": "Identifiant de la date",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtdebut": {
+			"title": "Date de début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date de fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtmodif": {
+			"title": "Date de modification",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

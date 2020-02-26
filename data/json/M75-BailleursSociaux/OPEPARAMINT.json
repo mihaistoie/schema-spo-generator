@@ -1,0 +1,37 @@
+{
+	"tableName": "OPEPARAMINT",
+	"name": "SpoParametrageIntervenants",
+	"title": "Paramètrage des intervenants",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idtypope"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtypope": {
+			"title": "Type d’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idacteur1": {
+			"title": "Intervenant 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idacteur2": {
+			"title": "Intervenant 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idacteur3": {
+			"title": "Intervenant 3",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"tableName": "TB_CONDOPE_V",
+	"name": "SpoTB_CONDOPE_V",
+	"title": "TB_CONDOPE_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"condope_genre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"condope_nomprenom": {
+			"title": "Nom Prénom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"condope_titre": {
+			"title": "Titre",
+			"type": "string",
+			"maxLength": 255
+		},
+		"condope_reference": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 200
+		},
+		"condope_tel": {
+			"title": "Téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"condope_poste": {
+			"title": "Poste",
+			"type": "string",
+			"maxLength": 25
+		},
+		"condope_fax": {
+			"title": "Fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"condope_email": {
+			"title": "Email",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"tableName": "OPEBENEF_W",
+	"name": "SpoListeOperationBeneficaireAssocie",
+	"title": "Liste des opérations avec le bénéficiaire associé",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

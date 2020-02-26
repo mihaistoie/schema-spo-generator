@@ -1,0 +1,54 @@
+{
+	"tableName": "TB_BC_V",
+	"name": "SpoTB_BC_V",
+	"title": "TB_BC_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"bc_lib": {
+			"title": "Bureau de Contrôle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"bc_genre": {
+			"title": "Genre du bureau de contrôle",
+			"type": "string",
+			"maxLength": 80
+		},
+		"bc_represnom": {
+			"title": "Nom du représentant du bureau de contrôle",
+			"type": "string",
+			"maxLength": 50
+		},
+		"bc_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"bc_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"bc_represprenom": {
+			"title": "Prénom du représentant du bureau de contrôle",
+			"type": "string",
+			"maxLength": 30
+		},
+		"bc_mnt": {
+			"title": "Montant du bureau de contrôle",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

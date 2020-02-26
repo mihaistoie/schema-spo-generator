@@ -1,0 +1,102 @@
+{
+	"tableName": "GFMOUVEMENT",
+	"name": "SpoMouvementsGestionFinanciere",
+	"title": "Mouvements de la gestion financière",
+	"type": "object",
+	"primaryKey": [
+		"uidmgdis"
+	],
+	"properties": {
+		"uidmgdis": {
+			"title": "Idetifiant unique MGDIS",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere1s": {
+			"title": "Code critère 1 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere2s": {
+			"title": "Code critère 2 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere3s": {
+			"title": "Code critère 3 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere4s": {
+			"title": "Code critère 4 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere5s": {
+			"title": "Code critère 5 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere6s": {
+			"title": "Code critère 6 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere7s": {
+			"title": "Code critère 7 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere8s": {
+			"title": "Code critère 8 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere9s": {
+			"title": "Code critère 9 string",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere1n": {
+			"title": "Code critère 1 entier",
+			"type": "integer"
+		},
+		"critere2n": {
+			"title": "Code critère 2 entier",
+			"type": "integer"
+		},
+		"critere3n": {
+			"title": "Code critère 3 entier",
+			"type": "integer"
+		},
+		"critere4n": {
+			"title": "Code critère 4 entier",
+			"type": "integer"
+		},
+		"valide": {
+			"title": "Mouvement validé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"datecreation": {
+			"title": "Date de la création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datesupp": {
+			"title": "Date de la suppression",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

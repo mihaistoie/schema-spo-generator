@@ -1,0 +1,34 @@
+{
+	"tableName": "TB_LOT_V",
+	"name": "SpoTB_LOT_V",
+	"title": "TB_LOT_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"lotiddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lotidacteur": {
+			"title": "Code Acteur",
+			"type": "string",
+			"maxLength": 8
+		},
+		"nummar": {
+			"title": "Numéro Marché",
+			"type": "string",
+			"maxLength": 20
+		},
+		"libmar": {
+			"title": "Marché",
+			"type": "string",
+			"maxLength": 50
+		},
+		"mntmar": {
+			"title": "Montant Marché",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

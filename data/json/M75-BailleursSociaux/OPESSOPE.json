@@ -1,0 +1,102 @@
+{
+	"tableName": "OPESSOPE",
+	"name": "SpoVueRemplacementAncienneOPESSOPE",
+	"title": "Vue de remplacement de l’ancienne table OPESSOPE",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idssope"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idssope": {
+			"title": "Code sous opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbope": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"mtprevht": {
+			"title": "Montant prévisionnel HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprevttc": {
+			"title": "Montant prévisionnel TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"suivap": {
+			"title": "Suivi en A.P.",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"apuniq": {
+			"title": "A.P. unique",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtprevdeb": {
+			"title": "Date prévisionnelle de début des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtprevfin": {
+			"title": "Date prévisionnelle de fin des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"ancreat": {
+			"title": "Année de création",
+			"type": "string",
+			"maxLength": 4
+		},
+		"dtcreat": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"anreal": {
+			"title": "Année de réalisation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"nbexercice": {
+			"title": "Nombre exercice",
+			"type": "integer"
+		},
+		"tauxtva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtdeb": {
+			"title": "Date réelle de début des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date réelle de fin des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"iddoss_anc": {
+			"title": "AncienCodeDossier",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"tableName": "MGFUSIONTIERS_V",
+	"name": "SpoMGFUSIONTIERS_V",
+	"title": "Vue pour la récupération des tiers à fusionner",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"foncfin": {
+			"title": "Tiers à fonction financière",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"cod_coll": {
+			"title": "Code collectivité",
+			"type": "string",
+			"maxLength": 5
+		},
+		"idcompta": {
+			"title": "Référence compatble",
+			"type": "string",
+			"maxLength": 20
+		}
+	}
+}

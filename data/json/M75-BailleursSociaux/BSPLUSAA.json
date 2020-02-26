@@ -1,0 +1,110 @@
+{
+	"tableName": "BSPLUSAA",
+	"name": "SpoPLUSAA",
+	"title": "PLUSAA",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logplusaa": {
+			"title": "Total logements PLUS AA",
+			"type": "integer"
+		},
+		"cdplusaac": {
+			"title": "Code programme PLUS AA Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplusaac": {
+			"title": "Libellé programme PLUS AA Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plusaac1": {
+			"title": "PLUS AA collectif T1",
+			"type": "integer"
+		},
+		"plusaac1b": {
+			"title": "PLUS AA collectif T1b",
+			"type": "integer"
+		},
+		"plusaac2": {
+			"title": "PLUS AA collectif T2",
+			"type": "integer"
+		},
+		"plusaac3": {
+			"title": "PLUS AA collectif T3",
+			"type": "integer"
+		},
+		"plusaac4": {
+			"title": "PLUS AA collectif T4",
+			"type": "integer"
+		},
+		"plusaac5": {
+			"title": "PLUS AA collectif T5",
+			"type": "integer"
+		},
+		"plusaac6": {
+			"title": "PLUS AA collectif T6",
+			"type": "integer"
+		},
+		"plusaac7": {
+			"title": "PLUS AA collectif T7",
+			"type": "integer"
+		},
+		"cdplusaai": {
+			"title": "Code programme PLUS AA Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplusaai": {
+			"title": "Libellé programme PLUS AA Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plusaai1": {
+			"title": "PLUS AA individuel T1",
+			"type": "integer"
+		},
+		"plusaai1b": {
+			"title": "PLUS AA individuel T1b",
+			"type": "integer"
+		},
+		"plusaai2": {
+			"title": "PLUS AA individuel T2",
+			"type": "integer"
+		},
+		"plusaai3": {
+			"title": "PLUS AA individuel T3",
+			"type": "integer"
+		},
+		"plusaai4": {
+			"title": "PLUS AA individuel T4",
+			"type": "integer"
+		},
+		"plusaai5": {
+			"title": "PLUS AA individuel T5",
+			"type": "integer"
+		},
+		"plusaai6": {
+			"title": "PLUS AA individuel T6",
+			"type": "integer"
+		},
+		"plusaai7": {
+			"title": "PLUS AA individuel T7",
+			"type": "integer"
+		}
+	}
+}

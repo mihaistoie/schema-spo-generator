@@ -1,0 +1,54 @@
+{
+	"tableName": "TB_MOE_V",
+	"name": "SpoTB_MOE_V",
+	"title": "TB_MOE_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"moe_lib": {
+			"title": "Maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 200
+		},
+		"moe_genre": {
+			"title": "Genre du maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"moe_represnom": {
+			"title": "Nom du representant du maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 50
+		},
+		"moe_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"moe_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"moe_represprenom": {
+			"title": "Prénom du representant du maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 30
+		},
+		"moe_mnt": {
+			"title": "Montant du maitre d’oeuvre",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

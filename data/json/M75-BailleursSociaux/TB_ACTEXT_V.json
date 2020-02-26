@@ -1,0 +1,284 @@
+{
+	"tableName": "TB_ACTEXT_V",
+	"name": "SpoTB_ACTEXT_V",
+	"title": "TB_ACTEXT_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"aeiddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"aeiddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"maire_genre": {
+			"title": "Genre du maire",
+			"type": "string",
+			"maxLength": 80
+		},
+		"maire_nom": {
+			"title": "Nom du maire",
+			"type": "string",
+			"maxLength": 81
+		},
+		"moe_lib": {
+			"title": "Maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 200
+		},
+		"moe_genre": {
+			"title": "Genre du maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"moe_represnom": {
+			"title": "Nom du representant du maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 50
+		},
+		"moe_represprenom": {
+			"title": "Prénom du representant du maitre d’oeuvre",
+			"type": "string",
+			"maxLength": 30
+		},
+		"moe_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"moe_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"moe_mnt": {
+			"title": "Montant du maitre d’oeuvre",
+			"type": "number",
+			"decimals": 2
+		},
+		"moevrd_lib": {
+			"title": "Maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 200
+		},
+		"moevrd_genre": {
+			"title": "Genre du maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 80
+		},
+		"moevrd_represnom": {
+			"title": "Nom du representant du maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 50
+		},
+		"moevrd_represprenom": {
+			"title": "Prénom du representant du maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 30
+		},
+		"moevrd_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"moevrd_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"geo_lib": {
+			"title": "Géomètre",
+			"type": "string",
+			"maxLength": 200
+		},
+		"geo_genre": {
+			"title": "Genre du géomètre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"geo_represnom": {
+			"title": "Nom du représentant du géomètre",
+			"type": "string",
+			"maxLength": 50
+		},
+		"geo_represprenom": {
+			"title": "Prénom du représentant du géomètre",
+			"type": "string",
+			"maxLength": 30
+		},
+		"geo_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"geo_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"sps_lib": {
+			"title": "Coordonnateur SPS",
+			"type": "string",
+			"maxLength": 200
+		},
+		"sps_genre": {
+			"title": "Genre du coordonnateur SPS",
+			"type": "string",
+			"maxLength": 80
+		},
+		"sps_represnom": {
+			"title": "Nom du repésentant du coordonnateur SPS",
+			"type": "string",
+			"maxLength": 50
+		},
+		"sps_represprenom": {
+			"title": "Prénom du repésentant du coordonnateur SPS",
+			"type": "string",
+			"maxLength": 30
+		},
+		"sps_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"sps_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"opc_lib": {
+			"title": "Coordonnateur OPC",
+			"type": "string",
+			"maxLength": 200
+		},
+		"opc_genre": {
+			"title": "Genre du coordonnateur OPC",
+			"type": "string",
+			"maxLength": 80
+		},
+		"opc_represnom": {
+			"title": "Nom du repésentant du coordonnateur OPC",
+			"type": "string",
+			"maxLength": 50
+		},
+		"opc_represprenom": {
+			"title": "Prénom du repésentant du coordonnateur OPC",
+			"type": "string",
+			"maxLength": 30
+		},
+		"opc_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"opc_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"bc_lib": {
+			"title": "Bureau de Contrôle",
+			"type": "string",
+			"maxLength": 200
+		},
+		"bc_genre": {
+			"title": "Genre du bureau de contrôle",
+			"type": "string",
+			"maxLength": 80
+		},
+		"bc_represnom": {
+			"title": "Nom du représentant du bureau de contrôle",
+			"type": "string",
+			"maxLength": 50
+		},
+		"bc_represprenom": {
+			"title": "Prénom du représentant du bureau de contrôle",
+			"type": "string",
+			"maxLength": 30
+		},
+		"bc_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"bc_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"bc_mnt": {
+			"title": "Montant du bureau de contrôle",
+			"type": "number",
+			"decimals": 2
+		},
+		"etsol_lib": {
+			"title": "Etude de sols",
+			"type": "string",
+			"maxLength": 200
+		},
+		"etsol_genre": {
+			"title": "Genre de l’étude de sols",
+			"type": "string",
+			"maxLength": 80
+		},
+		"etsol_represnom": {
+			"title": "Nom représentant de l’étude de sols",
+			"type": "string",
+			"maxLength": 50
+		},
+		"etsol_represprenom": {
+			"title": "Prénom représentant de l’étude de sols",
+			"type": "string",
+			"maxLength": 30
+		},
+		"etsol_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"etsol_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"etsol_mnt": {
+			"title": "montant de l’étude de sols",
+			"type": "number",
+			"decimals": 2
+		},
+		"pol_lib": {
+			"title": "Etude pollution",
+			"type": "string",
+			"maxLength": 200
+		},
+		"pol_genre": {
+			"title": "Genre du représentant de l’etude pollution",
+			"type": "string",
+			"maxLength": 80
+		},
+		"pol_represnom": {
+			"title": "Nom du représentant de l’etude pollution",
+			"type": "string",
+			"maxLength": 50
+		},
+		"pol_represprenom": {
+			"title": "Prénom du représentant de l’etude pollution",
+			"type": "string",
+			"maxLength": 30
+		},
+		"pol_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"pol_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		}
+	}
+}

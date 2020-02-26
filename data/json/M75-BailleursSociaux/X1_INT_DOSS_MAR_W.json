@@ -1,0 +1,46 @@
+{
+	"tableName": "X1_INT_DOSS_MAR_W",
+	"name": "SpoX1DossiersComplementMarche",
+	"title": "X1- Dossiers Complément Marché GF",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idmar"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Dossier Subvention - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmar": {
+			"title": "Marché - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"collcod": {
+			"title": "Code collectivité CORIOLIS",
+			"type": "string",
+			"maxLength": 3
+		},
+		"objecodnat": {
+			"title": "Code nature (Dépense, Recette) CORIOLIS",
+			"type": "string",
+			"maxLength": 1
+		},
+		"marcann": {
+			"title": "Année marché CORIOLIS",
+			"type": "integer"
+		},
+		"marcnum": {
+			"title": "Numéro marché CORIOLIS",
+			"type": "integer"
+		}
+	}
+}

@@ -1,0 +1,56 @@
+{
+	"tableName": "DOMTIERSFI",
+	"name": "SpoTiersFinancier",
+	"title": "Tiers financier",
+	"type": "object",
+	"primaryKey": [
+		"idtiers"
+	],
+	"properties": {
+		"idtiers": {
+			"title": "Code  tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"foncfin": {
+			"title": "Tiers à fonction financière",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"cod_coll": {
+			"title": "Code collectivité",
+			"type": "string",
+			"maxLength": 5
+		},
+		"idcompta": {
+			"title": "Référence comptable",
+			"type": "string",
+			"maxLength": 20
+		},
+		"dtattrib": {
+			"title": "Date d’atribution",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"qualite": {
+			"title": "Qualité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idactiv": {
+			"title": "Type d’activité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typefin": {
+			"title": "Type financier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typevalid": {
+			"title": "Statut",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

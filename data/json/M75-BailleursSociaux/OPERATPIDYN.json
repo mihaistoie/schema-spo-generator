@@ -1,0 +1,21 @@
+{
+	"tableName": "OPERATPIDYN",
+	"name": "SpoAssociationProcedureTheme",
+	"title": "Association à une Procédure d’instruction d’un thème de rattachement",
+	"type": "object",
+	"primaryKey": [
+		"idproced",
+		"idtheme"
+	],
+	"properties": {
+		"idproced": {
+			"title": "Code de la procédure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtheme": {
+			"title": "Code du thème de rattachement",
+			"type": "string"
+		}
+	}
+}

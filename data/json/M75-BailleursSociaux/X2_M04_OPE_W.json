@@ -1,0 +1,371 @@
+{
+	"tableName": "X2_M04_OPE_W",
+	"name": "SpoOperationsMGDIS",
+	"title": "Opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idope"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idope": {
+			"title": "Opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbope": {
+			"title": "Opération - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"objope": {
+			"title": "Objet de l’opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idprof": {
+			"title": "Groupe - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbprof": {
+			"title": "Groupe - Libellé",
+			"type": "string",
+			"maxLength": 100
+		},
+		"idopemere": {
+			"title": "Opération mère - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbopemere": {
+			"title": "Opération mère - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idbenef": {
+			"title": "Bénéficiaire - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbbenef": {
+			"title": "Bénéficiaire - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idnatope": {
+			"title": "Nature de l’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbnatope": {
+			"title": "Nature de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 150
+		},
+		"idtypope": {
+			"title": "Type d’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbtypope": {
+			"title": "Type d’opération - Libellé",
+			"type": "string",
+			"maxLength": 150
+		},
+		"opefin": {
+			"title": "Opération financière",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"execreat": {
+			"title": "Année de création",
+			"type": "string",
+			"maxLength": 4
+		},
+		"exereal": {
+			"title": "Année de réalisation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"nbexercice": {
+			"title": "Nombre d’exercices",
+			"type": "number",
+			"decimals": 0
+		},
+		"dtenqpub": {
+			"title": "Date d’enquête publique",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtautopref": {
+			"title": "Date d’autorisation préfectorale",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdebprev": {
+			"title": "Date de début prévue",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfinprev": {
+			"title": "Date de fin prévue",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdebtrv": {
+			"title": "Date réelle de début des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfintrv": {
+			"title": "Date réelle de fin des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mtprojht": {
+			"title": "Montant projet HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxtvaproj": {
+			"title": "Taux de TVA projet",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprojttc": {
+			"title": "Montant projet TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtdepht": {
+			"title": "Montant des dépenses HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxtvadep": {
+			"title": "Taux de TVA des dépenses",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtdepttc": {
+			"title": "Montant des dépenses TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"idetatav": {
+			"title": "Etat d’avancement - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbetatav": {
+			"title": "Etat d’avancement - Libellé",
+			"type": "string",
+			"maxLength": 150
+		},
+		"dtetatav": {
+			"title": "Date de mise à jour de l’etat d’avancement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idutiletatav": {
+			"title": "Utilisateur ayant mis à jour l’etat d’avancement - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbutiletatav": {
+			"title": "Utilisateur ayant mis à jour l’etat d’avancement - Libellé",
+			"type": "string",
+			"maxLength": 40
+		},
+		"dtcreat": {
+			"title": "Date de création de l’opération",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdeb": {
+			"title": "Date de début d’instruction de l’opération",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date de clôture de l’opération",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idetados": {
+			"title": "Etat de l’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbetados": {
+			"title": "Etat de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 150
+		},
+		"iddirect": {
+			"title": "Direction du gestionnaire de l’opération - Code",
+			"type": "string",
+			"maxLength": 9
+		},
+		"lbdirect": {
+			"title": "Direction du gestionnaire de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 100
+		},
+		"refdirect": {
+			"title": "Direction du gestionnaire de l’opération - Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idserv": {
+			"title": "Service du gestionnaire de l’opération - Code",
+			"type": "string",
+			"maxLength": 9
+		},
+		"lbserv": {
+			"title": "Service du gestionnaire de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 80
+		},
+		"refserv": {
+			"title": "Service du gestionnaire de l’opération - Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Gestionnaire de l’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbuti": {
+			"title": "Gestionnaire de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 40
+		},
+		"idproced": {
+			"title": "Procédure de l’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbproced": {
+			"title": "Procédure de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idprofpi": {
+			"title": "Profil de la  Procédure de l’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbprofpi": {
+			"title": "Profil de la  Procédure de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 100
+		},
+		"notedesc": {
+			"title": "Note de l’opération",
+			"type": "string",
+			"maxLength": 600
+		},
+		"mtvote": {
+			"title": "Montant voté de l’opération",
+			"type": "number",
+			"decimals": 2
+		},
+		"nbdecision": {
+			"title": "Nombre de décisions",
+			"type": "integer"
+		},
+		"mtaffapdttc": {
+			"title": "Montant affecté AP dépense TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtaffcpdttc": {
+			"title": "Montant affecté CP dépense TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtengapdttc": {
+			"title": "Montant engagé AP dépense TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtengcpdttc": {
+			"title": "Montant engagé CP dépense TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtpremdttc": {
+			"title": "Montant pré-mandaté dépense TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtmanddttc": {
+			"title": "Montant mandaté dépense TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtaffaprttc": {
+			"title": "Montant affecté AP recette TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtengaprttc": {
+			"title": "Montant engagé AP recette TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtengcprttc": {
+			"title": "Montant engagé CP recette TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtpremrttc": {
+			"title": "Montant pré-mandaté recette TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtmandrttc": {
+			"title": "Montant mandaté recette TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"collcod": {
+			"title": "Code collectivité",
+			"type": "string",
+			"maxLength": 3
+		},
+		"opegann": {
+			"title": "Année de l’opération CORIOLIS",
+			"type": "string",
+			"maxLength": 4
+		},
+		"opegcod": {
+			"title": "Code opération CORIOLIS",
+			"type": "string",
+			"maxLength": 5
+		},
+		"opegnum": {
+			"title": "Numéro d’opération CORIOLIS",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idoperatar": {
+			"title": "Code opération ASTRE",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

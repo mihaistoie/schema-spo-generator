@@ -1,0 +1,8 @@
+{
+	"tableName": "X1_DM_TIERS_W",
+	"name": "SpoDMTiers",
+	"title": "DM - Tiers",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

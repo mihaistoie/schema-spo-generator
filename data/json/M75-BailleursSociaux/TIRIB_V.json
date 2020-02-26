@@ -1,0 +1,98 @@
+{
+	"tableName": "TIRIB_V",
+	"name": "SpoTIRIB_V",
+	"title": "Liste des domiciliations bancaires des tiers",
+	"type": "object",
+	"primaryKey": [
+		"idtiers",
+		"rangrib",
+		"ribfinanc"
+	],
+	"properties": {
+		"idtiers": {
+			"title": "Code tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rangrib": {
+			"title": "Rang du RIB",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbintitule": {
+			"title": "Intitulé du compte",
+			"type": "string",
+			"maxLength": 120
+		},
+		"banque": {
+			"title": "Nom de l’établissement",
+			"type": "string",
+			"maxLength": 40
+		},
+		"agence": {
+			"title": "Nom du guichet",
+			"type": "string",
+			"maxLength": 40
+		},
+		"coderib": {
+			"title": "Rib",
+			"type": "string",
+			"maxLength": 23
+		},
+		"coderibformat": {
+			"title": "Rib formaté",
+			"type": "string",
+			"maxLength": 26
+		},
+		"gestfin": {
+			"title": "Code bancaire hors SEPA",
+			"type": "string",
+			"maxLength": 30
+		},
+		"neutral": {
+			"title": "Domiciliation bancaire active",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"modreg": {
+			"title": "Mode de règlement",
+			"type": "string",
+			"maxLength": 2
+		},
+		"ribfinanc": {
+			"title": "Domiciliation bancaire financière",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"codiban": {
+			"title": "IBAN",
+			"type": "string",
+			"maxLength": 34
+		},
+		"bic": {
+			"title": "BIC",
+			"type": "string",
+			"maxLength": 11
+		},
+		"typdomibanq": {
+			"title": "Type bancaire",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idtypdomibanq": {
+			"title": "Code du type bancaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"pardefaut": {
+			"title": "Par défaut",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"codeibanformat": {
+			"title": "Iban formaté",
+			"type": "string",
+			"maxLength": 42
+		}
+	}
+}

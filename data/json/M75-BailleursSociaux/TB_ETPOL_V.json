@@ -1,0 +1,49 @@
+{
+	"tableName": "TB_ETPOL_V",
+	"name": "SpoTB_ETPOL_V",
+	"title": "TB_ETPOL_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"pol_lib": {
+			"title": "Etude pollution",
+			"type": "string",
+			"maxLength": 200
+		},
+		"pol_genre": {
+			"title": "Genre du représentant de l’etude pollution",
+			"type": "string",
+			"maxLength": 80
+		},
+		"pol_represnom": {
+			"title": "Nom du représentant de l’etude pollution",
+			"type": "string",
+			"maxLength": 50
+		},
+		"pol_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"pol_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"pol_represprenom": {
+			"title": "Prénom du représentant de l’etude pollution",
+			"type": "string",
+			"maxLength": 30
+		}
+	}
+}

@@ -1,0 +1,28 @@
+{
+	"tableName": "G01VALEURAXEGF",
+	"name": "SpoCorrespondanceAvecValeursAxesGF",
+	"title": "correspondance entre les valeurs d’axes PROGOS et les valeurs d’axes GF",
+	"type": "object",
+	"primaryKey": [
+		"codeaxeprogos",
+		"codevaleuraxeprogos",
+		"codevaleuraxegf"
+	],
+	"properties": {
+		"codeaxeprogos": {
+			"title": "Code axe Progos",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codevaleuraxeprogos": {
+			"title": "Code valeur axe Progos",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codevaleuraxegf": {
+			"title": "Code valeur axe GF",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

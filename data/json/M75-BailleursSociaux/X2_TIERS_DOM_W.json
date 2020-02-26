@@ -1,0 +1,82 @@
+{
+	"tableName": "X2_TIERS_DOM_W",
+	"name": "SpoTiersMGDISDomiciliationBancaire",
+	"title": "Tiers - Domiciliations bancaires",
+	"type": "object",
+	"primaryKey": [
+		"idtiers",
+		"rangrib"
+	],
+	"properties": {
+		"idtiers": {
+			"title": "Tiers - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Tiers",
+			"type": "string",
+			"maxLength": 200
+		},
+		"rangrib": {
+			"title": "N° de domiciliation PROGOS",
+			"type": "string",
+			"maxLength": 50
+		},
+		"numordre": {
+			"title": "N° d’ordre de domiciliation PROGOS",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbintitule": {
+			"title": "Intitulé",
+			"type": "string",
+			"maxLength": 120
+		},
+		"banque": {
+			"title": "Banque",
+			"type": "string",
+			"maxLength": 40
+		},
+		"agence": {
+			"title": "Agence",
+			"type": "string",
+			"maxLength": 40
+		},
+		"coderib": {
+			"title": "RIB",
+			"type": "string",
+			"maxLength": 23
+		},
+		"codiban": {
+			"title": "IBAN",
+			"type": "string",
+			"maxLength": 34
+		},
+		"bic": {
+			"title": "BIC",
+			"type": "string",
+			"maxLength": 11
+		},
+		"gestfin": {
+			"title": "Code bancaire hors SEPA",
+			"type": "string",
+			"maxLength": 30
+		},
+		"lbneutral": {
+			"title": "Etat du RIB",
+			"type": "string",
+			"maxLength": 14
+		},
+		"modreg": {
+			"title": "Mode de règlement",
+			"type": "string",
+			"maxLength": 150
+		},
+		"lbribfinanc": {
+			"title": "RIB financier",
+			"type": "string",
+			"maxLength": 17
+		}
+	}
+}

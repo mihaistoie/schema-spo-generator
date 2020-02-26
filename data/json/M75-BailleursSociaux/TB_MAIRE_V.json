@@ -1,0 +1,34 @@
+{
+	"tableName": "TB_MAIRE_V",
+	"name": "SpoTB_MAIRE_V",
+	"title": "TB_MAIRE_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"maire_lib": {
+			"title": "Maire",
+			"type": "string",
+			"maxLength": 200
+		},
+		"maire_genre": {
+			"title": "Genre du maire",
+			"type": "string",
+			"maxLength": 80
+		},
+		"maire_nom": {
+			"title": "Nom du maire",
+			"type": "string",
+			"maxLength": 81
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"tableName": "INPADATE",
+	"name": "SpoTypeDate",
+	"title": "Type date",
+	"type": "object",
+	"primaryKey": [
+		"idtypedate",
+		"critere"
+	],
+	"properties": {
+		"idtypedate": {
+			"title": "Code type date",
+			"type": "string",
+			"maxLength": 10
+		},
+		"critere": {
+			"title": "Critère",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libtypedate": {
+			"title": "Libelle type date",
+			"type": "string",
+			"maxLength": 50
+		},
+		"numordre": {
+			"title": "numero d’ordre",
+			"type": "integer"
+		}
+	}
+}

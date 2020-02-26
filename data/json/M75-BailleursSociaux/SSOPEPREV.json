@@ -1,0 +1,33 @@
+{
+	"tableName": "SSOPEPREV",
+	"name": "SpoPrevisionnelSurSousOperations",
+	"title": "Prévisionnel sur sous-opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idexe"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idexe": {
+			"title": "Exercice",
+			"type": "string",
+			"maxLength": 4
+		},
+		"montant": {
+			"title": "Montant",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

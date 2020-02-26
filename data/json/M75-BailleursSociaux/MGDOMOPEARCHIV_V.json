@@ -1,0 +1,77 @@
+{
+	"tableName": "MGDOMOPEARCHIV_V",
+	"name": "SpoListeDossiersArchivesDomaineOperation",
+	"title": "Liste des dossiers archivés du domaine des Opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddoss",
+		"iddossreg"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé du dossier",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence du dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproced": {
+			"title": "Code Procédure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbproced": {
+			"title": "Libellé Procédure d’instruction",
+			"type": "string",
+			"maxLength": 200
+		},
+		"lbdirect": {
+			"title": "Libellé de la direction",
+			"type": "string",
+			"maxLength": 100
+		},
+		"lbserv": {
+			"title": "Libellé du service",
+			"type": "string",
+			"maxLength": 80
+		},
+		"lbuti": {
+			"title": "Libellé utilisateur",
+			"type": "string",
+			"maxLength": 40
+		},
+		"iduti": {
+			"title": "Code utilisateur créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddirect": {
+			"title": "Code de la direction",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idserv": {
+			"title": "Code du service",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddossreg": {
+			"title": "Code dossier père",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

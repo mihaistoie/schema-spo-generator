@@ -1,0 +1,54 @@
+{
+	"tableName": "TB_NDEST_V",
+	"name": "SpoTB_NDEST_V",
+	"title": "TB_NDEST_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"opeobjet": {
+			"title": "Objet de l’opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"opelib": {
+			"title": "Opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"operef": {
+			"title": "Référence de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"opeville": {
+			"title": "Ville de l’opération",
+			"type": "string",
+			"maxLength": 80
+		},
+		"dateedition": {
+			"title": "Date d’édition",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"proclib": {
+			"title": "Procédure",
+			"type": "string",
+			"maxLength": 200
+		},
+		"lbserv": {
+			"title": "Service",
+			"type": "string",
+			"maxLength": 80
+		},
+		"lbdirect": {
+			"title": "Direction",
+			"type": "string",
+			"maxLength": 100
+		}
+	}
+}

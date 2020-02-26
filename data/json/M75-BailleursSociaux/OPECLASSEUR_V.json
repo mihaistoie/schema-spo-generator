@@ -1,0 +1,24 @@
+{
+	"tableName": "OPECLASSEUR_V",
+	"name": "SpoOPECLASSEUR_V",
+	"title": "OPECLASSEUR_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"idclas": {
+			"title": "Code classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbclas": {
+			"title": "Classeur",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idclaspere": {
+			"title": "Code classeur père",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"tableName": "X1_DM_SUBFIN_W",
+	"name": "SpoDMAidesVerseesGF",
+	"title": "DM - Aides versées GF",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

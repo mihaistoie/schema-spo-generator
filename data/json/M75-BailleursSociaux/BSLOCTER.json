@@ -1,0 +1,66 @@
+{
+	"tableName": "BSLOCTER",
+	"name": "SpoLocauxTertiaires",
+	"title": "Locaux Tertiaires",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ltlib": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 120
+		},
+		"ltsurfutil": {
+			"title": "Surface utile en m²",
+			"type": "number",
+			"decimals": 2
+		},
+		"ltnbc": {
+			"title": "Nombre de cellules commercialisées",
+			"type": "integer"
+		},
+		"ltnivliv": {
+			"title": "Niveau de livraison",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ltstat": {
+			"title": "Stationnement",
+			"type": "string",
+			"maxLength": 120
+		},
+		"ltannexe": {
+			"title": "Annexe",
+			"type": "string",
+			"maxLength": 120
+		},
+		"ltdest": {
+			"title": "Destination",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ltshon": {
+			"title": " SHON réglementaire",
+			"type": "number",
+			"decimals": 2
+		},
+		"ltshob": {
+			"title": " SHOB",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

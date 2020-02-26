@@ -1,0 +1,68 @@
+{
+	"tableName": "BSLIVREMCLE",
+	"name": "SpoBSLivRemCle",
+	"title": "Livaison et remise des clés",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idaction"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "Code action",
+			"type": "string",
+			"maxLength": 20
+		},
+		"loginsc": {
+			"title": "Total logements",
+			"type": "integer"
+		},
+		"logcol": {
+			"title": "Total logements collectifs",
+			"type": "integer"
+		},
+		"logind": {
+			"title": "Total logements individuels",
+			"type": "integer"
+		},
+		"inscbud": {
+			"title": "Total PLUS",
+			"type": "integer"
+		},
+		"logplai": {
+			"title": "Total PLAI",
+			"type": "integer"
+		},
+		"logpluscd": {
+			"title": "Total PLUS CD",
+			"type": "integer"
+		},
+		"logpls": {
+			"title": "Total PLS",
+			"type": "integer"
+		},
+		"logpcl": {
+			"title": "Total PSLA",
+			"type": "integer"
+		},
+		"logautre1": {
+			"title": "Total PLI",
+			"type": "integer"
+		},
+		"logautre3": {
+			"title": "Total Autre",
+			"type": "integer"
+		}
+	}
+}

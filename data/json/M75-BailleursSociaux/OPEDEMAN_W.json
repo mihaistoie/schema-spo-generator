@@ -1,0 +1,8 @@
+{
+	"tableName": "OPEDEMAN_W",
+	"name": "SpoListeOperationsDemandeurAssocie",
+	"title": "Liste des opérations avec le demandeur associé",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

@@ -1,0 +1,31 @@
+{
+	"tableName": "OPERATDOSSTHEME",
+	"name": "SpoEstimationThemeDossier",
+	"title": "Estimation par thème sur le dossier",
+	"type": "object",
+	"primaryKey": [
+		"iddoss",
+		"idtheme"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code du dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtheme": {
+			"title": "Code du thème de rattachement",
+			"type": "string"
+		},
+		"mtestime": {
+			"title": "Montant estimé",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxtva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

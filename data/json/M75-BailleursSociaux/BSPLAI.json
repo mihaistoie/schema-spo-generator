@@ -1,0 +1,110 @@
+{
+	"tableName": "BSPLAI",
+	"name": "SpoPLAI",
+	"title": "PLAI",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logplai": {
+			"title": "Total logements PLAI",
+			"type": "integer"
+		},
+		"cdplaic": {
+			"title": "Code programme PLAI Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplaic": {
+			"title": "Libellé programme PLAI Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plaict1": {
+			"title": "PLAI collectif T1",
+			"type": "integer"
+		},
+		"plaict1b": {
+			"title": "PLAI collectif T1b",
+			"type": "integer"
+		},
+		"plaict2": {
+			"title": "PLAI collectif T 2",
+			"type": "integer"
+		},
+		"plaict3": {
+			"title": "PLAI collectif T 3",
+			"type": "integer"
+		},
+		"plaict4": {
+			"title": "PLAI collectif T 4",
+			"type": "integer"
+		},
+		"plaict5": {
+			"title": "PLAI collectif T 5",
+			"type": "integer"
+		},
+		"plaict6": {
+			"title": "PLAI collectif T 6",
+			"type": "integer"
+		},
+		"plaict7": {
+			"title": "PLAI collectif T 7",
+			"type": "integer"
+		},
+		"cdplaii": {
+			"title": "Code programme PLAI Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libplaii": {
+			"title": "Libellé programme PLAI Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"plaiit1": {
+			"title": "PLAI individuel T1",
+			"type": "integer"
+		},
+		"plaiit1b": {
+			"title": "PLAI individuel T1b",
+			"type": "integer"
+		},
+		"plaiit2": {
+			"title": "PLAI individuel T2",
+			"type": "integer"
+		},
+		"plaiit3": {
+			"title": "PLAI individuel T3",
+			"type": "integer"
+		},
+		"plaiit4": {
+			"title": "PLAI individuel T4",
+			"type": "integer"
+		},
+		"plaiit5": {
+			"title": "PLAI individuel T5",
+			"type": "integer"
+		},
+		"plaiit6": {
+			"title": "PLAI individuel T6",
+			"type": "integer"
+		},
+		"plaiit7": {
+			"title": "PLAI individuel T7",
+			"type": "integer"
+		}
+	}
+}

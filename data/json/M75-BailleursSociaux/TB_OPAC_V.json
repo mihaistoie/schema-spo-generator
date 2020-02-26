@@ -1,0 +1,174 @@
+{
+	"tableName": "TB_OPAC_V",
+	"name": "SpoTB_OPAC_V",
+	"title": "TB_OPAC_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"dg_titre": {
+			"title": "dg_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dg_nomprenom": {
+			"title": "dg_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"dg_tel": {
+			"title": "dg_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"dg_email": {
+			"title": "dg_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"dga_titre": {
+			"title": "dga_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dga_nomprenom": {
+			"title": "dga_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"dga_tel": {
+			"title": "dga_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"dga_email": {
+			"title": "dga_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"sd_titre": {
+			"title": "sd_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"sd_nomprenom": {
+			"title": "sd_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"sd_tel": {
+			"title": "sd_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"sd_email": {
+			"title": "sd_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"secr_titre": {
+			"title": "secr_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"secr_nomprenom": {
+			"title": "secr_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"secr_tel": {
+			"title": "secr_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"secr_email": {
+			"title": "secr_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"cellmarche_titre": {
+			"title": "cellmarche_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"cellmarche_nomprenom": {
+			"title": "cellmarche_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"cellmarche_tel": {
+			"title": "cellmarche_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"cellmarche_email": {
+			"title": "cellmarche_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"respserv_titre": {
+			"title": "respserv_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"respserv_nomprenom": {
+			"title": "respserv_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"respserv_tel": {
+			"title": "respserv_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"respserv_email": {
+			"title": "respserv_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"organismeville": {
+			"title": "organismeville",
+			"type": "string",
+			"maxLength": 40
+		},
+		"organismenom": {
+			"title": "organismenom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"orgarue1": {
+			"title": "orgarue1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgarue2": {
+			"title": "orgarue2",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgarue3": {
+			"title": "orgarue3",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgarue4": {
+			"title": "orgarue4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgatel": {
+			"title": "orgatel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"orgafax": {
+			"title": "orgafax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"orgamail": {
+			"title": "orgamail",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

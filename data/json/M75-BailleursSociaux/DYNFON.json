@@ -1,0 +1,105 @@
+{
+	"tableName": "DYNFON",
+	"name": "SpoDYNFON",
+	"title": "Données complémentaires foncier",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "iddoss",
+			"type": "string",
+			"maxLength": 32
+		},
+		"surfter": {
+			"title": "Surface du  terrain",
+			"type": "integer"
+		},
+		"prixter": {
+			"title": "Prix du terrain",
+			"type": "integer"
+		},
+		"shon": {
+			"title": "SHON",
+			"type": "integer"
+		},
+		"anneeprog": {
+			"title": "Année de programmation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"typacha": {
+			"title": "Type acquisition",
+			"type": "string",
+			"maxLength": 32
+		},
+		"perprog": {
+			"title": "Période de programmation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"comfonc": {
+			"title": "Commentaire",
+			"type": "string",
+			"maxLength": 250
+		},
+		"constexist": {
+			"title": "Construction existante",
+			"type": "string",
+			"maxLength": 32
+		},
+		"statju": {
+			"title": "Statut juridique du foncier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"amgt": {
+			"title": "Aménagement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"const": {
+			"title": "Construction",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"lot": {
+			"title": "Lot",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"modfiaa": {
+			"title": "Mode de financement AA",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nblogacq": {
+			"title": "Nombre de logements Acquisition Amélioration",
+			"type": "integer"
+		},
+		"adresse": {
+			"title": "Adresse",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dep": {
+			"title": "Département",
+			"type": "string",
+			"maxLength": 32
+		},
+		"epci": {
+			"title": "EPCI",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nblot": {
+			"title": "Nombre de lots",
+			"type": "integer"
+		},
+		"nblog": {
+			"title": "Nombre de logements",
+			"type": "integer"
+		}
+	}
+}

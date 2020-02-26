@@ -1,0 +1,239 @@
+{
+	"tableName": "SUBDEC",
+	"name": "SpoMultidecisionSurDossier",
+	"title": "Multidécision sur dossier",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"numacc"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numacc": {
+			"title": "Numéro d’accord",
+			"type": "integer"
+		},
+		"orgadecid": {
+			"title": "Organe de décision",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtprop": {
+			"title": "Date de la proposition",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"etapbug": {
+			"title": "Etape budgétaire",
+			"type": "string",
+			"maxLength": 4
+		},
+		"idexe": {
+			"title": "Exercice",
+			"type": "string",
+			"maxLength": 4
+		},
+		"mtprop": {
+			"title": "Montant proposé au vote",
+			"type": "number",
+			"decimals": 2
+		},
+		"decision": {
+			"title": "Décision",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mtvote": {
+			"title": "Montant décidé",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtdecid": {
+			"title": "Date de décision",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtnotif": {
+			"title": "Date de notification",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"lbmotif": {
+			"title": "Motif de l’avis",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"derniere": {
+			"title": "Derniere décision",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtarratt": {
+			"title": "Date de l’arrêté attributif",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"refarratt": {
+			"title": "Référence de l’arrêté attributif",
+			"type": "string",
+			"maxLength": 40
+		},
+		"mtdepreel": {
+			"title": "Coût réel de l’opération",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtdepsubv": {
+			"title": "Dépense subventionnable réelle",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtacc": {
+			"title": "Montant voté",
+			"type": "number",
+			"decimals": 2
+		},
+		"idcom": {
+			"title": "Code de la commission",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typedec": {
+			"title": "Type de décision",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeacte": {
+			"title": "Type d’acte",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcollec": {
+			"title": "Code collectivité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idexebud": {
+			"title": "Exercice budgétaire",
+			"type": "string",
+			"maxLength": 4
+		},
+		"idbudget": {
+			"title": "Code budget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idligbud": {
+			"title": "N° de ligne budgetaire",
+			"type": "integer"
+		},
+		"numdelib": {
+			"title": "N° de délibération",
+			"type": "string",
+			"maxLength": 40
+		},
+		"dtdelib": {
+			"title": "Date de délibération",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"lbdec": {
+			"title": "Intitulé de la décision",
+			"type": "string",
+			"maxLength": 200
+		},
+		"delaireal": {
+			"title": "Délai de réalisation",
+			"type": "integer"
+		},
+		"delairealfin": {
+			"title": "Délai de fin de réalisation",
+			"type": "integer"
+		},
+		"dtdemprorog": {
+			"title": "Date de la demande de prorogation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"valide": {
+			"title": "Validé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"delaidemprorog": {
+			"title": "Délai de prorogation demandé",
+			"type": "integer"
+		},
+		"delaiprorogvalid": {
+			"title": "Délai de prorogation valid",
+			"type": "integer"
+		},
+		"idutidemprorog": {
+			"title": "Code utilisateur demandeur de la prorogation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtvalprorog": {
+			"title": "Date de validation de la prorogation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idutivalprorog": {
+			"title": "Code utilisateur qui a validé la demande de prorogation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"obsprorog": {
+			"title": "Observations",
+			"type": "string"
+		},
+		"dteddeprorog": {
+			"title": "Date arrivée demande de prorogation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dterecprorog": {
+			"title": "Date réception documents",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"avisserviceprorog": {
+			"title": "Avis du service",
+			"type": "string",
+			"maxLength": 32
+		},
+		"motifvisaprorog": {
+			"title": "Motivation visa",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"motifvisanegprorog": {
+			"title": "Modification visa négatif",
+			"type": "string",
+			"maxLength": 32
+		},
+		"histoprorog": {
+			"title": "Historique de prorogation",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"decisionprise": {
+			"title": "Décision prise",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

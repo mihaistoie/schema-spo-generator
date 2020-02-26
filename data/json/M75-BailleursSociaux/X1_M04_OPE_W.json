@@ -1,0 +1,197 @@
+{
+	"tableName": "X1_M04_OPE_W",
+	"name": "SpoX1M04Operations",
+	"title": "X1-M04-Opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idope"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idope": {
+			"title": "Opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbope": {
+			"title": "Opération - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"objope": {
+			"title": "Objet de l’opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idprof": {
+			"title": "Groupe - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbprof": {
+			"title": "Groupe - Libellé",
+			"type": "string",
+			"maxLength": 100
+		},
+		"idopemere": {
+			"title": "Opération mère - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbopemere": {
+			"title": "Opération mère - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idbenef": {
+			"title": "Bénéficiaire - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbbenef": {
+			"title": "Bénéficiaire - Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idnatope": {
+			"title": "Nature de l’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbnatope": {
+			"title": "Nature de l’opération - Libellé",
+			"type": "string",
+			"maxLength": 150
+		},
+		"idtypope": {
+			"title": "Type d’opération - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbtypope": {
+			"title": "Type d’opération - Libellé",
+			"type": "string",
+			"maxLength": 150
+		},
+		"opefin": {
+			"title": "Opération financière",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"execreat": {
+			"title": "Année de création",
+			"type": "string",
+			"maxLength": 4
+		},
+		"exereal": {
+			"title": "Année de réalisation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"nbexercice": {
+			"title": "Nombre exercice",
+			"type": "number",
+			"decimals": 0
+		},
+		"dtcreatope": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtenqpub": {
+			"title": "Date d’enquête publique",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtautopref": {
+			"title": "Date d’autorisation préfectorale",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdebprev": {
+			"title": "Date de début prévue",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfinprev": {
+			"title": "Date de fin prévue",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdebtrv": {
+			"title": "Date réelle de début des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfintrv": {
+			"title": "Date réelle de fin des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mtprojht": {
+			"title": "Montant projet HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxtvaproj": {
+			"title": "Taux de TVA projet",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprojttc": {
+			"title": "Montant projet TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtdepht": {
+			"title": "Montant des dépenses HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxtvadep": {
+			"title": "Taux de TVA des dépenses",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtdepttc": {
+			"title": "Montant des dépenses TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"idetatav": {
+			"title": "Etat d’avancement - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbetatav": {
+			"title": "Etat d’avancement - Libellé",
+			"type": "string",
+			"maxLength": 150
+		},
+		"dtetatav": {
+			"title": "Date de mise à jour de l’etat d’avancement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idutiletatav": {
+			"title": "Utilisateur ayant mis à jour l’etat d’avancement - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbutiletatav": {
+			"title": "Utilisateur ayant mis à jour l’etat d’avancement - Libellé",
+			"type": "string",
+			"maxLength": 40
+		}
+	}
+}

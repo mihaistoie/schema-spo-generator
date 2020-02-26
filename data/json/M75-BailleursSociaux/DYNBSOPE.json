@@ -1,0 +1,274 @@
+{
+	"tableName": "DYNBSOPE",
+	"name": "SpoDynBSOPE",
+	"title": "Données complémentaires liées aux domaine BS pour les opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomop": {
+			"title": "Nom d’origine de l’opération",
+			"type": "string",
+			"maxLength": 80
+		},
+		"lieudit": {
+			"title": "Lieu dit",
+			"type": "string",
+			"maxLength": 180
+		},
+		"adresse": {
+			"title": "Adresse",
+			"type": "string",
+			"maxLength": 180
+		},
+		"agence": {
+			"title": "Agence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"statuop": {
+			"title": "Statut de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typop": {
+			"title": "Type opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nummarche": {
+			"title": "Compétence de financement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dureop": {
+			"title": "Durée en mois",
+			"type": "integer"
+		},
+		"typenergie": {
+			"title": "Type d’énergie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"shon": {
+			"title": "SHON réglementaire",
+			"type": "integer"
+		},
+		"surftotale": {
+			"title": "Surface Annexes réelles",
+			"type": "integer"
+		},
+		"prixpaye": {
+			"title": "Prix total payé en Euros",
+			"type": "number",
+			"decimals": 2
+		},
+		"shob": {
+			"title": "SHOB",
+			"type": "integer"
+		},
+		"annee": {
+			"title": "Année de programmation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"comm": {
+			"title": "Commentaire & Actualité",
+			"type": "string",
+			"maxLength": 250
+		},
+		"typacha": {
+			"title": "Type d’acquisition foncière",
+			"type": "string",
+			"maxLength": 32
+		},
+		"zloyer": {
+			"title": "Zone de loyer",
+			"type": "string",
+			"maxLength": 32
+		},
+		"zabc": {
+			"title": "Zone de loyer ABC",
+			"type": "string",
+			"maxLength": 32
+		},
+		"canton": {
+			"title": "Canton",
+			"type": "string",
+			"maxLength": 32
+		},
+		"pays": {
+			"title": "Pays",
+			"type": "string",
+			"maxLength": 32
+		},
+		"epci": {
+			"title": "EPCI",
+			"type": "string",
+			"maxLength": 32
+		},
+		"surfutil": {
+			"title": "Surface utile",
+			"type": "number",
+			"decimals": 2
+		},
+		"surfhab": {
+			"title": "Surface habitable",
+			"type": "number",
+			"decimals": 2
+		},
+		"resaunpct": {
+			"title": "Nb Lgts réservataires Collecteurs 1%",
+			"type": "integer"
+		},
+		"resacol": {
+			"title": "Nb Lgts réservataires Collectivité",
+			"type": "integer"
+		},
+		"resapref": {
+			"title": "Nb Lgts réservataires Préfecture (PLUS)",
+			"type": "integer"
+		},
+		"resadep": {
+			"title": "Nb Lgts réservataires Département",
+			"type": "integer"
+		},
+		"resabg": {
+			"title": "Besoins Généraux",
+			"type": "integer"
+		},
+		"resadivers": {
+			"title": "Divers",
+			"type": "integer"
+		},
+		"decompo": {
+			"title": "Autres informations",
+			"type": "string",
+			"maxLength": 200
+		},
+		"durchantier": {
+			"title": "Durée de chantier",
+			"type": "string",
+			"maxLength": 110
+		},
+		"typchauff": {
+			"title": "Type de chauffage ",
+			"type": "string",
+			"maxLength": 32
+		},
+		"chaufep": {
+			"title": "Chauffage  Energie primaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"chaufappoint": {
+			"title": "Chauffage Energie appoint",
+			"type": "string",
+			"maxLength": 32
+		},
+		"chaufcom": {
+			"title": "Chauffage - commentaire",
+			"type": "string",
+			"maxLength": 250
+		},
+		"typsan": {
+			"title": "Type Eau chaude Sanitaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"chaufsan": {
+			"title": "Eau chaude Sanitaire - Energie primaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"sanappoint": {
+			"title": "Eau chaude sanitaire - Energie d’appoint",
+			"type": "string",
+			"maxLength": 32
+		},
+		"sancom": {
+			"title": "Eau chaude sanitaire - Commentaire",
+			"type": "string",
+			"maxLength": 250
+		},
+		"typcertif": {
+			"title": "Type de certification",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nivcertif": {
+			"title": "Niveau de certification",
+			"type": "string",
+			"maxLength": 32
+		},
+		"reglcertif": {
+			"title": "Règlementation thermique ",
+			"type": "string",
+			"maxLength": 200
+		},
+		"optioncertif": {
+			"title": "Option",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idopesmo": {
+			"title": "Code opération SMO",
+			"type": "string",
+			"maxLength": 50
+		},
+		"exportgf": {
+			"title": "Export GF",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"groupe": {
+			"title": "Groupe",
+			"type": "string",
+			"maxLength": 100
+		},
+		"importpaie": {
+			"title": "Import Paiements",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"service": {
+			"title": "Service",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numerogroupe": {
+			"title": "Numéro de groupe",
+			"type": "string",
+			"maxLength": 80
+		},
+		"contratplan": {
+			"title": "Contrat de plan",
+			"type": "integer"
+		},
+		"valdomaine": {
+			"title": "Valeur des domaines",
+			"type": "number",
+			"decimals": 2
+		},
+		"nbascenceurs": {
+			"title": "Nombre d’ascenceurs",
+			"type": "integer"
+		},
+		"etiquetteavanttrvx": {
+			"title": "Etiquette énergétique avant travaux (de A à G)",
+			"type": "string",
+			"maxLength": 32
+		},
+		"etiquetteaprestrvx": {
+			"title": "Etiquette énergétique après travaux (de A à G)",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,178 @@
+{
+	"tableName": "TB_DESTDT_V",
+	"name": "SpoTB_DESTDT_V",
+	"title": "TB_DESTDT_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idacteur": {
+			"title": "Code Acteur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbacteur": {
+			"title": "Acteur",
+			"type": "string",
+			"maxLength": 40
+		},
+		"tierslib": {
+			"title": "Tiers",
+			"type": "string",
+			"maxLength": 200
+		},
+		"tiersmorale": {
+			"title": "Tiers Morale",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code Tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tiersref": {
+			"title": "Réference du Tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tiersobjet": {
+			"title": "Objet du Tiers",
+			"type": "string",
+			"maxLength": 255
+		},
+		"rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue2": {
+			"title": "Rue 2",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue3": {
+			"title": "Rue 3",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"tiersville": {
+			"title": "Ville",
+			"type": "string",
+			"maxLength": 40
+		},
+		"destel": {
+			"title": "Téléphone destinataire",
+			"type": "string",
+			"maxLength": 25
+		},
+		"desfax": {
+			"title": "Fax destinataire",
+			"type": "string",
+			"maxLength": 25
+		},
+		"despol": {
+			"title": "Formule de politesse",
+			"type": "string",
+			"maxLength": 200
+		},
+		"desapp": {
+			"title": "Formule d’appel",
+			"type": "string",
+			"maxLength": 100
+		},
+		"opeobjet": {
+			"title": "Objet de l’opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"opelib": {
+			"title": "Opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"operef": {
+			"title": "Réference de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"opeville": {
+			"title": "Ville de l’opération",
+			"type": "string",
+			"maxLength": 80
+		},
+		"dateedition": {
+			"title": "Date d’édition",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"proclib": {
+			"title": "Procédure",
+			"type": "string",
+			"maxLength": 200
+		},
+		"genre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"represnom": {
+			"title": "Nom du représentant",
+			"type": "string",
+			"maxLength": 50
+		},
+		"represprenom": {
+			"title": "Prénom du représentant",
+			"type": "string",
+			"maxLength": 30
+		},
+		"represtitre": {
+			"title": "Titre du représentant",
+			"type": "string",
+			"maxLength": 100
+		},
+		"represgenre": {
+			"title": "Genre du représentant",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idaction1": {
+			"title": "Code action 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtreal1": {
+			"title": "Date réalisation 1",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtprev1": {
+			"title": "Date prévu 1",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idaction2": {
+			"title": "Code action 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtreal2": {
+			"title": "Date réalisation 2",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtprev2": {
+			"title": "Date prévu 2",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}

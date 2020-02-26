@@ -1,0 +1,140 @@
+{
+	"tableName": "SUBPADIV",
+	"name": "SpoParametresDiversUnePI",
+	"title": "Paramètres divers d’une PI",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idproced"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproced": {
+			"title": "Code procédure d’instruction",
+			"type": "string",
+			"maxLength": 32
+		},
+		"orgadecid": {
+			"title": "Organe de décision",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typaid": {
+			"title": "Type d’aide",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delai_real": {
+			"title": "Délai de début de réalisation",
+			"type": "integer"
+		},
+		"codeniv1": {
+			"title": "Code niveau 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeniv2": {
+			"title": "Code niveau 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeniv3": {
+			"title": "Code niveau 3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delairealfin": {
+			"title": "Délai de fin de réalisation",
+			"type": "integer"
+		},
+		"signat": {
+			"title": "Signataire",
+			"type": "string",
+			"maxLength": 200
+		},
+		"progid": {
+			"title": "Programme spécifique des formules",
+			"type": "string",
+			"maxLength": 50
+		},
+		"paidec": {
+			"title": "Paiement par décisions",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"progiddec": {
+			"title": "Programme spécifique des décisions",
+			"type": "string",
+			"maxLength": 50
+		},
+		"recouv": {
+			"title": "Recouvrement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"basesubvttc": {
+			"title": "Base subventionnable en TTC",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"caltauxprop": {
+			"title": "Calcul de taux en fonction du proposé",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"typarronddec": {
+			"title": "Type d’arrondi sur le montant proposé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"progidnat": {
+			"title": "Programme spécifique des natures",
+			"type": "string",
+			"maxLength": 50
+		},
+		"piecttrecues": {
+			"title": "Pièces toutes reçues par défaut",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"avisfavo": {
+			"title": "Avis favorables par défaut",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"aviservinstr": {
+			"title": "Avis du service instructeur par défaut",
+			"type": "string",
+			"maxLength": 32
+		},
+		"suivipar": {
+			"title": "Affaire suivie par",
+			"type": "string",
+			"maxLength": 32
+		},
+		"telephone": {
+			"title": "Téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"comsect": {
+			"title": "Type de commissions sectorielles",
+			"type": "string",
+			"maxLength": 32
+		},
+		"objetdossier": {
+			"title": "Objet du dossier",
+			"type": "string",
+			"maxLength": 300
+		},
+		"categoriepi": {
+			"title": "Catégorie de procédure",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

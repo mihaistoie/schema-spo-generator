@@ -1,0 +1,54 @@
+{
+	"tableName": "TB_ETSOL_V",
+	"name": "SpoTB_ETSOL_V",
+	"title": "TB_ETSOL_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"etsol_lib": {
+			"title": "Etude de sols",
+			"type": "string",
+			"maxLength": 200
+		},
+		"etsol_genre": {
+			"title": "Genre de l’étude de sols",
+			"type": "string",
+			"maxLength": 80
+		},
+		"etsol_represnom": {
+			"title": "Nom représentant de l’étude de sols",
+			"type": "string",
+			"maxLength": 50
+		},
+		"etsol_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"etsol_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"etsol_represprenom": {
+			"title": "Prénom représentant de l’étude de sols",
+			"type": "string",
+			"maxLength": 30
+		},
+		"etsol_mnt": {
+			"title": "montant de l’étude de sols",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"tableName": "X1_DM_PROGRAM_W",
+	"name": "SpoDMDossiersLocalisations",
+	"title": "DM - Prorammes",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

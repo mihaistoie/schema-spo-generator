@@ -1,0 +1,8 @@
+{
+	"tableName": "X1_OPEGF_W",
+	"name": "SpoX1ConsolidationGFOPE",
+	"title": "X1 - Consolidation GF - OPE",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

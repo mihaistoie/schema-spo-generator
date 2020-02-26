@@ -1,0 +1,36 @@
+{
+	"tableName": "DYNACHA",
+	"name": "SpoNOP",
+	"title": "Données complémentaires acquisitions ventes",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typamen": {
+			"title": "Type d’aménagement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"localanru": {
+			"title": "Localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"plh": {
+			"title": "Secteur PLH",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"epci": {
+			"title": "Nom de l’ EPCI",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

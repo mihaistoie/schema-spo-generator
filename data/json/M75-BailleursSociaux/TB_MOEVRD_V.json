@@ -1,0 +1,49 @@
+{
+	"tableName": "TB_MOEVRD_V",
+	"name": "SpoTB_MOEVRD_V",
+	"title": "TB_MOEVRD_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"moevrd_lib": {
+			"title": "Maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 200
+		},
+		"moevrd_genre": {
+			"title": "Genre du maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 80
+		},
+		"moevrd_represnom": {
+			"title": "Nom du representant du maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 50
+		},
+		"moevrd_rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"moevrd_rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"moevrd_represprenom": {
+			"title": "Prénom du representant du maitre d’oeuvre VRD",
+			"type": "string",
+			"maxLength": 30
+		}
+	}
+}

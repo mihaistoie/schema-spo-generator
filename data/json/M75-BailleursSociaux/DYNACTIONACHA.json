@@ -1,0 +1,329 @@
+{
+	"tableName": "DYNACTIONACHA",
+	"name": "SpoNOP",
+	"title": "action complément achat",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idetape",
+		"idaction",
+		"idacteur",
+		"idtiers"
+	],
+	"properties": {
+		"iddom": {
+			"title": "iddom",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "iddoss",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "idetape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "idaction",
+			"type": "string",
+			"maxLength": 20
+		},
+		"idacteur": {
+			"title": "idacteur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtiers": {
+			"title": "idtiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"daareal": {
+			"title": "DA à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"refavis": {
+			"title": "Référence Avis",
+			"type": "string",
+			"maxLength": 40
+		},
+		"estim": {
+			"title": "Estimation en euros",
+			"type": "number",
+			"decimals": 2
+		},
+		"fraispr": {
+			"title": "Frais provisoires",
+			"type": "number",
+			"decimals": 2
+		},
+		"signav": {
+			"title": "Signature à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"fraisre": {
+			"title": "Frais réels",
+			"type": "number",
+			"decimals": 2
+		},
+		"pubfonc": {
+			"title": "Publicité à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"conserv": {
+			"title": "Conservation",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numvol": {
+			"title": "Volume",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numero": {
+			"title": "Numéro",
+			"type": "string",
+			"maxLength": 40
+		},
+		"pubfonr": {
+			"title": "Publicité Att. Rect.  à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"conserr": {
+			"title": "Conservation Att. Rect.",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numvolr": {
+			"title": "Volume Att. Rect.",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numeror": {
+			"title": "Numéro Att. Rect.",
+			"type": "string",
+			"maxLength": 40
+		},
+		"surftot": {
+			"title": "Surface totale en m²",
+			"type": "integer"
+		},
+		"prixarr": {
+			"title": "Prix arrêté",
+			"type": "number",
+			"decimals": 2
+		},
+		"mutatio": {
+			"title": "Droits de mutations",
+			"type": "number",
+			"decimals": 2
+		},
+		"txtva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"monttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"montaht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"comnego": {
+			"title": "Commision négociation",
+			"type": "number",
+			"decimals": 2
+		},
+		"partici": {
+			"title": "Participation ass. & copro.",
+			"type": "number",
+			"decimals": 2
+		},
+		"divers": {
+			"title": "divers",
+			"type": "number",
+			"decimals": 2
+		},
+		"commentai": {
+			"title": "commentaire",
+			"type": "string",
+			"maxLength": 250
+		},
+		"ref": {
+			"title": "Références cadastrales",
+			"type": "string",
+			"maxLength": 250
+		},
+		"parcel1": {
+			"title": "Parcelle 1 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel2": {
+			"title": "Parcelle 1 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel3": {
+			"title": "Parcelle 2 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel4": {
+			"title": "Parcelle 2 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel5": {
+			"title": "Parcelle 3 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel6": {
+			"title": "Parcelle 3 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel7": {
+			"title": "Parcelle 4 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel8": {
+			"title": "Parcelle 4 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel9": {
+			"title": "Parcelle 5 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce10": {
+			"title": "Parcelle 5 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parce11": {
+			"title": "Parcelle 11",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce12": {
+			"title": "Parcelle 12",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce13": {
+			"title": "Parcelle 13",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce14": {
+			"title": "Parcelle 14",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce15": {
+			"title": "Parcelle 15",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce16": {
+			"title": "Parcelle 16",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce17": {
+			"title": "Parcelle 17",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce18": {
+			"title": "Parcelle 18",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce19": {
+			"title": "Parcelle 19",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce20": {
+			"title": "Parcelle 20",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce21": {
+			"title": "Parcelle 21",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce22": {
+			"title": "Parcelle 22",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce23": {
+			"title": "Parcelle 23",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce24": {
+			"title": "Parcelle 24",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce25": {
+			"title": "Parcelle 25",
+			"type": "string",
+			"maxLength": 40
+		},
+		"copro": {
+			"title": "Copropriété",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"servit": {
+			"title": "Servitudes",
+			"type": "string",
+			"maxLength": 32
+		},
+		"divol": {
+			"title": "Division en volumes",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"asl": {
+			"title": "ASL (ou AFUL)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"convtier": {
+			"title": "Convention avec tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"bailld": {
+			"title": "Type de bail",
+			"type": "string",
+			"maxLength": 32
+		},
+		"anorig": {
+			"title": "Année d’origine de la construction",
+			"type": "integer"
+		}
+	}
+}

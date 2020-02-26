@@ -1,0 +1,19 @@
+{
+	"tableName": "OPECLASSEMENT_V",
+	"name": "SpoOPECLASSEMENT_V",
+	"title": "OPECLASSEMENT_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idclas": {
+			"title": "Code classeur",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

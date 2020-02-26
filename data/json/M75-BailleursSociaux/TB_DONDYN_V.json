@@ -1,0 +1,151 @@
+{
+	"tableName": "TB_DONDYN_V",
+	"name": "SpoTB_DONDYN_V",
+	"title": "TB_DONDYN_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"dyniddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"openomorigine": {
+			"title": "Nom d’origine de l’opération",
+			"type": "string",
+			"maxLength": 80
+		},
+		"opelieudit": {
+			"title": "Lieu dit",
+			"type": "string",
+			"maxLength": 180
+		},
+		"opeadresse": {
+			"title": "Adresse",
+			"type": "string",
+			"maxLength": 180
+		},
+		"dureop": {
+			"title": "Durée en mois",
+			"type": "integer"
+		},
+		"typenergie": {
+			"title": "Type d’énergie",
+			"type": "string",
+			"maxLength": 10
+		},
+		"shon": {
+			"title": "SHON",
+			"type": "integer"
+		},
+		"surftotale": {
+			"title": "Surface Annexes réelles",
+			"type": "integer"
+		},
+		"prixpaye": {
+			"title": "Prix total payé en Euros",
+			"type": "number",
+			"decimals": 2
+		},
+		"shob": {
+			"title": "SHOB",
+			"type": "integer"
+		},
+		"annee": {
+			"title": "Année de programmation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"comm": {
+			"title": "Commentaire & Actualité",
+			"type": "string",
+			"maxLength": 250
+		},
+		"typacha": {
+			"title": "Type d’acquisition foncière",
+			"type": "string",
+			"maxLength": 10
+		},
+		"zloyer": {
+			"title": "Zone de loyer",
+			"type": "string",
+			"maxLength": 10
+		},
+		"canton": {
+			"title": "Canton",
+			"type": "string",
+			"maxLength": 10
+		},
+		"pays": {
+			"title": "Pays",
+			"type": "string",
+			"maxLength": 10
+		},
+		"epci": {
+			"title": "EPCI",
+			"type": "string",
+			"maxLength": 10
+		},
+		"surfutil": {
+			"title": "Surface Utile",
+			"type": "number",
+			"decimals": 2
+		},
+		"surfhab": {
+			"title": "Surface Habitable",
+			"type": "number",
+			"decimals": 2
+		},
+		"resaunpct": {
+			"title": "Nb Lgts réservataires Collecteurs 1%",
+			"type": "integer"
+		},
+		"resacol": {
+			"title": "Nb Lgts réservataires Collectivité",
+			"type": "integer"
+		},
+		"resapref": {
+			"title": "Nb Lgts réservataires Préfecture (PLUS)",
+			"type": "integer"
+		},
+		"resadep": {
+			"title": "Nb Lgts réservataires Département",
+			"type": "integer"
+		},
+		"resabg": {
+			"title": "Besoins Généraux",
+			"type": "integer"
+		},
+		"resadivers": {
+			"title": "Divers",
+			"type": "integer"
+		},
+		"decompo": {
+			"title": "Autres informations",
+			"type": "string",
+			"maxLength": 200
+		},
+		"typlog": {
+			"title": "Synthèse nb log. par type",
+			"type": "string",
+			"maxLength": 80
+		},
+		"nblog": {
+			"title": "Total logements",
+			"type": "integer"
+		},
+		"typolog": {
+			"title": "Synthèse par typologie",
+			"type": "string",
+			"maxLength": 60
+		},
+		"logcol": {
+			"title": "Total logements collectifs",
+			"type": "integer"
+		},
+		"logind": {
+			"title": "Total logements individuels",
+			"type": "integer"
+		}
+	}
+}

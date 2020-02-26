@@ -1,0 +1,28 @@
+{
+	"tableName": "G01CODEAXEGF",
+	"name": "SpoCorrespondanceAvecCodesAxesGF",
+	"title": "correspondance entre les codes axes PROGOS et les codes axes GF",
+	"type": "object",
+	"primaryKey": [
+		"codeaxeprogos",
+		"typeaxeprogos",
+		"codeaxegf"
+	],
+	"properties": {
+		"codeaxeprogos": {
+			"title": "Code axe Progos",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeaxeprogos": {
+			"title": "Type axe Progos",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeaxegf": {
+			"title": "Code axe GF",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

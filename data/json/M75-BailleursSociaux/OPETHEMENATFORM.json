@@ -1,0 +1,25 @@
+{
+	"tableName": "OPETHEMENATFORM",
+	"name": "SpoAssociationFormuleThemeNature",
+	"title": "Association d’une formule à une nature d’un thème",
+	"type": "object",
+	"primaryKey": [
+		"uidtheme",
+		"idnaturetheme"
+	],
+	"properties": {
+		"uidtheme": {
+			"title": "Code du thème",
+			"type": "string"
+		},
+		"idnaturetheme": {
+			"title": "Nature du thème",
+			"type": "string",
+			"maxLength": 32
+		},
+		"formule": {
+			"title": "Formule",
+			"type": "string"
+		}
+	}
+}

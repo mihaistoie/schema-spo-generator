@@ -1,0 +1,32 @@
+{
+	"tableName": "SUBPAIFI",
+	"name": "SpoPaiements",
+	"title": "Paiements",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idpai"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idpai": {
+			"title": "Numéro de paiement",
+			"type": "integer"
+		},
+		"refcompta": {
+			"title": "Référence comptable",
+			"type": "string",
+			"maxLength": 50
+		}
+	}
+}

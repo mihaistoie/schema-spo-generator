@@ -1,0 +1,8 @@
+{
+	"tableName": "OPESSOPE2",
+	"name": "SpoRameneAncienCodeSousOperations",
+	"title": "Ramene ancien code sous opérations",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

@@ -1,0 +1,62 @@
+{
+	"tableName": "X1_INT_DOSS_PAI_W",
+	"name": "SpoX1DossiersComplementPaiement",
+	"title": "X1- Dossiers Complément Paiement GF",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idcrit1",
+		"idcrit2",
+		"idcrit3"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Dossier Subvention - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit1": {
+			"title": "Critère 1- Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit2": {
+			"title": "Critère 1- Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit3": {
+			"title": "Critère 1- Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"collcod": {
+			"title": "Code collectivité CORIOLIS",
+			"type": "string",
+			"maxLength": 3
+		},
+		"budgexe": {
+			"title": "Exercice CORIOLIS",
+			"type": "integer"
+		},
+		"colbcodbud": {
+			"title": "Code nature (Dépense, Recette) CORIOLIS",
+			"type": "integer"
+		},
+		"objecodnat": {
+			"title": "Code nature CORIOLIS",
+			"type": "string",
+			"maxLength": 1
+		},
+		"cndgnumpro": {
+			"title": "Numéro provisoire de conso CORIOLIS",
+			"type": "integer"
+		}
+	}
+}

@@ -1,0 +1,38 @@
+{
+	"tableName": "OPERATVENTILCP",
+	"name": "SpoOperationVentilationCP",
+	"title": "Opération Ventilation CP",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"exercice"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"exercice": {
+			"title": "Exercice",
+			"type": "string",
+			"maxLength": 4
+		},
+		"mtprevuinit": {
+			"title": "Montant prévu initialement",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprevuactu": {
+			"title": "Montant prévu actualisé",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

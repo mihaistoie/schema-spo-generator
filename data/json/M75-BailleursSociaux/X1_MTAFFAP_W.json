@@ -1,0 +1,50 @@
+{
+	"tableName": "X1_MTAFFAP_W",
+	"name": "SpoX1DossiersTotalAffecteAP",
+	"title": "X1- Dossiers - Total affecté AP",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idcrit1",
+		"idcrit2",
+		"idcrit3"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Dossier Subvention - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit1": {
+			"title": "Critère 1 - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit2": {
+			"title": "Critère 2 - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit3": {
+			"title": "Critère 3 - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mtaffapdttc": {
+			"title": "Montant affecté en AP - Dépense",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtaffaprttc": {
+			"title": "Montant affecté en AP - Recette",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

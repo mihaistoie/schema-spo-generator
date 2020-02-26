@@ -1,0 +1,54 @@
+{
+	"tableName": "TB_ASSMONTOP_V",
+	"name": "SpoTB_ASSMONTOP_V",
+	"title": "TB_ASSMONTOP_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"assmop_genre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"assmop_nomprenom": {
+			"title": "Nom Prénom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"assmop_titre": {
+			"title": "Titre",
+			"type": "string",
+			"maxLength": 255
+		},
+		"assmop_reference": {
+			"title": "Reference",
+			"type": "string",
+			"maxLength": 200
+		},
+		"assmop_tel": {
+			"title": "Téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"assmop_poste": {
+			"title": "Poste",
+			"type": "string",
+			"maxLength": 25
+		},
+		"assmop_fax": {
+			"title": "Fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"assmop_email": {
+			"title": "Email",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

@@ -1,0 +1,66 @@
+{
+	"tableName": "X1_MTMANDEXE_W",
+	"name": "SpoX1DossiersTotalLiquideEtMandateCPParExercice",
+	"title": "X1- Dossiers - Total liquidé et mandaté CP par exercice",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"exercice",
+		"idcrit1",
+		"idcrit2",
+		"idcrit3"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Dossier Subvention - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"exercice": {
+			"title": "Exercice",
+			"type": "string",
+			"maxLength": 4
+		},
+		"idcrit1": {
+			"title": "Critère 1 - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit2": {
+			"title": "Critère 2 - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit3": {
+			"title": "Critère 3 - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mtliqdttc": {
+			"title": "Montant liquidé - Dépense",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtliqrttc": {
+			"title": "Montant liquidé - Recette",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtmanddttc": {
+			"title": "Montant mandaté - Dépense",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtmandrttc": {
+			"title": "Montant mandaté - Recette",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

@@ -1,0 +1,191 @@
+{
+	"tableName": "BSLOGEMENTS",
+	"name": "SpoLogements",
+	"title": "Logements",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"loginsc": {
+			"title": "Total logements",
+			"type": "integer"
+		},
+		"logtri": {
+			"title": "Nb équivalents logements",
+			"type": "integer"
+		},
+		"logcol": {
+			"title": "Total logements collectifs",
+			"type": "integer"
+		},
+		"logind": {
+			"title": "Total logements individuels",
+			"type": "integer"
+		},
+		"semt1": {
+			"title": "Nombre T1",
+			"type": "integer"
+		},
+		"semt1b": {
+			"title": "Nombre T1bis",
+			"type": "integer"
+		},
+		"semt2": {
+			"title": "Nombre T2",
+			"type": "integer"
+		},
+		"semt3": {
+			"title": "Nombre T3",
+			"type": "integer"
+		},
+		"semt4": {
+			"title": "Nombre T4",
+			"type": "integer"
+		},
+		"semt5": {
+			"title": "Nombre T5",
+			"type": "integer"
+		},
+		"semt6": {
+			"title": "Nombre T6",
+			"type": "integer"
+		},
+		"semt7": {
+			"title": "Nombre T7 et +",
+			"type": "integer"
+		},
+		"synthtyp": {
+			"title": "Synthèse nb log. par type",
+			"type": "string",
+			"maxLength": 80
+		},
+		"synthmod": {
+			"title": "Synthèse nb log par mode de fi.",
+			"type": "string",
+			"maxLength": 80
+		},
+		"logsemcol": {
+			"title": "Synthèse par typologie",
+			"type": "string",
+			"maxLength": 60
+		},
+		"garint": {
+			"title": "Nombre Lgts avec garage intégré",
+			"type": "integer"
+		},
+		"garnint": {
+			"title": "Garages non intégrés",
+			"type": "integer"
+		},
+		"garaer": {
+			"title": "Nb de places de parking aérien",
+			"type": "integer"
+		},
+		"bxss": {
+			"title": "boxe en sous-sol",
+			"type": "integer"
+		},
+		"nbxss": {
+			"title": "Non boxé en sous-sol",
+			"type": "integer"
+		},
+		"nbloghp": {
+			"title": "Nb total logements HP",
+			"type": "integer"
+		},
+		"nbloghp1": {
+			"title": "Nombre T1 HP",
+			"type": "integer"
+		},
+		"nbloghp1b": {
+			"title": "Nombre T1bis HP",
+			"type": "integer"
+		},
+		"nbloghp2": {
+			"title": "Nombre T2 HP",
+			"type": "integer"
+		},
+		"nbloghp3": {
+			"title": "Nombre T3 HP",
+			"type": "integer"
+		},
+		"nbloghp4": {
+			"title": "Nombre T4 HP",
+			"type": "integer"
+		},
+		"nbloghp5": {
+			"title": "Nombre T5 HP",
+			"type": "integer"
+		},
+		"nbloghp6": {
+			"title": "Nombre T6 HP",
+			"type": "integer"
+		},
+		"nbcellier": {
+			"title": "Nb de celliers",
+			"type": "integer"
+		},
+		"nbcave": {
+			"title": "Nb de caves",
+			"type": "integer"
+		},
+		"resaunpct": {
+			"title": "Nb Lgts réservataires Collecteurs 1%",
+			"type": "integer"
+		},
+		"resacol": {
+			"title": "Nb Lgts réservataires Collectivité",
+			"type": "integer"
+		},
+		"resapref": {
+			"title": "Nb Lgts réservataires Préfecture (PLUS)",
+			"type": "integer"
+		},
+		"resadep": {
+			"title": "Nb Lgts réservataires Département",
+			"type": "integer"
+		},
+		"resabg": {
+			"title": "Besoins Généraux",
+			"type": "integer"
+		},
+		"resadivers": {
+			"title": "Divers",
+			"type": "integer"
+		},
+		"surfjard": {
+			"title": "M2 de surface Jardins",
+			"type": "number",
+			"decimals": 2
+		},
+		"surfterras": {
+			"title": "M2 de surface Terrasses",
+			"type": "number",
+			"decimals": 2
+		},
+		"bxsstruct": {
+			"title": "Boxes en super structure",
+			"type": "integer"
+		},
+		"nbjard": {
+			"title": "Nb Jardins",
+			"type": "integer"
+		},
+		"nbterras": {
+			"title": "Nb Terasses",
+			"type": "integer"
+		}
+	}
+}

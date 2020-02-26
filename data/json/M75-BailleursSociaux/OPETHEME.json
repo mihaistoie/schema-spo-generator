@@ -1,0 +1,35 @@
+{
+	"tableName": "OPETHEME",
+	"name": "SpoThemeRattachement",
+	"title": "Thème de rattachement",
+	"type": "object",
+	"primaryKey": [
+		"uidtheme"
+	],
+	"properties": {
+		"uidtheme": {
+			"title": "Code du thème",
+			"type": "string"
+		},
+		"lbtheme": {
+			"title": "Libellé du thème",
+			"type": "string",
+			"maxLength": 200
+		},
+		"ordre": {
+			"title": "Ordre",
+			"type": "string",
+			"maxLength": 4
+		},
+		"montantderog": {
+			"title": "Montant dérogation",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxderog": {
+			"title": "Taux dérogation",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"tableName": "MGLSTRCTDOMOPERAT_V",
+	"name": "SpoListeDossiersRecentsDomaineOperation",
+	"title": "Liste des dossiers récents du domaine des Opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"lbdoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé du dossier",
+			"type": "string",
+			"maxLength": 200
+		},
+		"lbproced": {
+			"title": "Libellé  de la procédure",
+			"type": "string",
+			"maxLength": 200
+		}
+	}
+}

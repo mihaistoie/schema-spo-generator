@@ -1,0 +1,26 @@
+{
+	"tableName": "MGOPERATDETBUDGET_V",
+	"name": "SpoEcranFinancementDOMPOPE",
+	"title": "Vue de l’écran financement DOMOPE",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mtprojttc": {
+			"title": "Montant Projet TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtdepttc": {
+			"title": "Montant Opération TTC",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

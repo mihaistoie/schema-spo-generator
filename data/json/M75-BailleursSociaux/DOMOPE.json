@@ -1,0 +1,264 @@
+{
+	"tableName": "DOMOPE",
+	"name": "SpoOperations",
+	"title": "Opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"objdos": {
+			"title": "Objet",
+			"type": "string",
+			"maxLength": 200
+		},
+		"iddossreg": {
+			"title": "Est le fils de",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro d’ordre du dossier fils",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typope": {
+			"title": "Type d’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"sousope": {
+			"title": "Décomposée en sous-opérations",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"natope": {
+			"title": "Nature de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtenqpub": {
+			"title": "Date d’enquête publique",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtautopref": {
+			"title": "Date d’autorisation préfectorale",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mtprevht": {
+			"title": "Montant prévisionnel des dépenses opération HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprevttc": {
+			"title": "Montant prévisionnel des dépenses opération TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"suivap": {
+			"title": "Opération financière (Suivi en AP)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"apuniq": {
+			"title": "A.P. unique",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ancreat": {
+			"title": "Année de création",
+			"type": "string",
+			"maxLength": 4
+		},
+		"dtcreatope": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"anreal": {
+			"title": "Année de réalisation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"nbexercice": {
+			"title": "Nombre exercice",
+			"type": "integer"
+		},
+		"tauxtva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtetatav": {
+			"title": "Date de mise a jour de l’etat d’avancement",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"etatav": {
+			"title": "Etat d’avancement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtdebprev": {
+			"title": "Date de début prévue",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfinprev": {
+			"title": "Date de fin prévue",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdebtrv": {
+			"title": "Date réelle de début des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfintrv": {
+			"title": "Date réelle de fin des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mtprojht": {
+			"title": "Montant projet HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"tauxtvaproj": {
+			"title": "Taux de TVA projet",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprojttc": {
+			"title": "Montant projet TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"utiletatav": {
+			"title": "Utilisateur ayant mis à jour l’etat d’avancement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"montantsttc": {
+			"title": "Base de calcul des montants TTC (à défaut : HT)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"majplanning": {
+			"title": "Date de mise a jour du planning",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"istreso": {
+			"title": "Prise en compte par la trésorerie",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"refurl": {
+			"title": "Paramètre de construction de l’Url",
+			"type": "string",
+			"maxLength": 32
+		},
+		"issmo": {
+			"title": "Lien avec Montage opération",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"rue1": {
+			"title": "Bâtiment, résidence, entrée",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue2": {
+			"title": "N° et voie",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue3": {
+			"title": "Lieu-dit, boite postale",
+			"type": "string",
+			"maxLength": 100
+		},
+		"codepostal": {
+			"title": "CodePostal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nomville": {
+			"title": "NomVille",
+			"type": "string",
+			"maxLength": 50
+		},
+		"pays": {
+			"title": "Pays",
+			"type": "string",
+			"maxLength": 40
+		},
+		"gisposition ": {
+			"title": "Position géographique",
+			"type": "string",
+			"maxLength": 50
+		},
+		"proprietaire ": {
+			"title": "Proprietaire du terrain",
+			"type": "string",
+			"maxLength": 100
+		},
+		"modbudget": {
+			"title": "Modèle de budget",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomcom": {
+			"title": "Nom commercial",
+			"type": "string",
+			"maxLength": 100
+		},
+		"societerv": {
+			"title": "Société",
+			"type": "string",
+			"maxLength": 32
+		},
+		"isversion": {
+			"title": "operation version",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"statutope": {
+			"title": "Statut d’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"uniteloyer": {
+			"title": "Unité Loyer",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

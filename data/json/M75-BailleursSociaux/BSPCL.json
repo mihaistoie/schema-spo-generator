@@ -1,0 +1,110 @@
+{
+	"tableName": "BSPCL",
+	"name": "SpoPCL",
+	"title": "PCL",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logpcl": {
+			"title": "Total logements PSLA",
+			"type": "integer"
+		},
+		"cdpslac": {
+			"title": "Code programme PSLA Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libpslac": {
+			"title": "Libellé programme PSLA Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"pclc1": {
+			"title": "PSLA collectif T1",
+			"type": "integer"
+		},
+		"pclc1b": {
+			"title": "PSLA collectif T1b",
+			"type": "integer"
+		},
+		"pclc2": {
+			"title": "PSLA collectif T2",
+			"type": "integer"
+		},
+		"pclc3": {
+			"title": "PSLA collectif T3",
+			"type": "integer"
+		},
+		"pclc4": {
+			"title": "PSLA collectif T4",
+			"type": "integer"
+		},
+		"pclc5": {
+			"title": "PSLA collectif T5",
+			"type": "integer"
+		},
+		"pclc6": {
+			"title": "PSLA collectif T6",
+			"type": "integer"
+		},
+		"pclc7": {
+			"title": "PSLA collectif T7",
+			"type": "integer"
+		},
+		"cdpslai": {
+			"title": "Code programme PSLA Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"libpslai": {
+			"title": "Libellé programme PSLA Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"pcli1": {
+			"title": "PSLA individuel T1",
+			"type": "integer"
+		},
+		"pcli1b": {
+			"title": "PSLA individuel T1b",
+			"type": "integer"
+		},
+		"pcli2": {
+			"title": "PSLA individuel T2",
+			"type": "integer"
+		},
+		"pcli3": {
+			"title": "PSLA individuel T3",
+			"type": "integer"
+		},
+		"pcli4": {
+			"title": "PSLA individuel T4",
+			"type": "integer"
+		},
+		"pcli5": {
+			"title": "PSLA individuel T5",
+			"type": "integer"
+		},
+		"pcli6": {
+			"title": "PSLA individuel T6",
+			"type": "integer"
+		},
+		"pcli7": {
+			"title": "PSLA individuel T7",
+			"type": "integer"
+		}
+	}
+}

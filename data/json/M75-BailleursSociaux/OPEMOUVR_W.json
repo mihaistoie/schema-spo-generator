@@ -1,0 +1,8 @@
+{
+	"tableName": "OPEMOUVR_W",
+	"name": "SpoListeOperationsMaitreOuvrageAssocie",
+	"title": "Liste des opérations avec le maître d’ouvrage associé",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {}
+}

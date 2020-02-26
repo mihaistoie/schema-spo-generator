@@ -1,0 +1,506 @@
+{
+	"tableName": "TB_CDESTDT_V",
+	"name": "SpoTB_CDESTDT_V",
+	"title": "TB_CDESTDT_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idacteur": {
+			"title": "Code Acteur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbacteur": {
+			"title": "Acteur",
+			"type": "string",
+			"maxLength": 40
+		},
+		"tierslib": {
+			"title": "Tiers",
+			"type": "string",
+			"maxLength": 200
+		},
+		"tiersmorale": {
+			"title": "Tiers Morale",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code Tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tiersref": {
+			"title": "Réference du Tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tiersobjet": {
+			"title": "Objet du Tiers",
+			"type": "string",
+			"maxLength": 255
+		},
+		"rue1": {
+			"title": "Rue 1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue2": {
+			"title": "Rue 2",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue3": {
+			"title": "Rue 3",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue4": {
+			"title": "Rue 4",
+			"type": "string",
+			"maxLength": 100
+		},
+		"tiersville": {
+			"title": "Ville",
+			"type": "string",
+			"maxLength": 40
+		},
+		"destel": {
+			"title": "Téléphone destinataire",
+			"type": "string",
+			"maxLength": 25
+		},
+		"desfax": {
+			"title": "Fax destinataire",
+			"type": "string",
+			"maxLength": 25
+		},
+		"despol": {
+			"title": "Formule de politesse",
+			"type": "string",
+			"maxLength": 200
+		},
+		"desapp": {
+			"title": "Formule d’appel",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dateedition": {
+			"title": "Date d’édition",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"proclib": {
+			"title": "Procédure",
+			"type": "string",
+			"maxLength": 200
+		},
+		"genre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"represnom": {
+			"title": "Nom du représentant",
+			"type": "string",
+			"maxLength": 50
+		},
+		"represprenom": {
+			"title": "Prénom du représentant",
+			"type": "string",
+			"maxLength": 30
+		},
+		"represtitre": {
+			"title": "Titre du représentant",
+			"type": "string",
+			"maxLength": 100
+		},
+		"represgenre": {
+			"title": "Genre du représentant",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idaction1": {
+			"title": "Code action 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtreal1": {
+			"title": "Date réalisation 1",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtprev1": {
+			"title": "Date prévu 1",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idaction2": {
+			"title": "Code action 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtreal2": {
+			"title": "Date réalisation 2",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtprev2": {
+			"title": "Date prévu 2",
+			"type": "string",
+			"maxLength": 10
+		},
+		"aiiddoss": {
+			"title": "aiiddoss",
+			"type": "string",
+			"maxLength": 32
+		},
+		"montope_genre": {
+			"title": "montope_genre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"montope_nomprenom": {
+			"title": "montope_nomprenom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"montope_titre": {
+			"title": "montope_titre",
+			"type": "string",
+			"maxLength": 255
+		},
+		"montope_reference": {
+			"title": "montope_reference",
+			"type": "string",
+			"maxLength": 200
+		},
+		"montope_tel": {
+			"title": "montope_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"montope_poste": {
+			"title": "montope_poste",
+			"type": "string",
+			"maxLength": 25
+		},
+		"montope_fax": {
+			"title": "montope_fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"montope_email": {
+			"title": "montope_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"assmop_genre": {
+			"title": "assmop_genre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"assmop_nomprenom": {
+			"title": "assmop_nomprenom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"assmop_titre": {
+			"title": "assmop_titre",
+			"type": "string",
+			"maxLength": 255
+		},
+		"assmop_reference": {
+			"title": "assmop_reference",
+			"type": "string",
+			"maxLength": 200
+		},
+		"assmop_tel": {
+			"title": "assmop_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"assmop_poste": {
+			"title": "assmop_poste",
+			"type": "string",
+			"maxLength": 25
+		},
+		"assmop_fax": {
+			"title": "assmop_fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"assmop_email": {
+			"title": "assmop_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"condope_genre": {
+			"title": "condope_genre",
+			"type": "string",
+			"maxLength": 80
+		},
+		"condope_nomprenom": {
+			"title": "condope_nomprenom",
+			"type": "string",
+			"maxLength": 200
+		},
+		"condope_titre": {
+			"title": "condope_titre",
+			"type": "string",
+			"maxLength": 255
+		},
+		"condope_reference": {
+			"title": "condope_reference",
+			"type": "string",
+			"maxLength": 200
+		},
+		"condope_tel": {
+			"title": "condope_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"condope_poste": {
+			"title": "condope_poste",
+			"type": "string",
+			"maxLength": 25
+		},
+		"condope_fax": {
+			"title": "condope_fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"condope_email": {
+			"title": "condope_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"inspfonc_genre": {
+			"title": "Genre Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 80
+		},
+		"inspfonc_nomprenom": {
+			"title": "Nom Prenom Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 200
+		},
+		"inspfonc_titre": {
+			"title": "Titre Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 255
+		},
+		"inspfonc_reference": {
+			"title": "Reference Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 200
+		},
+		"inspfonc_tel": {
+			"title": "Telephone Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 25
+		},
+		"inspfonc_poste": {
+			"title": "Poste Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 25
+		},
+		"inspfonc_fax": {
+			"title": "Fax Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 25
+		},
+		"inspfonc_email": {
+			"title": "Email Inspecteur Foncier",
+			"type": "string",
+			"maxLength": 64
+		},
+		"dg_titre": {
+			"title": "dg_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dg_nomprenom": {
+			"title": "dg_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"dga_titre": {
+			"title": "dga_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dga_nomprenom": {
+			"title": "dga_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"sd_titre": {
+			"title": "sd_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"sd_nomprenom": {
+			"title": "sd_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"secr_titre": {
+			"title": "secr_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"secr_nomprenom": {
+			"title": "secr_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"cellmarche_titre": {
+			"title": "cellmarche_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"cellmarche_nomprenom": {
+			"title": "cellmarche_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"cellmarche_tel": {
+			"title": "cellmarche_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"cellmarche_email": {
+			"title": "cellmarche_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"respserv_titre": {
+			"title": "respserv_titre",
+			"type": "string",
+			"maxLength": 100
+		},
+		"respserv_nomprenom": {
+			"title": "respserv_nomprenom",
+			"type": "string",
+			"maxLength": 81
+		},
+		"respserv_tel": {
+			"title": "respserv_tel",
+			"type": "string",
+			"maxLength": 25
+		},
+		"respserv_email": {
+			"title": "respserv_email",
+			"type": "string",
+			"maxLength": 64
+		},
+		"dyniddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"opeobjet": {
+			"title": "Objet de l’opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"opelib": {
+			"title": "Opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"operef": {
+			"title": "Référence de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"opeville": {
+			"title": "Ville de l’opération",
+			"type": "string",
+			"maxLength": 80
+		},
+		"openomorigine": {
+			"title": "Nom d’origine de l’opération",
+			"type": "string",
+			"maxLength": 80
+		},
+		"opelieudit": {
+			"title": "Lieu dit de l’opération",
+			"type": "string",
+			"maxLength": 180
+		},
+		"opeadresse": {
+			"title": "Adresse de l’opération",
+			"type": "string",
+			"maxLength": 180
+		},
+		"typlog": {
+			"title": "Synthèse nb log. par type",
+			"type": "string",
+			"maxLength": 80
+		},
+		"nblog": {
+			"title": "Total logements",
+			"type": "integer"
+		},
+		"typolog": {
+			"title": "Synthèse par typologie",
+			"type": "string",
+			"maxLength": 60
+		},
+		"dureop": {
+			"title": "Durée en mois",
+			"type": "integer"
+		},
+		"organismeville": {
+			"title": "Ville organisme",
+			"type": "string",
+			"maxLength": 40
+		},
+		"organismenom": {
+			"title": "Nom organisme",
+			"type": "string",
+			"maxLength": 200
+		},
+		"orgarue1": {
+			"title": "Rue 1 organisme",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgarue2": {
+			"title": "Rue 2 organisme",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgarue3": {
+			"title": "Rue 3 organisme",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgarue4": {
+			"title": "Rue 4 organisme",
+			"type": "string",
+			"maxLength": 100
+		},
+		"orgatel": {
+			"title": "Téléphone organisme",
+			"type": "string",
+			"maxLength": 25
+		},
+		"orgafax": {
+			"title": "Fax organisme",
+			"type": "string",
+			"maxLength": 25
+		},
+		"orgamail": {
+			"title": "Mail organisme",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

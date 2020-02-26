@@ -1,0 +1,74 @@
+{
+	"tableName": "TB_NDESTDT_V",
+	"name": "SpoTB_NDESTDT_V",
+	"title": "TB_NDESTDT_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"opeobjet": {
+			"title": "Objet de l’opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"opelib": {
+			"title": "Opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"operef": {
+			"title": "Référence de l’opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"opeville": {
+			"title": "Ville de l’opération",
+			"type": "string",
+			"maxLength": 80
+		},
+		"dateedition": {
+			"title": "Date d’édition",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"proclib": {
+			"title": "Procédure",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idaction1": {
+			"title": "Code action 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtreal1": {
+			"title": "Date réalisation 1",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtprev1": {
+			"title": "Date prévu 1",
+			"type": "string",
+			"maxLength": 10
+		},
+		"idaction2": {
+			"title": "Code action 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtreal2": {
+			"title": "Date réalisation 2",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtprev2": {
+			"title": "Date prévu 2",
+			"type": "string",
+			"maxLength": 10
+		}
+	}
+}

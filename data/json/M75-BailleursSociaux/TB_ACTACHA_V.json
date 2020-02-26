@@ -1,0 +1,174 @@
+{
+	"tableName": "TB_ACTACHA_V",
+	"name": "SpoTB_ACTACHA_V",
+	"title": "TB_Acteur achat",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddoss": {
+			"title": "iddoss",
+			"type": "string",
+			"maxLength": 32
+		},
+		"geometre": {
+			"title": "Geomètre",
+			"type": "string",
+			"maxLength": 200
+		},
+		"architecte": {
+			"title": "Architecte",
+			"type": "string",
+			"maxLength": 200
+		},
+		"etudsol": {
+			"title": "Etude de sol",
+			"type": "string",
+			"maxLength": 200
+		},
+		"notairegh": {
+			"title": "Notaire GH",
+			"type": "string",
+			"maxLength": 200
+		},
+		"notaireghville": {
+			"title": "Notaire GH Ville",
+			"type": "string",
+			"maxLength": 40
+		},
+		"notaireghrue": {
+			"title": "Notaire GH Rue",
+			"type": "string",
+			"maxLength": 100
+		},
+		"notairevend": {
+			"title": "Notaire Vendeur",
+			"type": "string",
+			"maxLength": 200
+		},
+		"notairevendvil": {
+			"title": "Notaire Vendeur Ville",
+			"type": "string",
+			"maxLength": 40
+		},
+		"notairevendrue": {
+			"title": "Notaire Vendeur Rue",
+			"type": "string",
+			"maxLength": 100
+		},
+		"vendeur": {
+			"title": "Vendeur",
+			"type": "string",
+			"maxLength": 200
+		},
+		"acquereur": {
+			"title": "acquereur",
+			"type": "string",
+			"maxLength": 200
+		},
+		"juriste": {
+			"title": "Juriste",
+			"type": "string",
+			"maxLength": 200
+		},
+		"juristel": {
+			"title": "Juriste Téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"jurisfax": {
+			"title": "Juriste Fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"jurismail": {
+			"title": "Juriste E-mail",
+			"type": "string",
+			"maxLength": 64
+		},
+		"jurisini": {
+			"title": "Juriste initiales",
+			"type": "string",
+			"maxLength": 200
+		},
+		"signataire": {
+			"title": "Signataire",
+			"type": "string",
+			"maxLength": 200
+		},
+		"monteurope": {
+			"title": "Monteur opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"monteurini": {
+			"title": "Monteur initiales",
+			"type": "string",
+			"maxLength": 200
+		},
+		"monteurtel": {
+			"title": "Monteur téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"monteurfax": {
+			"title": "Monteur fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"monteurmail": {
+			"title": "Monteur mail",
+			"type": "string",
+			"maxLength": 64
+		},
+		"technicien": {
+			"title": "Technicien",
+			"type": "string",
+			"maxLength": 200
+		},
+		"technini": {
+			"title": "Technicien initiales",
+			"type": "string",
+			"maxLength": 200
+		},
+		"techntel": {
+			"title": "Technicien téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"technfax": {
+			"title": "Technicien fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"technmail": {
+			"title": "Technicien mail",
+			"type": "string",
+			"maxLength": 64
+		},
+		"chargeetude": {
+			"title": "Chargé d’études",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cetudini": {
+			"title": "Chargé d’études initiales",
+			"type": "string",
+			"maxLength": 200
+		},
+		"cetudtel": {
+			"title": "Chargé d’études téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"cetudfax": {
+			"title": "Chargé d’études fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"cetudmail": {
+			"title": "Chargé d’études mail",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

@@ -1,0 +1,33 @@
+{
+	"tableName": "MARFI",
+	"name": "SpoLienFinancierMarche",
+	"title": "Lien financier marché",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idmar"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmar": {
+			"title": "Code marché",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcompta": {
+			"title": "Référence comptable",
+			"type": "string",
+			"maxLength": 50
+		}
+	}
+}

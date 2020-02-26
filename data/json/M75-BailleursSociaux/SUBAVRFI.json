@@ -1,0 +1,49 @@
+{
+	"tableName": "SUBAVRFI",
+	"name": "SpoAvancesRemboursablesFinancier",
+	"title": "Avances Remboursables Financier",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"ident",
+		"numech",
+		"idproced",
+		"typeech",
+		"numordre"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ident": {
+			"title": "Identifiant du bénéficiaire",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numech": {
+			"title": "Numéro de l’échéancier",
+			"type": "integer"
+		},
+		"idproced": {
+			"title": "Code procedure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeech": {
+			"title": "Type de l’échéancier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro d’ordre",
+			"type": "integer"
+		},
+		"reference": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 50
+		}
+	}
+}

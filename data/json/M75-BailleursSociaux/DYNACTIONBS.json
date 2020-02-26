@@ -1,0 +1,151 @@
+{
+	"tableName": "DYNACTIONBS",
+	"name": "SpoDynActionBS",
+	"title": "Données complémentaires liées aux actions du domaine BS",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idetape",
+		"idaction",
+		"idacteur",
+		"idtiers"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "Code etape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idaction": {
+			"title": "Code action",
+			"type": "string",
+			"maxLength": 20
+		},
+		"idacteur": {
+			"title": "Code acteur",
+			"type": "string",
+			"maxLength": 8
+		},
+		"idtiers": {
+			"title": "Code tiers",
+			"type": "string",
+			"maxLength": 8
+		},
+		"numpd": {
+			"title": "Numéro permis de démolir",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numpc": {
+			"title": "Numéro de permis de constuire",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numpm": {
+			"title": "Numéro de permis modificatif",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numpc2": {
+			"title": "Numéro permis de construire (2ème)",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numpc3": {
+			"title": "Numéro permis de construire (3ème)",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numpc4": {
+			"title": "Numéro permis de construire (4ème)",
+			"type": "string",
+			"maxLength": 40
+		},
+		"nummar": {
+			"title": "Numéro du Marché",
+			"type": "string",
+			"maxLength": 20
+		},
+		"mntmar": {
+			"title": "Montant du Marché",
+			"type": "number",
+			"decimals": 2
+		},
+		"libmar": {
+			"title": "Intitulé du Lot",
+			"type": "string",
+			"maxLength": 50
+		},
+		"avenant1": {
+			"title": "Avenant 1 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"avenant2": {
+			"title": "Avenant 2 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"avenant3": {
+			"title": "Avenant 3 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"avenant4": {
+			"title": "Avenant 4 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"avenant5": {
+			"title": "Avenant 5 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"mnthono": {
+			"title": "Honoraires",
+			"type": "number",
+			"decimals": 2
+		},
+		"honoav1": {
+			"title": "Honoraires 1 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"honoav2": {
+			"title": "Honoraires 2 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"honoav3": {
+			"title": "Honoraires 3 HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"honorgeo": {
+			"title": "Honoraire géomètre HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"honoretsol": {
+			"title": "Honoraire étude de sols HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"honomoead": {
+			"title": "Honoraires Maître d’oeuvre HT",
+			"type": "number",
+			"decimals": 2
+		}
+	}
+}

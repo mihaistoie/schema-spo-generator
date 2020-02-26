@@ -1,0 +1,276 @@
+{
+	"tableName": "TB_ACHAT2_V",
+	"name": "SpoTB_ACHAT2_V",
+	"title": "données du dossier d’acquisition et d’opération lié au dossier d’acquisition",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom1": {
+			"title": "Code domaine opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss1": {
+			"title": "Code dossier opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddom2": {
+			"title": "Code domaine Acquisitions",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss2": {
+			"title": "Code dossier Acquisitions",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé dossier Acquisition",
+			"type": "string",
+			"maxLength": 80
+		},
+		"objdos": {
+			"title": "Objet dossier Acquisition",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence Acquisition",
+			"type": "string",
+			"maxLength": 30
+		},
+		"lbop": {
+			"title": "Libellé opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"objop": {
+			"title": "Objet opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"anreal": {
+			"title": "Année programmation opération",
+			"type": "string",
+			"maxLength": 4
+		},
+		"refop": {
+			"title": "Référence opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typop": {
+			"title": "Type opération",
+			"type": "string",
+			"maxLength": 10
+		},
+		"typacha": {
+			"title": "Type acquisition",
+			"type": "string",
+			"maxLength": 10
+		},
+		"surfhab": {
+			"title": "Surface habitable",
+			"type": "number",
+			"decimals": 2
+		},
+		"daareal": {
+			"title": "DA à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"refavis": {
+			"title": "Référence Avis",
+			"type": "string",
+			"maxLength": 40
+		},
+		"estim": {
+			"title": "Estimation en euros",
+			"type": "number",
+			"decimals": 2
+		},
+		"fraispr": {
+			"title": "Frais provisoires",
+			"type": "number",
+			"decimals": 2
+		},
+		"signav": {
+			"title": "Signature à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"fraisre": {
+			"title": "Frais réels",
+			"type": "number",
+			"decimals": 2
+		},
+		"pubfonc": {
+			"title": "Publicité à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"conserv": {
+			"title": "Conservation",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numvol": {
+			"title": "Volume",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numero": {
+			"title": "Numéro",
+			"type": "string",
+			"maxLength": 40
+		},
+		"pubfonr": {
+			"title": "Publicité Att. Rect.  à réaliser",
+			"type": "string",
+			"maxLength": 40
+		},
+		"conserr": {
+			"title": "Conservation Att. Rect.",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numvolr": {
+			"title": "Volume Att. Rect.",
+			"type": "string",
+			"maxLength": 40
+		},
+		"numeror": {
+			"title": "Numéro Att. Rect.",
+			"type": "string",
+			"maxLength": 40
+		},
+		"surftot": {
+			"title": "Surface totale en m²",
+			"type": "integer"
+		},
+		"prixarr": {
+			"title": "Prix arrêté",
+			"type": "number",
+			"decimals": 2
+		},
+		"mutatio": {
+			"title": "Droits de mutations",
+			"type": "number",
+			"decimals": 2
+		},
+		"txtva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"monttva": {
+			"title": "Montant TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"montaht": {
+			"title": "Montant HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"comnego": {
+			"title": "Commision négociation",
+			"type": "number",
+			"decimals": 2
+		},
+		"partici": {
+			"title": "Participation ass. & copro.",
+			"type": "number",
+			"decimals": 2
+		},
+		"divers": {
+			"title": "divers",
+			"type": "number",
+			"decimals": 2
+		},
+		"commentai": {
+			"title": "commentaire",
+			"type": "string",
+			"maxLength": 250
+		},
+		"parcel1": {
+			"title": "Parcelle 1 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel2": {
+			"title": "Parcelle 1 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel3": {
+			"title": "Parcelle 2 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel4": {
+			"title": "Parcelle 2 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel5": {
+			"title": "Parcelle 3 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel6": {
+			"title": "Parcelle 3 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel7": {
+			"title": "Parcelle 4 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parcel8": {
+			"title": "Parcelle 4 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"parcel9": {
+			"title": "Parcelle 5 références",
+			"type": "string",
+			"maxLength": 40
+		},
+		"parce10": {
+			"title": "Parcelle 5 surface",
+			"type": "number",
+			"decimals": 2
+		},
+		"ref": {
+			"title": "Références cadastrales",
+			"type": "string",
+			"maxLength": 250
+		},
+		"logtri": {
+			"title": "Nb équivalents logements",
+			"type": "integer"
+		},
+		"loginsc": {
+			"title": "Total logements",
+			"type": "integer"
+		},
+		"synthtyp": {
+			"title": "Synthèse nb log. par type",
+			"type": "string",
+			"maxLength": 80
+		},
+		"logsemcol": {
+			"title": "Synthèse par typologie",
+			"type": "string",
+			"maxLength": 60
+		},
+		"synthmod": {
+			"title": "Synthèse nb log par mode de fi.",
+			"type": "string",
+			"maxLength": 80
+		}
+	}
+}

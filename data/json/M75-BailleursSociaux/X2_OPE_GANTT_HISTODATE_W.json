@@ -1,0 +1,104 @@
+{
+	"tableName": "X2_OPE_GANTT_HISTODATE_W",
+	"name": "SpoX2OpeGanttHistoDate",
+	"title": "R-Opérations - Gantt historisation des dates",
+	"type": "object",
+	"primaryKey": [
+		"idope"
+	],
+	"properties": {
+		"idope": {
+			"title": "Code opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbope": {
+			"title": "Libellé opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idtache": {
+			"title": "Code tâche",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbtache": {
+			"title": "Libellé tâche",
+			"type": "string",
+			"maxLength": 200
+		},
+		"datmodif": {
+			"title": "Date de modification",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datprevdeb": {
+			"title": "Date prévisionnelle de début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datprevfin": {
+			"title": "Date prévisionnelle de fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dureeprev": {
+			"title": "Durée prévisionnelle",
+			"type": "integer"
+		},
+		"datrevdeb": {
+			"title": "Date revu de début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datrevfin": {
+			"title": "Date revue de fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dureerevue": {
+			"title": "Durée revue",
+			"type": "integer"
+		},
+		"datreelledeb": {
+			"title": "Date réelle de début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"datreellefin": {
+			"title": "Date réelle de fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dureereelle": {
+			"title": "Durée réelle",
+			"type": "integer"
+		},
+		"comrevu": {
+			"title": "Commentaire revu",
+			"type": "string",
+			"maxLength": 2000,
+			"format": "memo"
+		},
+		"comecart": {
+			"title": "Commentaire écart",
+			"type": "string",
+			"maxLength": 2000,
+			"format": "memo"
+		},
+		"numordre": {
+			"title": "Ordre",
+			"type": "integer"
+		},
+		"iduti": {
+			"title": "Modifié par - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbuti": {
+			"title": "Modifié par",
+			"type": "string",
+			"maxLength": 40
+		}
+	}
+}

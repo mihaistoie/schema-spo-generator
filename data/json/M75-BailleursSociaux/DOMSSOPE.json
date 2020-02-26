@@ -1,0 +1,109 @@
+{
+	"tableName": "DOMSSOPE",
+	"name": "SpoSousOperations",
+	"title": "Sous-opérations",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"objdos": {
+			"title": "Objet",
+			"type": "string",
+			"maxLength": 200
+		},
+		"iddossreg": {
+			"title": "Est le fils de",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro d’ordre du dossier fils",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mtprevht": {
+			"title": "Montant prévisionnel HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprevttc": {
+			"title": "Montant prévisionnel TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtprevdeb": {
+			"title": "Date prévisionnelle de début des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtprevfin": {
+			"title": "Date prévisionnelle de fin des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtcreatope": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"anreal": {
+			"title": "Année de réalisation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"nbexercice": {
+			"title": "Nombre exercice",
+			"type": "integer"
+		},
+		"tauxtva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtdebtrv": {
+			"title": "Date réelle de début des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfintrv": {
+			"title": "Date réelle de fin des travaux",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"suivap": {
+			"title": "Suivi en A.P.",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"apuniq": {
+			"title": "A.P. unique",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

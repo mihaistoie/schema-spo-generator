@@ -1,0 +1,133 @@
+{
+	"tableName": "STB_OPEENT_V",
+	"name": "SpoSTB_OPEENT_V",
+	"title": "STB_OPEENT_V",
+	"type": "object",
+	"primaryKey": [],
+	"properties": {
+		"iddom": {
+			"title": "Code Domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code Dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbope": {
+			"title": "Libellé opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcompta": {
+			"title": "Référence comptable",
+			"type": "string",
+			"maxLength": 50
+		},
+		"objdos": {
+			"title": "Objet opération",
+			"type": "string",
+			"maxLength": 200
+		},
+		"lbuti": {
+			"title": "lbuti",
+			"type": "string",
+			"maxLength": 40
+		},
+		"lbdirect": {
+			"title": "lbdirect",
+			"type": "string",
+			"maxLength": 100
+		},
+		"lbserv": {
+			"title": "lbserv",
+			"type": "string",
+			"maxLength": 80
+		},
+		"ancreat": {
+			"title": "Année pré programmation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"anreal": {
+			"title": "Année programmation",
+			"type": "string",
+			"maxLength": 4
+		},
+		"nbexercice": {
+			"title": "Nombre exercice",
+			"type": "integer"
+		},
+		"typope": {
+			"title": "Type opération",
+			"type": "string",
+			"maxLength": 32
+		},
+		"mtprevht": {
+			"title": "Montant prévu HT",
+			"type": "number",
+			"decimals": 2
+		},
+		"mtprevttc": {
+			"title": "Montant prévu TTC",
+			"type": "number",
+			"decimals": 2
+		},
+		"dtprevdeb": {
+			"title": "Date prévue début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtprevfin": {
+			"title": "Date prévue fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdeb": {
+			"title": "Date début",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfin": {
+			"title": "Date fin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtenqpub": {
+			"title": "Date d’enquête publique",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtautopref": {
+			"title": "Date d’autorisation préfectorale",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idclas1": {
+			"title": "Id classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbclas1": {
+			"title": "Classeur",
+			"type": "string",
+			"maxLength": 80
+		},
+		"lbclas2": {
+			"title": "Classeur2",
+			"type": "string",
+			"maxLength": 80
+		},
+		"lbclas3": {
+			"title": "Classeur3",
+			"type": "string",
+			"maxLength": 80
+		}
+	}
+}

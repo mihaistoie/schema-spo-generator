@@ -1,0 +1,110 @@
+{
+	"tableName": "BSAUTRE1",
+	"name": "SpoAutre1",
+	"title": "Autre 1",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"logautre2": {
+			"title": "Total logements Autre 1",
+			"type": "integer"
+		},
+		"cda1c": {
+			"title": "Code programme AUTRE 1 Collectif",
+			"type": "string",
+			"maxLength": 80
+		},
+		"liba1c": {
+			"title": "Libellé programme AUTRE 1 Collectif",
+			"type": "string",
+			"maxLength": 120
+		},
+		"a2c1": {
+			"title": "Autre 1 collectif T1",
+			"type": "integer"
+		},
+		"a2c1b": {
+			"title": "Autre 1 collectif T1b",
+			"type": "integer"
+		},
+		"a2c2": {
+			"title": "Autre 1 collectif T2",
+			"type": "integer"
+		},
+		"a2c3": {
+			"title": "Autre 1 collectif T3",
+			"type": "integer"
+		},
+		"a2c4": {
+			"title": "Autre 1 collectif T4",
+			"type": "integer"
+		},
+		"a2c5": {
+			"title": "Autre 1 collectif T5",
+			"type": "integer"
+		},
+		"a2c6": {
+			"title": "Autre 1 collectif T6",
+			"type": "integer"
+		},
+		"a2c7": {
+			"title": "Autre 1 collectif T7",
+			"type": "integer"
+		},
+		"cda1i": {
+			"title": "Code programme AUTRE 1 Individuel",
+			"type": "string",
+			"maxLength": 80
+		},
+		"liba1i": {
+			"title": "Libellé programme AUTRE 1 Individuel",
+			"type": "string",
+			"maxLength": 120
+		},
+		"a2i1": {
+			"title": "Autre 1 individuel T1",
+			"type": "integer"
+		},
+		"a2i1b": {
+			"title": "Autre 1 individuel T1b",
+			"type": "integer"
+		},
+		"a2i2": {
+			"title": "Autre 1 individuel T2",
+			"type": "integer"
+		},
+		"a2i3": {
+			"title": "Autre 1 individuel T3",
+			"type": "integer"
+		},
+		"a2i4": {
+			"title": "Autre 1 individuel T4",
+			"type": "integer"
+		},
+		"a2i5": {
+			"title": "Autre 1 individuel T5",
+			"type": "integer"
+		},
+		"a2i6": {
+			"title": "Autre 1 individuel T6",
+			"type": "integer"
+		},
+		"a2i7": {
+			"title": "Autre 1 individuel T7",
+			"type": "integer"
+		}
+	}
+}

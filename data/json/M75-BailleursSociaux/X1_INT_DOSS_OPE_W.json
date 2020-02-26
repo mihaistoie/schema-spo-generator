@@ -1,0 +1,61 @@
+{
+	"tableName": "X1_INT_DOSS_OPE_W",
+	"name": "SpoX1DossiersComplementOperation",
+	"title": "X1- Dossiers Complément Opération GF",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idcrit1"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Domaine du métier analysé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Dossier Subvention - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit1": {
+			"title": "Critère 1 - Code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"collcod": {
+			"title": "Code collectivité CORIOLIS",
+			"type": "string",
+			"maxLength": 3
+		},
+		"opegann": {
+			"title": "Année d’origine de l’engagement CORIOLIS",
+			"type": "integer"
+		},
+		"opegcod": {
+			"title": "Code engagement pluri-annuel CORIOLIS",
+			"type": "string",
+			"maxLength": 5
+		},
+		"opegnum": {
+			"title": "Numéro d’engagement pluri-annuel CORIOLIS",
+			"type": "integer"
+		},
+		"idoperat": {
+			"title": "Code opération ARIANNE",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idphase": {
+			"title": "Code phase",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcompta": {
+			"title": "Référence compatble",
+			"type": "string",
+			"maxLength": 50
+		}
+	}
+}

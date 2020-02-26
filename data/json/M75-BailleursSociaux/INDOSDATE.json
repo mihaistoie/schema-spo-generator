@@ -1,0 +1,73 @@
+{
+	"tableName": "INDOSDATE",
+	"name": "SpoDateDossier",
+	"title": "Date dossier",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"critere1",
+		"critere2",
+		"critere3",
+		"critere4",
+		"critere5",
+		"idtypedate"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere1": {
+			"title": "Critère 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere2": {
+			"title": "Critère 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere3": {
+			"title": "Critère 3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere4": {
+			"title": "Critère 4",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere5": {
+			"title": "Critère 5",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtypedate": {
+			"title": "Code type date",
+			"type": "string",
+			"maxLength": 10
+		},
+		"dtdate": {
+			"title": "Date",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdate_th": {
+			"title": "Date prévisionnelle",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"actif": {
+			"title": "Actif",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

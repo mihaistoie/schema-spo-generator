@@ -1,0 +1,50 @@
+{
+	"tableName": "DOMACHA",
+	"name": "SpoDOMACHA",
+	"title": "Acquisitions foncières",
+	"type": "object",
+	"primaryKey": [
+		"iddoss"
+	],
+	"properties": {
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdoss": {
+			"title": "Libellé dossier",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 30
+		},
+		"objdos": {
+			"title": "Objet du dossier",
+			"type": "string",
+			"maxLength": 200
+		},
+		"iddossreg": {
+			"title": "Code dossier père",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro d’ordre",
+			"type": "integer"
+		},
+		"idtiers": {
+			"title": "Code tiers",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}
