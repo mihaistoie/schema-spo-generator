@@ -185,6 +185,21 @@
 			"title": "DepTvaMarge",
 			"type": "number",
 			"decimals": 2
+		},
+		"dation": {
+			"title": "Dation",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mntdationht": {
+			"title": "mntDationHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntdationttc": {
+			"title": "mntDationTTC",
+			"type": "number",
+			"decimals": 4
 		}
 	},
 	"relations": {

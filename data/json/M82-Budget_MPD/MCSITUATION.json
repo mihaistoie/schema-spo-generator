@@ -144,6 +144,11 @@
 			"title": "Utilisateur ayant fait la dernière modification",
 			"type": "string",
 			"maxLength": 32
+		},
+		"ismultitaux": {
+			"title": "IsMultiTaux",
+			"type": "boolean",
+			"format": "mgdis-boolean"
 		}
 	},
 	"relations": {

@@ -5,7 +5,8 @@
 	"type": "object",
 	"primaryKey": [
 		"idsitu",
-		"numtiers"
+		"numtiers",
+		"txtva"
 	],
 	"properties": {
 		"idsitu": {
@@ -35,6 +36,11 @@
 			"title": "Code situation-tiers",
 			"type": "string",
 			"maxLength": 32
+		},
+		"txtva": {
+			"title": "Taux de TVA",
+			"type": "number",
+			"decimals": 2
 		}
 	},
 	"relations": {

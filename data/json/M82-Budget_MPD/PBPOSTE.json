@@ -101,6 +101,11 @@
 			"title": "inclusTvaMarge",
 			"type": "boolean",
 			"format": "mgdis-boolean"
+		},
+		"colaxe": {
+			"title": "colAxe",
+			"type": "string",
+			"maxLength": 32
 		}
 	},
 	"relations": {

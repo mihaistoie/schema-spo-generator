@@ -1784,6 +1784,21 @@
 				"title": "DepTvaMarge",
 				"type": "number",
 				"decimals": 2
+			},
+			"dation": {
+				"title": "Dation",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"mntdationht": {
+				"title": "mntDationHT",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntdationttc": {
+				"title": "mntDationTTC",
+				"type": "number",
+				"decimals": 4
 			}
 		},
 		"relations": {
@@ -2134,6 +2149,16 @@
 				"title": "prixFige",
 				"type": "string",
 				"maxLength": 32
+			},
+			"unitecomm": {
+				"title": "uniteComm",
+				"type": "string",
+				"maxLength": 10
+			},
+			"rythmecomm": {
+				"title": "rythmeComm",
+				"type": "number",
+				"decimals": 2
 			}
 		},
 		"relations": {
@@ -3889,6 +3914,11 @@
 				"title": "inclusTvaMarge",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"colaxe": {
+				"title": "colAxe",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -5441,6 +5471,11 @@
 				"title": "MethodeTvaMarge",
 				"type": "string",
 				"maxLength": 10
+			},
+			"dation": {
+				"title": "Dation",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -10998,6 +11033,11 @@
 				"title": "Utilisateur ayant fait la dernière modification",
 				"type": "string",
 				"maxLength": 32
+			},
+			"idfacfinal": {
+				"title": "idFacFinal",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -11063,6 +11103,11 @@
 				"title": "Code TVA",
 				"type": "string",
 				"maxLength": 10
+			},
+			"idfacacompte": {
+				"title": "idFacAcompte",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -11226,6 +11271,11 @@
 				"title": "Utilisateur ayant fait la dernière modification",
 				"type": "string",
 				"maxLength": 32
+			},
+			"ismultitaux": {
+				"title": "IsMultiTaux",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -11323,6 +11373,11 @@
 				"title": "IdInfoReval",
 				"type": "string",
 				"maxLength": 32
+			},
+			"tauxtiers": {
+				"title": "Taux du tiersi",
+				"type": "number",
+				"decimals": 2
 			}
 		},
 		"relations": {
@@ -11452,7 +11507,8 @@
 		"type": "object",
 		"primaryKey": [
 			"idsitu",
-			"numtiers"
+			"numtiers",
+			"txtva"
 		],
 		"properties": {
 			"idsitu": {
@@ -11482,6 +11538,11 @@
 				"title": "Code situation-tiers",
 				"type": "string",
 				"maxLength": 32
+			},
+			"txtva": {
+				"title": "Taux de TVA",
+				"type": "number",
+				"decimals": 2
 			}
 		},
 		"relations": {

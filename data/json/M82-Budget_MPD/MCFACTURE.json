@@ -190,6 +190,11 @@
 			"title": "Utilisateur ayant fait la dernière modification",
 			"type": "string",
 			"maxLength": 32
+		},
+		"idfacfinal": {
+			"title": "idFacFinal",
+			"type": "string",
+			"maxLength": 32
 		}
 	},
 	"relations": {

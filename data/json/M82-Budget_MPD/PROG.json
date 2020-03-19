@@ -211,6 +211,11 @@
 			"title": "MethodeTvaMarge",
 			"type": "string",
 			"maxLength": 10
+		},
+		"dation": {
+			"title": "Dation",
+			"type": "boolean",
+			"format": "mgdis-boolean"
 		}
 	},
 	"relations": {

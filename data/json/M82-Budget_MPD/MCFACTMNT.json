@@ -46,6 +46,11 @@
 			"title": "Code TVA",
 			"type": "string",
 			"maxLength": 10
+		},
+		"idfacacompte": {
+			"title": "idFacAcompte",
+			"type": "string",
+			"maxLength": 32
 		}
 	},
 	"relations": {

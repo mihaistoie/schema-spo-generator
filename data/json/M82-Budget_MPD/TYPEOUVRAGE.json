@@ -31,6 +31,16 @@
 			"title": "prixFige",
 			"type": "string",
 			"maxLength": 32
+		},
+		"unitecomm": {
+			"title": "uniteComm",
+			"type": "string",
+			"maxLength": 10
+		},
+		"rythmecomm": {
+			"title": "rythmeComm",
+			"type": "number",
+			"decimals": 2
 		}
 	},
 	"relations": {
