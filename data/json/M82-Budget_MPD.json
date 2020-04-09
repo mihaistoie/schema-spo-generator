@@ -12808,6 +12808,11 @@
 				"type": "string",
 				"format": "mgdis-date"
 			},
+			"datelibrefin": {
+				"title": "DateLibreFin",
+				"type": "string",
+				"format": "mgdis-date"
+			},
 			"coeff": {
 				"title": "Coefficient",
 				"type": "number",
@@ -13141,6 +13146,21 @@
 			"decalage": {
 				"title": "Décalage",
 				"type": "integer"
+			},
+			"taux": {
+				"title": "Taux",
+				"type": "number",
+				"decimals": 2
+			},
+			"periodicite": {
+				"title": "Periodicite",
+				"type": "string",
+				"maxLength": 10
+			},
+			"basecalcul": {
+				"title": "BaseCalcul",
+				"type": "string",
+				"maxLength": 10
 			}
 		}
 	},
@@ -13523,60 +13543,6 @@
 			}
 		}
 	},
-	"VIEW_ECHEANCES": {
-		"tableName": "VIEW_ECHEANCES",
-		"name": "SpoView_Echeances",
-		"title": "View_Echeances",
-		"type": "object",
-		"primaryKey": [],
-		"properties": {
-			"idop": {
-				"title": "idop",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idprog": {
-				"title": "idprog",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idposte": {
-				"title": "idposte",
-				"type": "string",
-				"maxLength": 32
-			},
-			"mnt": {
-				"title": "mnt",
-				"type": "number",
-				"decimals": 2
-			},
-			"date": {
-				"title": "date",
-				"type": "string",
-				"format": "mgdis-date"
-			},
-			"idpostetreso": {
-				"title": "idpostetreso",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idpiece": {
-				"title": "idpiece",
-				"type": "string",
-				"maxLength": 32
-			},
-			"libpiece": {
-				"title": "libpiece",
-				"type": "string",
-				"maxLength": 200
-			},
-			"datepiece": {
-				"title": "datepiece",
-				"type": "string",
-				"format": "mgdis-date"
-			}
-		}
-	},
 	"VIEW_FIN_PREVU": {
 		"tableName": "VIEW_FIN_PREVU",
 		"name": "SpoView_Fin_Prevu",
@@ -13603,6 +13569,16 @@
 				"title": "mnt",
 				"type": "number",
 				"decimals": 2
+			},
+			"mntht": {
+				"title": "mntht",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttva": {
+				"title": "mnttva",
+				"type": "number",
+				"decimals": 4
 			},
 			"date": {
 				"title": "date",
@@ -13633,6 +13609,159 @@
 				"title": "acompte",
 				"type": "string",
 				"maxLength": 10
+			}
+		}
+	},
+	"VIEW_ECHEANCES": {
+		"tableName": "VIEW_ECHEANCES",
+		"name": "SpoView_Echeances",
+		"title": "View_Echeances",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"mntht": {
+				"title": "mntht",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttva": {
+				"title": "mnttva",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"X2_M82TRESODATAOP_W": {
+		"tableName": "X2_M82TRESODATAOP_W",
+		"name": "SpoX2_M82TresoDataOp_W",
+		"title": "View trésorerie",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"libproc": {
+				"title": "Libellé de la procédure",
+				"type": "string",
+				"maxLength": 200
+			},
+			"typeop": {
+				"title": "Type d’opération",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libop": {
+				"title": "Libellé d’opération",
+				"type": "string",
+				"maxLength": 200
+			},
+			"dtosprev": {
+				"title": "Date OS prévue",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtosreal": {
+				"title": "Date OS réalisée",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtlivrprev": {
+				"title": "Date livraison prévue",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtlivreal": {
+				"title": "Date livraison réalisée",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"deprealise": {
+				"title": "Dépenses réalisées",
+				"type": "number",
+				"decimals": 2
+			},
+			"recreal": {
+				"title": "Recette réalisées",
+				"type": "number",
+				"decimals": 2
+			},
+			"tauxempreal": {
+				"title": "Taux d’emprunt réalisé / dépenses",
+				"type": "number",
+				"decimals": 12
+			},
+			"tresofinmois": {
+				"title": "Trésorerie fin de mois",
+				"type": "number",
+				"decimals": 2
+			},
+			"fondpropre": {
+				"title": "Fonds propres",
+				"type": "number",
+				"decimals": 2
+			},
+			"pret": {
+				"title": "Prêts",
+				"type": "number",
+				"decimals": 2
+			},
+			"subvention": {
+				"title": "Subventions",
+				"type": "number",
+				"decimals": 2
+			},
+			"moisannee": {
+				"title": "Mois, Année de trésorerie fin mois",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idop": {
+				"title": "Code opération",
+				"type": "string",
+				"maxLength": 32
 			}
 		}
 	},
@@ -13663,6 +13792,16 @@
 				"type": "number",
 				"decimals": 2
 			},
+			"mntht": {
+				"title": "mntht",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttva": {
+				"title": "mnttva",
+				"type": "number",
+				"decimals": 2
+			},
 			"date": {
 				"title": "date",
 				"type": "string",
@@ -13695,6 +13834,134 @@
 			}
 		}
 	},
+	"VIEW_FIN_PAYE_IMPORT": {
+		"tableName": "VIEW_FIN_PAYE_IMPORT",
+		"name": "SpoView_Fin_Paye_Import",
+		"title": "View_Fin_Paye_Import",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"mntht": {
+				"title": "mntht",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttva": {
+				"title": "mnttva",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"VIEW_FIN_PREVU_IMPORT": {
+		"tableName": "VIEW_FIN_PREVU_IMPORT",
+		"name": "SpoView_Fin_Prevu_Import",
+		"title": "View_Fin_Prevu_Import",
+		"type": "object",
+		"primaryKey": [],
+		"properties": {
+			"idop": {
+				"title": "idop",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprog": {
+				"title": "idprog",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "idposte",
+				"type": "string",
+				"maxLength": 32
+			},
+			"mnt": {
+				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"mntht": {
+				"title": "mntht",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttva": {
+				"title": "mnttva",
+				"type": "number",
+				"decimals": 2
+			},
+			"date": {
+				"title": "date",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idpostetreso": {
+				"title": "idpostetreso",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idpiece": {
+				"title": "idpiece",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libpiece": {
+				"title": "libpiece",
+				"type": "string",
+				"maxLength": 200
+			},
+			"datepiece": {
+				"title": "datepiece",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
 	"VIEW_FACTSIT_PAYE": {
 		"tableName": "VIEW_FACTSIT_PAYE",
 		"name": "SpoView_FactSit_Paye",
@@ -13719,6 +13986,16 @@
 			},
 			"mnt": {
 				"title": "mnt",
+				"type": "number",
+				"decimals": 2
+			},
+			"mntht": {
+				"title": "mntht",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttva": {
+				"title": "mnttva",
 				"type": "number",
 				"decimals": 2
 			},
@@ -13781,6 +14058,16 @@
 				"type": "number",
 				"decimals": 2
 			},
+			"mntht": {
+				"title": "mntht",
+				"type": "number",
+				"decimals": 2
+			},
+			"mnttva": {
+				"title": "mnttva",
+				"type": "number",
+				"decimals": 2
+			},
 			"date": {
 				"title": "date",
 				"type": "string",
@@ -13815,114 +14102,6 @@
 				"title": "type",
 				"type": "string",
 				"maxLength": 2
-			}
-		}
-	},
-	"VIEW_FIN_PREVU_IMPORT": {
-		"tableName": "VIEW_FIN_PREVU_IMPORT",
-		"name": "SpoView_Fin_Prevu_Import",
-		"title": "View_Fin_Prevu_Import",
-		"type": "object",
-		"primaryKey": [],
-		"properties": {
-			"idop": {
-				"title": "idop",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idprog": {
-				"title": "idprog",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idposte": {
-				"title": "idposte",
-				"type": "string",
-				"maxLength": 32
-			},
-			"mnt": {
-				"title": "mnt",
-				"type": "number",
-				"decimals": 2
-			},
-			"date": {
-				"title": "date",
-				"type": "string",
-				"format": "mgdis-date"
-			},
-			"idpostetreso": {
-				"title": "idpostetreso",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idpiece": {
-				"title": "idpiece",
-				"type": "string",
-				"maxLength": 32
-			},
-			"libpiece": {
-				"title": "libpiece",
-				"type": "string",
-				"maxLength": 200
-			},
-			"datepiece": {
-				"title": "datepiece",
-				"type": "string",
-				"format": "mgdis-date"
-			}
-		}
-	},
-	"VIEW_FIN_PAYE_IMPORT": {
-		"tableName": "VIEW_FIN_PAYE_IMPORT",
-		"name": "SpoView_Fin_Paye_Import",
-		"title": "View_Fin_Paye_Import",
-		"type": "object",
-		"primaryKey": [],
-		"properties": {
-			"idop": {
-				"title": "idop",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idprog": {
-				"title": "idprog",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idposte": {
-				"title": "idposte",
-				"type": "string",
-				"maxLength": 32
-			},
-			"mnt": {
-				"title": "mnt",
-				"type": "number",
-				"decimals": 2
-			},
-			"date": {
-				"title": "date",
-				"type": "string",
-				"format": "mgdis-date"
-			},
-			"idpostetreso": {
-				"title": "idpostetreso",
-				"type": "string",
-				"maxLength": 32
-			},
-			"idpiece": {
-				"title": "idpiece",
-				"type": "string",
-				"maxLength": 32
-			},
-			"libpiece": {
-				"title": "libpiece",
-				"type": "string",
-				"maxLength": 200
-			},
-			"datepiece": {
-				"title": "datepiece",
-				"type": "string",
-				"format": "mgdis-date"
 			}
 		}
 	},

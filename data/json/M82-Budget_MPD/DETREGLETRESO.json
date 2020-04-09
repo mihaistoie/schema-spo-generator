@@ -37,6 +37,11 @@
 			"type": "string",
 			"format": "mgdis-date"
 		},
+		"datelibrefin": {
+			"title": "DateLibreFin",
+			"type": "string",
+			"format": "mgdis-date"
+		},
 		"coeff": {
 			"title": "Coefficient",
 			"type": "number",

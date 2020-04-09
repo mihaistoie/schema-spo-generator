@@ -5756,7 +5756,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="cumulht" libelle="Cumul HT" nomInterne="CumulHT" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="cumulttc" libelle="Cumul TTC" nomInterne="CumulTTC" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="taux" libelle="Taux" nomInterne="Taux" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="3" taillePartieDecimale="2" crypte="N" />
-              <Champ id="idinforeval" libelle="IdInfoReval" nomInterne="IdInfoReval" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />			  
+              <Champ id="idinforeval" libelle="IdInfoReval" nomInterne="IdInfoReval" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />	
 			  <Champ id="tauxtiers" libelle="Taux du tiersi" nomInterne="TauxTiers" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="3" taillePartieDecimale="2" crypte="N" />			  
             </Champs>
             <Indexes>
@@ -6192,6 +6192,7 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="idev" libelle="Code événement" nomInterne="IdEv" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idposte" libelle="Code poste" nomInterne="IdPoste" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="datelibre" libelle="DateLibre" nomInterne="DateLibre" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="datelibrefin" libelle="DateLibreFin" nomInterne="DateLibreFin" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />			  
               <Champ id="coeff" libelle="Coefficient" nomInterne="Coeff" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="decalage" libelle="Decalage" nomInterne="Decalage" clePrimaire="N" obligatoire="N" type="Entier" taillePartieEntiere="5" crypte="N" />
               <Champ id="perdecalage" libelle="Periode décalage" nomInterne="PerDecalage" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
@@ -6260,7 +6261,10 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="typeregle" libelle="Type règle" nomInterne="TypeRegle" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="perdecalage" libelle="Type période" nomInterne="PerDecalage" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
               <Champ id="decalage" libelle="Décalage" nomInterne="Decalage" clePrimaire="N" obligatoire="N" type="Entier" taillePartieEntiere="5" crypte="N" />
-            </Champs>
+              <Champ id="taux" libelle="Taux" nomInterne="Taux" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="3" taillePartieDecimale="2" crypte="N" />
+              <Champ id="periodicite" libelle="Periodicite" nomInterne="Periodicite" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
+              <Champ id="basecalcul" libelle="BaseCalcul" nomInterne="BaseCalcul" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
+			  </Champs>
             <Indexes />
           </Table>
           <Table id="TAUXINTERET" libelle="Taux d’intérêt" nomInterne="TauxInteret" visibilite="N" abstraite="N">
@@ -6384,154 +6388,14 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
           </Table>
         </Tables>
         <Vues>
-          <Vue id="VIEW_ECHEANCES" libelle="View_Echeances" nomInterne="View_Echeances" visibilite="N" abstraite="N">
-            <Champs>
-              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
-              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
-              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-            </Champs>
-            <SQLSERVER>
-              WITH
-              POSTE
-              as
-              (
-              select id,typstruct from PBPOSTE
-              ),
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              PAR_OPE
-              as
-              (
-              select
-              E.idop
-              ,'*' as idprog
-              ,E.idpostetreso as idposte
-              ,sum(E.mnt) as mnt
-              ,E.dateEch as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,E.idregletreso as idpiece
-              ,null as libpiece
-              ,E.dateEch as datepiece
-              from EcheanceTreso E join OPE on OPE.iddoss = E.idop
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
-              where E.typeposte= 'BUD'
-              group by E.idop,E.idpostetreso,E.dateEch,COALESCE(P0.idpostetreso,P1.idpostetreso) ,E.idregletreso
-              ),
-              PAR_PROG
-              as
-              (
-              select
-              E.idop
-              ,E.idprog
-              ,E.idpostetreso as idposte
-              ,E.mnt as mnt
-              ,E.dateEch as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,E.idregletreso as idpiece
-              ,null as libpiece
-              ,E.dateEch as datepiece
-              from EcheanceTreso E join OPE on OPE.iddoss = E.idop
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
-              where E.typeposte= 'BUD'
-              )
-              select
-              PAR_OPE.*
-              ,POSTE.typstruct
-              from PAR_OPE
-              JOIN POSTE ON POSTE.id = PAR_OPE.idposte
-              UNION
-              select
-              PAR_PROG.*
-              , POSTE.typstruct
-              from PAR_PROG
-              JOIN POSTE ON POSTE.id = PAR_PROG.idposte
-            </SQLSERVER>
-            <ORACLE>
-              WITH
-              POSTE
-              as
-              (
-              select id,typstruct from PBPOSTE
-              ),
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              PAR_OPE
-              as
-              (
-              select
-              E.idop
-              ,'*' as idprog
-              ,E.idpostetreso as idposte
-              ,sum(E.mnt) as mnt
-              ,E.dateEch as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,E.idregletreso as idpiece
-              ,null as libpiece
-              ,E.dateEch as datepiece
-              from EcheanceTreso E join OPE on OPE.iddoss = E.idop
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
-              where E.typeposte= 'BUD'
-              group by E.idop,E.idpostetreso,E.dateEch,COALESCE(P0.idpostetreso,P1.idpostetreso) ,E.idregletreso
-              ),
-              PAR_PROG
-              as
-              (
-              select
-              E.idop
-              ,E.idprog
-              ,E.idpostetreso as idposte
-              ,E.mnt as mnt
-              ,E.dateEch as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,E.idregletreso as idpiece
-              ,null as libpiece
-              ,E.dateEch as datepiece
-              from EcheanceTreso E join OPE on OPE.iddoss = E.idop
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
-              where E.typeposte= 'BUD'
-              )
-              select
-              PAR_OPE.*
-              ,POSTE.typstruct
-              from PAR_OPE
-              JOIN POSTE ON POSTE.id = PAR_OPE.idposte
-              UNION
-              select
-              PAR_PROG.*
-              , POSTE.typstruct
-              from PAR_PROG
-              JOIN POSTE ON POSTE.id = PAR_PROG.idposte
-            </ORACLE>
-            <ENTERPRISEDB />
-          </Vue>
           <Vue id="VIEW_FIN_PREVU" libelle="View_Fin_Prevu" nomInterne="View_Fin_Prevu" visibilite="N" abstraite="N">
             <Champs>
               <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mntht" libelle="mntht" nomInterne="mntht" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mnttva" libelle="mnttva" nomInterne="mnttva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="4" crypte="N" />
               <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
@@ -6539,214 +6403,493 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="acompte" libelle="acompte" nomInterne="acompte" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
             </Champs>
-            <SQLSERVER>
-              WITH
-              AV as
-              (
-              SELECT
-              D.idop
-              ,D.idprog
-              ,A.ac
-              ,A.dtprever
-              ,D.iddoss
-              ,COALESCE(A.mntac,0) as mnt
-              FROM
-              DOMOPEFIN D
-              JOIN FINDEMAC A ON (A.iddoss = D.iddoss)
-              WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
-              )
-              , DEMAC AS
-              (
-              select idop,idprog,ac,dtprever,iddoss,mnt from AV
-              union
-              select idop,'*',ac,dtprever,iddoss,mnt from AV
-              ),
+            <SQLSERVER>WITH
+AV as 
+(
+SELECT 
+D.idop
+,D.idprog
+,A.ac
+,A.dtprever
+,D.iddoss
+,COALESCE(A.mntac,0) as mnt
+,COALESCE(A.mntac,0) as mntht
+,0 as mnttva
+FROM
+ DOMOPEFIN D   
+ JOIN FINDEMAC A ON (A.iddoss = D.iddoss) 
+  WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
+ )
+ , DEMAC AS
+  (
+ select idop,idprog,ac,dtprever,iddoss,mnt, mntht, mnttva  from AV
+ union
+ select idop,'*',ac,dtprever,iddoss,mnt, mntht, mnttva from AV
+ ),
 
-              DOMOPF
-              as
-              (
-              SELECT iddoss,idop,idposte,lbdoss,dtdem FROM DOMOPEFIN where idprog is null OR idprog = '*'
-              ),
-              ACOMPTE
-              AS
-              (
-              select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
-              ),
-              PROGRAMME
-              AS
-              (
-              SELECT id, idop  FROM PROG
-              UNION
-              SELECT '*', PROG.idop FROM PROG
-              ),
-              BUD
-              AS (
-              SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
-              ),
-              MONTANTBUD
-              AS (
-              SELECT id , idposte , idprog , mntttc FROM BUDMONTANT
-              )
+DOMOPF
+as
+(
+ SELECT iddoss,idop,idposte,lbdoss,dtdem FROM DOMOPEFIN where idprog is null OR idprog = '*'
+),
+ACOMPTE
+AS
+(
+select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
+),
+PROGRAMME
+AS
+(
+ SELECT id, idop  FROM PROG 
+ UNION  
+ SELECT '*', PROG.idop FROM PROG
+),
+BUD
+AS (
+ SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
+),
+MONTANTBUD
+AS (
+ SELECT id , idposte , idprog , mntttc , mntht, (mntttc-mntht) as mnttva FROM BUDMONTANT
+)
 
-              SELECT
-              BUD.idop
-              ,PROGRAMME.id as idprog
-              ,MONTANTBUD.idposte
-              ,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
-              ,F.dtprever as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,F.iddoss as idpiece
-              ,D.lbdoss as libpiece
-              ,D.dtdem as datepiece
-              ,A.lbval as acompte
-              FROM FINDEMAC F
-              JOIN DOMOPF D ON (D.iddoss = F.iddoss)
-              LEFT JOIN ACOMPTE A ON A.valeur = F.ac
-              JOIN BUD ON (BUD.idop = D.idop)
-              JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
-              JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
-              JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
-              UNION ALL
-              SELECT
-              A.idop,
-              A.idprog,
-              A.idposte,
-              A.mntht as mnt,
-              OD.dateod as dateflux,
-              COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
-              OD.id as idpiece,
-              OD.lib as libpiece,
-              OD.dateod as datepice,
-              null as acompte
-              FROM MCAFFECBUD A
-              JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN'
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
-              where A.typemnt = 'E'
-              UNION
+SELECT 
+ BUD.idop
+,PROGRAMME.id as idprog
+,MONTANTBUD.idposte
+,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
+,CASE WHEN (M.mntht &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mntht/M.mntht),2)),2) ELSE 0 END as mntht
+,CASE WHEN (M.mnttva &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mnttva/M.mnttva),2)),2) ELSE 0 END as mnttva
+,F.dtprever as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,F.iddoss as idpiece
+,D.lbdoss as libpiece
+,D.dtdem as datepiece
+,A.lbval as acompte
+FROM FINDEMAC F
+JOIN DOMOPF D ON (D.iddoss = F.iddoss)
+LEFT JOIN ACOMPTE A ON A.valeur = F.ac
+JOIN BUD ON (BUD.idop = D.idop)
+JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
+JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
+JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
+UNION ALL
+SELECT 
+A.idop,
+A.idprog,
+A.idposte,
+A.mntht as mnt,
+A.mntht as mntht,
+A.mnttva as mnttva,
+OD.dateod as dateflux,
+COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
+OD.id as idpiece,
+OD.lib as libpiece,
+OD.dateod as datepice,
+null as acompte
+FROM MCAFFECBUD A
+JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN' 
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
+where A.typemnt = 'E'
+UNION
+ select
+  V.idop
+ ,V.idprog
+ ,F.idposte
+ ,coalesce(V.mnt,0) as mnt
+ ,coalesce(V.mntht,0) as mntht
+ ,coalesce(V.mnttva,0) as mnttva
+,V.dtprever as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,V.iddoss as idpiece
+,F.lbdoss as libpiece
+,F.dtdem as datepiece
+,AC.lbval as acompte
+ FROM DEMAC V
+ LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss 
+ LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte 
+</SQLSERVER>
+            <ORACLE>WITH
+AV as 
+(
+SELECT 
+D.idop
+,D.idprog
+,A.ac
+,A.dtprever
+,D.iddoss
+,COALESCE(A.mntac,0) as mnt
+,COALESCE(A.mntac,0) as mntht
+,0 as mnttva
+FROM
+ DOMOPEFIN D   
+ JOIN FINDEMAC A ON (A.iddoss = D.iddoss) 
+  WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
+ )
+ , DEMAC AS
+  (
+ select idop,idprog,ac,dtprever,iddoss,mnt, mntht, mnttva  from AV
+ union
+ select idop,'*',ac,dtprever,iddoss,mnt, mntht, mnttva from AV
+ ),
+
+DOMOPF
+as
+(
+ SELECT iddoss,idop,idposte,lbdoss,dtdem FROM DOMOPEFIN where idprog is null OR idprog = '*'
+),
+ACOMPTE
+AS
+(
+select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
+),
+PROGRAMME
+AS
+(
+ SELECT id, idop  FROM PROG 
+ UNION  
+ SELECT '*', PROG.idop FROM PROG
+),
+BUD
+AS (
+ SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
+),
+MONTANTBUD
+AS (
+ SELECT id , idposte , idprog , mntttc , mntht, (mntttc-mntht) as mnttva FROM BUDMONTANT
+)
+
+SELECT 
+ BUD.idop
+,PROGRAMME.id as idprog
+,MONTANTBUD.idposte
+,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
+,CASE WHEN (M.mntht &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mntht/M.mntht),2)),2) ELSE 0 END as mntht
+,CASE WHEN (M.mnttva &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mnttva/M.mnttva),2)),2) ELSE 0 END as mnttva
+,F.dtprever as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,F.iddoss as idpiece
+,D.lbdoss as libpiece
+,D.dtdem as datepiece
+,A.lbval as acompte
+FROM FINDEMAC F
+JOIN DOMOPF D ON (D.iddoss = F.iddoss)
+LEFT JOIN ACOMPTE A ON A.valeur = F.ac
+JOIN BUD ON (BUD.idop = D.idop)
+JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
+JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
+JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
+UNION ALL
+SELECT 
+A.idop,
+A.idprog,
+A.idposte,
+A.mntht as mnt,
+A.mntht as mntht,
+A.mnttva as mnttva,
+OD.dateod as dateflux,
+COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
+OD.id as idpiece,
+OD.lib as libpiece,
+OD.dateod as datepice,
+null as acompte
+FROM MCAFFECBUD A
+JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN' 
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
+where A.typemnt = 'E'
+UNION
+ select
+  V.idop
+ ,V.idprog
+ ,F.idposte
+ ,coalesce(V.mnt,0) as mnt
+ ,coalesce(V.mntht,0) as mntht
+ ,coalesce(V.mnttva,0) as mnttva
+,V.dtprever as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,V.iddoss as idpiece
+,F.lbdoss as libpiece
+,F.dtdem as datepiece
+,AC.lbval as acompte
+ FROM DEMAC V
+ LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss 
+ LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte 
+</ORACLE>
+            <ENTERPRISEDB />
+          </Vue>
+          <Vue id="VIEW_ECHEANCES" libelle="View_Echeances" nomInterne="View_Echeances" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mntht" libelle="mntht" nomInterne="mntht" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mnttva" libelle="mnttva" nomInterne="mnttva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
+              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+            </Champs>
+            <SQLSERVER>WITH 
+POSTE 
+as
+(
+select id,typstruct from PBPOSTE
+),
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+PAR_OPE
+as
+( 
+select 
+E.idop
+,'*' as idprog
+,E.idpostetreso as idposte
+,sum(E.mnt) as mnt
+,sum(E.mntht) as mntht
+,sum(E.mnttva) as mnttva
+,E.dateEch as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,E.idregletreso as idpiece
+,null as libpiece
+,E.dateEch as datepiece
+from EcheanceTreso E join OPE on OPE.iddoss = E.idop
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
+where E.typeposte= 'BUD'
+group by E.idop,E.idpostetreso,E.dateEch,COALESCE(P0.idpostetreso,P1.idpostetreso) ,E.idregletreso
+),
+PAR_PROG
+as
+(
+select 
+E.idop
+,E.idprog
+,E.idpostetreso as idposte
+,sum(E.mnt) as mnt
+,sum(E.mntht) as mntht
+,sum(E.mnttva) as mnttva
+,E.dateEch as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,E.idregletreso as idpiece
+,null as libpiece
+,E.dateEch as datepiece
+from EcheanceTreso E join OPE on OPE.iddoss = E.idop
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
+where E.typeposte= 'BUD'
+group by E.idop,E.idprog,E.idpostetreso,E.dateEch,COALESCE(P0.idpostetreso,P1.idpostetreso) ,E.idregletreso
+)
+select 
+PAR_OPE.*
+,POSTE.typstruct
+from PAR_OPE 
+JOIN POSTE ON POSTE.id = PAR_OPE.idposte
+UNION
+select
+ PAR_PROG.* 
+, POSTE.typstruct
+ from PAR_PROG
+JOIN POSTE ON POSTE.id = PAR_PROG.idposte
+</SQLSERVER>
+            <ORACLE>WITH 
+POSTE 
+as
+(
+select id,typstruct from PBPOSTE
+),
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+PAR_OPE
+as
+( 
+select 
+E.idop
+,'*' as idprog
+,E.idpostetreso as idposte
+,sum(E.mnt) as mnt
+,sum(E.mntht) as mntht
+,sum(E.mnttva) as mnttva
+,E.dateEch as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,E.idregletreso as idpiece
+,null as libpiece
+,E.dateEch as datepiece
+from EcheanceTreso E join OPE on OPE.iddoss = E.idop
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
+where E.typeposte= 'BUD'
+group by E.idop,E.idpostetreso,E.dateEch,COALESCE(P0.idpostetreso,P1.idpostetreso) ,E.idregletreso
+),
+PAR_PROG
+as
+(
+select 
+E.idop
+,E.idprog
+,E.idpostetreso as idposte
+,sum(E.mnt) as mnt
+,sum(E.mntht) as mntht
+,sum(E.mnttva) as mnttva
+,E.dateEch as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,E.idregletreso as idpiece
+,null as libpiece
+,E.dateEch as datepiece
+from EcheanceTreso E join OPE on OPE.iddoss = E.idop
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = E.idop and P0.idposte = E.idpostetreso and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = E.idop and P1.idposte = E.idpostetreso
+where E.typeposte= 'BUD'
+group by E.idop,E.idprog,E.idpostetreso,E.dateEch,COALESCE(P0.idpostetreso,P1.idpostetreso) ,E.idregletreso
+)
+select 
+PAR_OPE.*
+,POSTE.typstruct
+from PAR_OPE 
+JOIN POSTE ON POSTE.id = PAR_OPE.idposte
+UNION
+select
+ PAR_PROG.* 
+, POSTE.typstruct
+ from PAR_PROG
+JOIN POSTE ON POSTE.id = PAR_PROG.idposte
+</ORACLE>
+            <ENTERPRISEDB />
+          </Vue>
+          <Vue id="X2_M82TRESODATAOP_W" libelle="View trésorerie" nomInterne="X2_M82TresoDataOp_W" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="libproc" libelle="Libellé de la procédure" nomInterne="LibProc" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
+              <Champ id="typeop" libelle="Type d'opération" nomInterne="TypeOp" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="libop" libelle="Libellé d'opération" nomInterne="LibOp" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
+              <Champ id="dtosprev" libelle="Date OS prévue" nomInterne="DtOSPrev" clePrimaire="N" obligatoire="O" type="DateMG" crypte="N" />
+              <Champ id="dtosreal" libelle="Date OS réalisée" nomInterne="DtOSReal" clePrimaire="N" obligatoire="O" type="DateMG" crypte="N" />
+              <Champ id="dtlivrprev" libelle="Date livraison prévue" nomInterne="DtLivrPrev" clePrimaire="N" obligatoire="O" type="DateMG" crypte="N" />
+              <Champ id="dtlivreal" libelle="Date livraison réalisée" nomInterne="DtLivReal" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="deprealise" libelle="Dépenses réalisées" nomInterne="DepRealise" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="recreal" libelle="Recette réalisées" nomInterne="RecReal" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="tauxempreal" libelle="Taux d'emprunt réalisé / dépenses" nomInterne="TauxEmpReal" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="6" taillePartieDecimale="12" crypte="N" />
+              <Champ id="tresofinmois" libelle="Trésorerie fin de mois" nomInterne="TresoFinMois" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="fondpropre" libelle="Fonds propres" nomInterne="FondPropre" clePrimaire="N" obligatoire="O" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="pret" libelle="Prêts" nomInterne="Pret" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="subvention" libelle="Subventions" nomInterne="Subvention" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="moisannee" libelle="Mois, Année de trésorerie fin mois" nomInterne="MoisAnnee" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idop" libelle="Code opération" nomInterne="IdOp" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+            </Champs>
+            <SQLSERVER>  			 WITH
+			  TmpPoste2 AS(
+				select B.idop, P.id, P.carac, M.mntttc
+				from BUDGET B
+				JOIN BUDMONTANT M ON B.id = M.id and M.idprog='*'
+				JOIN PBPOSTE P ON M.idposte=P.id
+				WHERE B.typbud=0 AND P.carac in ('SUBV','PRET','FP')
+				),
+			  TmpBudget AS(
+			  select 
+			  idop,
+			  carac,
+			  sum(mntttc) mntttc
+			  from TmpPoste2
+			  group by idop,carac			  
+			  ),
+              TmpTypeOpe AS (
+              SELECT valeur, lbval FROM INVAL WHERE idcodif = 'TYPEOPE'
+              )
               select
-              V.idop
-              ,V.idprog
-              ,F.idposte
-              ,coalesce(V.mnt,0) as mnt
-              ,V.dtprever as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,V.iddoss as idpiece
-              ,F.lbdoss as libpiece
-              ,F.dtdem as datepiece
-              ,AC.lbval as acompte
-              FROM DEMAC V
-              LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss
-              LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte
-            </SQLSERVER>
-            <ORACLE>
-              WITH
-              AV as
-              (
-              SELECT
-              D.idop
-              ,D.idprog
-              ,A.ac
-              ,A.dtprever
-              ,D.iddoss
-              ,COALESCE(A.mntac,0) as mnt
-              FROM
-              DOMOPEFIN D
-              JOIN FINDEMAC A ON (A.iddoss = D.iddoss)
-              WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
+              P.lbproced as libproc,
+              OP.lbval as typeop,
+              O.lbdoss as libop,
+              OS.dtprev as dtosprev,
+              OS.dtreal as dtosreal,
+              DL.dtprev as dtlivrprev,
+              DL.dtreal as dtlivreal,
+              T.mntdepenses as deprealise,
+              T.mntrecettes as recreal,
+              T.tauxemprunt as tauxempreal,
+              T.tresofinmois as tresofinmois,
+			  FP.mntttc as fondpropre,
+			  PRET.mntttc as pret,
+			  SUBV.mntttc as subvention,
+              DATENAME(MONTH, CONVERT(datetime, T.dateflux, 120))+ ' ' + DATENAME(YEAR, CONVERT(datetime, T.dateflux, 120)) as moisannee,
+              O.iddoss as idop
+              from TRESODATAOP T
+              JOIN DOMOPE O ON O.iddoss = T.idop
+              JOIN TmpTypeOpe OP On OP.valeur = O.typope
+              LEFT JOIN INCOMPUN P ON (P.iddom='DOMOPE' AND P.iddoss=O.iddoss AND P.defaut=-1)
+              LEFT JOIN SPOAPPEVENTDATE OS ON OS.idop = T.idop and OS.idev = 'EVT_OS'
+              LEFT JOIN SPOAPPEVENTDATE DL ON DL.idop = T.idop and DL.idev = 'EVT_LIVRAISON'
+			  LEFT JOIN TmpBudget FP ON FP.idop = T.idop and FP.carac = 'FP'
+			  LEFT JOIN TmpBudget SUBV ON SUBV.idop = T.idop and SUBV.carac = 'SUBV'
+			  LEFT JOIN TmpBudget PRET ON PRET.idop = T.idop and PRET.carac = 'PRET'
+</SQLSERVER>
+            <ORACLE>			 WITH
+			  TmpPoste2 AS(
+				select B.idop, P.id, P.carac, M.mntttc
+				from BUDGET B
+				JOIN BUDMONTANT M ON B.id = M.id and M.idprog='*'
+				JOIN PBPOSTE P ON M.idposte=P.id
+				WHERE B.typbud=0 AND P.carac in ('SUBV','PRET','FP')
+				),
+			  TmpBudget AS(
+			  select 
+			  idop,
+			  carac,
+			  sum(mntttc) mntttc
+			  from TmpPoste2
+			  group by idop,carac			  
+			  ),
+              TmpTypeOpe AS (
+              SELECT valeur, lbval FROM INVAL WHERE idcodif = 'TYPEOPE'
               )
-              , DEMAC AS
-              (
-              select idop,idprog,ac,dtprever,iddoss,mnt from AV
-              union
-              select idop,'*',ac,dtprever,iddoss,mnt from AV
-              ),
-
-              DOMOPF
-              as
-              (
-              SELECT iddoss,idop,idposte,lbdoss,dtdem FROM DOMOPEFIN where idprog is null OR idprog = '*'
-              ),
-              ACOMPTE
-              AS
-              (
-              select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
-              ),
-              PROGRAMME
-              AS
-              (
-              SELECT id, idop  FROM PROG
-              UNION
-              SELECT '*', PROG.idop FROM PROG
-              ),
-              BUD
-              AS (
-              SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
-              ),
-              MONTANTBUD
-              AS (
-              SELECT id , idposte , idprog , mntttc FROM BUDMONTANT
-              )
-
-              SELECT
-              BUD.idop
-              ,PROGRAMME.id as idprog
-              ,MONTANTBUD.idposte
-              ,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((F.mntac * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
-              ,F.dtprever as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,F.iddoss as idpiece
-              ,D.lbdoss as libpiece
-              ,D.dtdem as datepiece
-              ,A.lbval as acompte
-              FROM FINDEMAC F
-              JOIN DOMOPF D ON (D.iddoss = F.iddoss)
-              LEFT JOIN ACOMPTE A ON A.valeur = F.ac
-              JOIN BUD ON (BUD.idop = D.idop)
-              JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
-              JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
-              JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
-              UNION ALL
-              SELECT
-              A.idop,
-              A.idprog,
-              A.idposte,
-              A.mntht as mnt,
-              OD.dateod as dateflux,
-              COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
-              OD.id as idpiece,
-              OD.lib as libpiece,
-              OD.dateod as datepice,
-              null as acompte
-              FROM MCAFFECBUD A
-              JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN'
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
-              where A.typemnt = 'E'
-              UNION
               select
-              V.idop
-              ,V.idprog
-              ,F.idposte
-              ,coalesce(V.mnt,0) as mnt
-              ,V.dtprever as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,V.iddoss as idpiece
-              ,F.lbdoss as libpiece
-              ,F.dtdem as datepiece
-              ,AC.lbval as acompte
-              FROM DEMAC V
-              LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss
-              LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte
-            </ORACLE>
+              P.lbproced as libproc,
+              OP.lbval as typeop,
+              O.lbdoss as libop,
+              OS.dtprev as dtosprev,
+              OS.dtreal as dtosreal,
+              DL.dtprev as dtlivrprev,
+              DL.dtreal as dtlivreal,
+              T.mntdepenses as deprealise,
+              T.mntrecettes as recreal,
+              T.tauxemprunt as tauxempreal,
+              T.tresofinmois as tresofinmois,
+			  FP.mntttc as fondpropre,
+			  PRET.mntttc as pret,
+			  SUBV.mntttc as subvention,
+              to_char(To_Date(T.dateflux,'YYYY/MM/DD'), 'Month')||to_char(To_Date(T.dateflux,'YYYY/MM/DD'), 'YYYY') as moisannee,
+              O.iddoss as idop
+              from TRESODATAOP T
+              JOIN DOMOPE O ON O.iddoss = T.idop
+              JOIN TmpTypeOpe OP On OP.valeur = O.typope
+              LEFT JOIN INCOMPUN P ON (P.iddom='DOMOPE' AND P.iddoss=O.iddoss AND P.defaut=-1)
+              LEFT JOIN SPOAPPEVENTDATE OS ON OS.idop = T.idop and OS.idev = 'EVT_OS'
+              LEFT JOIN SPOAPPEVENTDATE DL ON DL.idop = T.idop and DL.idev = 'EVT_LIVRAISON'
+			  LEFT JOIN TmpBudget FP ON FP.idop = T.idop and FP.carac = 'FP'
+			  LEFT JOIN TmpBudget SUBV ON SUBV.idop = T.idop and SUBV.carac = 'SUBV'
+			  LEFT JOIN TmpBudget PRET ON PRET.idop = T.idop and PRET.carac = 'PRET'
+</ORACLE>
             <ENTERPRISEDB />
           </Vue>
           <Vue id="VIEW_FIN_PAYE" libelle="View_Fin_Paye" nomInterne="View_Fin_Paye" visibilite="N" abstraite="N">
@@ -6755,6 +6898,8 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mntht" libelle="mntht" nomInterne="mntht" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mnttva" libelle="mnttva" nomInterne="mnttva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
               <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
@@ -6762,216 +6907,384 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="acompte" libelle="acompte" nomInterne="acompte" clePrimaire="N" obligatoire="N" type="String" taille="10" crypte="N" />
             </Champs>
-            <SQLSERVER>
-              WITH
-              AV as
-              (
-              SELECT
-              D.idop
-              ,D.idprog
-              ,A.ac
-              ,F.dtver
-              ,D.iddoss
-              ,COALESCE(A.mnt,0) as mnt
-              FROM
-              DOMOPEFIN D
-              JOIN FINVERSEMAC A ON (A.iddoss = D.iddoss)
-              JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
-              WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
-              ),
-              VERS
-              AS
-              (
-              select idop,idprog,ac,dtver,iddoss,mnt from AV
-              union
-              select idop,'*',ac,dtver,iddoss,mnt from AV
-              ),
-              DOMOPF
-              as
-              (
-              SELECT iddoss,idop,idposte,lbdoss,dtdem,idprog FROM DOMOPEFIN where idprog is null OR idprog = '*'
-              ),
-              PROGRAMME
-              AS
-              (
-              SELECT id, idop  FROM PROG
-              UNION
-              SELECT '*', PROG.idop FROM PROG
-              ),
-              BUD
-              AS (
-              SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
-              ),
-              ACOMPTE
-              AS
-              (
-              select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
-              ),
-              MONTANTBUD
-              AS (
-              SELECT id , idposte , idprog , mntttc FROM BUDMONTANT
-              )
-              SELECT
-              BUD.idop
-              ,PROGRAMME.id as idprog
-              ,MONTANTBUD.idposte
-              ,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((A.mnt * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
-              ,F.dtver as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,D.iddoss as idpiece
-              ,D.lbdoss as libpiece
-              ,D.dtdem as datepiece
-              ,AC.lbval as acompte
-              FROM FINVERSEMAC A
-              JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
-              JOIN DOMOPF D ON (D.iddoss = F.iddoss)
-              LEFT JOIN ACOMPTE AC ON AC.valeur = A.ac
-              JOIN BUD ON (BUD.idop = D.idop)
-              JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
-              JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
-              JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
-              UNION
-              SELECT
-              A.idop,
-              A.idprog,
-              A.idposte,
-              A.mntht as mnt,
-              OD.dateod as dateflux,
-              COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
-              OD.id as idpiece,
-              OD.lib as libpiece,
-              OD.dateod as datepice,
-              null as acompte
-              FROM MCAFFECBUD A
-              JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN'
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
-              where A.typemnt = 'F'
-              UNION
-              select
-              V.idop
-              ,V.idprog
-              ,F.idposte
-              ,coalesce(V.mnt,0) as mnt
-              ,V.dtver as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,V.iddoss as idpiece
-              ,F.lbdoss as libpiece
-              ,F.dtdem as datepiece
-              ,AC.lbval as acompte
-              FROM VERS V
-              LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss
-              LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte
-            </SQLSERVER>
-            <ORACLE>
-              WITH
-              AV as
-              (
-              SELECT
-              D.idop
-              ,D.idprog
-              ,A.ac
-              ,F.dtver
-              ,D.iddoss
-              ,COALESCE(A.mnt,0) as mnt
-              FROM
-              DOMOPEFIN D
-              JOIN FINVERSEMAC A ON (A.iddoss = D.iddoss)
-              JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
-              WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
-              ),
-              VERS
-              AS
-              (
-              select idop,idprog,ac,dtver,iddoss,mnt from AV
-              union
-              select idop,'*',ac,dtver,iddoss,mnt from AV
-              ),
-              DOMOPF
-              as
-              (
-              SELECT iddoss,idop,idposte,lbdoss,dtdem,idprog FROM DOMOPEFIN where idprog is null OR idprog = '*'
-              ),
-              PROGRAMME
-              AS
-              (
-              SELECT id, idop  FROM PROG
-              UNION
-              SELECT '*', PROG.idop FROM PROG
-              ),
-              BUD
-              AS (
-              SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
-              ),
-              ACOMPTE
-              AS
-              (
-              select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
-              ),
-              MONTANTBUD
-              AS (
-              SELECT id , idposte , idprog , mntttc FROM BUDMONTANT
-              )
-              SELECT
-              BUD.idop
-              ,PROGRAMME.id as idprog
-              ,MONTANTBUD.idposte
-              ,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((A.mnt * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
-              ,F.dtver as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,D.iddoss as idpiece
-              ,D.lbdoss as libpiece
-              ,D.dtdem as datepiece
-              ,AC.lbval as acompte
-              FROM FINVERSEMAC A
-              JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
-              JOIN DOMOPF D ON (D.iddoss = F.iddoss)
-              LEFT JOIN ACOMPTE AC ON AC.valeur = A.ac
-              JOIN BUD ON (BUD.idop = D.idop)
-              JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
-              JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
-              JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
-              UNION
-              SELECT
-              A.idop,
-              A.idprog,
-              A.idposte,
-              A.mntht as mnt,
-              OD.dateod as dateflux,
-              COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
-              OD.id as idpiece,
-              OD.lib as libpiece,
-              OD.dateod as datepice,
-              null as acompte
-              FROM MCAFFECBUD A
-              JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN'
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
-              where A.typemnt = 'F'
-              UNION
-              select
-              V.idop
-              ,V.idprog
-              ,F.idposte
-              ,coalesce(V.mnt,0) as mnt
-              ,V.dtver as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,V.iddoss as idpiece
-              ,F.lbdoss as libpiece
-              ,F.dtdem as datepiece
-              ,AC.lbval as acompte
-              FROM VERS V
-              LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss
-              LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte
-            </ORACLE>
+            <SQLSERVER>WITH
+AV as 
+(
+SELECT 
+D.idop
+,D.idprog
+,A.ac
+,F.dtver
+,D.iddoss
+,COALESCE(A.mnt,0) as mnt
+,COALESCE(A.mnt,0) as mntht
+,0 as mnttva
+FROM
+ DOMOPEFIN D 
+ JOIN FINVERSEMAC A ON (A.iddoss = D.iddoss) 
+ JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
+ WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
+ ),
+ VERS
+ AS
+ (
+ select idop,idprog,ac,dtver,iddoss,mnt, mntht, mnttva from AV
+ union
+ select idop,'*',ac,dtver,iddoss,mnt, mntht, mnttva  from AV
+ ),
+DOMOPF
+as
+(
+	SELECT iddoss,idop,idposte,lbdoss,dtdem,idprog FROM DOMOPEFIN where idprog is null OR idprog = '*'
+),
+PROGRAMME
+AS
+(
+	SELECT id, idop  FROM PROG 
+	UNION 
+	SELECT '*', PROG.idop FROM PROG
+),
+BUD
+AS (
+	SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
+),
+ACOMPTE
+AS
+(
+select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
+),
+MONTANTBUD
+AS (
+	SELECT id , idposte , idprog , mntttc, mntht,(mntttc - mntht) as mnttva FROM BUDMONTANT
+)
+SELECT 
+ BUD.idop
+,PROGRAMME.id as idprog
+,MONTANTBUD.idposte
+,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((A.mnt * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
+,CASE WHEN (M.mntht &gt; 0) THEN ROUND((A.mnt * ROUND((MONTANTBUD.mntht/M.mntht),2)),2) ELSE 0 END as mntht
+,0 as mnttva
+,F.dtver as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,D.iddoss as idpiece
+,D.lbdoss as libpiece
+,D.dtdem as datepiece
+,AC.lbval as acompte
+FROM FINVERSEMAC A
+JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
+JOIN DOMOPF D ON (D.iddoss = F.iddoss)
+LEFT JOIN ACOMPTE AC ON AC.valeur = A.ac
+JOIN BUD ON (BUD.idop = D.idop)
+JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
+JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
+JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
+UNION 
+SELECT 
+A.idop,
+A.idprog,
+A.idposte,
+A.mntht as mnt,
+A.mntht as mntht,
+0 as mnttva,
+OD.dateod as dateflux,
+COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
+OD.id as idpiece,
+OD.lib as libpiece,
+OD.dateod as datepice,
+null as acompte
+FROM MCAFFECBUD A
+JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN' 
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
+where A.typemnt = 'F'  
+UNION
+ select
+  V.idop
+ ,V.idprog
+ ,F.idposte
+ ,coalesce(V.mnt,0) as mnt
+ ,coalesce(V.mnt,0) as mntht
+ ,0 as mnttva
+,V.dtver as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,V.iddoss as idpiece
+,F.lbdoss as libpiece
+,F.dtdem as datepiece
+,AC.lbval as acompte
+ FROM VERS V
+ LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss 
+ LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte 
+</SQLSERVER>
+            <ORACLE>WITH
+AV as 
+(
+SELECT 
+D.idop
+,D.idprog
+,A.ac
+,F.dtver
+,D.iddoss
+,COALESCE(A.mnt,0) as mnt
+,COALESCE(A.mnt,0) as mntht
+,0 as mnttva
+FROM
+ DOMOPEFIN D 
+ JOIN FINVERSEMAC A ON (A.iddoss = D.iddoss) 
+ JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
+ WHERE D.idprog is not null and D.idprog &lt;&gt;'*'
+ ),
+ VERS
+ AS
+ (
+ select idop,idprog,ac,dtver,iddoss,mnt, mntht, mnttva from AV
+ union
+ select idop,'*',ac,dtver,iddoss,mnt, mntht, mnttva  from AV
+ ),
+DOMOPF
+as
+(
+	SELECT iddoss,idop,idposte,lbdoss,dtdem,idprog FROM DOMOPEFIN where idprog is null OR idprog = '*'
+),
+PROGRAMME
+AS
+(
+	SELECT id, idop  FROM PROG 
+	UNION 
+	SELECT '*', PROG.idop FROM PROG
+),
+BUD
+AS (
+	SELECT id, idop, typbud, soc FROM BUDGET WHERE typbud = 0
+),
+ACOMPTE
+AS
+(
+select valeur,lbval from INVAL where idcodif= 'FiLibAcompte'
+),
+MONTANTBUD
+AS (
+	SELECT id , idposte , idprog , mntttc, mntht,(mntttc - mntht) as mnttva FROM BUDMONTANT
+)
+SELECT 
+ BUD.idop
+,PROGRAMME.id as idprog
+,MONTANTBUD.idposte
+,CASE WHEN (M.mntttc &gt; 0) THEN ROUND((A.mnt * ROUND((MONTANTBUD.mntttc/M.mntttc),2)),2) ELSE 0 END as mnt
+,CASE WHEN (M.mntht &gt; 0) THEN ROUND((A.mnt * ROUND((MONTANTBUD.mntht/M.mntht),2)),2) ELSE 0 END as mntht
+,0 as mnttva
+,F.dtver as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,D.iddoss as idpiece
+,D.lbdoss as libpiece
+,D.dtdem as datepiece
+,AC.lbval as acompte
+FROM FINVERSEMAC A
+JOIN FINVERSEM F ON (F.iddoss = A.iddoss and F.refver = A.refver)
+JOIN DOMOPF D ON (D.iddoss = F.iddoss)
+LEFT JOIN ACOMPTE AC ON AC.valeur = A.ac
+JOIN BUD ON (BUD.idop = D.idop)
+JOIN PROGRAMME ON (PROGRAMME.idop = D.idop)
+JOIN MONTANTBUD ON (montantbud.id = BUD.id and MONTANTBUD.idposte = D.idposte and MONTANTBUD.idprog = PROGRAMME.id)
+JOIN MONTANTBUD M ON (M.id = BUD.id and M.idposte = D.idposte and M.idprog = '*')
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = D.idop and P0.idposte = D.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = D.idop and P1.idposte = D.idposte
+UNION 
+SELECT 
+A.idop,
+A.idprog,
+A.idposte,
+A.mntht as mnt,
+A.mntht as mntht,
+0 as mnttva,
+OD.dateod as dateflux,
+COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso,
+OD.id as idpiece,
+OD.lib as libpiece,
+OD.dateod as datepice,
+null as acompte
+FROM MCAFFECBUD A
+JOIN MCOD OD ON OD.id = A.idfact and OD.typeod = 'ODFIN' 
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = A.idop and P0.idposte = A.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = A.idop and P1.idposte = A.idposte
+where A.typemnt = 'F'  
+UNION
+ select
+  V.idop
+ ,V.idprog
+ ,F.idposte
+ ,coalesce(V.mnt,0) as mnt
+ ,coalesce(V.mnt,0) as mntht
+ ,0 as mnttva
+,V.dtver as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,V.iddoss as idpiece
+,F.lbdoss as libpiece
+,F.dtdem as datepiece
+,AC.lbval as acompte
+ FROM VERS V
+ LEFT JOIN DOMOPEFIN F ON  F.iddoss = V.iddoss 
+ LEFT JOIN ACOMPTE AC ON AC.valeur = V.ac
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = V.idop and P0.idposte = F.idposte and P0.estsaisie = -1
+ LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = V.idop and P1.idposte = F.idposte 
+</ORACLE>
+            <ENTERPRISEDB />
+          </Vue>
+          <Vue id="VIEW_FIN_PAYE_IMPORT" libelle="View_Fin_Paye_Import" nomInterne="View_Fin_Paye_Import" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mntht" libelle="mntht" nomInterne="mntht" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mnttva" libelle="mnttva" nomInterne="mnttva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
+              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+            </Champs>
+            <SQLSERVER>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,SUM(mntht) as mntht,SUM(mnttva) as mnttva,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'V' and OPE.exportgf=0
+group by idop,idposte,dtcompta,numfact,lib, dtimport
+)
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.mntht as mntht
+,IMP.mnttva as mnttva
+,IMP.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,IMP.idpiece
+,IMP.lib as libpiece
+,IMP.dtimport as datepiece
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte</SQLSERVER>
+            <ORACLE>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,SUM(mntht) as mntht,SUM(mnttva) as mnttva,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'V' and OPE.exportgf=0
+group by idop,idposte,dtcompta,numfact,lib, dtimport
+)
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.mntht as mntht
+,IMP.mnttva as mnttva
+,IMP.dateflux as dateflux
+,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
+,IMP.idpiece
+,IMP.lib as libpiece
+,IMP.dtimport as datepiece
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
+LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte</ORACLE>
+            <ENTERPRISEDB />
+          </Vue>
+          <Vue id="VIEW_FIN_PREVU_IMPORT" libelle="View_Fin_Prevu_Import" nomInterne="View_Fin_Prevu_Import" visibilite="N" abstraite="N">
+            <Champs>
+              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mntht" libelle="mntht" nomInterne="mntht" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mnttva" libelle="mnttva" nomInterne="mnttva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
+              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
+              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
+            </Champs>
+            <SQLSERVER>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,SUM(mntht) as mntht,SUM(mnttva) as mnttva,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'D' and OPE.exportgf=0
+group by idop,idposte,dtcompta,numfact,lib, dtimport
+)
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.mntht as mntht
+,IMP.mnttva as mnttva
+,IMP.dateflux as dateflux
+,P.idpostetreso 
+,IMP.idpiece
+,IMP.lib as libpiece
+,IMP.dtimport as datepiece
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P ON P.idop = IMP.idop and P.idposte = IMP.idposte</SQLSERVER>
+            <ORACLE>WITH 
+OPE
+as
+(
+select D.iddoss,D.exportgf,D.importpaie,O.istreso 
+from DYNBSOPE D
+join DOMOPE O ON D.iddoss = O.iddoss 
+where istreso = -1
+),
+IMP
+as
+(
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,SUM(mntht) as mntht,SUM(mnttva) as mnttva,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
+from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
+where typenreg = 'D' and OPE.exportgf=0
+group by idop,idposte,dtcompta,numfact,lib, dtimport
+)
+select IMP.idop 
+,IMP.idprog
+,IMP.idposte
+,IMP.mntttc as mnt
+,IMP.mntht as mntht
+,IMP.mnttva as mnttva
+,IMP.dateflux as dateflux
+,P.idpostetreso 
+,IMP.idpiece
+,IMP.lib as libpiece
+,IMP.dtimport as datepiece
+ from IMP
+LEFT OUTER JOIN CONSOPOSTETRESOOP P ON P.idop = IMP.idop and P.idposte = IMP.idposte</ORACLE>
             <ENTERPRISEDB />
           </Vue>
           <Vue id="VIEW_FACTSIT_PAYE" libelle="View_FactSit_Paye" nomInterne="View_FactSit_Paye" visibilite="N" abstraite="N">
@@ -6980,6 +7293,8 @@ where G.idproced is null and I.iddom = 'DOMOPE' and I.gantt = -1 </ORACLE>
               <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mntht" libelle="mntht" nomInterne="mntht" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mnttva" libelle="mnttva" nomInterne="mnttva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
               <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
@@ -6999,16 +7314,24 @@ where istreso = -1
 RETENU
 as 
 (
-select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
+select idfact,idposte,idprog
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret 
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntht ELSE mntht END ) retht
+,sum(CASE WHEN (typemnt = 'AV') THEN -(mntttc-mntht) ELSE (mntttc-mntht) END ) rettva
+from MCAFFECCPTA
 group by idfact,idposte,idprog
 union
-select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
+select idfact,idposte,'*'
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret 
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntht ELSE  mntht END ) retht
+,sum(CASE WHEN (typemnt = 'AV') THEN -(mntttc-mntht) ELSE  (mntttc-mntht) END ) rettva
+from MCAFFECCPTA
 group by idfact,idposte
 ),
 S_IMP
 as
 (
-select idop,'*' as idprog ,idposte,SUM(mntttc) as mntht,dtcompta as dateflux ,numfact as idpiece,lib as libpiece ,dtimport as datepiece 
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mnt,SUM(mntht) as mntht,SUM(mnttva) as mnttva,dtcompta as dateflux ,numfact as idpiece,lib as libpiece ,dtimport as datepiece 
 from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
 where typenreg = 'F' and OPE.exportgf=0 and dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)
 group by idop,idposte,dtcompta,numfact,lib,dtimport
@@ -7021,6 +7344,8 @@ I.idop
 ,I.idprog
 ,I.idposte
 ,I.mntttc
+,I.mntht
+,I.mnttva
 ,I.dtcompta as dateflux
 ,I.numfact as idpiece
 ,I.lib as libpiece
@@ -7039,6 +7364,8 @@ A.idop
 ,A.idprog
 ,A.idposte
 ,A.mntttc - COALESCE(R.ret,0) as mntttc
+,A.mntht - COALESCE(R.retht,0) as mntht
+,A.mnttva - COALESCE(R.rettva,0) as mnttva
 ,COALESCE(S.dtpaie,F.dtpaie,OD.dateod,A.dtcompta) as dateflux
 ,A.idfact as idpiece
 ,COALESCE(S.lib,F.lib,OD.lib,FI.libelle) as libpiece 
@@ -7063,6 +7390,8 @@ select IMP.idop
 ,IMP.idprog
 ,IMP.idposte
 ,IMP.mntttc as mnt
+,IMP.mntht as mntht
+,IMP.mnttva as mnttva
 ,IMP.dateflux as dateflux
 ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
 ,IMP.idpiece
@@ -7078,6 +7407,8 @@ select
 ,FAC.idprog
 ,FAC.idposte
 ,FAC.mntttc as mnt
+,FAC.mntht as mntht
+,FAC.mnttva as mnttva
 ,FAC.dateflux as dateflux
 ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
 ,FAC.idpiece
@@ -7196,6 +7527,8 @@ LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.
               <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mntht" libelle="mntht" nomInterne="mntht" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
+              <Champ id="mnttva" libelle="mnttva" nomInterne="mnttva" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
               <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
               <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
               <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
@@ -7216,16 +7549,24 @@ where istreso = -1
 RETENU
 as 
 (
-select idfact,idposte,idprog,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret from MCAFFECCPTA
+select idfact,idposte,idprog
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE mntttc END ) ret
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntht ELSE mntht END ) retht
+,sum(CASE WHEN (typemnt = 'AV') THEN -(mntttc-mntht) ELSE (mntttc-mntht) END ) rettva
+from MCAFFECCPTA
 group by idfact,idposte,idprog
 union
-select idfact,idposte,'*',sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret from MCAFFECCPTA
+select idfact,idposte,'*'
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntttc ELSE  mntttc END ) ret 
+,sum(CASE WHEN (typemnt = 'AV') THEN -mntht ELSE mntht END ) retht
+,sum(CASE WHEN (typemnt = 'AV') THEN -(mntttc-mntht) ELSE (mntttc-mntht) END ) rettva
+from MCAFFECCPTA
 group by idfact,idposte
 ),
 S_IMP
 as
-(
-select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece ,lib as libpiece ,dtimport as datepiece,
+( 
+select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,SUM(mntht) as mntht,SUM(mnttva) as mnttva,dtcompta as dateflux ,numfact as idpiece ,lib as libpiece ,dtimport as datepiece,
 CASE WHEN (dtcompta &lt;= CONVERT(VARCHAR(10),GETDATE(),111)) THEN dtcompta ELSE null END as datepaie
 from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
 where typenreg = 'F' and OPE.exportgf=0
@@ -7239,6 +7580,8 @@ I.idop
 ,I.idprog
 ,I.idposte
 ,I.mntttc
+,I.mntht
+,I.mnttva
 ,I.dtcompta as dateflux
 ,I.numfact as idpiece
 ,I.lib as libpiece
@@ -7258,6 +7601,8 @@ A.idop
 ,A.idprog
 ,A.idposte
 ,A.mntttc - COALESCE(R.ret,0) as mntttc
+,A.mntht - COALESCE(R.retht,0) as mntht
+,A.mnttva - COALESCE(R.rettva,0) as mnttva
 ,CASE WHEN (FI.code is not null) THEN  CONVERT(VARCHAR(10),CAST(FI.dateFin AS datetime),111) WHEN (OD.id is not null) THEN  OD.dateod WHEN (S.idsitu IS null) THEN  COALESCE(F.dtpaie,F.dtech) ELSE COALESCE(S.dtpaie, S.dtpaieprev) END as dateflux
 ,A.idfact as idpiece
 ,COALESCE(S.lib,F.lib,OD.lib,Fi.libelle) as libpiece 
@@ -7283,6 +7628,8 @@ select IMP.idop
 ,IMP.idprog
 ,IMP.idposte
 ,IMP.mntttc as mnt
+,IMP.mntht as mntht
+,IMP.mnttva as mnttva
 ,IMP.dateflux as dateflux
 ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
 ,IMP.idpiece
@@ -7299,6 +7646,8 @@ select
 ,FAC.idprog
 ,FAC.idposte
 ,FAC.mntttc as mnt
+,FAC.mntht as mntht
+,FAC.mnttva as mnttva
 ,FAC.dateflux as dateflux
 ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
 ,FAC.idpiece
@@ -7415,156 +7764,6 @@ select
 from FAC
 LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = FAC.idop and P0.idposte = FAC.idposte and P0.estsaisie = -1
 LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = FAC.idop and P1.idposte = FAC.idposte</ORACLE>
-            <ENTERPRISEDB />
-          </Vue>
-          <Vue id="VIEW_FIN_PREVU_IMPORT" libelle="View_Fin_Prevu_Import" nomInterne="View_Fin_Prevu_Import" visibilite="N" abstraite="N">
-            <Champs>
-              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
-              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
-              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-            </Champs>
-            <SQLSERVER>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'D' and OPE.exportgf=0
-              group by idop,idposte,dtcompta,numfact,lib, dtimport
-              )
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,P.idpostetreso
-              ,IMP.idpiece
-              ,IMP.lib as libpiece
-              ,IMP.dtimport as datepiece
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P ON P.idop = IMP.idop and P.idposte = IMP.idposte
-            </SQLSERVER>
-            <ORACLE>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'D' and OPE.exportgf=0
-              group by idop,idposte,dtcompta,numfact,lib, dtimport
-              )
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,P.idpostetreso
-              ,IMP.idpiece
-              ,IMP.lib as libpiece
-              ,IMP.dtimport as datepiece
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P ON P.idop = IMP.idop and P.idposte = IMP.idposte
-            </ORACLE>
-            <ENTERPRISEDB />
-          </Vue>
-          <Vue id="VIEW_FIN_PAYE_IMPORT" libelle="View_Fin_Paye_Import" nomInterne="View_Fin_Paye_Import" visibilite="N" abstraite="N">
-            <Champs>
-              <Champ id="idop" libelle="idop" nomInterne="idop" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idprog" libelle="idprog" nomInterne="idprog" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idposte" libelle="idposte" nomInterne="idposte" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="mnt" libelle="mnt" nomInterne="mnt" clePrimaire="N" obligatoire="N" type="Monetaire" taillePartieEntiere="13" taillePartieDecimale="2" crypte="N" />
-              <Champ id="date" libelle="date" nomInterne="date" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-              <Champ id="idpostetreso" libelle="idpostetreso" nomInterne="idpostetreso" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="idpiece" libelle="idpiece" nomInterne="idpiece" clePrimaire="N" obligatoire="N" type="String" taille="32" crypte="N" />
-              <Champ id="libpiece" libelle="libpiece" nomInterne="libpiece" clePrimaire="N" obligatoire="N" type="String" taille="200" crypte="N" />
-              <Champ id="datepiece" libelle="datepiece" nomInterne="datepiece" clePrimaire="N" obligatoire="N" type="DateMG" crypte="N" />
-            </Champs>
-            <SQLSERVER>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'V' and OPE.exportgf=0
-              group by idop,idposte,dtcompta,numfact,lib, dtimport
-              )
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,IMP.idpiece
-              ,IMP.lib as libpiece
-              ,IMP.dtimport as datepiece
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
-            </SQLSERVER>
-            <ORACLE>
-              WITH
-              OPE
-              as
-              (
-              select D.iddoss,D.exportgf,D.importpaie,O.istreso
-              from DYNBSOPE D
-              join DOMOPE O ON D.iddoss = O.iddoss
-              where istreso = -1
-              ),
-              IMP
-              as
-              (
-              select idop,'*' as idprog ,idposte,SUM(mntttc) as mntttc,dtcompta as dateflux ,numfact as idpiece , lib, dtimport
-              from MCIMPORTGF join OPE on OPE.iddoss = MCIMPORTGF.idop
-              where typenreg = 'V' and OPE.exportgf=0
-              group by idop,idposte,dtcompta,numfact,lib, dtimport
-              )
-              select IMP.idop
-              ,IMP.idprog
-              ,IMP.idposte
-              ,IMP.mntttc as mnt
-              ,IMP.dateflux as dateflux
-              ,COALESCE(P0.idpostetreso,P1.idpostetreso) as idpostetreso
-              ,IMP.idpiece
-              ,IMP.lib as libpiece
-              ,IMP.dtimport as datepiece
-              from IMP
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P0 ON P0.idop = IMP.idop and P0.idposte = IMP.idposte and P0.estsaisie = -1
-              LEFT OUTER JOIN CONSOPOSTETRESOOP P1 ON P1.idop = IMP.idop and P1.idposte = IMP.idposte
-            </ORACLE>
             <ENTERPRISEDB />
           </Vue>
 		  </Vues>

@@ -50,6 +50,21 @@
 		"decalage": {
 			"title": "Décalage",
 			"type": "integer"
+		},
+		"taux": {
+			"title": "Taux",
+			"type": "number",
+			"decimals": 2
+		},
+		"periodicite": {
+			"title": "Periodicite",
+			"type": "string",
+			"maxLength": 10
+		},
+		"basecalcul": {
+			"title": "BaseCalcul",
+			"type": "string",
+			"maxLength": 10
 		}
 	}
 }

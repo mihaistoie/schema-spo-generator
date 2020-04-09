@@ -25,6 +25,16 @@
 			"type": "number",
 			"decimals": 2
 		},
+		"mntht": {
+			"title": "mntht",
+			"type": "number",
+			"decimals": 2
+		},
+		"mnttva": {
+			"title": "mnttva",
+			"type": "number",
+			"decimals": 4
+		},
 		"date": {
 			"title": "date",
 			"type": "string",
