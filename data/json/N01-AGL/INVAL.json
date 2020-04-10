@@ -1,0 +1,37 @@
+{
+	"tableName": "INVAL",
+	"name": "SpoValeurCodification",
+	"title": "Valeur de codification",
+	"type": "object",
+	"primaryKey": [
+		"idcodif",
+		"valeur"
+	],
+	"properties": {
+		"idcodif": {
+			"title": "Code codification",
+			"type": "string",
+			"maxLength": 32
+		},
+		"valeur": {
+			"title": "Valeur de code",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbval": {
+			"title": "Libellé de code",
+			"type": "string",
+			"maxLength": 150
+		},
+		"visibilite": {
+			"title": "Visibilité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"active": {
+			"title": "Actif",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

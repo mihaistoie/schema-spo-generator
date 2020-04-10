@@ -1,0 +1,63 @@
+{
+	"tableName": "RI_INUTI",
+	"name": "SpoUtilisateurRI",
+	"title": "Utilisateur",
+	"type": "object",
+	"primaryKey": [
+		"compteur"
+	],
+	"properties": {
+		"compteur": {
+			"title": "Compteur Utilisateur RI",
+			"type": "integer"
+		},
+		"login": {
+			"title": "Login",
+			"type": "string",
+			"maxLength": 15
+		},
+		"nomuti": {
+			"title": "Nom",
+			"type": "string",
+			"maxLength": 30
+		},
+		"preuti": {
+			"title": "Prénom",
+			"type": "string",
+			"maxLength": 30
+		},
+		"telephon": {
+			"title": "Numéro de téléphone",
+			"type": "string",
+			"maxLength": 14
+		},
+		"email": {
+			"title": "E-Mail",
+			"type": "string",
+			"maxLength": 64
+		},
+		"idserv": {
+			"title": "Code du service",
+			"type": "integer"
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddirect": {
+			"title": "Code de la direction",
+			"type": "integer"
+		},
+		"idgenre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idutil": {
+			"title": "Code Utilisateur",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

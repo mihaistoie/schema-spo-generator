@@ -1,0 +1,52 @@
+{
+	"tableName": "INPARAMWEBLST",
+	"name": "SpoParametrageListeWeb",
+	"title": "Paramétrage Liste Web",
+	"type": "object",
+	"primaryKey": [
+		"idparam",
+		"idmetier",
+		"idproced",
+		"idelem"
+	],
+	"properties": {
+		"idparam": {
+			"title": "Code Paramètre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idmetier": {
+			"title": "Code Métier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproced": {
+			"title": "Code Procédure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idelem": {
+			"title": "Code Element",
+			"type": "string",
+			"maxLength": 32
+		},
+		"param1": {
+			"title": "Paramètre 1",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"param2": {
+			"title": "Paramètre 2",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"param3": {
+			"title": "Paramètre 3",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		}
+	}
+}

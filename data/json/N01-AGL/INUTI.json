@@ -1,0 +1,162 @@
+{
+	"tableName": "INUTI",
+	"name": "SpoUtilisateur",
+	"title": "Utilisateur",
+	"type": "object",
+	"primaryKey": [
+		"idutil"
+	],
+	"properties": {
+		"idutil": {
+			"title": "Code Utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"login": {
+			"title": "Login",
+			"type": "string",
+			"maxLength": 256
+		},
+		"nomuti": {
+			"title": "Nom",
+			"type": "string",
+			"maxLength": 30
+		},
+		"preuti": {
+			"title": "Prénom",
+			"type": "string",
+			"maxLength": 30
+		},
+		"lbuti": {
+			"title": "Libellé utilisateur",
+			"type": "string",
+			"maxLength": 40
+		},
+		"dtmaj": {
+			"title": "Date de mise à jour",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"mdputi": {
+			"title": "Mot de passe",
+			"type": "string",
+			"maxLength": 128
+		},
+		"dtcreat": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtchgmdp": {
+			"title": "Date changement Mdp",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"typdlmdp": {
+			"title": "Type délais Mdp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dlmdp": {
+			"title": "Délais Mdp",
+			"type": "integer"
+		},
+		"dtfin": {
+			"title": "Date fin Mdp",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtactif": {
+			"title": "Date activation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtexp": {
+			"title": "Date fin Expiration",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"typdlexp": {
+			"title": "Type délais Expiration",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dlexp": {
+			"title": "Délais Expiration",
+			"type": "integer"
+		},
+		"actif": {
+			"title": "Utilisateur actif",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mdpobli": {
+			"title": "Mdp obligatoire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"nbcarmdp": {
+			"title": "Nb caractères minimum Mdp",
+			"type": "integer"
+		},
+		"telephon": {
+			"title": "Numéro de téléphone",
+			"type": "string",
+			"maxLength": 14
+		},
+		"email": {
+			"title": "E-Mail",
+			"type": "string",
+			"maxLength": 64
+		},
+		"postwin": {
+			"title": "Poste Windows",
+			"type": "string",
+			"maxLength": 20
+		},
+		"idserv": {
+			"title": "Code du service",
+			"type": "integer"
+		},
+		"idprof": {
+			"title": "Code profil créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"extranet": {
+			"title": "Extranet",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtnais": {
+			"title": "Date de naissance",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idgenre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"bloquerchgmdp": {
+			"title": "Changement de mot de passe impossible",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"jamaismdpexpire": {
+			"title": "Le mot de passe n’expire jamais",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"idfonction": {
+			"title": "Fonction",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

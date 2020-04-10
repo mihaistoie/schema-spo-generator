@@ -1,0 +1,33 @@
+{
+	"tableName": "INENR",
+	"name": "SpoProtectionEnregistrements",
+	"title": "Protection des enregistrements",
+	"type": "object",
+	"primaryKey": [
+		"idprofcre",
+		"nomaxe",
+		"idprofpro"
+	],
+	"properties": {
+		"idprofcre": {
+			"title": "Code profil créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomaxe": {
+			"title": "Nom axe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprofpro": {
+			"title": "Code profil protégé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"droits": {
+			"title": "Droits groupe protégé",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

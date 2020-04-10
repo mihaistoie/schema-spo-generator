@@ -1,0 +1,26 @@
+{
+	"tableName": "INAXEPR",
+	"name": "SpoAxesProteges",
+	"title": "Axes protégés",
+	"type": "object",
+	"primaryKey": [
+		"nomaxe"
+	],
+	"properties": {
+		"nomaxe": {
+			"title": "Nom axe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"actif": {
+			"title": "Protection active",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"delegation": {
+			"title": "Axe délégué",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

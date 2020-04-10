@@ -1,0 +1,95 @@
+{
+	"tableName": "INSUP",
+	"name": "SpoSupport",
+	"title": "Supports",
+	"type": "object",
+	"primaryKey": [
+		"idsupport"
+	],
+	"properties": {
+		"idsupport": {
+			"title": "Code support",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbsupport": {
+			"title": "Nom support",
+			"type": "string",
+			"maxLength": 80
+		},
+		"typsup": {
+			"title": "Type de composant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"actif": {
+			"title": "Validité support",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"useado": {
+			"title": "Nécessite une conection au SGBD",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"executable": {
+			"title": "Nom du fichier",
+			"type": "string",
+			"maxLength": 20
+		},
+		"argument": {
+			"title": "Argument exécutable",
+			"type": "string",
+			"maxLength": 255
+		},
+		"progid1": {
+			"title": "Nom du projet",
+			"type": "string",
+			"maxLength": 50
+		},
+		"modaff": {
+			"title": "Mode d’affichage",
+			"type": "string",
+			"maxLength": 32
+		},
+		"tclass": {
+			"title": "Classe fenêtre principale",
+			"type": "string",
+			"maxLength": 60
+		},
+		"tcaption": {
+			"title": "Titre fenêtre principale",
+			"type": "string",
+			"maxLength": 60
+		},
+		"crefic": {
+			"title": "Création de fichiers",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"usenum": {
+			"title": "Gère la numérisation",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"utilisation": {
+			"title": "Utilisée pour",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"formeSupportList": {
+			"type": "hasMany",
+			"aggregationKind": "none",
+			"model": "SpoFormeSupport",
+			"localFields": [
+				"idsupport"
+			],
+			"foreignFields": [
+				"idsupport"
+			],
+			"invRel": "support"
+		}
+	}
+}

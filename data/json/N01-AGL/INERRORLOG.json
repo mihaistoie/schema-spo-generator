@@ -1,0 +1,47 @@
+{
+	"tableName": "INERRORLOG",
+	"name": "SpologErreursBatch",
+	"title": "Log batch",
+	"type": "object",
+	"primaryKey": [
+		"id"
+	],
+	"properties": {
+		"id": {
+			"title": "Numéro d’id",
+			"type": "string",
+			"maxLength": 32
+		},
+		"code": {
+			"title": "Code",
+			"type": "string",
+			"maxLength": 10
+		},
+		"description": {
+			"title": "Description de la log",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"categorie": {
+			"title": "Catégorie de la log",
+			"type": "string",
+			"maxLength": 32
+		},
+		"origine": {
+			"title": "Origine log",
+			"type": "string",
+			"maxLength": 32
+		},
+		"datelog": {
+			"title": "Date de la log",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"heurelog": {
+			"title": "Heure de la log",
+			"type": "string",
+			"maxLength": 12
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"tableName": "INLIENETAP",
+	"name": "SpoLiensEntreActions",
+	"title": "Liens entre actions",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"iddoss",
+		"idetape",
+		"idetapelie"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetape": {
+			"title": "Code étape",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idetapelie": {
+			"title": "Code étape liée",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typelien": {
+			"title": "Type de lien",
+			"type": "string",
+			"maxLength": 32
+		},
+		"delai": {
+			"title": "Délai en jours",
+			"type": "integer"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+{
+	"tableName": "RI_INSERV",
+	"name": "SpoServiceRI",
+	"title": "Service",
+	"type": "object",
+	"primaryKey": [
+		"idserv"
+	],
+	"properties": {
+		"idserv": {
+			"title": "Code du service",
+			"type": "integer"
+		},
+		"lbserv": {
+			"title": "Libellé du service",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idref": {
+			"title": "Sigle",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddirect": {
+			"title": "Code de la direction",
+			"type": "integer"
+		}
+	}
+}

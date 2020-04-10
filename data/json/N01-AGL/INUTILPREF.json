@@ -1,0 +1,26 @@
+{
+	"tableName": "INUTILPREF",
+	"name": "SpoPreferenceUtilisateur",
+	"title": "Préférences de l’utilisateurs",
+	"type": "object",
+	"primaryKey": [
+		"idutil",
+		"typepref"
+	],
+	"properties": {
+		"idutil": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typepref": {
+			"title": "Type de préférence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"preference": {
+			"title": "description des préférences",
+			"type": "string"
+		}
+	}
+}

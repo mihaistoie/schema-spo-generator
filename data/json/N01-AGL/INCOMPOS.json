@@ -1,0 +1,41 @@
+{
+	"tableName": "INCOMPOS",
+	"name": "SpoComposants",
+	"title": "Composants",
+	"type": "object",
+	"primaryKey": [
+		"idcompos"
+	],
+	"properties": {
+		"idcompos": {
+			"title": "Code composant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbcompos": {
+			"title": "Libellé composant",
+			"type": "string",
+			"maxLength": 80
+		},
+		"versioncp": {
+			"title": "Version composant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcppere": {
+			"title": "Composant père",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typecp": {
+			"title": "Type de composant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cleactif": {
+			"title": "Clé d’activité",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

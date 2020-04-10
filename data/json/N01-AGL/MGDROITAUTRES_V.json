@@ -1,0 +1,58 @@
+{
+	"tableName": "MGDROITAUTRES_V",
+	"name": "SpoMGDROITAUTRES_V",
+	"title": "Vue pour les droits",
+	"type": "object",
+	"primaryKey": [
+		"nomaxe",
+		"idprofil",
+		"idprofil2"
+	],
+	"properties": {
+		"nomaxe": {
+			"title": "nom de l’axe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprofil": {
+			"title": "profil ",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprofcre": {
+			"title": "profil créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprofil2": {
+			"title": "profil utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprofpro": {
+			"title": "profil pro",
+			"type": "string",
+			"maxLength": 32
+		},
+		"droitboollecture": {
+			"title": "Lecture",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitboolmodif": {
+			"title": "Modification",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitboolsup": {
+			"title": "Suppression",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droits": {
+			"title": "droits",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

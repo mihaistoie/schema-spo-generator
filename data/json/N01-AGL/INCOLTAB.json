@@ -1,0 +1,103 @@
+{
+	"tableName": "INCOLTAB",
+	"name": "SpoColonneUneTable",
+	"title": "Colonne d’une table",
+	"type": "object",
+	"primaryKey": [
+		"nomtab",
+		"nomcol"
+	],
+	"properties": {
+		"nomtab": {
+			"title": "Nom physique table",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomcol": {
+			"title": "Nom physique colonne",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rangcol": {
+			"title": "Rang de colonne",
+			"type": "integer"
+		},
+		"lbcol": {
+			"title": "Libellé de colonne",
+			"type": "string",
+			"maxLength": 80
+		},
+		"strucol": {
+			"title": "Structure colonne",
+			"type": "string",
+			"maxLength": 32
+		},
+		"taille": {
+			"title": "Taille",
+			"type": "integer"
+		},
+		"nbdecimal": {
+			"title": "Nombre de décimales",
+			"type": "integer"
+		},
+		"idcodif": {
+			"title": "Code codification",
+			"type": "string",
+			"maxLength": 32
+		},
+		"oblig": {
+			"title": "Saisie obligatoire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"localis": {
+			"title": "Colonne Localisation",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"idtyploc": {
+			"title": "Type de localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cryptage": {
+			"title": "Colonne cryptée",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"valdef": {
+			"title": "Valeur par défaut",
+			"type": "string",
+			"maxLength": 20
+		},
+		"numcle": {
+			"title": "Numéro ordre clé",
+			"type": "integer"
+		},
+		"liensql": {
+			"title": "Définition SQL jointure métier",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"soustype": {
+			"title": "Sous type de la colonne",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"sourceDonnees": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoSourceDonnees",
+			"localFields": [
+				"nomaxe"
+			],
+			"foreignFields": [
+				"nomtab"
+			],
+			"invRel": "colonneUneTableList"
+		}
+	}
+}

@@ -1,0 +1,58 @@
+{
+	"tableName": "MGDROITENRUTI_V",
+	"name": "SpoMGDROITENRUTI_V",
+	"title": "Vue pour les droits par utilisateurs",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idutil",
+		"idutil2"
+	],
+	"properties": {
+		"iddom": {
+			"title": "nom de l’axe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idutil": {
+			"title": "utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduticre": {
+			"title": "utilisateur créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idutil2": {
+			"title": "utilisateur pro",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idutipro": {
+			"title": "utilisateur protégé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"droitboollecture": {
+			"title": "Lecture",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitboolmodif": {
+			"title": "Modification",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitboolsup": {
+			"title": "Suppression",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droits": {
+			"title": "droits",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

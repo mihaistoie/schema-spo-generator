@@ -1,0 +1,40 @@
+{
+	"tableName": "INERR",
+	"name": "SpoErreurApplicative",
+	"title": "Erreur applicative",
+	"type": "object",
+	"primaryKey": [
+		"iddom",
+		"idcritere",
+		"coderreur"
+	],
+	"properties": {
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcritere": {
+			"title": "Identifiant critere",
+			"type": "string",
+			"maxLength": 32
+		},
+		"coderreur": {
+			"title": "Code erreur",
+			"type": "integer"
+		},
+		"severite": {
+			"title": "Severite message",
+			"type": "integer"
+		},
+		"messerr": {
+			"title": "Message d’erreur",
+			"type": "string",
+			"maxLength": 254
+		},
+		"aide": {
+			"title": "Contexte aide",
+			"type": "integer"
+		}
+	}
+}

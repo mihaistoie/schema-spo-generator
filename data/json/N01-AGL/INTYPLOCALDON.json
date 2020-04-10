@@ -1,0 +1,22 @@
+{
+	"tableName": "INTYPLOCALDON",
+	"name": "SpoInformationsComplementairesVisiblesParTypeLocalisation",
+	"title": "Informations complémentaires visibles par type de localisation",
+	"type": "object",
+	"primaryKey": [
+		"idtyploc",
+		"nomcol"
+	],
+	"properties": {
+		"idtyploc": {
+			"title": "Code type de localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomcol": {
+			"title": "Nom physique colonne",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

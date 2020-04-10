@@ -1,0 +1,33 @@
+{
+	"tableName": "INENRUTI",
+	"name": "SpoProtectionEnregistrementsUtilisateur",
+	"title": "Protection des enregistrements au niveau utilisateur",
+	"type": "object",
+	"primaryKey": [
+		"iduticre",
+		"nomaxe",
+		"idutipro"
+	],
+	"properties": {
+		"iduticre": {
+			"title": "Code utilisateur créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomaxe": {
+			"title": "Nom axe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idutipro": {
+			"title": "Code utilisateur protégé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"droits": {
+			"title": "Droits groupe protégé",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

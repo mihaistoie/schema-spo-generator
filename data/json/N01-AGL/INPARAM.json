@@ -1,0 +1,26 @@
+{
+	"tableName": "INPARAM",
+	"name": "SpoParametresGeneraux",
+	"title": "Paramètres généraux",
+	"type": "object",
+	"primaryKey": [
+		"code"
+	],
+	"properties": {
+		"code": {
+			"title": "Code du paramètre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"attribut": {
+			"title": "Attributs",
+			"type": "string",
+			"maxLength": 100
+		},
+		"gestion": {
+			"title": "Gestion du paramètre",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

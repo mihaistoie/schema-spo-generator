@@ -1,0 +1,34 @@
+{
+	"tableName": "INTICKETUSER",
+	"name": "SpotokenListe",
+	"title": "Liste des tikets par utilisateur",
+	"type": "object",
+	"primaryKey": [
+		"ticket",
+		"idutil",
+		"idprof"
+	],
+	"properties": {
+		"ticket": {
+			"title": "Ticket",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"idutil": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcreat": {
+			"title": "Date de creation du ticket",
+			"type": "string",
+			"maxLength": 20
+		}
+	}
+}

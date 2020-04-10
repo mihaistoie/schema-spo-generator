@@ -1,0 +1,36 @@
+{
+	"tableName": "MGLSTDEFHIERAR_V",
+	"name": "SpoMGLSTDEFHIERAR_V",
+	"title": "ListeAffichageDefinitionsHierarchies",
+	"type": "object",
+	"primaryKey": [
+		"idhier",
+		"idtyploc"
+	],
+	"properties": {
+		"idhier": {
+			"title": "code hierarchies",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtyploc": {
+			"title": "code Type des localisations",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "niveau",
+			"type": "integer"
+		},
+		"libtyploc": {
+			"title": "Type des localisations",
+			"type": "string",
+			"maxLength": 50
+		},
+		"idinfodyn": {
+			"title": "Type d’informations dynamiques",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

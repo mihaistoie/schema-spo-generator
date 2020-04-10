@@ -1,0 +1,61 @@
+{
+	"tableName": "N01RECEPUTI",
+	"name": "SpoReceptionEnregistrementsTypeUtilisateur",
+	"title": "Réception des enregistrements de type utilisateur",
+	"type": "object",
+	"primaryKey": [
+		"login"
+	],
+	"properties": {
+		"login": {
+			"title": "Login",
+			"type": "string",
+			"maxLength": 256
+		},
+		"nom": {
+			"title": "Nom",
+			"type": "string",
+			"maxLength": 30
+		},
+		"prenom": {
+			"title": "Prénom",
+			"type": "string",
+			"maxLength": 30
+		},
+		"actif": {
+			"title": "Utilisateur actif",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"idrefserv": {
+			"title": "Code du service",
+			"type": "string",
+			"maxLength": 32
+		},
+		"telephon": {
+			"title": "Numéro de téléphone",
+			"type": "string",
+			"maxLength": 14
+		},
+		"email": {
+			"title": "E-Mail",
+			"type": "string",
+			"maxLength": 64
+		},
+		"extranet": {
+			"title": "Extranet",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtnais": {
+			"title": "Date de naissance",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idgenre": {
+			"title": "Genre",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

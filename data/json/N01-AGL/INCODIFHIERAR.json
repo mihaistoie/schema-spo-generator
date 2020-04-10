@@ -1,0 +1,39 @@
+{
+	"tableName": "INCODIFHIERAR",
+	"name": "SpoHierarchieCodificationsValeurs",
+	"title": "Hierarchie des codifications et des valeurs",
+	"type": "object",
+	"primaryKey": [
+		"idcodifmere",
+		"valeurmere",
+		"idcodiffille",
+		"valeurfille"
+	],
+	"properties": {
+		"idcodifmere": {
+			"title": "Code de la codification mère",
+			"type": "string",
+			"maxLength": 32
+		},
+		"valeurmere": {
+			"title": "Code de la valeur mère",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcodiffille": {
+			"title": "Code de la codification fille",
+			"type": "string",
+			"maxLength": 32
+		},
+		"valeurfille": {
+			"title": "Code de la valeur fille",
+			"type": "string",
+			"maxLength": 32
+		},
+		"defaut": {
+			"title": "Défaut",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

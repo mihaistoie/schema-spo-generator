@@ -1,0 +1,32 @@
+{
+	"tableName": "INHIELOCVAL",
+	"name": "SpoHierarchiesValidees",
+	"title": "Hierarchies validées",
+	"type": "object",
+	"primaryKey": [
+		"idhier",
+		"exercice"
+	],
+	"properties": {
+		"idhier": {
+			"title": "Code hierarchie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"exercice": {
+			"title": "Exercice",
+			"type": "string",
+			"maxLength": 4
+		},
+		"hierref": {
+			"title": "Hierarchie de référence",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"hiervalid": {
+			"title": "Hierarchie validée",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

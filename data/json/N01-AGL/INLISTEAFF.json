@@ -1,0 +1,65 @@
+{
+	"tableName": "INLISTEAFF",
+	"name": "SpoListesAffichages",
+	"title": "Table des listes d’’affichages ",
+	"type": "object",
+	"primaryKey": [
+		"critere1",
+		"critere2",
+		"critere3",
+		"critere4",
+		"critere5",
+		"critere6"
+	],
+	"properties": {
+		"critere1": {
+			"title": "Critère 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere2": {
+			"title": "Critère 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere3": {
+			"title": "Critère 3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere4": {
+			"title": "Critère 4",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere5": {
+			"title": "Critère 5",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere6": {
+			"title": "Critère 6",
+			"type": "string",
+			"maxLength": 32
+		},
+		"param1": {
+			"title": "Paramètre 1",
+			"type": "string",
+			"maxLength": 200
+		},
+		"param2": {
+			"title": "Paramètre 2",
+			"type": "string",
+			"maxLength": 200
+		},
+		"param3": {
+			"title": "Paramètre 3",
+			"type": "string",
+			"maxLength": 200
+		},
+		"descxml": {
+			"title": "Description Xml",
+			"type": "string"
+		}
+	}
+}

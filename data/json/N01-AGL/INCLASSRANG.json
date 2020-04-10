@@ -1,0 +1,26 @@
+{
+	"tableName": "INCLASSRANG",
+	"name": "SpoClasseurRang",
+	"title": "Classeur (Ordre d’affichage)",
+	"type": "object",
+	"primaryKey": [
+		"typclas",
+		"idclas"
+	],
+	"properties": {
+		"typclas": {
+			"title": "Type de classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idclas": {
+			"title": "Code classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rang": {
+			"title": "rang",
+			"type": "integer"
+		}
+	}
+}

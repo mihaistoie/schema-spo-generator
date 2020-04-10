@@ -1,0 +1,31 @@
+{
+	"tableName": "INUNITE",
+	"name": "SpoUnite",
+	"title": "Unité",
+	"type": "object",
+	"primaryKey": [
+		"idunite"
+	],
+	"properties": {
+		"idunite": {
+			"title": "Code de l’unité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbunite": {
+			"title": "Libellé de l’unité",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence de l’unité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Responsable",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

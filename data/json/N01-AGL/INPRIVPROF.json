@@ -1,0 +1,33 @@
+{
+	"tableName": "INPRIVPROF",
+	"name": "SpoPrivilegesProfile",
+	"title": "Privilèges du Profil",
+	"type": "object",
+	"primaryKey": [
+		"idprof",
+		"idsupport",
+		"idforme",
+		"idpriv"
+	],
+	"properties": {
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idsupport": {
+			"title": "Code composant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idforme": {
+			"title": "Code forme",
+			"type": "integer"
+		},
+		"idpriv": {
+			"title": "Code privilège",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

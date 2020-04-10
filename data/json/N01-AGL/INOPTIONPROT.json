@@ -1,0 +1,32 @@
+{
+	"tableName": "INOPTIONPROT",
+	"name": "SpoProtectionOptionsMiseAJour",
+	"title": "Protection des options de mise à jour",
+	"type": "object",
+	"primaryKey": [
+		"idsupport",
+		"idoption"
+	],
+	"properties": {
+		"idsupport": {
+			"title": "Code support",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idoption": {
+			"title": "Code option",
+			"type": "string",
+			"maxLength": 32
+		},
+		"actif": {
+			"title": "Option active",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"protect": {
+			"title": "Code protection",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

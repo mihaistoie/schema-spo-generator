@@ -1,0 +1,30 @@
+{
+	"tableName": "INCODIF",
+	"name": "SpoCodification",
+	"title": "Codification",
+	"type": "object",
+	"primaryKey": [
+		"idcodif"
+	],
+	"properties": {
+		"idcodif": {
+			"title": "Code codification",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbcodif": {
+			"title": "Libellé de codification",
+			"type": "string",
+			"maxLength": 80
+		},
+		"taille": {
+			"title": "Taille",
+			"type": "integer"
+		},
+		"visibilite": {
+			"title": "Visibilité",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

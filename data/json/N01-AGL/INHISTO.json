@@ -1,0 +1,41 @@
+{
+	"tableName": "INHISTO",
+	"name": "SpoHistorique",
+	"title": "Historique",
+	"type": "object",
+	"primaryKey": [
+		"idhisto",
+		"rang"
+	],
+	"properties": {
+		"idhisto": {
+			"title": "Code de l’objet",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rang": {
+			"title": "Rang",
+			"type": "integer"
+		},
+		"typeobjet": {
+			"title": "Type de l’objet",
+			"type": "string",
+			"maxLength": 30
+		},
+		"datemaj": {
+			"title": "Date de mise à jour",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"heuremaj": {
+			"title": "Heure de mise à jour",
+			"type": "string",
+			"maxLength": 12
+		},
+		"modifiepar": {
+			"title": "Modifié par",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

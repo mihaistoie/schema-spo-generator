@@ -1,0 +1,68 @@
+{
+	"tableName": "INDESC",
+	"name": "SpoTableDescription",
+	"title": "Table de description",
+	"type": "object",
+	"primaryKey": [
+		"nomaxe",
+		"critere1",
+		"critere2",
+		"critere3",
+		"critere4",
+		"critere5",
+		"critere6",
+		"critere7",
+		"critere8"
+	],
+	"properties": {
+		"nomaxe": {
+			"title": "Nom axe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere1": {
+			"title": "Critère 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere2": {
+			"title": "Critère 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere3": {
+			"title": "Critère 3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere4": {
+			"title": "Critère 4",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere5": {
+			"title": "Critère 5",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere6": {
+			"title": "Critère 6",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere7": {
+			"title": "Critère 7",
+			"type": "string",
+			"maxLength": 32
+		},
+		"critere8": {
+			"title": "Critère 8",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ficdesc": {
+			"title": "Fiche descriptive",
+			"type": "string"
+		}
+	}
+}

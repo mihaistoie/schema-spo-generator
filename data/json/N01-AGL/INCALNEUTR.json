@@ -1,0 +1,22 @@
+{
+	"tableName": "INCALNEUTR",
+	"name": "SpoJoursNeutralises",
+	"title": "Jours neutralisés",
+	"type": "object",
+	"primaryKey": [
+		"idcalen",
+		"dtneutr"
+	],
+	"properties": {
+		"idcalen": {
+			"title": "Code calendrier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtneutr": {
+			"title": "Date de jour neutralisé",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

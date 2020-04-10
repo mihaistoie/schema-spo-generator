@@ -1,0 +1,46 @@
+{
+	"tableName": "INCLASSINFO",
+	"name": "SpoInformationsClasseurs",
+	"title": "Informations des classeurs",
+	"type": "object",
+	"primaryKey": [
+		"typclas",
+		"idclas",
+		"idcrit1",
+		"idcrit2",
+		"idcrit3",
+		"idcrit4"
+	],
+	"properties": {
+		"typclas": {
+			"title": "Type de classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idclas": {
+			"title": "Code classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit1": {
+			"title": "Critére1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit2": {
+			"title": "Critére2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit3": {
+			"title": "Critére3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idcrit4": {
+			"title": "Critére4",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,50 @@
+{
+	"tableName": "INDIREC",
+	"name": "SpoDirection",
+	"title": "Direction",
+	"type": "object",
+	"primaryKey": [
+		"iddirect"
+	],
+	"properties": {
+		"iddirect": {
+			"title": "Code de la direction",
+			"type": "integer"
+		},
+		"lbdirect": {
+			"title": "Libellé de la direction",
+			"type": "string",
+			"maxLength": 100
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Responsable",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcreat": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"actif": {
+			"title": "Etat(Actif/Clos)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtclos": {
+			"title": "Date de clôture",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idgrdir": {
+			"title": "Code du groupe de directions",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"tableName": "INADRORGA",
+	"name": "SpoAdressesOrganigramme",
+	"title": "Adresses organigramme",
+	"type": "object",
+	"primaryKey": [
+		"typeorga",
+		"idorga"
+	],
+	"properties": {
+		"typeorga": {
+			"title": "Type organigramme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idorga": {
+			"title": "Code organigramme",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rue1": {
+			"title": "Rue1",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue2": {
+			"title": "Rue2",
+			"type": "string",
+			"maxLength": 100
+		},
+		"rue3": {
+			"title": "Rue3",
+			"type": "string",
+			"maxLength": 100
+		},
+		"codepostal": {
+			"title": "Code postal",
+			"type": "string",
+			"maxLength": 10
+		},
+		"nomville": {
+			"title": "Ville",
+			"type": "string",
+			"maxLength": 50
+		},
+		"telephone": {
+			"title": "Téléphone",
+			"type": "string",
+			"maxLength": 25
+		},
+		"fax": {
+			"title": "Fax",
+			"type": "string",
+			"maxLength": 25
+		},
+		"adremail": {
+			"title": "Adresse mail",
+			"type": "string",
+			"maxLength": 64
+		}
+	}
+}

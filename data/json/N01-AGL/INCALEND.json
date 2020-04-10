@@ -1,0 +1,31 @@
+{
+	"tableName": "INCALEND",
+	"name": "SpoCalendrierType",
+	"title": "Calendrier type",
+	"type": "object",
+	"primaryKey": [
+		"idcalen"
+	],
+	"properties": {
+		"idcalen": {
+			"title": "Code calendrier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbcalen": {
+			"title": "Libellé calendrier",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code Utilisateur",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

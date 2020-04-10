@@ -1,0 +1,31 @@
+{
+	"tableName": "INHIERARDEF",
+	"name": "SpoDefinitionHierarchie",
+	"title": "Définition de la hierarchie",
+	"type": "object",
+	"primaryKey": [
+		"idhier",
+		"idtyploc"
+	],
+	"properties": {
+		"idhier": {
+			"title": "Code hierarchie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtyploc": {
+			"title": "Code type de localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro d’ordre",
+			"type": "integer"
+		},
+		"idinfodyn": {
+			"title": "Code type d’informations dynamiques",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

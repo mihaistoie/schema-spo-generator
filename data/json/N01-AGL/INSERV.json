@@ -1,0 +1,49 @@
+{
+	"tableName": "INSERV",
+	"name": "SpoService",
+	"title": "Service",
+	"type": "object",
+	"primaryKey": [
+		"idserv"
+	],
+	"properties": {
+		"idserv": {
+			"title": "Code du service",
+			"type": "integer"
+		},
+		"lbserv": {
+			"title": "Libellé du service",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddirect": {
+			"title": "Code de la direction",
+			"type": "integer"
+		},
+		"iduti": {
+			"title": "Responsable",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcreat": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"actif": {
+			"title": "Etat(Actif/Clos)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dtclos": {
+			"title": "Date de clôture",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

@@ -1,0 +1,39 @@
+{
+	"tableName": "INEVENEMENT",
+	"name": "SpoEvenement",
+	"title": "Evènement",
+	"type": "object",
+	"primaryKey": [
+		"idevenement"
+	],
+	"properties": {
+		"idevenement": {
+			"title": "Code évènement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtevenement": {
+			"title": "Date évènement",
+			"type": "integer"
+		},
+		"iddom": {
+			"title": "Code domaine",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iddoss": {
+			"title": "Code dossier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typeevenement": {
+			"title": "Type d’évènement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"contenu": {
+			"title": "Contenu de l’évènement",
+			"type": "string"
+		}
+	}
+}

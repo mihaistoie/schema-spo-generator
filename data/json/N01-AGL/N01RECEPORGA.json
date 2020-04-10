@@ -1,0 +1,36 @@
+{
+	"tableName": "N01RECEPORGA",
+	"name": "SpoReceptionEnregistrementsTypeOrganigramme",
+	"title": "Réception des enregistrements de type organigramme",
+	"type": "object",
+	"primaryKey": [
+		"idref"
+	],
+	"properties": {
+		"idref": {
+			"title": "Référence externe de la structure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbstructure": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 80
+		},
+		"niveau": {
+			"title": "Niveau de la structure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idrefparent": {
+			"title": "Référence externe de la structure parent",
+			"type": "string",
+			"maxLength": 32
+		},
+		"actif": {
+			"title": "Etat(Actif/Clos)",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

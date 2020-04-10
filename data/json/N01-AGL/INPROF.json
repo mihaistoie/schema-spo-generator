@@ -1,0 +1,51 @@
+{
+	"tableName": "INPROF",
+	"name": "SpoProfile",
+	"title": "Profil",
+	"type": "object",
+	"primaryKey": [
+		"idprofil"
+	],
+	"properties": {
+		"idprofil": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomprof": {
+			"title": "Libellé court",
+			"type": "string",
+			"maxLength": 50
+		},
+		"lbprof": {
+			"title": "Libellé du profil",
+			"type": "string",
+			"maxLength": 100
+		},
+		"dtmaj": {
+			"title": "Date de mise à jour",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtcreat": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idprof": {
+			"title": "Code profil créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"extranet": {
+			"title": "Extranet",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

@@ -1,0 +1,31 @@
+{
+	"tableName": "INCOLDX",
+	"name": "SpoIdenficationColonnesIndex",
+	"title": "Idenfication colonnes des index",
+	"type": "object",
+	"primaryKey": [
+		"nomidx",
+		"nomcol"
+	],
+	"properties": {
+		"nomidx": {
+			"title": "Nom physique index",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomcol": {
+			"title": "Nom physique colonne",
+			"type": "string",
+			"maxLength": 32
+		},
+		"rangcol": {
+			"title": "Rang de colonne",
+			"type": "integer"
+		},
+		"tricrois": {
+			"title": "Sens croissant",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+{
+	"tableName": "INPROFU",
+	"name": "SpoUtilisateursProfiles",
+	"title": "Utilisateurs des profils",
+	"type": "object",
+	"primaryKey": [
+		"idprofil",
+		"idutil"
+	],
+	"properties": {
+		"idprofil": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idutil": {
+			"title": "Code Utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"defaut": {
+			"title": "Groupe par défaut",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

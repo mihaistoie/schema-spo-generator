@@ -1,0 +1,82 @@
+{
+	"tableName": "INLOCALIS",
+	"name": "SpoLocalisations",
+	"title": "Localisations",
+	"type": "object",
+	"primaryKey": [
+		"idlocal"
+	],
+	"properties": {
+		"idlocal": {
+			"title": "Code localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtyploc": {
+			"title": "Code type de localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idadm": {
+			"title": "Code administratif",
+			"type": "string",
+			"maxLength": 100
+		},
+		"lblocal": {
+			"title": "Libellé",
+			"type": "string",
+			"maxLength": 250
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"uuid": {
+			"title": "UUID",
+			"type": "string",
+			"maxLength": 40
+		},
+		"codecomp": {
+			"title": "Code complémentaire",
+			"type": "string",
+			"maxLength": 3500,
+			"format": "memo"
+		},
+		"lbcourt": {
+			"title": "Libellé court",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idutimod": {
+			"title": "Modifié par",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtcreat": {
+			"title": "Date de création",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtmod": {
+			"title": "Date de modification",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtdebval": {
+			"title": "Date de début de validité",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtfinval": {
+			"title": "Date de fin de validité",
+			"type": "string",
+			"format": "mgdis-date"
+		}
+	}
+}

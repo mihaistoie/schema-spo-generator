@@ -1,0 +1,32 @@
+{
+	"tableName": "INOPTION",
+	"name": "SpoOptionMiseAJour",
+	"title": "Option de mise à jour",
+	"type": "object",
+	"primaryKey": [
+		"idsupport",
+		"idoption"
+	],
+	"properties": {
+		"idsupport": {
+			"title": "Code support",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idoption": {
+			"title": "Code option",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lboption": {
+			"title": "Libellé option",
+			"type": "string",
+			"maxLength": 80
+		},
+		"drtproced": {
+			"title": "Droit par procédure",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"tableName": "INPRIV",
+	"name": "SpoPrivilege",
+	"title": "Privilège",
+	"type": "object",
+	"primaryKey": [
+		"idsupport",
+		"idforme",
+		"idpriv"
+	],
+	"properties": {
+		"idsupport": {
+			"title": "Code composant",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idforme": {
+			"title": "Code forme",
+			"type": "integer"
+		},
+		"idpriv": {
+			"title": "Code privilège",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbpriv": {
+			"title": "Libellé privilège",
+			"type": "string",
+			"maxLength": 80
+		}
+	}
+}

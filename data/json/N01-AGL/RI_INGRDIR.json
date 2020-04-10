@@ -1,0 +1,31 @@
+{
+	"tableName": "RI_INGRDIR",
+	"name": "SpoGroupeDirectionRI",
+	"title": "Groupes de directions",
+	"type": "object",
+	"primaryKey": [
+		"idgrdir"
+	],
+	"properties": {
+		"idgrdir": {
+			"title": "Code du groupe de directions",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbgrdir": {
+			"title": "Libellé du groupe de directions",
+			"type": "string",
+			"maxLength": 200
+		},
+		"idref": {
+			"title": "Référence du groupe de directions",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idunite": {
+			"title": "Code de l’unité",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

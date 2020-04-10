@@ -1,0 +1,31 @@
+{
+	"tableName": "INEVENEMENTPROPAGATION",
+	"name": "SpoEvenementPropagation",
+	"title": "Propagation des évènements",
+	"type": "object",
+	"primaryKey": [
+		"idevenement",
+		"typepropagation"
+	],
+	"properties": {
+		"idevenement": {
+			"title": "Code évènement",
+			"type": "string",
+			"maxLength": 32
+		},
+		"typepropagation": {
+			"title": "Type de propagation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"erreur": {
+			"title": "Erreur",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"description": {
+			"title": "Description de l’évènement propagé",
+			"type": "string"
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+	"tableName": "RI_INDIREC",
+	"name": "SpoListeDirectionsRI",
+	"title": "Liste des Directions",
+	"type": "object",
+	"primaryKey": [
+		"iddirect"
+	],
+	"properties": {
+		"iddirect": {
+			"title": "Code de la direction",
+			"type": "integer"
+		},
+		"idref": {
+			"title": "Sigle de la direction",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbdirect": {
+			"title": "Libelle de la direction",
+			"type": "string",
+			"maxLength": 100
+		},
+		"idgrdir": {
+			"title": "Code du groupe de directions",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

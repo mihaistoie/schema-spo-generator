@@ -1,0 +1,20 @@
+{
+	"tableName": "RI_INUTI_V",
+	"name": "SpoRI_INUTI_V",
+	"title": "Utilisateurs avec mot de passe crypté",
+	"type": "object",
+	"primaryKey": [
+		"compteur"
+	],
+	"properties": {
+		"compteur": {
+			"title": "Compteur Utilisateur RI",
+			"type": "integer"
+		},
+		"mdpcrypte": {
+			"title": "Login",
+			"type": "string",
+			"maxLength": 15
+		}
+	}
+}

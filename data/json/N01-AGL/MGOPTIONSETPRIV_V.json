@@ -1,0 +1,32 @@
+{
+	"tableName": "MGOPTIONSETPRIV_V",
+	"name": "SpoOPTIONSETPRIVILEGES_V",
+	"title": "Vue pour la récupération des otpions et privilèges qui n’en sont pas",
+	"type": "object",
+	"primaryKey": [
+		"codesupport",
+		"codeoption"
+	],
+	"properties": {
+		"codesupport": {
+			"title": "Code support",
+			"type": "string",
+			"maxLength": 32
+		},
+		"codeoption": {
+			"title": "Code option",
+			"type": "string",
+			"maxLength": 32
+		},
+		"liboption": {
+			"title": "Libellé de l’option",
+			"type": "string",
+			"maxLength": 80
+		},
+		"typeoption": {
+			"title": "Type de l’option (option ou privilège)",
+			"type": "string",
+			"maxLength": 1
+		}
+	}
+}

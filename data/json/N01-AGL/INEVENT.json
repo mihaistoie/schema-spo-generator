@@ -1,0 +1,32 @@
+{
+	"tableName": "INEVENT",
+	"name": "SpoEvenementsEDA",
+	"title": "Evènements levés par le serveur",
+	"type": "object",
+	"primaryKey": [
+		"uidcanal",
+		"libelle",
+		"timestamp"
+	],
+	"properties": {
+		"uidcanal": {
+			"title": "Canal de diffusion",
+			"type": "string",
+			"maxLength": 32
+		},
+		"libelle": {
+			"title": "Titre de l’évènement",
+			"type": "string",
+			"maxLength": 200
+		},
+		"chargeutile": {
+			"title": "Charge utile",
+			"type": "string"
+		},
+		"timestamp": {
+			"title": "Timestamp de levée de l’évènement",
+			"type": "string",
+			"maxLength": 30
+		}
+	}
+}

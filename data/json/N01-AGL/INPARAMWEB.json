@@ -1,0 +1,66 @@
+{
+	"tableName": "INPARAMWEB",
+	"name": "SpoParametrageWeb",
+	"title": "Paramétrage Web",
+	"type": "object",
+	"primaryKey": [
+		"idparam",
+		"idmetier",
+		"idproced"
+	],
+	"properties": {
+		"idparam": {
+			"title": "Code Paramètre",
+			"type": "string",
+			"maxLength": 36
+		},
+		"idmetier": {
+			"title": "Code Métier",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproced": {
+			"title": "Code Procédure",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbopt": {
+			"title": "Libellé Paramètre",
+			"type": "string",
+			"maxLength": 200
+		},
+		"typeparam": {
+			"title": "Type Paramètre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"modeparam": {
+			"title": "Mode du Paramètre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"actif": {
+			"title": "Activation du Paramètre",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"param1": {
+			"title": "Paramètre 1",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"param2": {
+			"title": "Paramètre 2",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		},
+		"param3": {
+			"title": "Paramètre 3",
+			"type": "string",
+			"maxLength": 1000,
+			"format": "memo"
+		}
+	}
+}

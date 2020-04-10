@@ -1,0 +1,55 @@
+{
+	"tableName": "INTYPLOCAL",
+	"name": "SpoTypesLocalisation",
+	"title": "Types de localisation",
+	"type": "object",
+	"primaryKey": [
+		"idtyploc"
+	],
+	"properties": {
+		"idtyploc": {
+			"title": "Code type de localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtypent": {
+			"title": "Type d’entité gérée",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbtypl": {
+			"title": "Libellé type de localisation",
+			"type": "string",
+			"maxLength": 50
+		},
+		"longtypl": {
+			"title": "Longueur code",
+			"type": "integer"
+		},
+		"idadmoblig": {
+			"title": "Code administratif obligatoire",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"idadmuniq": {
+			"title": "Unicité du code administratif des localisations",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idinfodyn": {
+			"title": "Code type d’informations dynamiques",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

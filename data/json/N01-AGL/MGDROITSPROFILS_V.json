@@ -1,0 +1,71 @@
+{
+	"tableName": "MGDROITSPROFILS_V",
+	"name": "SpoMGDROITSPROFILS_V",
+	"title": "Droits des profils",
+	"type": "object",
+	"primaryKey": [
+		"nomaxe"
+	],
+	"properties": {
+		"nomaxe": {
+			"title": "Nom de l’axe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbaxe": {
+			"title": "Source de données",
+			"type": "string",
+			"maxLength": 115
+		},
+		"idprofcre": {
+			"title": "Code profil créateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbprofcre": {
+			"title": "Profil créateur",
+			"type": "string",
+			"maxLength": 135
+		},
+		"idprofpro": {
+			"title": "Code Profil protégé",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbprofpro": {
+			"title": "Profil protégé",
+			"type": "string",
+			"maxLength": 135
+		},
+		"droitcreation": {
+			"title": "Création",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitlecture": {
+			"title": "Lecture",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitmodif": {
+			"title": "Modification",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitsup": {
+			"title": "Suppression",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"droitsautres": {
+			"title": "DroitsAutres",
+			"type": "string",
+			"maxLength": 32
+		},
+		"droitscreat": {
+			"title": "DroitsCreation",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

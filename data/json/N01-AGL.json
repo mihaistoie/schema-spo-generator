@@ -1,0 +1,3243 @@
+{
+	"DOMPARAM": {
+		"tableName": "DOMPARAM",
+		"name": "SpoAdministrationParametrage",
+		"title": "Administration et Paramètrage",
+		"type": "object",
+		"primaryKey": [
+			"iddoss"
+		],
+		"properties": {
+			"iddoss": {
+				"title": "Code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbdoss": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idref": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"objdos": {
+				"title": "Objet",
+				"type": "string",
+				"maxLength": 200
+			},
+			"iddossreg": {
+				"title": "Est le fils de",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Numéro d’ordre du dossier fils",
+				"type": "integer"
+			},
+			"idtiers": {
+				"title": "Code tiers",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCLASSEUR": {
+		"tableName": "INCLASSEUR",
+		"name": "SpoClasseur",
+		"title": "Classeur",
+		"type": "object",
+		"primaryKey": [
+			"typclas",
+			"idclas"
+		],
+		"properties": {
+			"typclas": {
+				"title": "Type de classeur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idclas": {
+				"title": "Code classeur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idgrp": {
+				"title": "Code groupe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbclas": {
+				"title": "Libellé classeur",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idref": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idclaspere": {
+				"title": "Classeur père",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtmaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCLASSINFO": {
+		"tableName": "INCLASSINFO",
+		"name": "SpoInformationsClasseurs",
+		"title": "Informations des classeurs",
+		"type": "object",
+		"primaryKey": [
+			"typclas",
+			"idclas",
+			"idcrit1",
+			"idcrit2",
+			"idcrit3",
+			"idcrit4"
+		],
+		"properties": {
+			"typclas": {
+				"title": "Type de classeur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idclas": {
+				"title": "Code classeur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcrit1": {
+				"title": "Critére1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcrit2": {
+				"title": "Critére2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcrit3": {
+				"title": "Critére3",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcrit4": {
+				"title": "Critére4",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCLASSRANG": {
+		"tableName": "INCLASSRANG",
+		"name": "SpoClasseurRang",
+		"title": "Classeur (Ordre d’affichage)",
+		"type": "object",
+		"primaryKey": [
+			"typclas",
+			"idclas"
+		],
+		"properties": {
+			"typclas": {
+				"title": "Type de classeur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idclas": {
+				"title": "Code classeur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rang": {
+				"title": "rang",
+				"type": "integer"
+			}
+		}
+	},
+	"INCOMPOS": {
+		"tableName": "INCOMPOS",
+		"name": "SpoComposants",
+		"title": "Composants",
+		"type": "object",
+		"primaryKey": [
+			"idcompos"
+		],
+		"properties": {
+			"idcompos": {
+				"title": "Code composant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbcompos": {
+				"title": "Libellé composant",
+				"type": "string",
+				"maxLength": 80
+			},
+			"versioncp": {
+				"title": "Version composant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcppere": {
+				"title": "Composant père",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typecp": {
+				"title": "Type de composant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cleactif": {
+				"title": "Clé d’activité",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INDESC": {
+		"tableName": "INDESC",
+		"name": "SpoTableDescription",
+		"title": "Table de description",
+		"type": "object",
+		"primaryKey": [
+			"nomaxe",
+			"critere1",
+			"critere2",
+			"critere3",
+			"critere4",
+			"critere5",
+			"critere6",
+			"critere7",
+			"critere8"
+		],
+		"properties": {
+			"nomaxe": {
+				"title": "Nom axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere1": {
+				"title": "Critère 1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere2": {
+				"title": "Critère 2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere3": {
+				"title": "Critère 3",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere4": {
+				"title": "Critère 4",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere5": {
+				"title": "Critère 5",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere6": {
+				"title": "Critère 6",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere7": {
+				"title": "Critère 7",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere8": {
+				"title": "Critère 8",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ficdesc": {
+				"title": "Fiche descriptive",
+				"type": "string"
+			}
+		}
+	},
+	"INERR": {
+		"tableName": "INERR",
+		"name": "SpoErreurApplicative",
+		"title": "Erreur applicative",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idcritere",
+			"coderreur"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcritere": {
+				"title": "Identifiant critere",
+				"type": "string",
+				"maxLength": 32
+			},
+			"coderreur": {
+				"title": "Code erreur",
+				"type": "integer"
+			},
+			"severite": {
+				"title": "Severite message",
+				"type": "integer"
+			},
+			"messerr": {
+				"title": "Message d’erreur",
+				"type": "string",
+				"maxLength": 254
+			},
+			"aide": {
+				"title": "Contexte aide",
+				"type": "integer"
+			}
+		}
+	},
+	"INPARAM": {
+		"tableName": "INPARAM",
+		"name": "SpoParametresGeneraux",
+		"title": "Paramètres généraux",
+		"type": "object",
+		"primaryKey": [
+			"code"
+		],
+		"properties": {
+			"code": {
+				"title": "Code du paramètre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"attribut": {
+				"title": "Attributs",
+				"type": "string",
+				"maxLength": 100
+			},
+			"gestion": {
+				"title": "Gestion du paramètre",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INDYNPARAM": {
+		"tableName": "INDYNPARAM",
+		"name": "SpoParametresDynamiquesUtilisateur",
+		"title": "Paramètres dynamiques utilisateur",
+		"type": "object",
+		"primaryKey": [
+			"idparam",
+			"idobj",
+			"idref",
+			"numordre",
+			"crit1",
+			"crit2",
+			"crit3",
+			"crit4",
+			"crit5"
+		],
+		"properties": {
+			"idparam": {
+				"title": "Code du paramètre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idobj": {
+				"title": "Code de l’objet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idref": {
+				"title": "Code de la référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"valeur": {
+				"title": "Valeur paramétrage",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"crit1": {
+				"title": "Critere1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"crit2": {
+				"title": "Critere2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"crit3": {
+				"title": "Critere3",
+				"type": "string",
+				"maxLength": 32
+			},
+			"crit4": {
+				"title": "Critere4",
+				"type": "string",
+				"maxLength": 32
+			},
+			"crit5": {
+				"title": "Critere5",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INHISTO": {
+		"tableName": "INHISTO",
+		"name": "SpoHistorique",
+		"title": "Historique",
+		"type": "object",
+		"primaryKey": [
+			"idhisto",
+			"rang"
+		],
+		"properties": {
+			"idhisto": {
+				"title": "Code de l’objet",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rang": {
+				"title": "Rang",
+				"type": "integer"
+			},
+			"typeobjet": {
+				"title": "Type de l’objet",
+				"type": "string",
+				"maxLength": 30
+			},
+			"datemaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"heuremaj": {
+				"title": "Heure de mise à jour",
+				"type": "string",
+				"maxLength": 12
+			},
+			"modifiepar": {
+				"title": "Modifié par",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INPARAMWEB": {
+		"tableName": "INPARAMWEB",
+		"name": "SpoParametrageWeb",
+		"title": "Paramétrage Web",
+		"type": "object",
+		"primaryKey": [
+			"idparam",
+			"idmetier",
+			"idproced"
+		],
+		"properties": {
+			"idparam": {
+				"title": "Code Paramètre",
+				"type": "string",
+				"maxLength": 36
+			},
+			"idmetier": {
+				"title": "Code Métier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code Procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbopt": {
+				"title": "Libellé Paramètre",
+				"type": "string",
+				"maxLength": 200
+			},
+			"typeparam": {
+				"title": "Type Paramètre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"modeparam": {
+				"title": "Mode du Paramètre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"actif": {
+				"title": "Activation du Paramètre",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"param1": {
+				"title": "Paramètre 1",
+				"type": "string",
+				"maxLength": 1000,
+				"format": "memo"
+			},
+			"param2": {
+				"title": "Paramètre 2",
+				"type": "string",
+				"maxLength": 1000,
+				"format": "memo"
+			},
+			"param3": {
+				"title": "Paramètre 3",
+				"type": "string",
+				"maxLength": 1000,
+				"format": "memo"
+			}
+		}
+	},
+	"INPARAMWEBLST": {
+		"tableName": "INPARAMWEBLST",
+		"name": "SpoParametrageListeWeb",
+		"title": "Paramétrage Liste Web",
+		"type": "object",
+		"primaryKey": [
+			"idparam",
+			"idmetier",
+			"idproced",
+			"idelem"
+		],
+		"properties": {
+			"idparam": {
+				"title": "Code Paramètre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idmetier": {
+				"title": "Code Métier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code Procédure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idelem": {
+				"title": "Code Element",
+				"type": "string",
+				"maxLength": 32
+			},
+			"param1": {
+				"title": "Paramètre 1",
+				"type": "string",
+				"maxLength": 1000,
+				"format": "memo"
+			},
+			"param2": {
+				"title": "Paramètre 2",
+				"type": "string",
+				"maxLength": 1000,
+				"format": "memo"
+			},
+			"param3": {
+				"title": "Paramètre 3",
+				"type": "string",
+				"maxLength": 1000,
+				"format": "memo"
+			}
+		}
+	},
+	"INERRORLOG": {
+		"tableName": "INERRORLOG",
+		"name": "SpologErreursBatch",
+		"title": "Log batch",
+		"type": "object",
+		"primaryKey": [
+			"id"
+		],
+		"properties": {
+			"id": {
+				"title": "Numéro d’id",
+				"type": "string",
+				"maxLength": 32
+			},
+			"code": {
+				"title": "Code",
+				"type": "string",
+				"maxLength": 10
+			},
+			"description": {
+				"title": "Description de la log",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"categorie": {
+				"title": "Catégorie de la log",
+				"type": "string",
+				"maxLength": 32
+			},
+			"origine": {
+				"title": "Origine log",
+				"type": "string",
+				"maxLength": 32
+			},
+			"datelog": {
+				"title": "Date de la log",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"heurelog": {
+				"title": "Heure de la log",
+				"type": "string",
+				"maxLength": 12
+			}
+		}
+	},
+	"INTICKETUSER": {
+		"tableName": "INTICKETUSER",
+		"name": "SpotokenListe",
+		"title": "Liste des tikets par utilisateur",
+		"type": "object",
+		"primaryKey": [
+			"ticket",
+			"idutil",
+			"idprof"
+		],
+		"properties": {
+			"ticket": {
+				"title": "Ticket",
+				"type": "string",
+				"maxLength": 1000,
+				"format": "memo"
+			},
+			"idutil": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtcreat": {
+				"title": "Date de creation du ticket",
+				"type": "string",
+				"maxLength": 20
+			}
+		}
+	},
+	"MGLSTDEFHIERAR_V": {
+		"tableName": "MGLSTDEFHIERAR_V",
+		"name": "SpoMGLSTDEFHIERAR_V",
+		"title": "ListeAffichageDefinitionsHierarchies",
+		"type": "object",
+		"primaryKey": [
+			"idhier",
+			"idtyploc"
+		],
+		"properties": {
+			"idhier": {
+				"title": "code hierarchies",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtyploc": {
+				"title": "code Type des localisations",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "niveau",
+				"type": "integer"
+			},
+			"libtyploc": {
+				"title": "Type des localisations",
+				"type": "string",
+				"maxLength": 50
+			},
+			"idinfodyn": {
+				"title": "Type d’informations dynamiques",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"MGLSTAXE_V": {
+		"tableName": "MGLSTAXE_V",
+		"name": "SpoMGLSTAXE_V",
+		"title": "Recherche d’un axe",
+		"type": "object",
+		"primaryKey": [
+			"nomaxe"
+		],
+		"properties": {
+			"nomaxe": {
+				"title": "Nom source de données",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbaxe": {
+				"title": "Libellé source de données",
+				"type": "string",
+				"maxLength": 80
+			},
+			"typaxe": {
+				"title": "Type de source de données",
+				"type": "string",
+				"maxLength": 32
+			},
+			"visibilite": {
+				"title": "Visibilité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomcolexe": {
+				"title": "Nom de la colonne Exercice",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtmaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"proprio": {
+				"title": "Propriétaire",
+				"type": "string",
+				"maxLength": 15
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cle1": {
+				"title": "Colonne clé 1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cle2": {
+				"title": "Colonne clé 2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cle3": {
+				"title": "Colonne clé 3",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cle4": {
+				"title": "Colonne clé 4",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cle5": {
+				"title": "Colonne clé 5",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cle6": {
+				"title": "Colonne clé 6",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cle7": {
+				"title": "Colonne clé 7",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"RI_INUTI_V": {
+		"tableName": "RI_INUTI_V",
+		"name": "SpoRI_INUTI_V",
+		"title": "Utilisateurs avec mot de passe crypté",
+		"type": "object",
+		"primaryKey": [
+			"compteur"
+		],
+		"properties": {
+			"compteur": {
+				"title": "Compteur Utilisateur RI",
+				"type": "integer"
+			},
+			"mdpcrypte": {
+				"title": "Login",
+				"type": "string",
+				"maxLength": 15
+			}
+		}
+	},
+	"INAXE": {
+		"tableName": "INAXE",
+		"name": "SpoSourceDonnees",
+		"title": "Source de données",
+		"type": "object",
+		"primaryKey": [
+			"nomaxe"
+		],
+		"properties": {
+			"nomaxe": {
+				"title": "Nom source de données",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbaxe": {
+				"title": "Libellé source de données",
+				"type": "string",
+				"maxLength": 80
+			},
+			"typaxe": {
+				"title": "Type de source de données",
+				"type": "string",
+				"maxLength": 32
+			},
+			"visibilite": {
+				"title": "Visibilité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomcolexe": {
+				"title": "Nom de la colonne Exercice",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtmaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"proprio": {
+				"title": "Propriétaire",
+				"type": "string",
+				"maxLength": 15
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"colonneUneTableList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoColonneUneTable",
+				"localFields": [
+					"nomtab"
+				],
+				"foreignFields": [
+					"nomaxe"
+				],
+				"invRel": "sourceDonnees"
+			}
+		}
+	},
+	"INAXEPR": {
+		"tableName": "INAXEPR",
+		"name": "SpoAxesProteges",
+		"title": "Axes protégés",
+		"type": "object",
+		"primaryKey": [
+			"nomaxe"
+		],
+		"properties": {
+			"nomaxe": {
+				"title": "Nom axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"actif": {
+				"title": "Protection active",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"delegation": {
+				"title": "Axe délégué",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCODIF": {
+		"tableName": "INCODIF",
+		"name": "SpoCodification",
+		"title": "Codification",
+		"type": "object",
+		"primaryKey": [
+			"idcodif"
+		],
+		"properties": {
+			"idcodif": {
+				"title": "Code codification",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbcodif": {
+				"title": "Libellé de codification",
+				"type": "string",
+				"maxLength": 80
+			},
+			"taille": {
+				"title": "Taille",
+				"type": "integer"
+			},
+			"visibilite": {
+				"title": "Visibilité",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCOLDX": {
+		"tableName": "INCOLDX",
+		"name": "SpoIdenficationColonnesIndex",
+		"title": "Idenfication colonnes des index",
+		"type": "object",
+		"primaryKey": [
+			"nomidx",
+			"nomcol"
+		],
+		"properties": {
+			"nomidx": {
+				"title": "Nom physique index",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomcol": {
+				"title": "Nom physique colonne",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rangcol": {
+				"title": "Rang de colonne",
+				"type": "integer"
+			},
+			"tricrois": {
+				"title": "Sens croissant",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INCOLTAB": {
+		"tableName": "INCOLTAB",
+		"name": "SpoColonneUneTable",
+		"title": "Colonne d’une table",
+		"type": "object",
+		"primaryKey": [
+			"nomtab",
+			"nomcol"
+		],
+		"properties": {
+			"nomtab": {
+				"title": "Nom physique table",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomcol": {
+				"title": "Nom physique colonne",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rangcol": {
+				"title": "Rang de colonne",
+				"type": "integer"
+			},
+			"lbcol": {
+				"title": "Libellé de colonne",
+				"type": "string",
+				"maxLength": 80
+			},
+			"strucol": {
+				"title": "Structure colonne",
+				"type": "string",
+				"maxLength": 32
+			},
+			"taille": {
+				"title": "Taille",
+				"type": "integer"
+			},
+			"nbdecimal": {
+				"title": "Nombre de décimales",
+				"type": "integer"
+			},
+			"idcodif": {
+				"title": "Code codification",
+				"type": "string",
+				"maxLength": 32
+			},
+			"oblig": {
+				"title": "Saisie obligatoire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"localis": {
+				"title": "Colonne Localisation",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idtyploc": {
+				"title": "Type de localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"cryptage": {
+				"title": "Colonne cryptée",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"valdef": {
+				"title": "Valeur par défaut",
+				"type": "string",
+				"maxLength": 20
+			},
+			"numcle": {
+				"title": "Numéro ordre clé",
+				"type": "integer"
+			},
+			"liensql": {
+				"title": "Définition SQL jointure métier",
+				"type": "string",
+				"maxLength": 4000,
+				"format": "memo"
+			},
+			"soustype": {
+				"title": "Sous type de la colonne",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"sourceDonnees": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoSourceDonnees",
+				"localFields": [
+					"nomaxe"
+				],
+				"foreignFields": [
+					"nomtab"
+				],
+				"invRel": "colonneUneTableList"
+			}
+		}
+	},
+	"ININDEX": {
+		"tableName": "ININDEX",
+		"name": "SpoIdentificationIndex",
+		"title": "Identification index",
+		"type": "object",
+		"primaryKey": [
+			"nomidx"
+		],
+		"properties": {
+			"nomidx": {
+				"title": "Nom physique index",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomtab": {
+				"title": "Nom physique table",
+				"type": "string",
+				"maxLength": 32
+			},
+			"unicite": {
+				"title": "Index unique",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INVAL": {
+		"tableName": "INVAL",
+		"name": "SpoValeurCodification",
+		"title": "Valeur de codification",
+		"type": "object",
+		"primaryKey": [
+			"idcodif",
+			"valeur"
+		],
+		"properties": {
+			"idcodif": {
+				"title": "Code codification",
+				"type": "string",
+				"maxLength": 32
+			},
+			"valeur": {
+				"title": "Valeur de code",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbval": {
+				"title": "Libellé de code",
+				"type": "string",
+				"maxLength": 150
+			},
+			"visibilite": {
+				"title": "Visibilité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"active": {
+				"title": "Actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INCODIFHIERAR": {
+		"tableName": "INCODIFHIERAR",
+		"name": "SpoHierarchieCodificationsValeurs",
+		"title": "Hierarchie des codifications et des valeurs",
+		"type": "object",
+		"primaryKey": [
+			"idcodifmere",
+			"valeurmere",
+			"idcodiffille",
+			"valeurfille"
+		],
+		"properties": {
+			"idcodifmere": {
+				"title": "Code de la codification mère",
+				"type": "string",
+				"maxLength": 32
+			},
+			"valeurmere": {
+				"title": "Code de la valeur mère",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idcodiffille": {
+				"title": "Code de la codification fille",
+				"type": "string",
+				"maxLength": 32
+			},
+			"valeurfille": {
+				"title": "Code de la valeur fille",
+				"type": "string",
+				"maxLength": 32
+			},
+			"defaut": {
+				"title": "Défaut",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INDIREC": {
+		"tableName": "INDIREC",
+		"name": "SpoDirection",
+		"title": "Direction",
+		"type": "object",
+		"primaryKey": [
+			"iddirect"
+		],
+		"properties": {
+			"iddirect": {
+				"title": "Code de la direction",
+				"type": "integer"
+			},
+			"lbdirect": {
+				"title": "Libellé de la direction",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idref": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Responsable",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtcreat": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"actif": {
+				"title": "Etat(Actif/Clos)",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dtclos": {
+				"title": "Date de clôture",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idgrdir": {
+				"title": "Code du groupe de directions",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INENR": {
+		"tableName": "INENR",
+		"name": "SpoProtectionEnregistrements",
+		"title": "Protection des enregistrements",
+		"type": "object",
+		"primaryKey": [
+			"idprofcre",
+			"nomaxe",
+			"idprofpro"
+		],
+		"properties": {
+			"idprofcre": {
+				"title": "Code profil créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomaxe": {
+				"title": "Nom axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofpro": {
+				"title": "Code profil protégé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"droits": {
+				"title": "Droits groupe protégé",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INENRUTI": {
+		"tableName": "INENRUTI",
+		"name": "SpoProtectionEnregistrementsUtilisateur",
+		"title": "Protection des enregistrements au niveau utilisateur",
+		"type": "object",
+		"primaryKey": [
+			"iduticre",
+			"nomaxe",
+			"idutipro"
+		],
+		"properties": {
+			"iduticre": {
+				"title": "Code utilisateur créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomaxe": {
+				"title": "Nom axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutipro": {
+				"title": "Code utilisateur protégé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"droits": {
+				"title": "Droits groupe protégé",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INPRIV": {
+		"tableName": "INPRIV",
+		"name": "SpoPrivilege",
+		"title": "Privilège",
+		"type": "object",
+		"primaryKey": [
+			"idsupport",
+			"idforme",
+			"idpriv"
+		],
+		"properties": {
+			"idsupport": {
+				"title": "Code composant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idforme": {
+				"title": "Code forme",
+				"type": "integer"
+			},
+			"idpriv": {
+				"title": "Code privilège",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbpriv": {
+				"title": "Libellé privilège",
+				"type": "string",
+				"maxLength": 80
+			}
+		}
+	},
+	"INPRIVPROF": {
+		"tableName": "INPRIVPROF",
+		"name": "SpoPrivilegesProfile",
+		"title": "Privilèges du Profil",
+		"type": "object",
+		"primaryKey": [
+			"idprof",
+			"idsupport",
+			"idforme",
+			"idpriv"
+		],
+		"properties": {
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idsupport": {
+				"title": "Code composant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idforme": {
+				"title": "Code forme",
+				"type": "integer"
+			},
+			"idpriv": {
+				"title": "Code privilège",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INPROF": {
+		"tableName": "INPROF",
+		"name": "SpoProfile",
+		"title": "Profil",
+		"type": "object",
+		"primaryKey": [
+			"idprofil"
+		],
+		"properties": {
+			"idprofil": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomprof": {
+				"title": "Libellé court",
+				"type": "string",
+				"maxLength": 50
+			},
+			"lbprof": {
+				"title": "Libellé du profil",
+				"type": "string",
+				"maxLength": 100
+			},
+			"dtmaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtcreat": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idprof": {
+				"title": "Code profil créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"extranet": {
+				"title": "Extranet",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INPROFU": {
+		"tableName": "INPROFU",
+		"name": "SpoUtilisateursProfiles",
+		"title": "Utilisateurs des profils",
+		"type": "object",
+		"primaryKey": [
+			"idprofil",
+			"idutil"
+		],
+		"properties": {
+			"idprofil": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutil": {
+				"title": "Code Utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"defaut": {
+				"title": "Groupe par défaut",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INUTI": {
+		"tableName": "INUTI",
+		"name": "SpoUtilisateur",
+		"title": "Utilisateur",
+		"type": "object",
+		"primaryKey": [
+			"idutil"
+		],
+		"properties": {
+			"idutil": {
+				"title": "Code Utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"login": {
+				"title": "Login",
+				"type": "string",
+				"maxLength": 256
+			},
+			"nomuti": {
+				"title": "Nom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"preuti": {
+				"title": "Prénom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"lbuti": {
+				"title": "Libellé utilisateur",
+				"type": "string",
+				"maxLength": 40
+			},
+			"dtmaj": {
+				"title": "Date de mise à jour",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"mdputi": {
+				"title": "Mot de passe",
+				"type": "string",
+				"maxLength": 128
+			},
+			"dtcreat": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtchgmdp": {
+				"title": "Date changement Mdp",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"typdlmdp": {
+				"title": "Type délais Mdp",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dlmdp": {
+				"title": "Délais Mdp",
+				"type": "integer"
+			},
+			"dtfin": {
+				"title": "Date fin Mdp",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtactif": {
+				"title": "Date activation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtexp": {
+				"title": "Date fin Expiration",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"typdlexp": {
+				"title": "Type délais Expiration",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dlexp": {
+				"title": "Délais Expiration",
+				"type": "integer"
+			},
+			"actif": {
+				"title": "Utilisateur actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"mdpobli": {
+				"title": "Mdp obligatoire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"nbcarmdp": {
+				"title": "Nb caractères minimum Mdp",
+				"type": "integer"
+			},
+			"telephon": {
+				"title": "Numéro de téléphone",
+				"type": "string",
+				"maxLength": 14
+			},
+			"email": {
+				"title": "E-Mail",
+				"type": "string",
+				"maxLength": 64
+			},
+			"postwin": {
+				"title": "Poste Windows",
+				"type": "string",
+				"maxLength": 20
+			},
+			"idserv": {
+				"title": "Code du service",
+				"type": "integer"
+			},
+			"idprof": {
+				"title": "Code profil créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"extranet": {
+				"title": "Extranet",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dtnais": {
+				"title": "Date de naissance",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idgenre": {
+				"title": "Genre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"bloquerchgmdp": {
+				"title": "Changement de mot de passe impossible",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"jamaismdpexpire": {
+				"title": "Le mot de passe n’expire jamais",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idfonction": {
+				"title": "Fonction",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INSERV": {
+		"tableName": "INSERV",
+		"name": "SpoService",
+		"title": "Service",
+		"type": "object",
+		"primaryKey": [
+			"idserv"
+		],
+		"properties": {
+			"idserv": {
+				"title": "Code du service",
+				"type": "integer"
+			},
+			"lbserv": {
+				"title": "Libellé du service",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idref": {
+				"title": "Référence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddirect": {
+				"title": "Code de la direction",
+				"type": "integer"
+			},
+			"iduti": {
+				"title": "Responsable",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtcreat": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"actif": {
+				"title": "Etat(Actif/Clos)",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dtclos": {
+				"title": "Date de clôture",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"INGRDIR": {
+		"tableName": "INGRDIR",
+		"name": "SpoGroupeDirection",
+		"title": "Groupes de directions",
+		"type": "object",
+		"primaryKey": [
+			"idgrdir"
+		],
+		"properties": {
+			"idgrdir": {
+				"title": "Code du groupe de directions",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbgrdir": {
+				"title": "Libellé du groupe de directions",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idref": {
+				"title": "Référence du groupe de directions",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idunite": {
+				"title": "Code de l’unité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Responsable",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INUNITE": {
+		"tableName": "INUNITE",
+		"name": "SpoUnite",
+		"title": "Unité",
+		"type": "object",
+		"primaryKey": [
+			"idunite"
+		],
+		"properties": {
+			"idunite": {
+				"title": "Code de l’unité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbunite": {
+				"title": "Libellé de l’unité",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idref": {
+				"title": "Référence de l’unité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Responsable",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INADRORGA": {
+		"tableName": "INADRORGA",
+		"name": "SpoAdressesOrganigramme",
+		"title": "Adresses organigramme",
+		"type": "object",
+		"primaryKey": [
+			"typeorga",
+			"idorga"
+		],
+		"properties": {
+			"typeorga": {
+				"title": "Type organigramme",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idorga": {
+				"title": "Code organigramme",
+				"type": "string",
+				"maxLength": 32
+			},
+			"rue1": {
+				"title": "Rue1",
+				"type": "string",
+				"maxLength": 100
+			},
+			"rue2": {
+				"title": "Rue2",
+				"type": "string",
+				"maxLength": 100
+			},
+			"rue3": {
+				"title": "Rue3",
+				"type": "string",
+				"maxLength": 100
+			},
+			"codepostal": {
+				"title": "Code postal",
+				"type": "string",
+				"maxLength": 10
+			},
+			"nomville": {
+				"title": "Ville",
+				"type": "string",
+				"maxLength": 50
+			},
+			"telephone": {
+				"title": "Téléphone",
+				"type": "string",
+				"maxLength": 25
+			},
+			"fax": {
+				"title": "Fax",
+				"type": "string",
+				"maxLength": 25
+			},
+			"adremail": {
+				"title": "Adresse mail",
+				"type": "string",
+				"maxLength": 64
+			}
+		}
+	},
+	"MGOPTIONSETPRIV_V": {
+		"tableName": "MGOPTIONSETPRIV_V",
+		"name": "SpoOPTIONSETPRIVILEGES_V",
+		"title": "Vue pour la récupération des otpions et privilèges qui n’en sont pas",
+		"type": "object",
+		"primaryKey": [
+			"codesupport",
+			"codeoption"
+		],
+		"properties": {
+			"codesupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"codeoption": {
+				"title": "Code option",
+				"type": "string",
+				"maxLength": 32
+			},
+			"liboption": {
+				"title": "Libellé de l’option",
+				"type": "string",
+				"maxLength": 80
+			},
+			"typeoption": {
+				"title": "Type de l’option (option ou privilège)",
+				"type": "string",
+				"maxLength": 1
+			}
+		}
+	},
+	"MGDROITCREATION_V": {
+		"tableName": "MGDROITCREATION_V",
+		"name": "SpoMGDROITCREATION_V",
+		"title": "Vue pour les droits de création",
+		"type": "object",
+		"primaryKey": [
+			"nomaxe",
+			"idprofil"
+		],
+		"properties": {
+			"nomaxe": {
+				"title": "nom de l’axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofil": {
+				"title": "profil ",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofcre": {
+				"title": "profil créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofpro": {
+				"title": "profil pro",
+				"type": "string",
+				"maxLength": 32
+			},
+			"droitbool": {
+				"title": "droit booléen",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droits": {
+				"title": "droits",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"MGDROITAUTRES_V": {
+		"tableName": "MGDROITAUTRES_V",
+		"name": "SpoMGDROITAUTRES_V",
+		"title": "Vue pour les droits",
+		"type": "object",
+		"primaryKey": [
+			"nomaxe",
+			"idprofil",
+			"idprofil2"
+		],
+		"properties": {
+			"nomaxe": {
+				"title": "nom de l’axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofil": {
+				"title": "profil ",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofcre": {
+				"title": "profil créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofil2": {
+				"title": "profil utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idprofpro": {
+				"title": "profil pro",
+				"type": "string",
+				"maxLength": 32
+			},
+			"droitboollecture": {
+				"title": "Lecture",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitboolmodif": {
+				"title": "Modification",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitboolsup": {
+				"title": "Suppression",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droits": {
+				"title": "droits",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"MGDROITENRUTI_V": {
+		"tableName": "MGDROITENRUTI_V",
+		"name": "SpoMGDROITENRUTI_V",
+		"title": "Vue pour les droits par utilisateurs",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"idutil",
+			"idutil2"
+		],
+		"properties": {
+			"iddom": {
+				"title": "nom de l’axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutil": {
+				"title": "utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduticre": {
+				"title": "utilisateur créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutil2": {
+				"title": "utilisateur pro",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutipro": {
+				"title": "utilisateur protégé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"droitboollecture": {
+				"title": "Lecture",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitboolmodif": {
+				"title": "Modification",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitboolsup": {
+				"title": "Suppression",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droits": {
+				"title": "droits",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"MGDROITSPROFILS_V": {
+		"tableName": "MGDROITSPROFILS_V",
+		"name": "SpoMGDROITSPROFILS_V",
+		"title": "Droits des profils",
+		"type": "object",
+		"primaryKey": [
+			"nomaxe"
+		],
+		"properties": {
+			"nomaxe": {
+				"title": "Nom de l’axe",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbaxe": {
+				"title": "Source de données",
+				"type": "string",
+				"maxLength": 115
+			},
+			"idprofcre": {
+				"title": "Code profil créateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbprofcre": {
+				"title": "Profil créateur",
+				"type": "string",
+				"maxLength": 135
+			},
+			"idprofpro": {
+				"title": "Code Profil protégé",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbprofpro": {
+				"title": "Profil protégé",
+				"type": "string",
+				"maxLength": 135
+			},
+			"droitcreation": {
+				"title": "Création",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitlecture": {
+				"title": "Lecture",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitmodif": {
+				"title": "Modification",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitsup": {
+				"title": "Suppression",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"droitsautres": {
+				"title": "DroitsAutres",
+				"type": "string",
+				"maxLength": 32
+			},
+			"droitscreat": {
+				"title": "DroitsCreation",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INHIELOC": {
+		"tableName": "INHIELOC",
+		"name": "SpoHierarchieLocalisations",
+		"title": "Hierarchie localisations",
+		"type": "object",
+		"primaryKey": [
+			"idhier",
+			"exercice",
+			"idlocal",
+			"idlocalmere"
+		],
+		"properties": {
+			"idhier": {
+				"title": "Code hierarchie",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"idlocal": {
+				"title": "Code localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idlocalmere": {
+				"title": "Code localisation mère",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INHIELOCVAL": {
+		"tableName": "INHIELOCVAL",
+		"name": "SpoHierarchiesValidees",
+		"title": "Hierarchies validées",
+		"type": "object",
+		"primaryKey": [
+			"idhier",
+			"exercice"
+		],
+		"properties": {
+			"idhier": {
+				"title": "Code hierarchie",
+				"type": "string",
+				"maxLength": 32
+			},
+			"exercice": {
+				"title": "Exercice",
+				"type": "string",
+				"maxLength": 4
+			},
+			"hierref": {
+				"title": "Hierarchie de référence",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"hiervalid": {
+				"title": "Hierarchie validée",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INHIERAR": {
+		"tableName": "INHIERAR",
+		"name": "SpoHierarchie",
+		"title": "Hierarchie",
+		"type": "object",
+		"primaryKey": [
+			"idhier"
+		],
+		"properties": {
+			"idhier": {
+				"title": "Code hierarchie",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtypent": {
+				"title": "Type d’entité gérée",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbhier": {
+				"title": "Libellé hierarchie",
+				"type": "string",
+				"maxLength": 80
+			},
+			"jeucarte": {
+				"title": "Jeu de cartes associé",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"histomodif": {
+				"title": "Historique des modifications",
+				"type": "string",
+				"maxLength": 2000,
+				"format": "memo"
+			},
+			"uniqvalsurdos": {
+				"title": "Unique valeur sur dossier",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dernierniveau": {
+				"title": "Dernier niveau de rattachement",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"repartition": {
+				"title": "Saisie et contrôle de répartition",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"reference": {
+				"title": "Reference",
+				"type": "string",
+				"maxLength": 100
+			}
+		}
+	},
+	"INHIERARDEF": {
+		"tableName": "INHIERARDEF",
+		"name": "SpoDefinitionHierarchie",
+		"title": "Définition de la hierarchie",
+		"type": "object",
+		"primaryKey": [
+			"idhier",
+			"idtyploc"
+		],
+		"properties": {
+			"idhier": {
+				"title": "Code hierarchie",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtyploc": {
+				"title": "Code type de localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"numordre": {
+				"title": "Numéro d’ordre",
+				"type": "integer"
+			},
+			"idinfodyn": {
+				"title": "Code type d’informations dynamiques",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INLOCALIS": {
+		"tableName": "INLOCALIS",
+		"name": "SpoLocalisations",
+		"title": "Localisations",
+		"type": "object",
+		"primaryKey": [
+			"idlocal"
+		],
+		"properties": {
+			"idlocal": {
+				"title": "Code localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtyploc": {
+				"title": "Code type de localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idadm": {
+				"title": "Code administratif",
+				"type": "string",
+				"maxLength": 100
+			},
+			"lblocal": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 250
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"uuid": {
+				"title": "UUID",
+				"type": "string",
+				"maxLength": 40
+			},
+			"codecomp": {
+				"title": "Code complémentaire",
+				"type": "string",
+				"maxLength": 3500,
+				"format": "memo"
+			},
+			"lbcourt": {
+				"title": "Libellé court",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutimod": {
+				"title": "Modifié par",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtcreat": {
+				"title": "Date de création",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtmod": {
+				"title": "Date de modification",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtdebval": {
+				"title": "Date de début de validité",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtfinval": {
+				"title": "Date de fin de validité",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"INTYPLOCAL": {
+		"tableName": "INTYPLOCAL",
+		"name": "SpoTypesLocalisation",
+		"title": "Types de localisation",
+		"type": "object",
+		"primaryKey": [
+			"idtyploc"
+		],
+		"properties": {
+			"idtyploc": {
+				"title": "Code type de localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idtypent": {
+				"title": "Type d’entité gérée",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbtypl": {
+				"title": "Libellé type de localisation",
+				"type": "string",
+				"maxLength": 50
+			},
+			"longtypl": {
+				"title": "Longueur code",
+				"type": "integer"
+			},
+			"idadmoblig": {
+				"title": "Code administratif obligatoire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idadmuniq": {
+				"title": "Unicité du code administratif des localisations",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idinfodyn": {
+				"title": "Code type d’informations dynamiques",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INTYPLOCALDON": {
+		"tableName": "INTYPLOCALDON",
+		"name": "SpoInformationsComplementairesVisiblesParTypeLocalisation",
+		"title": "Informations complémentaires visibles par type de localisation",
+		"type": "object",
+		"primaryKey": [
+			"idtyploc",
+			"nomcol"
+		],
+		"properties": {
+			"idtyploc": {
+				"title": "Code type de localisation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"nomcol": {
+				"title": "Nom physique colonne",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INSUP": {
+		"tableName": "INSUP",
+		"name": "SpoSupport",
+		"title": "Supports",
+		"type": "object",
+		"primaryKey": [
+			"idsupport"
+		],
+		"properties": {
+			"idsupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbsupport": {
+				"title": "Nom support",
+				"type": "string",
+				"maxLength": 80
+			},
+			"typsup": {
+				"title": "Type de composant",
+				"type": "string",
+				"maxLength": 32
+			},
+			"actif": {
+				"title": "Validité support",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"useado": {
+				"title": "Nécessite une conection au SGBD",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"executable": {
+				"title": "Nom du fichier",
+				"type": "string",
+				"maxLength": 20
+			},
+			"argument": {
+				"title": "Argument exécutable",
+				"type": "string",
+				"maxLength": 255
+			},
+			"progid1": {
+				"title": "Nom du projet",
+				"type": "string",
+				"maxLength": 50
+			},
+			"modaff": {
+				"title": "Mode d’affichage",
+				"type": "string",
+				"maxLength": 32
+			},
+			"tclass": {
+				"title": "Classe fenêtre principale",
+				"type": "string",
+				"maxLength": 60
+			},
+			"tcaption": {
+				"title": "Titre fenêtre principale",
+				"type": "string",
+				"maxLength": 60
+			},
+			"crefic": {
+				"title": "Création de fichiers",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"usenum": {
+				"title": "Gère la numérisation",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"utilisation": {
+				"title": "Utilisée pour",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"formeSupportList": {
+				"type": "hasMany",
+				"aggregationKind": "none",
+				"model": "SpoFormeSupport",
+				"localFields": [
+					"idsupport"
+				],
+				"foreignFields": [
+					"idsupport"
+				],
+				"invRel": "support"
+			}
+		}
+	},
+	"INSUPFO": {
+		"tableName": "INSUPFO",
+		"name": "SpoFormeSupport",
+		"title": "Formes des supports",
+		"type": "object",
+		"primaryKey": [
+			"idsupport",
+			"idforme"
+		],
+		"properties": {
+			"idsupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idforme": {
+				"title": "Code forme",
+				"type": "integer"
+			},
+			"lbforme": {
+				"title": "Libellé de la forme",
+				"type": "string",
+				"maxLength": 80
+			},
+			"lbmodele": {
+				"title": "Terme employé pour les modèles",
+				"type": "string",
+				"maxLength": 30
+			},
+			"assistant": {
+				"title": "Assistant pour les modèles",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"attache": {
+				"title": "Autorise l’attachement de documents",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"autoraf": {
+				"title": "Propose un auto-rafraîchissement",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"extension": {
+				"title": "Extension pricipale des fichiers",
+				"type": "string",
+				"maxLength": 10
+			},
+			"usenum": {
+				"title": "Propose une numérisation",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"usereq": {
+				"title": "Nécessite une requête",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"requniq": {
+				"title": "Nécessite une requête au format unique",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"execreq": {
+				"title": "Exécuter la requête",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"sepchamp": {
+				"title": "Separateur de champs pour fichier",
+				"type": "integer"
+			},
+			"deltexte": {
+				"title": "Délimiteur de texte pour fichier",
+				"type": "integer"
+			},
+			"progid2": {
+				"title": "Nom de la classe",
+				"type": "string",
+				"maxLength": 50
+			},
+			"poke": {
+				"title": "Initialisation de la classe",
+				"type": "string",
+				"maxLength": 100
+			},
+			"attente": {
+				"title": "Protocole d’attente",
+				"type": "string",
+				"maxLength": 32
+			}
+		},
+		"relations": {
+			"support": {
+				"type": "hasOne",
+				"aggregationKind": "none",
+				"model": "SpoSupport",
+				"localFields": [
+					"idsupport"
+				],
+				"foreignFields": [
+					"idsupport"
+				],
+				"invRel": "formeSupportList"
+			}
+		}
+	},
+	"INCALEND": {
+		"tableName": "INCALEND",
+		"name": "SpoCalendrierType",
+		"title": "Calendrier type",
+		"type": "object",
+		"primaryKey": [
+			"idcalen"
+		],
+		"properties": {
+			"idcalen": {
+				"title": "Code calendrier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbcalen": {
+				"title": "Libellé calendrier",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iduti": {
+				"title": "Code Utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INCALNEUTR": {
+		"tableName": "INCALNEUTR",
+		"name": "SpoJoursNeutralises",
+		"title": "Jours neutralisés",
+		"type": "object",
+		"primaryKey": [
+			"idcalen",
+			"dtneutr"
+		],
+		"properties": {
+			"idcalen": {
+				"title": "Code calendrier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtneutr": {
+				"title": "Date de jour neutralisé",
+				"type": "string",
+				"format": "mgdis-date"
+			}
+		}
+	},
+	"INLIENETAP": {
+		"tableName": "INLIENETAP",
+		"name": "SpoLiensEntreActions",
+		"title": "Liens entre actions",
+		"type": "object",
+		"primaryKey": [
+			"iddom",
+			"iddoss",
+			"idetape",
+			"idetapelie"
+		],
+		"properties": {
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetape": {
+				"title": "Code étape",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idetapelie": {
+				"title": "Code étape liée",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typelien": {
+				"title": "Type de lien",
+				"type": "string",
+				"maxLength": 32
+			},
+			"delai": {
+				"title": "Délai en jours",
+				"type": "integer"
+			}
+		}
+	},
+	"INOPTION": {
+		"tableName": "INOPTION",
+		"name": "SpoOptionMiseAJour",
+		"title": "Option de mise à jour",
+		"type": "object",
+		"primaryKey": [
+			"idsupport",
+			"idoption"
+		],
+		"properties": {
+			"idsupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idoption": {
+				"title": "Code option",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lboption": {
+				"title": "Libellé option",
+				"type": "string",
+				"maxLength": 80
+			},
+			"drtproced": {
+				"title": "Droit par procédure",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"INOPTIONPROT": {
+		"tableName": "INOPTIONPROT",
+		"name": "SpoProtectionOptionsMiseAJour",
+		"title": "Protection des options de mise à jour",
+		"type": "object",
+		"primaryKey": [
+			"idsupport",
+			"idoption"
+		],
+		"properties": {
+			"idsupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idoption": {
+				"title": "Code option",
+				"type": "string",
+				"maxLength": 32
+			},
+			"actif": {
+				"title": "Option active",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"protect": {
+				"title": "Code protection",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INOPTIONPROC": {
+		"tableName": "INOPTIONPROC",
+		"name": "SpoOptionMiseAJourParProcedure",
+		"title": "Option de mise à jour par procédure",
+		"type": "object",
+		"primaryKey": [
+			"idsupport",
+			"idoption",
+			"idproced"
+		],
+		"properties": {
+			"idsupport": {
+				"title": "Code support",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idoption": {
+				"title": "Code option",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idproced": {
+				"title": "Code procédure",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"INUTILPREF": {
+		"tableName": "INUTILPREF",
+		"name": "SpoPreferenceUtilisateur",
+		"title": "Préférences de l’utilisateurs",
+		"type": "object",
+		"primaryKey": [
+			"idutil",
+			"typepref"
+		],
+		"properties": {
+			"idutil": {
+				"title": "Code utilisateur",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typepref": {
+				"title": "Type de préférence",
+				"type": "string",
+				"maxLength": 32
+			},
+			"preference": {
+				"title": "description des préférences",
+				"type": "string"
+			}
+		}
+	},
+	"INLISTEAFF": {
+		"tableName": "INLISTEAFF",
+		"name": "SpoListesAffichages",
+		"title": "Table des listes d’’affichages ",
+		"type": "object",
+		"primaryKey": [
+			"critere1",
+			"critere2",
+			"critere3",
+			"critere4",
+			"critere5",
+			"critere6"
+		],
+		"properties": {
+			"critere1": {
+				"title": "Critère 1",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere2": {
+				"title": "Critère 2",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere3": {
+				"title": "Critère 3",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere4": {
+				"title": "Critère 4",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere5": {
+				"title": "Critère 5",
+				"type": "string",
+				"maxLength": 32
+			},
+			"critere6": {
+				"title": "Critère 6",
+				"type": "string",
+				"maxLength": 32
+			},
+			"param1": {
+				"title": "Paramètre 1",
+				"type": "string",
+				"maxLength": 200
+			},
+			"param2": {
+				"title": "Paramètre 2",
+				"type": "string",
+				"maxLength": 200
+			},
+			"param3": {
+				"title": "Paramètre 3",
+				"type": "string",
+				"maxLength": 200
+			},
+			"descxml": {
+				"title": "Description Xml",
+				"type": "string"
+			}
+		}
+	},
+	"INEVENT": {
+		"tableName": "INEVENT",
+		"name": "SpoEvenementsEDA",
+		"title": "Evènements levés par le serveur",
+		"type": "object",
+		"primaryKey": [
+			"uidcanal",
+			"libelle",
+			"timestamp"
+		],
+		"properties": {
+			"uidcanal": {
+				"title": "Canal de diffusion",
+				"type": "string",
+				"maxLength": 32
+			},
+			"libelle": {
+				"title": "Titre de l’évènement",
+				"type": "string",
+				"maxLength": 200
+			},
+			"chargeutile": {
+				"title": "Charge utile",
+				"type": "string"
+			},
+			"timestamp": {
+				"title": "Timestamp de levée de l’évènement",
+				"type": "string",
+				"maxLength": 30
+			}
+		}
+	},
+	"INEVENEMENT": {
+		"tableName": "INEVENEMENT",
+		"name": "SpoEvenement",
+		"title": "Evènement",
+		"type": "object",
+		"primaryKey": [
+			"idevenement"
+		],
+		"properties": {
+			"idevenement": {
+				"title": "Code évènement",
+				"type": "string",
+				"maxLength": 32
+			},
+			"dtevenement": {
+				"title": "Date évènement",
+				"type": "integer"
+			},
+			"iddom": {
+				"title": "Code domaine",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddoss": {
+				"title": "Code dossier",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typeevenement": {
+				"title": "Type d’évènement",
+				"type": "string",
+				"maxLength": 32
+			},
+			"contenu": {
+				"title": "Contenu de l’évènement",
+				"type": "string"
+			}
+		}
+	},
+	"INEVENEMENTPROPAGATION": {
+		"tableName": "INEVENEMENTPROPAGATION",
+		"name": "SpoEvenementPropagation",
+		"title": "Propagation des évènements",
+		"type": "object",
+		"primaryKey": [
+			"idevenement",
+			"typepropagation"
+		],
+		"properties": {
+			"idevenement": {
+				"title": "Code évènement",
+				"type": "string",
+				"maxLength": 32
+			},
+			"typepropagation": {
+				"title": "Type de propagation",
+				"type": "string",
+				"maxLength": 32
+			},
+			"erreur": {
+				"title": "Erreur",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"description": {
+				"title": "Description de l’évènement propagé",
+				"type": "string"
+			}
+		}
+	},
+	"N01RECEPORGA": {
+		"tableName": "N01RECEPORGA",
+		"name": "SpoReceptionEnregistrementsTypeOrganigramme",
+		"title": "Réception des enregistrements de type organigramme",
+		"type": "object",
+		"primaryKey": [
+			"idref"
+		],
+		"properties": {
+			"idref": {
+				"title": "Référence externe de la structure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbstructure": {
+				"title": "Libellé",
+				"type": "string",
+				"maxLength": 80
+			},
+			"niveau": {
+				"title": "Niveau de la structure",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idrefparent": {
+				"title": "Référence externe de la structure parent",
+				"type": "string",
+				"maxLength": 32
+			},
+			"actif": {
+				"title": "Etat(Actif/Clos)",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"N01RECEPUTI": {
+		"tableName": "N01RECEPUTI",
+		"name": "SpoReceptionEnregistrementsTypeUtilisateur",
+		"title": "Réception des enregistrements de type utilisateur",
+		"type": "object",
+		"primaryKey": [
+			"login"
+		],
+		"properties": {
+			"login": {
+				"title": "Login",
+				"type": "string",
+				"maxLength": 256
+			},
+			"nom": {
+				"title": "Nom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"prenom": {
+				"title": "Prénom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"actif": {
+				"title": "Utilisateur actif",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"idrefserv": {
+				"title": "Code du service",
+				"type": "string",
+				"maxLength": 32
+			},
+			"telephon": {
+				"title": "Numéro de téléphone",
+				"type": "string",
+				"maxLength": 14
+			},
+			"email": {
+				"title": "E-Mail",
+				"type": "string",
+				"maxLength": 64
+			},
+			"extranet": {
+				"title": "Extranet",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"dtnais": {
+				"title": "Date de naissance",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"idgenre": {
+				"title": "Genre",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"RI_INDIREC": {
+		"tableName": "RI_INDIREC",
+		"name": "SpoListeDirectionsRI",
+		"title": "Liste des Directions",
+		"type": "object",
+		"primaryKey": [
+			"iddirect"
+		],
+		"properties": {
+			"iddirect": {
+				"title": "Code de la direction",
+				"type": "integer"
+			},
+			"idref": {
+				"title": "Sigle de la direction",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbdirect": {
+				"title": "Libelle de la direction",
+				"type": "string",
+				"maxLength": 100
+			},
+			"idgrdir": {
+				"title": "Code du groupe de directions",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"RI_INSERV": {
+		"tableName": "RI_INSERV",
+		"name": "SpoServiceRI",
+		"title": "Service",
+		"type": "object",
+		"primaryKey": [
+			"idserv"
+		],
+		"properties": {
+			"idserv": {
+				"title": "Code du service",
+				"type": "integer"
+			},
+			"lbserv": {
+				"title": "Libellé du service",
+				"type": "string",
+				"maxLength": 80
+			},
+			"idref": {
+				"title": "Sigle",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddirect": {
+				"title": "Code de la direction",
+				"type": "integer"
+			}
+		}
+	},
+	"RI_INPROF": {
+		"tableName": "RI_INPROF",
+		"name": "SpoProfilRI",
+		"title": "Profil",
+		"type": "object",
+		"primaryKey": [
+			"idprof"
+		],
+		"properties": {
+			"idprof": {
+				"title": "Code Profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbprof": {
+				"title": "Libellé du profil",
+				"type": "string",
+				"maxLength": 100
+			},
+			"defaut": {
+				"title": "Groupe par défaut",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			}
+		}
+	},
+	"RI_INUTI": {
+		"tableName": "RI_INUTI",
+		"name": "SpoUtilisateurRI",
+		"title": "Utilisateur",
+		"type": "object",
+		"primaryKey": [
+			"compteur"
+		],
+		"properties": {
+			"compteur": {
+				"title": "Compteur Utilisateur RI",
+				"type": "integer"
+			},
+			"login": {
+				"title": "Login",
+				"type": "string",
+				"maxLength": 15
+			},
+			"nomuti": {
+				"title": "Nom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"preuti": {
+				"title": "Prénom",
+				"type": "string",
+				"maxLength": 30
+			},
+			"telephon": {
+				"title": "Numéro de téléphone",
+				"type": "string",
+				"maxLength": 14
+			},
+			"email": {
+				"title": "E-Mail",
+				"type": "string",
+				"maxLength": 64
+			},
+			"idserv": {
+				"title": "Code du service",
+				"type": "integer"
+			},
+			"idprof": {
+				"title": "Code profil",
+				"type": "string",
+				"maxLength": 32
+			},
+			"iddirect": {
+				"title": "Code de la direction",
+				"type": "integer"
+			},
+			"idgenre": {
+				"title": "Genre",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idutil": {
+				"title": "Code Utilisateur",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"RI_INGRDIR": {
+		"tableName": "RI_INGRDIR",
+		"name": "SpoGroupeDirectionRI",
+		"title": "Groupes de directions",
+		"type": "object",
+		"primaryKey": [
+			"idgrdir"
+		],
+		"properties": {
+			"idgrdir": {
+				"title": "Code du groupe de directions",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbgrdir": {
+				"title": "Libellé du groupe de directions",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idref": {
+				"title": "Référence du groupe de directions",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idunite": {
+				"title": "Code de l’unité",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	},
+	"RI_INUNITE": {
+		"tableName": "RI_INUNITE",
+		"name": "SpoUniteRI",
+		"title": "Unité",
+		"type": "object",
+		"primaryKey": [
+			"idunite"
+		],
+		"properties": {
+			"idunite": {
+				"title": "Code de l’unité",
+				"type": "string",
+				"maxLength": 32
+			},
+			"lbunite": {
+				"title": "Libellé de l’unité",
+				"type": "string",
+				"maxLength": 200
+			},
+			"idref": {
+				"title": "Référence de l’unité",
+				"type": "string",
+				"maxLength": 32
+			}
+		}
+	}
+}

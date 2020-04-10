@@ -1,0 +1,57 @@
+{
+	"tableName": "INCLASSEUR",
+	"name": "SpoClasseur",
+	"title": "Classeur",
+	"type": "object",
+	"primaryKey": [
+		"typclas",
+		"idclas"
+	],
+	"properties": {
+		"typclas": {
+			"title": "Type de classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idclas": {
+			"title": "Code classeur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idgrp": {
+			"title": "Code groupe",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbclas": {
+			"title": "Libellé classeur",
+			"type": "string",
+			"maxLength": 80
+		},
+		"idref": {
+			"title": "Référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idclaspere": {
+			"title": "Classeur père",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtmaj": {
+			"title": "Date de mise à jour",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

@@ -1,0 +1,91 @@
+{
+	"tableName": "MGLSTAXE_V",
+	"name": "SpoMGLSTAXE_V",
+	"title": "Recherche d’un axe",
+	"type": "object",
+	"primaryKey": [
+		"nomaxe"
+	],
+	"properties": {
+		"nomaxe": {
+			"title": "Nom source de données",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbaxe": {
+			"title": "Libellé source de données",
+			"type": "string",
+			"maxLength": 80
+		},
+		"typaxe": {
+			"title": "Type de source de données",
+			"type": "string",
+			"maxLength": 32
+		},
+		"visibilite": {
+			"title": "Visibilité",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomcolexe": {
+			"title": "Nom de la colonne Exercice",
+			"type": "string",
+			"maxLength": 32
+		},
+		"dtmaj": {
+			"title": "Date de mise à jour",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"proprio": {
+			"title": "Propriétaire",
+			"type": "string",
+			"maxLength": 15
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cle1": {
+			"title": "Colonne clé 1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cle2": {
+			"title": "Colonne clé 2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cle3": {
+			"title": "Colonne clé 3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cle4": {
+			"title": "Colonne clé 4",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cle5": {
+			"title": "Colonne clé 5",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cle6": {
+			"title": "Colonne clé 6",
+			"type": "string",
+			"maxLength": 32
+		},
+		"cle7": {
+			"title": "Colonne clé 7",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

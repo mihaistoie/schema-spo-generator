@@ -1,0 +1,28 @@
+{
+	"tableName": "INOPTIONPROC",
+	"name": "SpoOptionMiseAJourParProcedure",
+	"title": "Option de mise à jour par procédure",
+	"type": "object",
+	"primaryKey": [
+		"idsupport",
+		"idoption",
+		"idproced"
+	],
+	"properties": {
+		"idsupport": {
+			"title": "Code support",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idoption": {
+			"title": "Code option",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idproced": {
+			"title": "Code procédure",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

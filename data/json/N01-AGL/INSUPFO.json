@@ -1,0 +1,108 @@
+{
+	"tableName": "INSUPFO",
+	"name": "SpoFormeSupport",
+	"title": "Formes des supports",
+	"type": "object",
+	"primaryKey": [
+		"idsupport",
+		"idforme"
+	],
+	"properties": {
+		"idsupport": {
+			"title": "Code support",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idforme": {
+			"title": "Code forme",
+			"type": "integer"
+		},
+		"lbforme": {
+			"title": "Libellé de la forme",
+			"type": "string",
+			"maxLength": 80
+		},
+		"lbmodele": {
+			"title": "Terme employé pour les modèles",
+			"type": "string",
+			"maxLength": 30
+		},
+		"assistant": {
+			"title": "Assistant pour les modèles",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"attache": {
+			"title": "Autorise l’attachement de documents",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"autoraf": {
+			"title": "Propose un auto-rafraîchissement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"extension": {
+			"title": "Extension pricipale des fichiers",
+			"type": "string",
+			"maxLength": 10
+		},
+		"usenum": {
+			"title": "Propose une numérisation",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"usereq": {
+			"title": "Nécessite une requête",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"requniq": {
+			"title": "Nécessite une requête au format unique",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"execreq": {
+			"title": "Exécuter la requête",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"sepchamp": {
+			"title": "Separateur de champs pour fichier",
+			"type": "integer"
+		},
+		"deltexte": {
+			"title": "Délimiteur de texte pour fichier",
+			"type": "integer"
+		},
+		"progid2": {
+			"title": "Nom de la classe",
+			"type": "string",
+			"maxLength": 50
+		},
+		"poke": {
+			"title": "Initialisation de la classe",
+			"type": "string",
+			"maxLength": 100
+		},
+		"attente": {
+			"title": "Protocole d’attente",
+			"type": "string",
+			"maxLength": 32
+		}
+	},
+	"relations": {
+		"support": {
+			"type": "hasOne",
+			"aggregationKind": "none",
+			"model": "SpoSupport",
+			"localFields": [
+				"idsupport"
+			],
+			"foreignFields": [
+				"idsupport"
+			],
+			"invRel": "formeSupportList"
+		}
+	}
+}

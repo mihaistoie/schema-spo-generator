@@ -1,0 +1,69 @@
+{
+	"tableName": "INDYNPARAM",
+	"name": "SpoParametresDynamiquesUtilisateur",
+	"title": "Paramètres dynamiques utilisateur",
+	"type": "object",
+	"primaryKey": [
+		"idparam",
+		"idobj",
+		"idref",
+		"numordre",
+		"crit1",
+		"crit2",
+		"crit3",
+		"crit4",
+		"crit5"
+	],
+	"properties": {
+		"idparam": {
+			"title": "Code du paramètre",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idobj": {
+			"title": "Code de l’objet",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idref": {
+			"title": "Code de la référence",
+			"type": "string",
+			"maxLength": 32
+		},
+		"numordre": {
+			"title": "Numéro d’ordre",
+			"type": "integer"
+		},
+		"valeur": {
+			"title": "Valeur paramétrage",
+			"type": "string",
+			"maxLength": 4000,
+			"format": "memo"
+		},
+		"crit1": {
+			"title": "Critere1",
+			"type": "string",
+			"maxLength": 32
+		},
+		"crit2": {
+			"title": "Critere2",
+			"type": "string",
+			"maxLength": 32
+		},
+		"crit3": {
+			"title": "Critere3",
+			"type": "string",
+			"maxLength": 32
+		},
+		"crit4": {
+			"title": "Critere4",
+			"type": "string",
+			"maxLength": 32
+		},
+		"crit5": {
+			"title": "Critere5",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

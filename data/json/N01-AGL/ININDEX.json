@@ -1,0 +1,26 @@
+{
+	"tableName": "ININDEX",
+	"name": "SpoIdentificationIndex",
+	"title": "Identification index",
+	"type": "object",
+	"primaryKey": [
+		"nomidx"
+	],
+	"properties": {
+		"nomidx": {
+			"title": "Nom physique index",
+			"type": "string",
+			"maxLength": 32
+		},
+		"nomtab": {
+			"title": "Nom physique table",
+			"type": "string",
+			"maxLength": 32
+		},
+		"unicite": {
+			"title": "Index unique",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		}
+	}
+}

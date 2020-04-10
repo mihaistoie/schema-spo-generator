@@ -1,0 +1,34 @@
+{
+	"tableName": "INHIELOC",
+	"name": "SpoHierarchieLocalisations",
+	"title": "Hierarchie localisations",
+	"type": "object",
+	"primaryKey": [
+		"idhier",
+		"exercice",
+		"idlocal",
+		"idlocalmere"
+	],
+	"properties": {
+		"idhier": {
+			"title": "Code hierarchie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"exercice": {
+			"title": "Exercice",
+			"type": "string",
+			"maxLength": 4
+		},
+		"idlocal": {
+			"title": "Code localisation",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idlocalmere": {
+			"title": "Code localisation mère",
+			"type": "string",
+			"maxLength": 32
+		}
+	}
+}

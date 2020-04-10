@@ -1,0 +1,67 @@
+{
+	"tableName": "INHIERAR",
+	"name": "SpoHierarchie",
+	"title": "Hierarchie",
+	"type": "object",
+	"primaryKey": [
+		"idhier"
+	],
+	"properties": {
+		"idhier": {
+			"title": "Code hierarchie",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idtypent": {
+			"title": "Type d’entité gérée",
+			"type": "string",
+			"maxLength": 32
+		},
+		"lbhier": {
+			"title": "Libellé hierarchie",
+			"type": "string",
+			"maxLength": 80
+		},
+		"jeucarte": {
+			"title": "Jeu de cartes associé",
+			"type": "string",
+			"maxLength": 100
+		},
+		"idprof": {
+			"title": "Code profil",
+			"type": "string",
+			"maxLength": 32
+		},
+		"iduti": {
+			"title": "Code utilisateur",
+			"type": "string",
+			"maxLength": 32
+		},
+		"histomodif": {
+			"title": "Historique des modifications",
+			"type": "string",
+			"maxLength": 2000,
+			"format": "memo"
+		},
+		"uniqvalsurdos": {
+			"title": "Unique valeur sur dossier",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"dernierniveau": {
+			"title": "Dernier niveau de rattachement",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"repartition": {
+			"title": "Saisie et contrôle de répartition",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"reference": {
+			"title": "Reference",
+			"type": "string",
+			"maxLength": 100
+		}
+	}
+}
