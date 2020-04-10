@@ -35,7 +35,8 @@
     "schema-tiers": "node ./bin/gen-schema.js  -xml data/xml/M01-Tiers_MPD_BASEREF.xml -d data/json/M01-Tiers_MPD_BASEREF.json",
     "schema-n02": "node ./bin/gen-schema.js  -xml data/xml/N02-GestionDossier_MPD_BASEREF.xml -d data/json/N02-GestionDossier_MPD_BASEREF.json",
     "schema-n14": "node ./bin/gen-schema.js  -xml data/xml/N14-Gantt_MPD_BASEREF.xml -d data/json/N14-Gantt_MPD_BASEREF.json",
-    "schema-m75": "node ./bin/gen-schema.js  -xml data/xml/M75-BailleursSociaux_MPD_BASEREF.xml -d data/json/M75-BailleursSociaux.json"
+    "schema-m75": "node ./bin/gen-schema.js  -xml data/xml/M75-BailleursSociaux_MPD_BASEREF.xml -d data/json/M75-BailleursSociaux.json",
+    "schema-n01": "node ./bin/gen-schema.js  -xml data/xml/N01-AGL_MPD_BASEREF.xml -d data/json/N01-AGL.json"
   },
   "bin": {
     "sop-schema-gen": "./app.js"
