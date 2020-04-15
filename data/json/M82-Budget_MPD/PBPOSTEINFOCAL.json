@@ -91,7 +91,7 @@
 		"typedetaille": {
 			"title": "TypeDetaille",
 			"type": "string",
-			"maxLength": 10
+			"maxLength": 100
 		}
 	},
 	"relations": {

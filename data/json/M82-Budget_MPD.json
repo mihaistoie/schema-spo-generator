@@ -3468,6 +3468,11 @@
 			"typedetaille": {
 				"title": "TypeDetaille",
 				"type": "string",
+				"maxLength": 100
+			},
+			"typeouvrage": {
+				"title": "TypeOuvrage",
+				"type": "string",
 				"maxLength": 10
 			}
 		},
@@ -3793,7 +3798,7 @@
 			"typedetaille": {
 				"title": "TypeDetaille",
 				"type": "string",
-				"maxLength": 10
+				"maxLength": 100
 			}
 		},
 		"relations": {
@@ -4795,6 +4800,16 @@
 				"title": "Pourcent",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"typedetaille": {
+				"title": "TypeDetaille",
+				"type": "string",
+				"maxLength": 100
+			},
+			"typeouvrage": {
+				"title": "TypeOuvrage",
+				"type": "string",
+				"maxLength": 10
 			}
 		}
 	},
@@ -4954,7 +4969,7 @@
 			"typedetaille": {
 				"title": "TypeDetaille",
 				"type": "string",
-				"maxLength": 10
+				"maxLength": 100
 			}
 		},
 		"relations": {

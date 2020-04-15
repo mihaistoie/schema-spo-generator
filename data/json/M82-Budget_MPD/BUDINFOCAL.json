@@ -64,6 +64,11 @@
 		"typedetaille": {
 			"title": "TypeDetaille",
 			"type": "string",
+			"maxLength": 100
+		},
+		"typeouvrage": {
+			"title": "TypeOuvrage",
+			"type": "string",
 			"maxLength": 10
 		}
 	},
