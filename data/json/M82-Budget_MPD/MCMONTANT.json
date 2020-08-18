@@ -99,6 +99,16 @@
 			"title": "Code TVA",
 			"type": "string",
 			"maxLength": 10
+		},
+		"tvaautoliquide": {
+			"title": "TvaAutoliquide",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mnttvaautoliquide": {
+			"title": "MntTvaAutoliquide",
+			"type": "number",
+			"decimals": 4
 		}
 	},
 	"relations": {

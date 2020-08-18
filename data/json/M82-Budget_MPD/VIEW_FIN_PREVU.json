@@ -33,7 +33,7 @@
 		"mnttva": {
 			"title": "mnttva",
 			"type": "number",
-			"decimals": 4
+			"decimals": 2
 		},
 		"date": {
 			"title": "date",

@@ -65,6 +65,11 @@
 			"title": "BaseCalcul",
 			"type": "string",
 			"maxLength": 10
+		},
+		"idpostefrais": {
+			"title": "IdPosteFrais",
+			"type": "string",
+			"maxLength": 32
 		}
 	}
 }

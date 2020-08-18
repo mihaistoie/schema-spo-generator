@@ -171,6 +171,11 @@
 			"title": "BIC",
 			"type": "string",
 			"maxLength": 11
+		},
+		"autoliquidation": {
+			"title": "Autoliquidation",
+			"type": "boolean",
+			"format": "mgdis-boolean"
 		}
 	},
 	"relations": {

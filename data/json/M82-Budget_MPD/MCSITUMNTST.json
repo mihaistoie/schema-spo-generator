@@ -70,6 +70,21 @@
 			"title": "Engagé TTC",
 			"type": "number",
 			"decimals": 4
+		},
+		"tauxtiers": {
+			"title": "Taux du tiers",
+			"type": "number",
+			"decimals": 2
+		},
+		"tvaautoliquide": {
+			"title": "TvaAutoliquide",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"mnttvaautoliquide": {
+			"title": "MntTvaAutoliquide",
+			"type": "number",
+			"decimals": 4
 		}
 	},
 	"relations": {

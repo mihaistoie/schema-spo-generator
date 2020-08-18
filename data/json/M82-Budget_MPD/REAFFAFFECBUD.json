@@ -122,6 +122,11 @@
 			"title": "Date annulation",
 			"type": "string",
 			"format": "mgdis-date"
+		},
+		"forcer": {
+			"title": "Forcer",
+			"type": "boolean",
+			"format": "mgdis-boolean"
 		}
 	},
 	"relations": {

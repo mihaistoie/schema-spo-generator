@@ -86,6 +86,11 @@
 			"title": "Date engagement",
 			"type": "string",
 			"format": "mgdis-date"
+		},
+		"tauxtiers": {
+			"title": "Taux du tiers",
+			"type": "number",
+			"decimals": 2
 		}
 	}
 }

@@ -101,6 +101,11 @@
 			"title": "Inventaire",
 			"type": "boolean",
 			"format": "mgdis-boolean"
+		},
+		"autoliquidation": {
+			"title": "Autoliquidation",
+			"type": "boolean",
+			"format": "mgdis-boolean"
 		}
 	},
 	"relations": {

@@ -1402,6 +1402,11 @@
 				"type": "string",
 				"format": "mgdis-date"
 			},
+			"dateactualis": {
+				"title": "Date actualisation trésorerie",
+				"type": "string",
+				"format": "mgdis-date"
+			},
 			"idparent": {
 				"title": "IdParent",
 				"type": "string",
@@ -6663,6 +6668,11 @@
 				"title": "Date annulation",
 				"type": "string",
 				"format": "mgdis-date"
+			},
+			"forcer": {
+				"title": "Forcer",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -8814,6 +8824,16 @@
 				"title": "Code TVA",
 				"type": "string",
 				"maxLength": 10
+			},
+			"tvaautoliquide": {
+				"title": "TvaAutoliquide",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"mnttvaautoliquide": {
+				"title": "MntTvaAutoliquide",
+				"type": "number",
+				"decimals": 4
 			}
 		},
 		"relations": {
@@ -9004,6 +9024,11 @@
 				"title": "BIC",
 				"type": "string",
 				"maxLength": 11
+			},
+			"autoliquidation": {
+				"title": "Autoliquidation",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		},
 		"relations": {
@@ -10853,6 +10878,11 @@
 				"title": "Date engagement",
 				"type": "string",
 				"format": "mgdis-date"
+			},
+			"tauxtiers": {
+				"title": "Taux du tiers",
+				"type": "number",
+				"decimals": 2
 			}
 		}
 	},
@@ -11393,6 +11423,11 @@
 				"title": "Taux du tiersi",
 				"type": "number",
 				"decimals": 2
+			},
+			"mnttvaautoliquide": {
+				"title": "MntTvaAutoliquide",
+				"type": "number",
+				"decimals": 4
 			}
 		},
 		"relations": {
@@ -11494,6 +11529,21 @@
 			},
 			"engagettc": {
 				"title": "Engagé TTC",
+				"type": "number",
+				"decimals": 4
+			},
+			"tauxtiers": {
+				"title": "Taux du tiers",
+				"type": "number",
+				"decimals": 2
+			},
+			"tvaautoliquide": {
+				"title": "TvaAutoliquide",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"mnttvaautoliquide": {
+				"title": "MntTvaAutoliquide",
 				"type": "number",
 				"decimals": 4
 			}
@@ -11852,6 +11902,11 @@
 			},
 			"inventaire": {
 				"title": "Inventaire",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"autoliquidation": {
+				"title": "Autoliquidation",
 				"type": "boolean",
 				"format": "mgdis-boolean"
 			}
@@ -13176,6 +13231,11 @@
 				"title": "BaseCalcul",
 				"type": "string",
 				"maxLength": 10
+			},
+			"idpostefrais": {
+				"title": "IdPosteFrais",
+				"type": "string",
+				"maxLength": 32
 			}
 		}
 	},
@@ -13593,7 +13653,7 @@
 			"mnttva": {
 				"title": "mnttva",
 				"type": "number",
-				"decimals": 4
+				"decimals": 2
 			},
 			"date": {
 				"title": "date",

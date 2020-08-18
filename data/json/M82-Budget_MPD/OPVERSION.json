@@ -38,6 +38,11 @@
 			"type": "string",
 			"format": "mgdis-date"
 		},
+		"dateactualis": {
+			"title": "Date actualisation trésorerie",
+			"type": "string",
+			"format": "mgdis-date"
+		},
 		"idparent": {
 			"title": "IdParent",
 			"type": "string",
