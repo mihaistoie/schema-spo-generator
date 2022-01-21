@@ -22,6 +22,11 @@
 			"title": "Valeur taux",
 			"type": "number",
 			"decimals": 4
+		},
+		"idop": {
+			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
 		}
 	}
 }

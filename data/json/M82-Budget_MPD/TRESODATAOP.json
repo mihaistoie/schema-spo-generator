@@ -5,11 +5,17 @@
 	"type": "object",
 	"primaryKey": [
 		"idop",
+		"idposte",
 		"dateflux"
 	],
 	"properties": {
 		"idop": {
 			"title": "IdOp",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idposte": {
+			"title": "IdPoste",
 			"type": "string",
 			"maxLength": 32
 		},
@@ -52,6 +58,16 @@
 			"title": "L’heure de la dérniere génération",
 			"type": "string",
 			"maxLength": 10
+		},
+		"mntht": {
+			"title": "MntHT",
+			"type": "number",
+			"decimals": 4
+		},
+		"mntttc": {
+			"title": "MntTTC",
+			"type": "number",
+			"decimals": 4
 		}
 	}
 }

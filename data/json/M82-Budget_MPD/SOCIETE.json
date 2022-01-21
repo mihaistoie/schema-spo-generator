@@ -146,6 +146,70 @@
 			"title": "MethodeTvaMarge",
 			"type": "string",
 			"maxLength": 10
+		},
+		"fichiercomptable": {
+			"title": "Donner au fichier généré le nom de la référence comptabl",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"cheminreglement": {
+			"title": "Chemin reglement",
+			"type": "string",
+			"maxLength": 256
+		},
+		"ftpenable": {
+			"title": "Activer FTP",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ftphost": {
+			"title": "Host  FTP",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ftpusername": {
+			"title": "UserName FTP",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ftppassword": {
+			"title": "Password  FTP",
+			"type": "string",
+			"maxLength": 32
+		},
+		"ftpport": {
+			"title": "Port FTP",
+			"type": "integer"
+		},
+		"ftppassivemode": {
+			"title": "Passive Mode FTP",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"ftpremotefolder": {
+			"title": "Remote Folder FTP",
+			"type": "string",
+			"maxLength": 256
+		},
+		"comptecollectiffournisseur": {
+			"title": "Compte Collectif Fournisseur",
+			"type": "string",
+			"maxLength": 50
+		},
+		"comptecollectifclient": {
+			"title": "Compte Collectif Client",
+			"type": "string",
+			"maxLength": 50
+		},
+		"grouppostebudgetaire": {
+			"title": "Groupement des postes budgétaires",
+			"type": "boolean",
+			"format": "mgdis-boolean"
+		},
+		"chemindepenses": {
+			"title": "Chemin depenses",
+			"type": "string",
+			"maxLength": 256
 		}
 	},
 	"relations": {

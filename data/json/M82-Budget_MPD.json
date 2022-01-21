@@ -4088,7 +4088,7 @@
 				"type": "integer"
 			},
 			"controlebud": {
-				"title": "Application du contrôle budgetaire",
+				"title": "Application du contrôle budgétaire",
 				"type": "boolean",
 				"format": "mgdis-boolean"
 			},
@@ -4130,6 +4130,16 @@
 				"title": "Lissage pluriannuel",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"idprp": {
+				"title": "Modèle Prix de revient",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idfin": {
+				"title": "Modèle Financement",
+				"type": "string",
+				"maxLength": 32
 			}
 		},
 		"relations": {
@@ -4321,6 +4331,70 @@
 				"title": "MethodeTvaMarge",
 				"type": "string",
 				"maxLength": 10
+			},
+			"fichiercomptable": {
+				"title": "Donner au fichier généré le nom de la référence comptabl",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"cheminreglement": {
+				"title": "Chemin reglement",
+				"type": "string",
+				"maxLength": 256
+			},
+			"ftpenable": {
+				"title": "Activer FTP",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"ftphost": {
+				"title": "Host  FTP",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ftpusername": {
+				"title": "UserName FTP",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ftppassword": {
+				"title": "Password  FTP",
+				"type": "string",
+				"maxLength": 32
+			},
+			"ftpport": {
+				"title": "Port FTP",
+				"type": "integer"
+			},
+			"ftppassivemode": {
+				"title": "Passive Mode FTP",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"ftpremotefolder": {
+				"title": "Remote Folder FTP",
+				"type": "string",
+				"maxLength": 256
+			},
+			"comptecollectiffournisseur": {
+				"title": "Compte Collectif Fournisseur",
+				"type": "string",
+				"maxLength": 50
+			},
+			"comptecollectifclient": {
+				"title": "Compte Collectif Client",
+				"type": "string",
+				"maxLength": 50
+			},
+			"grouppostebudgetaire": {
+				"title": "Groupement des postes budgétaires",
+				"type": "boolean",
+				"format": "mgdis-boolean"
+			},
+			"chemindepenses": {
+				"title": "Chemin depenses",
+				"type": "string",
+				"maxLength": 256
 			}
 		},
 		"relations": {
@@ -4453,11 +4527,6 @@
 			},
 			"prorata": {
 				"title": "Prorata TVA",
-				"type": "boolean",
-				"format": "mgdis-boolean"
-			},
-			"identique": {
-				"title": "Identique",
 				"type": "boolean",
 				"format": "mgdis-boolean"
 			}
@@ -11083,6 +11152,31 @@
 				"title": "idFacFinal",
 				"type": "string",
 				"maxLength": 32
+			},
+			"dtprevalid": {
+				"title": "Date pré-validation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtblocprevalid": {
+				"title": "Date blocage pré-validation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"commprevalid": {
+				"title": "Commentaire pré-validation",
+				"type": "string",
+				"maxLength": 200
+			},
+			"commvalid": {
+				"title": "Commentaire validation",
+				"type": "string",
+				"maxLength": 200
+			},
+			"dtblocvalid": {
+				"title": "Date blocage validation",
+				"type": "string",
+				"format": "mgdis-date"
 			}
 		},
 		"relations": {
@@ -11321,6 +11415,31 @@
 				"title": "IsMultiTaux",
 				"type": "boolean",
 				"format": "mgdis-boolean"
+			},
+			"dtprevalid": {
+				"title": "Date pré-validation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"dtblocprevalid": {
+				"title": "Date blocage pré-validation",
+				"type": "string",
+				"format": "mgdis-date"
+			},
+			"commprevalid": {
+				"title": "Commentaire pré-validation",
+				"type": "string",
+				"maxLength": 200
+			},
+			"commvalid": {
+				"title": "Commentaire validation",
+				"type": "string",
+				"maxLength": 200
+			},
+			"dtblocvalid": {
+				"title": "Date blocage validation",
+				"type": "string",
+				"format": "mgdis-date"
 			}
 		},
 		"relations": {
@@ -11546,6 +11665,11 @@
 				"title": "MntTvaAutoliquide",
 				"type": "number",
 				"decimals": 4
+			},
+			"dtpaie": {
+				"title": "Date paiement",
+				"type": "string",
+				"format": "mgdis-date"
 			}
 		},
 		"relations": {
@@ -13236,6 +13360,11 @@
 				"title": "IdPosteFrais",
 				"type": "string",
 				"maxLength": 32
+			},
+			"utilistabletaux": {
+				"title": "UtilisTableTaux",
+				"type": "boolean",
+				"format": "mgdis-boolean"
 			}
 		}
 	},
@@ -13263,6 +13392,11 @@
 				"title": "Valeur taux",
 				"type": "number",
 				"decimals": 4
+			},
+			"idop": {
+				"title": "IdOp",
+				"type": "string",
+				"maxLength": 32
 			}
 		}
 	},
@@ -13441,11 +13575,17 @@
 		"type": "object",
 		"primaryKey": [
 			"idop",
+			"idposte",
 			"dateflux"
 		],
 		"properties": {
 			"idop": {
 				"title": "IdOp",
+				"type": "string",
+				"maxLength": 32
+			},
+			"idposte": {
+				"title": "IdPoste",
 				"type": "string",
 				"maxLength": 32
 			},
@@ -13488,6 +13628,16 @@
 				"title": "L’heure de la dérniere génération",
 				"type": "string",
 				"maxLength": 10
+			},
+			"mntht": {
+				"title": "MntHT",
+				"type": "number",
+				"decimals": 4
+			},
+			"mntttc": {
+				"title": "MntTTC",
+				"type": "number",
+				"decimals": 4
 			}
 		}
 	},

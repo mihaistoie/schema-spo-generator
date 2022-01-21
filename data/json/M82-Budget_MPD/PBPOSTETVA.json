@@ -38,11 +38,6 @@
 			"title": "Prorata TVA",
 			"type": "boolean",
 			"format": "mgdis-boolean"
-		},
-		"identique": {
-			"title": "Identique",
-			"type": "boolean",
-			"format": "mgdis-boolean"
 		}
 	},
 	"relations": {

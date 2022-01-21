@@ -149,6 +149,31 @@
 			"title": "IsMultiTaux",
 			"type": "boolean",
 			"format": "mgdis-boolean"
+		},
+		"dtprevalid": {
+			"title": "Date pré-validation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"dtblocprevalid": {
+			"title": "Date blocage pré-validation",
+			"type": "string",
+			"format": "mgdis-date"
+		},
+		"commprevalid": {
+			"title": "Commentaire pré-validation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"commvalid": {
+			"title": "Commentaire validation",
+			"type": "string",
+			"maxLength": 200
+		},
+		"dtblocvalid": {
+			"title": "Date blocage validation",
+			"type": "string",
+			"format": "mgdis-date"
 		}
 	},
 	"relations": {

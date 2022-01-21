@@ -85,6 +85,11 @@
 			"title": "MntTvaAutoliquide",
 			"type": "number",
 			"decimals": 4
+		},
+		"dtpaie": {
+			"title": "Date paiement",
+			"type": "string",
+			"format": "mgdis-date"
 		}
 	},
 	"relations": {

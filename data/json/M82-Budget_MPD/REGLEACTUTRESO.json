@@ -70,6 +70,11 @@
 			"title": "IdPosteFrais",
 			"type": "string",
 			"maxLength": 32
+		},
+		"utilistabletaux": {
+			"title": "UtilisTableTaux",
+			"type": "boolean",
+			"format": "mgdis-boolean"
 		}
 	}
 }

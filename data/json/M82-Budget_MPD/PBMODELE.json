@@ -53,7 +53,7 @@
 			"type": "integer"
 		},
 		"controlebud": {
-			"title": "Application du contrôle budgetaire",
+			"title": "Application du contrôle budgétaire",
 			"type": "boolean",
 			"format": "mgdis-boolean"
 		},
@@ -95,6 +95,16 @@
 			"title": "Lissage pluriannuel",
 			"type": "boolean",
 			"format": "mgdis-boolean"
+		},
+		"idprp": {
+			"title": "Modèle Prix de revient",
+			"type": "string",
+			"maxLength": 32
+		},
+		"idfin": {
+			"title": "Modèle Financement",
+			"type": "string",
+			"maxLength": 32
 		}
 	},
 	"relations": {
